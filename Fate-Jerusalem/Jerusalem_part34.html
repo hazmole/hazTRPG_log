@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>耶路撒冷聖杯戰爭 - Part 34</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.quote {
+    margin: 0.5em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment-thumbnail {
+    margin-top: 0.3em;
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/576671536866525184/d5aefe15fbbffb43b5bce1a8a2b1c12f.png" alt="Guild icon" />
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Haz私人團務區</div>
+        <div class="preamble__entry">耶路撒冷聖杯戰爭 - Chapter 5-2: Rider．決裂</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+    <div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 04:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="709315324306128986" id="message-709315324306128986">
+                <div class="chatlog__content">
+                    <span class="markdown">雖然美其名是到外面巡視，但實際上幾乎可以說是被趕了出來。
+走出沉悶的地下室，在經過那狹窄卻充滿生活感的房間時，妳能看到許多被倉促抽出的衣物、以及散落在地上的玩具布偶。或許法蒂妮在撤離時已經做好心理準備，但那年幼的女孩又會是什麼樣的心情？來到室外，在朦朧飄下的雨滴之上，天空一片灰暗。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709315367499202601" id="message-709315367499202601">
+                <div class="chatlog__content">
+                    <span class="markdown">……接下來，該怎麼做呢？</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 05:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="709339923366281258" id="message-709339923366281258">
+                <div class="chatlog__content">
+                    <span class="markdown">周遭一切儘是她想抽離的元素。
+Rider沒有信心，接下來能和Caster平靜相處多久。或許他是好人，但厚重的往時傷痕，並沒有給她們留下足夠的紓解空間。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709341418854023197" id="message-709341418854023197">
+                <div class="chatlog__content">
+                    <span class="markdown">「救助之手...又該伸向哪裡？」
+要思考的難題已經夠多了，沒有餘力再解摩西這件事，現在她只想走更遠些。就像前幾次那樣，去找街道上需要協助的人吧......少女並非真正仁愛無私，但多見到別人的笑容，可以讓自己心情也跟著變好。</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 08:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="709376309385756773" id="message-709376309385756773">
+                <div class="chatlog__content">
+                    <span class="markdown">走在街道上，即使是在宗教聖地的舊城區，妳也能清晰地感受到氣氛的肅殺。幾天前街道上熱鬧的景象早已不在，不知道是不是將這裡視為了核心戰區，在這裡巡邏的特警人數更多，且幾乎不會單獨行動。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709376424058028084" id="message-709376424058028084">
+                <div class="chatlog__content">
+                    <span class="markdown">沒有可以幫助的人……不如說，妳在街上幾乎看不到什麼人。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709377292958302290" id="message-709377292958302290">
+                <div class="chatlog__content">
+                    <span class="markdown">漫無目的地遊盪著，不知是否是命運的指引、又抑或是下意識受到了靈脈的引導，妳緩緩地向著聖殿山的方向靠近。仰望籠罩著聖地的烏雲，透過那降在地上的綿綿細雨，妳敏銳的察覺到了一道微弱的魔力反應。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709377382024478742" id="message-709377382024478742">
+                <div class="chatlog__content">
+                    <span class="markdown">──Archer確實沒死。</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 08:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="709379518367793163" id="message-709379518367793163">
+                <div class="chatlog__content">
+                    <span class="markdown">Archer？
+意外的發現，但好像不該輕忽。鑑於先前的狙擊經驗，Rider神情一凝，準備上前就近查探對方動向。</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 08:39 PM</span>
+
+            <div class="chatlog__message " data-message-id="709384159239340113" id="message-709384159239340113">
+                <div class="chatlog__content">
+                    <span class="markdown">凝神注意，妳很快就鎖定了Archer的魔力反應位置。在聖殿山頂，他的反應極為虛弱……要不是曾經接觸過，妳幾乎會將他當成與火槍手一樣程度的存在。說到火槍手，妳也沒有在附近感知到其他的反應，恐怕在御主死亡後，殘存的魔力就已自顧不暇吧。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709385199397634150" id="message-709385199397634150">
+                <div class="chatlog__content">
+                    <span class="markdown">緩緩地沿著步道接近，透過靈體化的方式穿過了重兵佈署的以色列軍警，妳來到了聖殿山頂，阿克薩清真寺前的空地──妳還記得在前天晚上，妳的御主索拉曾在這裡與Lancer過招，而在昨日晚上，這裡似乎也發生過一場激烈的戰鬥，地上隱隱能看見刀槍留下的爪痕。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709385747932643470" id="message-709385747932643470">
+                <div class="chatlog__content">
+                    <span class="markdown">「……Rider嗎？」從石牆邊空蕩蕩的位置傳來了Archer的聲音，即使彼此皆處於靈體化，但妳仍能看見紅衣主教虛弱的身影靠坐在牆邊，透過地底下的靈脈穩定自己的存在。</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 08:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="709387877821186148" id="message-709387877821186148">
+                <div class="chatlog__content">
+                    <span class="markdown">少女現身，趕忙蹲下查看Archer情況──雖為英靈，這般動作或許毫無意義，但她仍是反射性地如此靠近。
+「主教，你還好吧？撐得住嗎？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 09:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="709395804527263837" id="message-709395804527263837">
+                <div class="chatlog__content">
+                    <span class="markdown">「撐是撐得住，但也就只是這樣了。」紅衣主教勉強撐起一抹微笑：「讓妳見笑了。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 09:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="709398785285161000" id="message-709398785285161000">
+                <div class="chatlog__content">
+                    <span class="markdown">「你在說什麼啊，又不是你的錯，是......」
+話語止住，也不知道該怎麼表達一團胡亂的想法，煩悶地拋到一邊。
+「得趕快找新的魔力源！否則你會消失的。」
+去哪裡找好呢，附近應該有教會才對。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709399281244700692" id="message-709399281244700692">
+                <div class="chatlog__content">
+                    <span class="markdown">扶著主教的那隻手，隱隱閃出紅光。
+她忽然頓悟了。救助的意義，難道是這個嗎？</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709400032922697789" id="message-709400032922697789">
+                <div class="chatlog__content">
+                    <span class="markdown">「...你需要魔術師對吧。」
+深呼吸一口氣，任由魔力聚集變形，埃及的神母頓時現身。
+她誦讀起復活之咒。</span>
+
+                        
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709401149488365600" id="message-709401149488365600">
+                <div class="chatlog__content">
+                    <span class="markdown"><strong>「汝之真名為黎希留，今以女神之命予汝昇華。」</strong>
+<strong>「你擁有伊西絲的血液；你擁有伊西絲的力量；你擁有伊西絲的法力。此護身符即為保護，它將會驅除所有針對他的罪行。」</strong>
+<strong>「Tyet-Ankh-Isset。」</strong></span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709401503114461215" id="message-709401503114461215">
+                <div class="chatlog__content">
+                    <span class="markdown">環抱安卡的令咒，縈繞出赤紅的絲線，將兩者命運繫於一體。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709401715732119574" id="message-709401715732119574">
+                <div class="chatlog__content">
+                    <span class="markdown">一切皆是如此自然，沒有躊躇。</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">11-May-20 09:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="709403683162685481" id="message-709403683162685481">
+                <div class="chatlog__content">
+                    <span class="markdown">「你那是……」注意到了妳手上的令咒，黎希留正想說些什麼，妳便開始了妳的動作。
+簡短而有效的宣言啟動了儀式，藉著聖杯賦予的令咒，妳觸碰著Archer的雙手編織著契約，聯繫了彼此。從妳靈格中湧出的魔力沿著甫建立的管道導入紅衣主教的體內，緩緩修補著他因魔力匱乏而發生龜裂的靈基。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709404636683042836" id="message-709404636683042836">
+                <div class="chatlog__content">
+                    <span class="markdown">「妳可真是亂來啊，Rider……」紅衣主教的右手蓋上妳的手掌，露出一副不知所措的表情：「不，吾的Master啊。」
+透過令咒賦予的聯繫，妳知道妳成功了……契約成立，Archer已經是妳的從者，而妳與索拉和菲力克斯站在了同樣的高度。黎希留的狀態雖然仍未達萬全，但靠著妳的魔力供給，確實已經避免了消散的危機。</span>
+
+                        
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709405775558082560" id="message-709405775558082560">
+                <div class="chatlog__content">
+                    <span class="markdown">然而，妳所送出的魔力並不是平白得來。作為締結契約的代價，妳感覺到身體彷彿被掏空般的虛弱，儘管依靠著索拉的契約仍能正常活動，但妳知道若在這種情況下開放寶具，妳與黎希留都將一起消散。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709405995046273164" id="message-709405995046273164">
+                <div class="chatlog__content">
+                    <span class="markdown"><div class="pre pre--multiline nohighlight">獲得形象［供不應求的契約魔力需求］</div></span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 12:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="709619744634044436" id="message-709619744634044436">
+                <div class="chatlog__content">
+                    <span class="markdown">「呼......」明明抽乾了大部分魔力，她卻覺得無比清爽。
+跌坐在地，仰望鮮豔的令咒，少女情不自禁露出傻笑。
+「想不到真的成功了。謝謝妳啦，小西。」</span>
+
+                        
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 12:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="709622053820694620" id="message-709622053820694620">
+                <div class="chatlog__content">
+                    <span class="markdown">有時候，她總連自己是誰也搞不清楚。不過現在，已有一項確切扎實的身分擺在眼前。
+溶去外貌，Rider再度回歸真身。她努力擠出氣勁，和主教一同站起來。
+「重新向你自我介紹，黎希留。我是伊娥，河流之女、希拉神殿的祭者、阿耳戈斯的公主。」
+「雖然還有很多其他稱號，不過隨便你叫吧，高興就好。」</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709622744089755689" id="message-709622744089755689">
+                <div class="chatlog__content">
+                    <span class="markdown">丟出真名，只為一時興之所致。然而正該如此，不為任何責任、義務與計謀，單純表現了短暫的激情，這才是她的生活方式。
+「可能有很多該聊的，但我還沒想好從哪開始。你有什麼想說的嗎？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 01:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="709645534104780842" id="message-709645534104780842">
+                <div class="chatlog__content">
+                    <span class="markdown">「那還是容吾喚妳為Rider吧。」黎希留微微淺笑，手扶著妳一同起身：「雖然結果是被妳救了，吾似乎也不好多加置喙。不過……怎麼說呢，還真是沒有考慮過採取了行動呢。」
+「妳的御主……是叫做索拉．阿克諾利吧，他沒問題嗎？」</span>
+
+                        
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 06:58 PM</span>
+
+            <div class="chatlog__message " data-message-id="709721250095824956" id="message-709721250095824956">
+                <div class="chatlog__content">
+                    <span class="markdown">索拉的問題是該想一下。雖然答案或許在更早之前就已被決定──因她是她，也因索拉就是索拉。
+「順其自然吧！索拉的陣營已經不能待了，得和他商量一下怎麼處理令咒。」
+有艾米在，說不定這還算不上麻煩。而且Rider也不願單方面想太多，有事自然說清楚最好。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709722149610586133" id="message-709722149610586133">
+                <div class="chatlog__content">
+                    <span class="markdown">一念之間，她就接通念話。
+「索拉，出大事了。我們的契約可能該結束了。」
+「我變成御主了。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 07:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="709726802272059473" id="message-709726802272059473">
+                <div class="chatlog__content">
+                    <span class="markdown">念話另一端的索拉沒有回應，在短暫的沉默後，傳來卻是帶著笑意的聲音：「你在開什麼玩笑？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 07:28 PM</span>
+
+            <div class="chatlog__message " data-message-id="709728618900881438" id="message-709728618900881438">
+                <div class="chatlog__content">
+                    <span class="markdown">按照慣例，這肯定是在不悅。
+「聖杯認同我的願望，給了我三條令咒，新的契約也簽訂了。」
+「要見面談嗎？沒有別人，就你和我。」
+「有些事情該說清楚了。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 07:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="709732270566670357" id="message-709732270566670357">
+                <div class="chatlog__content">
+                    <span class="markdown">察覺瑪莉亞說的或許是事實而非玩笑後，索拉這次真的在地下室笑出聲來，隨後傳過去的聲音輕鬆地說道：「好啊，你想在那裡談？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 08:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="709737030267175102" id="message-709737030267175102">
+                <div class="chatlog__content">
+                    <span class="markdown">「屋外的廣場，5分鐘後。」
+腳步啟程，並讓Archer不用動。「主教你在這等一下，我待會就回來。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 08:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="709737933678313645" id="message-709737933678313645">
+                <div class="chatlog__content">
+                    <span class="markdown">「祝妳一切順利。」主教苦笑著目送妳離去，儘管驚訝於妳的行動力與天真，但他並沒有對妳的決定表示意見。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709738644717699163" id="message-709738644717699163">
+                <div class="chatlog__content">
+                    <span class="markdown">＝＝＝＝＝＝＝＝</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 08:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="709740221884923934" id="message-709740221884923934">
+                <div class="chatlog__content">
+                    <span class="markdown">舊城區，法蒂妮住家附近的廣場前，正是妳昨晚與Assassin對談的場所。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709740647803912252" id="message-709740647803912252">
+                <div class="chatlog__content">
+                    <span class="markdown">在烏雲籠罩下，灰濛濛的雨天彷彿正暗示著什麼。
+當Rider終於抵達，那名黑髮青年的身影早已久候多時。</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 08:21 PM</span>
+
+            <div class="chatlog__message " data-message-id="709741925309349908" id="message-709741925309349908">
+                <div class="chatlog__content">
+                    <span class="markdown">隨著步伐漸近，Rider慢慢沉澱自我。她已確認，內心不再有半點遲疑，呼吸和雨聲同步對拍。
+見著少年後，她挽群躬身，和第一次會面時同樣微笑。</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 08:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="709744270680260630" id="message-709744270680260630">
+                <div class="chatlog__content">
+                    <span class="markdown">看著瑪莉亞的動作，索拉臉上的表情沒有變化，只是像在等待什麼般的不動。
+「你的令咒呢？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 08:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="709744600990089306" id="message-709744600990089306">
+                <div class="chatlog__content">
+                    <span class="markdown">她張開掌心，現出那道風格濃厚的令咒：</span>
+
+                </div>
+
+                <div class="chatlog__attachment">
+                    <a href="https://cdn.discordapp.com/attachments/656436422655606784/709744600436310036/c07aff76e01ff126.png">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/656436422655606784/709744600436310036/c07aff76e01ff126.png" alt="Attachment" />
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709746237829808168" id="message-709746237829808168">
+                <div class="chatlog__content">
+                    <span class="markdown">「波折一言難盡，總之現況就是這樣。」
+「你可能無法接受，但我覺得是該結束我們之間的關係了，這樣對大家都好。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 08:44 PM</span>
+
+            <div class="chatlog__message " data-message-id="709747789990461552" id="message-709747789990461552">
+                <div class="chatlog__content">
+                    <span class="markdown">「你還真的得到令咒了啊，聖杯到底在想什麼……」索拉手插著腰，無奈地笑著嘆了口氣，「先告訴我你是什麼時候得到令咒和你的從者是誰吧。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 08:47 PM</span>
+
+            <div class="chatlog__message " data-message-id="709748546546434128" id="message-709748546546434128">
+                <div class="chatlog__content">
+                    <span class="markdown">「嗯～可是我們就要變對手了，這些資訊好像──」Rider想想，感覺瞞著也沒意思。「算了。」
+「Archer啊，他是唯一的無主從者。可能因為這樣，聖杯昨晚便給我令咒。」</span>
+
+                        
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 09:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="709752633535234179" id="message-709752633535234179">
+                <div class="chatlog__content">
+                    <span class="markdown">「對手？你真的知道自己在做什麼嗎……」索拉抓了抓頭髮，亮出自己手上剩餘兩劃的令咒，「你不會不知道這東西在我們『人類』的手上是為了什麼吧？」
+他掩著自己的臉，像是在感嘆自己的從者為何會做出如此荒唐的行為，「算了，既然你說想結束，那就讓我聽聽你的理由吧。」</span>
+
+                        
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 09:16 PM</span>
+
+            <div class="chatlog__message " data-message-id="709755762162794526" id="message-709755762162794526">
+                <div class="chatlog__content">
+                    <span class="markdown">「你的魔力量不夠承擔兩名從者吧？照這樣下去，不是我先消散，就是你被契約榨乾魔力而死。」</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709756184734859344" id="message-709756184734859344">
+                <div class="chatlog__content">
+                    <span class="markdown">「你真的想留著令咒嗎？我覺得那樣不是好事，反而會害到索拉你。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 09:26 PM</span>
+
+            <div class="chatlog__message " data-message-id="709758382969454653" id="message-709758382969454653">
+                <div class="chatlog__content">
+                    <span class="markdown">「說要說清楚，結果講的就是這些？這不是你真正的理由吧。難道你骨子裡流著背叛的血液，讓你毫無理由地選擇放棄御主嗎？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 09:41 PM</span>
+
+            <div class="chatlog__message " data-message-id="709762072237572098" id="message-709762072237572098">
+                <div class="chatlog__content">
+                    <span class="markdown">「...索拉，你有信任過我嗎。」
+Rider輕淡說道：「對你來說，從者既非道具也非生命，只是一片待觀察的風景。」</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709762262931472424" id="message-709762262931472424">
+                <div class="chatlog__content">
+                    <span class="markdown">「甚至對其他人也是。沒有必要傾心、沒有必要說明，你總是在觀察別人，從不透露半片真實。」</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709762473267429438" id="message-709762473267429438">
+                <div class="chatlog__content">
+                    <span class="markdown">「從沒現出真面目的朋友，又怎麼可能令人交心呢？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 10:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="709770767348269188" id="message-709770767348269188">
+                <div class="chatlog__content">
+                    <span class="markdown">彷彿一顆石頭沉入了湖泊般，索拉靜靜地看著瑪莉亞，「還有嗎？你對我的不滿。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 10:21 PM</span>
+
+            <div class="chatlog__message " data-message-id="709772176127164447" id="message-709772176127164447">
+                <div class="chatlog__content">
+                    <span class="markdown">「這樣就足夠了吧。」本未期待什麼反應，Rider已準備離開。「你想保留令咒也沒關係，就順其自然吧。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 10:38 PM</span>
+
+            <div class="chatlog__message " data-message-id="709776554779213864" id="message-709776554779213864">
+                <div class="chatlog__content">
+                    <span class="markdown">索拉深吸一口氣，「如果你想和自己的御主成為朋友，很遺憾我無法滿足你的期望。」
+「我也期望過我有個能與我同心協力的從者，但我也發現你我豈止是不同心，我們有太多地方都不相同了，就算給你更多的期待與壓力也於事無補。」
+「現在你有自己的令咒、自己的從者。你有得選擇了，但很可惜，我沒有。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 11:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="709783332551917720" id="message-709783332551917720">
+                <div class="chatlog__content">
+                    <span class="markdown">她嘆了一口氣。如果早點吐出這種煩惱，是否結果就會變了？
+但她不想再為別人扭曲自己，更別說是見不著的御主願望。
+「索拉‧阿克諾利，我還是沒辦法喜歡上你。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 11:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="709788062434983985" id="message-709788062434983985">
+                <div class="chatlog__content">
+                    <span class="markdown">索拉暗自嘆了口氣。
+「那麼最後讓我確認一件事吧。我記得你說過你的願望是世界大同，那麼，你打算怎麼改造這個世界？」</span>
+
+                        
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 11:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="709789531351679087" id="message-709789531351679087">
+                <div class="chatlog__content">
+                    <span class="markdown">「暴力很不好，謊言也很不好。所以我希望新的世界，能完全杜絕這兩樣東西。」
+談起願望，Rider便漾起舒適的笑容。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709789623093559368" id="message-709789623093559368">
+                <div class="chatlog__content">
+                    <span class="markdown">「與全世界人類立約，不得隱瞞本心，且禁止互相同意、維護秩序以外，人類之間的一切殺傷。」</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="709789921702838342" id="message-709789921702838342">
+                <div class="chatlog__content">
+                    <span class="markdown">「未來將再也沒有謊言，人人都能面對真實，追尋願望。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-May-20 11:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="709796271254274198" id="message-709796271254274198">
+                <div class="chatlog__content">
+                    <span class="markdown">索拉搖了搖頭，斷然道：「這個願望是行不通的。當你的願望成真的那一刻，不但無法達成你理想的世界，更會因為這翻天覆地的改變帶來巨大的傷害。你真的了解你想拯救的人類嗎？就算沒有暴力、沒有謊言，人類也會找到其他方法傷害彼此。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">13-May-20 12:09 AM</span>
+
+            <div class="chatlog__message " data-message-id="709799311571157032" id="message-709799311571157032">
+                <div class="chatlog__content">
+                    <span class="markdown">「但這是一條可能性！人類的善性是真，只要我們能看見彼此的純真，遲早能創造出美好的未來。」
+對這條意見，Rider絲毫不肯讓步，反而向前一踏逼近索拉。
+「此份願望交給聖杯和命運公評。如果覺得我錯了，就來打倒我啊。」
+「我們都是在愚蠢掙扎的凡人，你又憑什麼否定？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">13-May-20 10:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="710143803331444816" id="message-710143803331444816">
+                <div class="chatlog__content">
+                    <span class="markdown">索拉不為所動地看著瑪莉亞逼近，眼神流露失望，「你不相信也罷。但是你竟然說要交給公評，為什麼你能如此輕易地決定人類的命運？這樣的態度和賭博有什麼兩樣？你是很期待賭贏後的世界，但要是你錯了呢？你有辦法負起責任嗎？你沒辦法。你甚至不用承受賭輸的苦果，因為它是由活在這個世界的所有人承擔的，你什麼都不用承擔。」</span>
+
+                        
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">13-May-20 11:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="710149582641692853" id="message-710149582641692853">
+                <div class="chatlog__content">
+                    <span class="markdown">「命運選擇了我為英靈，是整個世界塑造了我的生命。既然如此，我的願望便代表世界的意志。」</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="710149736811987024" id="message-710149736811987024">
+                <div class="chatlog__content">
+                    <span class="markdown">價值觀的巨大差異，使她決定不再爭執。
+「就此打住吧。你還有什麼想說的嗎？」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="乙名＠你知道自己在做什麼嗎？#3639" data-user-id="249145925921013760" style="color: #3498DB">索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 12:45 AM</span>
+
+            <div class="chatlog__message " data-message-id="710170765844152390" id="message-710170765844152390">
+                <div class="chatlog__content">
+                    <span class="markdown">聽著瑪莉亞說出的話，索拉才發現這名英靈不只是天真，還比自己想的更加無情且瘋狂。
+「不久前才看你自認不是英雄自卑的樣子，沒想到現在卻可以因為自己的身分如此傲慢，簡直判若兩人。」索拉笑著感嘆了一下，環視著街上的風景，像是眺望整個世界般說：「看看這個地方，爭奪願望機的聖杯戰爭正是人類欲望的縮影。人類無盡的欲望正是痛苦的根源，知足才是唯一的解藥。」
+他重新看著Rider，眼神只寄於最後的希望，「我的話或許你聽不進去，但你要真是為人類好，不如真正去瞭解活在這個世界的人經歷的苦難和想法吧。要是認為人類沒資格插嘴，那不如問問和你同為英靈的Archer等人如何？」
+「這之後就當作我給你的自由時間，想幹嘛就去幹嘛吧。」他伸了個懶腰，像是鬆了口氣般說著，「但是別忘了，要是我死了，你和Archer都會跟著消散，你的願望當然也就沒有實現的可能。就算你們活到了最後，必須湊齊六名英靈的魔力才能使用的聖杯也勢必要犧牲你們其中一人。不過，關於這些事，Archer肯定比你明理吧。」
+他轉過身，揮了揮手，步伐輕盈，「就別讓Archer打這種沒有回報的戰爭了，早點放過他吧。」</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456" style="color: #9B59B6">Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 01:08 AM</span>
+
+            <div class="chatlog__message " data-message-id="710176548161847358" id="message-710176548161847358">
+                <div class="chatlog__content">
+                    <span class="markdown">這些話語，無一不令她心痛。但她知曉這是該有的歷程，必須邁過痛苦才能繼續走下去。
+這是最後一次的嘗試，可惜以失敗告終。
+而自始至終男人都未能得知，她是不可能許下願望的。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="710177872135979079" id="message-710177872135979079">
+                <div class="chatlog__content">
+                    <span class="markdown">因此，她輕輕地放下了鑽心之言。
+「那你也認真聽吧，索拉。」
+「若你無欲，此處便非你應在之所。這是身為從者，我所贈予的最後一言。」</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="710178820455399518" id="message-710178820455399518">
+                <div class="chatlog__content">
+                    <span class="markdown">乘上雲朵，僅需淡淡一揮。
+伊人隨風漂離，不帶悲傷、唯有片絲訣情。</span>
+
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar" />
+    </div>
+    <div class="chatlog__messages">
+    <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" style="color: ">GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">14-May-20 11:44 AM</span>
+
+            <div class="chatlog__message " data-message-id="710336604522283048" id="message-710336604522283048">
+                <div class="chatlog__content">
+                    <span class="markdown">在陰雨下，儘管兩人之間仍有聖杯契約的相連，但互相背離的心，終於正式決裂。</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="710336894772183051" id="message-710336894772183051">
+                <div class="chatlog__content">
+                    <span class="markdown">一方失去了從者、而一方失去了魔力供給的來源……即使犧牲了勝機，也要貫徹自己的意志，這場聖杯戰爭，接下來又會朝著什麼樣的方向發展呢……？</span>
+
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="710336899155492875" id="message-710336899155492875">
+                <div class="chatlog__content">
+                    <span class="markdown"><div class="pre pre--multiline nohighlight">因為[Rider的自成勢力]，索拉將因此陷入麻煩，獲得1點命運點</div>
+＝＝＝＝＝＝＝＝</span>
+
+                        
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

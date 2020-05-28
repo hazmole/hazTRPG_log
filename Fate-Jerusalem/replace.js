@@ -1,3 +1,4 @@
+// '/c/Program Files/nodejs/node.exe' replace.js (filename)
 const fs = require('fs');
 
 if(process.argv.length < 3){
