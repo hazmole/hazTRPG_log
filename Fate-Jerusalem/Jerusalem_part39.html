@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>耶路撒冷聖杯戰爭 - Part 39</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/576671536866525184/d5aefe15fbbffb43b5bce1a8a2b1c12f.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Haz私人團務區</div>
+        <div class="preamble__entry">耶路撒冷聖杯戰爭 - Chapter 5-7: 聖殿山上的決鬥</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+    <div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">14-Jun-20 07:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="721681827244408852" id="message-721681827244408852">
+                <div class="chatlog__content">
+                    <div class="markdown">當太陽終於沒入地平線之下，原本因烏雲籠罩而陰鬱的天色頓時變得更加黑暗。
+不知是否為心理作用，不間斷的綿綿細雨似乎變得更大了些。撐著讓人聯想到喪禮的黑色雨傘，洛克神父走在最前頭，帶領你們來到了聖殿山。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721682540636798987" id="message-721682540636798987">
+                <div class="chatlog__content">
+                    <div class="markdown">距離約定的時間還有一段時間，或許是出於禮數，抑或是為了早一步掌握戰場，Archer和Lancer在這幾天總是會提早在這裡待命。早早站在決鬥場所的一側，Lancer氣定神閒；而Archer透過寶具召喚出來的火槍兵也早已埋伏在四周的高地，佈署著難以擅闖的監視網。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721683185741725727" id="message-721683185741725727">
+                <div class="chatlog__content">
+                    <div class="markdown">「……御主，觀察到Saber的接近，與昨晚一樣，單獨從東門進入。」借助著寶具創造出的聯繫，Archer向妳傳達了火槍兵的觀察結果。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721684085390573598" id="message-721684085390573598">
+                <div class="chatlog__content">
+                    <div class="markdown">「不要出手喔，Archer。」
+「這句話你說第三遍了，Lancer。」
+談笑間，Lancer象徵性的暖身動了動脖頸，手一翻，從虛空中握住了那柄毫無特色的斧槍。轉頭看向妳。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721684188222193694" id="message-721684188222193694">
+                <div class="chatlog__content">
+                    <div class="markdown">「Rider也是，妳只要阻止他再用令咒逃跑就好，可別擅自出手喔。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">14-Jun-20 07:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="721694482847891508" id="message-721694482847891508">
+                <div class="chatlog__content">
+                    <div class="markdown">她的心情在登山間逐漸整理完畢，掃去了一應雜念，將自己調整至最佳狀態。
+既身為御主，責任便不再是衝鋒陷陣，而是讓接下來的每一項決策，都不需要後悔。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721695633492410488" id="message-721695633492410488">
+                <div class="chatlog__content">
+                    <div class="markdown">「嗯...盡量吧，我自己也想見證你的勇武。但若發生其他意外，人命還是我第一重視的。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721695902754144256" id="message-721695902754144256">
+                <div class="chatlog__content">
+                    <div class="markdown">「萬一出了差錯導致事與願違，還請原諒我吧。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">15-Jun-20 03:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="721991809223491625" id="message-721991809223491625">
+                <div class="chatlog__content">
+                    <div class="markdown">「那當然。」Lancer哈哈一笑，不以為然。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721993361900306523" id="message-721993361900306523">
+                <div class="chatlog__content">
+                    <div class="markdown">斧槍向地面一敲，Lancer毫無保留的釋放出了魔力的波動，對接近中的薩拉丁發出了宣戰布告。不多時，從東門的方向，薩拉丁也回以同樣的禮儀，並加快了接近而來的腳步。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721994563467870208" id="message-721994563467870208">
+                <div class="chatlog__content">
+                    <div class="markdown">隨著接近而來的龐大魔力，附近火槍兵的氣息明顯歛起，為戰鬥做足了準備。Archer吸了一口氣，眼神看向薩拉丁的方向，洛克神父也離開了靠著的牆面，全神貫注。只有身處決鬥場中心的Lancer，仍是一副老神在在的模樣。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721995496469692456" id="message-721995496469692456">
+                <div class="chatlog__content">
+                    <div class="markdown">終於，在綿綿細雨中，薩拉丁的身影從聖殿山的階梯出現。一如往常，孤身一人，見到這邊這麼大陣仗的迎接，微微露出苦笑。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721995858606030868" id="message-721995858606030868">
+                <div class="chatlog__content">
+                    <div class="markdown">「喂，Saber，這次可別打到一半逃跑啦。」Lancer率先出聲，張開雙臂喊道：「不然您王者的名號可要哭出來了。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721996322177155082" id="message-721996322177155082">
+                <div class="chatlog__content">
+                    <div class="markdown">「放心，不會有下次了。」薩拉丁聳聳肩，站到定位，抽出長劍。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="721996810075242587" id="message-721996810075242587">
+                <div class="chatlog__content">
+                    <div class="markdown">他的視線往Rider的方向瞥了一眼，但沒有多問什麼。對於這名驕傲的君王而言，上一次的「戰術」或許確實在他心中留下了一塊陰影。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">15-Jun-20 05:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="722021027777085450" id="message-722021027777085450">
+                <div class="chatlog__content">
+                    <div class="markdown">兩邊的態度，已在沉默間表達完畢。下一次的交流契機，就要待到戰鬥中斷後了。
+而她想努力不讓其發生。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">16-Jun-20 02:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="722342543982854165" id="message-722342543982854165">
+                <div class="chatlog__content">
+                    <div class="markdown">舉起兵器，用風格迥異的姿勢互相行禮後，兩人同時前踏，拉近距離，敲響了戰鬥。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">16-Jun-20 02:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="722344573430530138" id="message-722344573430530138">
+                <div class="chatlog__content">
+                    <div class="markdown">俗話說「一吋長，一吋強」，佔了攻擊範圍優勢的Lancer率先發起攻勢，沉重的斧槍毫無技巧地當頭揮下。但儘管沒有取巧，這一斬卻也不是薩拉丁能夠用長劍接下的攻擊，在斧刃帶起的勁風下，薩拉丁被迫向側邊閃去，長劍斜斜揚起，欺近Lancer的左胸。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722345295232630856" id="message-722345295232630856">
+                <div class="chatlog__content">
+                    <div class="markdown">然而那大開大闔的先手不過是引子，Lancer雙手一翻，斧槍的槍柄捲起，先是擊退了襲擊而至的長劍，斧刃一旋，更是準備從薩拉丁的後方將他的腦袋砍下來。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722345757767893002" id="message-722345757767893002">
+                <div class="chatlog__content">
+                    <div class="markdown">薩拉丁矮身避開鋒芒，右腳一掃，試圖從下段動搖Lancer的站姿，但早已料到有這一步。Lancer向後一退，斧槍在手，正好又拉開了距離。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722346953538666496" id="message-722346953538666496">
+                <div class="chatlog__content">
+                    <div class="markdown">這數回合的交手不過眨眼之間，憑藉著同等位格的雙眼，妳能夠勉強捕捉到他們的速度，而妳也同時能意識到在這短短的交手過程，Lancer確實佔了上風。
+「還是一樣精湛的武藝呢，Lancer。」薩拉丁勾起笑容，肅穆的面容上滿是戰意。
+「你也是啊，薩拉丁。」Lancer仍然是那故做輕鬆的姿態，斧槍還隨著他的話語微微顫動：「不過，這也是第三次交手了呢……」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722347464639643648" id="message-722347464639643648">
+                <div class="chatlog__content">
+                    <div class="markdown">「你應該也已經很清楚，單憑劍刃相交是勝不過我的……對吧？」做出挑釁似的發言，Lancer招了招手：「你還想繼續陪老爺子我跳舞嗎？還是你想要動真格的了呢？」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722347835537883236" id="message-722347835537883236">
+                <div class="chatlog__content">
+                    <div class="markdown">「上次是我失約在先，就隨您想怎麼做就怎麼做吧。」劍尖下垂，薩拉丁沉聲說到，眼神卻不敢離開Lancer的槍尖。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">16-Jun-20 08:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="722424086646751324" id="message-722424086646751324">
+                <div class="chatlog__content">
+                    <div class="markdown">外行如她也知曉，在單挑時槍比長劍優秀許多，那些故國的戰爭英雄幾乎都是槍手。不過一旦成為英靈後，劍的重量便會慢慢體現出來了。
+「寶具」承載的傳說，將把這場戰鬥抬高到英雄們生前不可企及的新境界。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722424874496426014" id="message-722424874496426014">
+                <div class="chatlog__content">
+                    <div class="markdown">為此，她也需要做起其它準備。
+稍有疏忽，戰鬥進展便會突飛猛進。必須成為能跟上他們速度的軀體......</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722424990787567628" id="message-722424990787567628">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #變化為水</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">16-Jun-20 08:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="722424992305905738" id="message-722424992305905738">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="紫紫#5726">@Rider（PL: 紫紫）</span>:  <span class="pre pre--inline">4df+2</span> 變化為水 = (b-+-)+2 = 1</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">16-Jun-20 08:28 PM</span>
+
+            <div class="chatlog__message " data-message-id="722427417272123454" id="message-722427417272123454">
+                <div class="chatlog__content">
+                    <div class="markdown">/花1命運點援引【伴隨雲雨的精靈】+2，成功創造【水型態(1)】</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722428251464532040" id="message-722428251464532040">
+                <div class="chatlog__content">
+                    <div class="markdown">暫無必要躲至天空，先繼續在地面上觀視戰局吧。待發生變故時，立即捲起神父離開即可......</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">16-Jun-20 08:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="722432576110723132" id="message-722432576110723132">
+                <div class="chatlog__content">
+                    <div class="markdown">隨著身體緩緩被水體取代，戰場上的交鋒速度也越發快速。儘管斧槍看似笨重，但隨著一次又一次的交鋒，隨著它一次又一次撞開薩拉丁手中的彎刀，那柄平凡無奇的鐵器彷彿化做了雷電，在戰場上一次又一次的劈下。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722433489017896982" id="message-722433489017896982">
+                <div class="chatlog__content">
+                    <div class="markdown">比起決出勝負，Lancer似乎更享受於生死決鬥特有的緊張感。正如其所宣言的那樣，他在戰場上的身姿彷彿舞蹈，隱含著某種規律、某種架式，但卻又不拘泥於型，總能在最正確的時機招架、格擋、反擊，然後收穫戰果。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722433917738549258" id="message-722433917738549258">
+                <div class="chatlog__content">
+                    <div class="markdown">數分鐘過去，兩人已經交手了數百回合，金鐵交鳴聲中，薩拉丁的臉龐終於留下了數道血痕，但Lancer揮舞著的斧槍也已出現捲口。跟薩拉丁手中承載著威名的大馬士革彎刀不同。無論是妳，還是正身處戰場中的薩拉丁，都能確定Lancer手中的武器並非「寶具」。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722434936505630820" id="message-722434936505630820">
+                <div class="chatlog__content">
+                    <div class="markdown">「看來是決勝負的時候了呢。」毫不可惜的鬆開手，讓斧槍憑空消散。Lancer往空氣中虛抓一把，卻抓了個空，有些尷尬的抓了抓頭：「唉呀……老是會忘記自己現在是Lancer呢。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722436154720518199" id="message-722436154720518199">
+                <div class="chatlog__content">
+                    <div class="markdown">「如果您是以Saber的職階被召喚，或許沒有人能在白兵戰上勝過您吧。」薩拉丁抹去臉頰的血漬。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722436361482666035" id="message-722436361482666035">
+                <div class="chatlog__content">
+                    <div class="markdown">「喔？你知道我是誰啦？」有些驚訝的大笑著，Lancer瞇起眼：「不過嘛……你只說對了一半。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722436517162778696" id="message-722436517162778696">
+                <div class="chatlog__content">
+                    <div class="markdown">「就算以Lancer的身分現世，也沒有人能讓我在白兵戰上吞敗。」
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722437917133373461" id="message-722437917133373461">
+                <div class="chatlog__content">
+                    <div class="markdown">「或許是如此……但，我想你也不會只滿足於刀與劍的舞蹈吧。」長嘆了口氣，像是很可惜不能以純正的武藝勝過這樣一名武人。薩拉丁端正姿勢，將劍尖上揚。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722438316464537600" id="message-722438316464537600">
+                <div class="chatlog__content">
+                    <div class="markdown">「當然，你敢保留實力的話，我可是會殺了你的喔？異教徒的國王啊。」Lancer笑著，換了個架式，身邊浮現出點點星光，構築出了彷彿兵譜般的書卷。
+
+
+「吾名長槍，
+　吾乃尊貴之兵，戰鬥之始」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">16-Jun-20 09:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="722440937158213715" id="message-722440937158213715">
+                <div class="chatlog__content">
+                    <div class="markdown">對Rider來說，近代人類並不屬於她的知識範疇，若要釐清Lancer身分，只能借助聖杯之力了吧。
+不為戰略目的，她只是想猜測...接下來的戰局，她會再看到什麼呢？</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="722441029508136980" id="message-722441029508136980">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+1 #思考Lancer真名(凡俗學識)</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">16-Jun-20 09:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="722441030116311102" id="message-722441030116311102">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="紫紫#5726">@Rider（PL: 紫紫）</span>:  <span class="pre pre--inline">4df+1</span> 思考Lancer真名(凡俗學識) = (b+bb)+1 = 2</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">18-Jun-20 04:48 PM</span>
+
+            <div class="chatlog__message " data-message-id="723096876320161849" id="message-723096876320161849">
+                <div class="chatlog__content">
+                    <div class="markdown">並非王公將相，手持亦非神兵利器，單純武藝高強的無名戰士可謂多如過江之鯽。就算將時代限定在中世紀，要鎖定這麼一位特定人物仍然太過困難。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723097991178878988" id="message-723097991178878988">
+                <div class="chatlog__content">
+                    <div class="markdown">然而，當Lancer身邊的光芒化作了一頁頁書頁，那描繪著手持各樣兵器的戰士、使用不同架式與對手相搏的「劍譜」終於成形後，妳才終於知道了Lancer的真名。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723099330537455648" id="message-723099330537455648">
+                <div class="chatlog__content">
+                    <div class="markdown">菲奧雷．德．利貝里（Fiore dei Liberi），他是十四世紀末期著名的騎士、外交家、兵器格鬥大師。生於阿奎萊雅境內，自幼浸淫於百家武學，在數不勝數的德國和義大利大師門下研習各種武器之後，便開始了他週遊西歐列國交流和講學的旅途。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723100284208939018" id="message-723100284208939018">
+                <div class="chatlog__content">
+                    <div class="markdown">在異國他鄉孤身一人的他或許也是太過鋒芒畢露，曾經前後五次被其他門派高手圍堵、要求生死決鬥……然而，儘管身無吋甲，靠著手中的利劍，他仍締造了作為一位劍客的至高成就：毫髮無傷、一生無敗。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">18-Jun-20 05:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="723107351179034715" id="message-723107351179034715">
+                <div class="chatlog__content">
+                    <div class="markdown">儘管以義大利劍聖的尊稱聞名，但他擅長的卻不僅僅只有刀劍。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723107864926748733" id="message-723107864926748733">
+                <div class="chatlog__content">
+                    <div class="markdown">「Fior di Battaglia（戰場之花）」──義大利最古老的武學典籍，也是最早架構體系的武術手冊。那是他集一生大成的心血之作，書中內容豐富，涵蓋了擒拿、匕首、單手劍、雙手劍、披甲劍、短槍、斧槍、戰錘、騎乘戰鬥以及日常防身。不僅結構清晰易懂，更對歐洲武術產生深遠的影響，甚至時至今日，菲奧雷仍是最流行的幾個長劍門派之一。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723108084913799177" id="message-723108084913799177">
+                <div class="chatlog__content">
+                    <div class="markdown">而這，也正是環繞在他身邊那點點星光的真面目。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723109034710007829" id="message-723109034710007829">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">揭露Lancer的真名：［菲奧雷．德．利貝里］
+更新形象：［一生無敗的義大利劍聖］［執著武藝勝負之人］［善教的武術導師］
+更新寶具：［戰場之花 (Fior di Battaglia)］</div></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">18-Jun-20 09:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="723167692898566184" id="message-723167692898566184">
+                <div class="chatlog__content">
+                    <div class="markdown">是喀戎先生那類人......不對，喀戎加上阿基里斯吧。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723168294814613508" id="message-723168294814613508">
+                <div class="chatlog__content">
+                    <div class="markdown">知道他的來歷後，Rider第一個想法是「果然是個武痴」。無論是初次見面的隨性或對戰鬥的執著，都不似被塵俗牽絆的高位者。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723169124808785920" id="message-723169124808785920">
+                <div class="chatlog__content">
+                    <div class="markdown">單論武藝，薩拉丁沒有理由超越他，果然還是得看寶具的時機。雖然沒有根據，但她始終覺得......他也同樣，持有著一張「王牌」。
+『願意出王牌的話，薩拉丁會贏吧。』</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">19-Jun-20 03:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="723438032560062474" id="message-723438032560062474">
+                <div class="chatlog__content">
+                    <div class="markdown">靜靜地看著Lancer展開寶具，薩拉丁也嚴陣以待，舉起手中握著的大馬士革彎刀，積蓄著魔力……既然對方展現出了一生輝煌功績，那麼做為榮耀的戰士，自然也必須回以相同的禮數。強烈的魔力帶起旋風鼓動，環繞著戰場。
+
+「吾名槍斧，
+　吾乃沉重，兇殘，與死亡」
+
+隨著咒詞誦念，諸般武器宛如幻影般出現在Lancer的手上，雙手一握，星光凝聚成了一柄厚重的鑄鐵斧槍，重重敲在地面。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">19-Jun-20 03:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="723440187211776011" id="message-723440187211776011">
+                <div class="chatlog__content">
+                    <div class="markdown">這一幕已經不是第一次發生。
+在昨晚的決鬥終幕，他們便已準備好解放彼此象徵至高成就的寶具一決勝負。光憑積蓄的魔力判斷，薩拉丁的「閃耀吧，真理之劍」明顯壓過了Lancer，但就算是第二次見識到這一幕，Lancer的臉上仍然沒有懼怕，帶著一生無敗的自信，抽出斧槍，向前瞬出。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723440495161901078" id="message-723440495161901078">
+                <div class="chatlog__content">
+                    <div class="markdown">「Fior di ──」
+「Ars──」
+時機以至，不斷拉近距離的兩人解放了寶具的真名，在驕傲的吶喊聲中，浩瀚魔力捲起的陣風化作暴風，揚起的沙塵遮蓋了視線，終於要為這場決戰畫下句號──</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="723440556562186352" id="message-723440556562186352">
+                <div class="chatlog__content">
+                    <div class="markdown">＝＝＝＝＝＝＝＝</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
