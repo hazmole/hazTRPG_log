@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>耶路撒冷聖杯戰爭 - Part 50</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/576671536866525184/d5aefe15fbbffb43b5bce1a8a2b1c12f.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Haz私人團務區</div>
+        <div class="preamble__entry">耶路撒冷聖杯戰爭 - Chapter 7-6: 聖杯戰爭的最後一戰</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+    <div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 10:06 AM</span>
+
+            <div class="chatlog__message " data-message-id="747639252036223068" id="message-747639252036223068">
+                <div class="chatlog__content">
+                    <div class="markdown">驀地響起的槍聲宣告了戰鬥的開始，你們都認知到了另一處戰場中發生的事情。
+然而，或許是出於對御主的信賴、又亦或是那看透一切的千里眼早已掌握了情況，以此為訊號，摩西並沒有對此做出應對，而是朝著妳發出攻勢。
+在方才與掠奪王的戰鬥中，妳確實窺見了他那不同尋常的戰鬥方式：那不符合Caster職階的近戰能力、變化成毒蛇的手杖、以及甚至能分開紅海的權能。同樣的，他也清楚了妳戰鬥的模式，因此，在戰鬥開始之際，他立刻拉近了距離，意圖把妳拖入他的領域之中。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="747640018918441041" id="message-747640018918441041">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+3 #搏鬥，創造優勢</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">25-Aug-20 10:14 AM</span>
+
+            <div class="chatlog__message " data-message-id="747640019652444270" id="message-747640019652444270">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="hazmole#6672">@GM@Hazmole</span>:  <span class="pre pre--inline">4df+3</span> 搏鬥，創造優勢 = (+bb-)+3 = 3</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 11:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="747656198936854649" id="message-747656198936854649">
+                <div class="chatlog__content">
+                    <div class="markdown">不作多想，雙腳如羚羊般一蹬，向後脫離摩西的攻擊範圍。Rider拉遠距離、Caster近身作戰...若有餘裕思考就會覺得，這個組合未免過於清奇。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="747656276565295224" id="message-747656276565295224">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #運動防禦</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">25-Aug-20 11:19 AM</span>
+
+            <div class="chatlog__message " data-message-id="747656277563277352" id="message-747656277563277352">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="紫紫#5726">@Rider（PL: 紫紫）</span>:  <span class="pre pre--inline">4df+2</span> 運動防禦 = (-b++)+2 = 3</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 11:39 AM</span>
+
+            <div class="chatlog__message " data-message-id="747661491792248905" id="message-747661491792248905">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">平手，摩西創造出推助［窮追的近距離］</div></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 11:51 AM</span>
+
+            <div class="chatlog__message " data-message-id="747664445529915403" id="message-747664445529915403">
+                <div class="chatlog__content">
+                    <div class="markdown">既然暫時無法脫離，便必須作好物理手段的防禦。
+Rider身軀化水，同時也脫離了關節的滯礙，動作更加流暢自然。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="747664578501935126" id="message-747664578501935126">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #變化(水)</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">25-Aug-20 11:52 AM</span>
+
+            <div class="chatlog__message " data-message-id="747664579315892255" id="message-747664579315892255">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="紫紫#5726">@Rider（PL: 紫紫）</span>:  <span class="pre pre--inline">4df+2</span> 變化(水) = (b--b)+2 = 0</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 11:52 AM</span>
+
+            <div class="chatlog__message " data-message-id="747664680142635069" id="message-747664680142635069">
+                <div class="chatlog__content">
+                    <div class="markdown">/1點願力重骰(1/2)</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="747664750997143583" id="message-747664750997143583">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #Part2</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">25-Aug-20 11:52 AM</span>
+
+            <div class="chatlog__message " data-message-id="747664752183869450" id="message-747664752183869450">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="紫紫#5726">@Rider（PL: 紫紫）</span>:  <span class="pre pre--inline">4df+2</span> Part2 = (--bb)+2 = 0</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 11:53 AM</span>
+
+            <div class="chatlog__message " data-message-id="747664926667178066" id="message-747664926667178066">
+                <div class="chatlog__content">
+                    <div class="markdown">/1點願力重骰(0/2)</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="747665013019377695" id="message-747665013019377695">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #Part3</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">25-Aug-20 11:53 AM</span>
+
+            <div class="chatlog__message " data-message-id="747665014239920178" id="message-747665014239920178">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="紫紫#5726">@Rider（PL: 紫紫）</span>:  <span class="pre pre--inline">4df+2</span> Part3 = (+-b+)+2 = 3</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 11:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="747665245425893377" id="message-747665245425893377">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">創造形象【水型態(1)】</div></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 06:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="747757326928445503" id="message-747757326928445503">
+                <div class="chatlog__content">
+                    <div class="markdown">「水構成的身體……嗎？」敏銳地看穿了妳的變化，摩西倒轉了手中的長杖，直直朝著妳的方向點去。
+憑妳這連Berserker全力都能硬扛下來的特質身體，若這僅僅是單純的物理攻擊，那或許是完全可以忽略的動作──但面對這熟悉的敵人，妳很清楚他手中的那把木杖有什麼樣的能耐：畢竟，正是這柄手杖將埃及的命脈化作了惡臭的血水，宣告了十災的開始。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="747757384138620969" id="message-747757384138620969">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+3 #搏鬥，攻擊</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">25-Aug-20 06:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="747757385266757682" id="message-747757385266757682">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="hazmole#6672">@GM@Hazmole</span>:  <span class="pre pre--inline">4df+3</span> 搏鬥，攻擊 = (--+b)+3 = 2</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 06:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="747757480783642671" id="message-747757480783642671">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">使用推助［窮追的近距離］＋２</div></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 06:34 PM</span>
+
+            <div class="chatlog__message " data-message-id="747765864702541844" id="message-747765864702541844">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #運動防禦</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">25-Aug-20 06:34 PM</span>
+
+            <div class="chatlog__message " data-message-id="747765865482813440" id="message-747765865482813440">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="紫紫#5726">@Rider（PL: 紫紫）</span>:  <span class="pre pre--inline">4df+2</span> 運動防禦 = (b-++)+2 = 3</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">25-Aug-20 06:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="747766214146785280" id="message-747766214146785280">
+                <div class="chatlog__content">
+                    <div class="markdown">/損失1壓力格：XOO</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="747767896549359686" id="message-747767896549359686">
+                <div class="chatlog__content">
+                    <div class="markdown">為了躲避那柄手杖，她使盡渾身解數，在大空洞內奔馳挪移。趨離危險，一向是她的強項。
+同時，攻擊的契機也必不可少...若想取勝，不能只靠雙足和大地。
+她需要天空。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">26-Aug-20 05:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="748118700070010945" id="message-748118700070010945">
+                <div class="chatlog__content">
+                    <div class="markdown">下一個行動，自然是開啟寶具，但卻不是為了回擊。
+整座地層的水流在天頂內側暴竄，看不見的暗流使大空洞隱隱產生地鳴。
+「小心不要死了喔，你們兩個。」
+念話和通訊，分別傳向兩名魔術師。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748119132259745884" id="message-748119132259745884">
+                <div class="chatlog__content">
+                    <div class="markdown">「River, on my own.」
+啟動寶具，將積蓄的動能化為實象，粉碎上方的厚重岩盤。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">28-Aug-20 03:18 PM</span>
+
+            <div class="chatlog__message " data-message-id="748803654584107018" id="message-748803654584107018">
+                <div class="chatlog__content">
+                    <div class="markdown">大水帶起千鈞之力，宛如繃緊的絞索一般從內部徹底破壞了千年岩層的結構。崩岩隆隆，大小足以將人徹底壓成肉醬的巨大岩塊從靈魂之井的頂端落下，無情的砸在早已殘破不堪的地面，打擊著還佇立在戰場上的凡人。儘管以英靈之身並不需要擔心因此受傷，但Caster的攻擊態勢也因此一滯，分神片刻。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748804006284886047" id="message-748804006284886047">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">創造局勢形象［崩塌的聖殿山］</div></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748805054567284786" id="message-748805054567284786">
+                <div class="chatlog__content">
+                    <div class="markdown">和沒有御主也能單獨行動的妳不同，倘若菲力克斯在這場天崩地裂中不幸喪生，他可就要先行退場了。
+「御主！」Caster向著菲力克斯的方向喊道，舉起手試圖張開術式。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748805185068990566" id="message-748805185068990566">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #道行，創造優勢</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">28-Aug-20 03:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="748805186478276709" id="message-748805186478276709">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="hazmole#6672">@GM@Hazmole</span>:  <span class="pre pre--inline">4df+2</span> 道行，創造優勢 = (--++)+2 = 2</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">28-Aug-20 03:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="748805327956475926" id="message-748805327956475926">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">創造推助［光之壁］</div></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748806304633716746" id="message-748806304633716746">
+                <div class="chatlog__content">
+                    <div class="markdown">在轟隆墜落的無數巨岩下，一道散發輝光的薄膜在菲力克斯的上方展開。
+但這倉促成形的防禦術式卻仍無法匹敵那龐大質量帶來的破壞力，在偏折掉幾次撞擊後，光輝就在傾盆而下的大雨中消散──然而，對於深陷危機之中的凡人們，這點時間就相當足夠了。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748806444727533628" id="message-748806444727533628">
+                <div class="chatlog__content">
+                    <div class="markdown">//請索拉和菲力克斯進行防禦應對，若躲避則為使用運動的防禦檢定，難度４</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">28-Aug-20 05:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="748832316763406417" id="message-748832316763406417">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #運動，防禦</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">28-Aug-20 05:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="748832317484695563" id="message-748832317484695563">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="hazmole#6672">@GM@Hazmole</span>:  <span class="pre pre--inline">4df+2</span> 運動，防禦 = (bb++)+2 = 4</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">28-Aug-20 05:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="748841695243665418" id="message-748841695243665418">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+1 #運動</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">28-Aug-20 05:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="748841695961153596" id="message-748841695961153596">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="乙名＠對他使用炎拳吧#3639">@索拉．席凡斯．阿克諾利（PL:乙名）</span>:  <span class="pre pre--inline">4df+1</span> 運動 = (-b-+)+1 = 0</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">28-Aug-20 05:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="748841782686515231" id="message-748841782686515231">
+                <div class="chatlog__content">
+                    <div class="markdown">/援引推助［光之壁］+2</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">28-Aug-20 06:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="748846230255304774" id="message-748846230255304774">
+                <div class="chatlog__content">
+                    <div class="markdown">索拉本以為沒有希望躲過這陣石雨，想拉著菲力克斯陪葬，然而就在他繼續衝向菲力克斯時，Caster展開的光之壁卻也正好為他擋下了一部分的落石。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">28-Aug-20 06:48 PM</span>
+
+            <div class="chatlog__message " data-message-id="748856415262605374" id="message-748856415262605374">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">菲力克斯承受一個推助【態勢不穩】
+索拉標記第二格生理軌</div></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748857245772677180" id="message-748857245772677180">
+                <div class="chatlog__content">
+                    <div class="markdown">「你的從者做事可真魯莽啊，索拉。」側開身子，菲力克斯冒著冷汗，一邊笑著一邊避開落石，藉著摩西的支援全身而退。但突如其來的環境變化仍讓他重重影響了他的態勢，槍口偏離。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748858052236804148" id="message-748858052236804148">
+                <div class="chatlog__content">
+                    <div class="markdown">從坍方的岩壁破口，隱含著雷聲的大雨灑在了每一個人的身上。在這陣可怕的混亂中，即使利用了敵人的援助，你也沒能毫髮無傷。拳頭大小的石塊砸在厚重的軍裝上——或許造成了些瘀青？誰知道。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="748858161443766322" id="message-748858161443766322">
+                <div class="chatlog__content">
+                    <div class="markdown">但你很清楚，危機就是轉機。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">29-Aug-20 12:48 AM</span>
+
+            <div class="chatlog__message " data-message-id="748947191673913497" id="message-748947191673913497">
+                <div class="chatlog__content">
+                    <div class="markdown">「只要這麼做能夠擊敗你那倒不壞。」索拉露出陰冷的笑，「我預期會遇上一場惡戰，所以在來時就對自己施展了魔術。現在的我既感受不到痛楚，也感受不到恐懼。你得把子彈打在頭上才能阻止我呢。」他扭了扭肩膀。雖然石塊砸在身上，卻只感覺到剝離了痛的衝擊，「不過，你能擊中我的機會看來也就到此為止了。」語畢，他的身子再度跑動，口中誦唸咒語之時，黑暗籠罩而下。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">29-Aug-20 09:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="749254071822712862" id="message-749254071822712862">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+4 #潛匿</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">29-Aug-20 09:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="749254072615436348" id="message-749254072615436348">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="乙名＠對他使用炎拳吧#3639">@索拉．席凡斯．阿克諾利（PL:乙名）</span>:  <span class="pre pre--inline">4df+4</span> 潛匿 = (++-+)+4 = 6</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">30-Aug-20 10:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="749630882322710628" id="message-749630882322710628">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">絕妙成功，創造優勢［黑暗籠罩(2)］</div></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749632118442688602" id="message-749632118442688602">
+                <div class="chatlog__content">
+                    <div class="markdown">彷彿墨水暈染開來，遮斷視覺感官的術式憑空編織出了籠罩了索拉與菲力克斯周遭的黑暗。但在施術者的眼中，這道術式僅僅勾勒出了淡淡的陰影，提示著你確切的影響範圍。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749632375524425816" id="message-749632375524425816">
+                <div class="chatlog__content">
+                    <div class="markdown">「……為什麼？為什麼你要做到這種程度！」
+你看到菲力克斯舉起手槍，對準了你先前所在的位置。他的大拇指調動了愚者之雷的開關，將槍械切換成了另一個模式。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749634107666858046" id="message-749634107666858046">
+                <div class="chatlog__content">
+                    <div class="markdown">「斷絕與所有人的聯繫？就為了這種破事冒著生命危險？開什麼玩笑！」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749634310671171654" id="message-749634310671171654">
+                <div class="chatlog__content">
+                    <div class="markdown">看起來失去了冷靜，菲力克斯大吼著，扣下扳機。
+　Thunderbolt
+「『轟雷彈！』」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749634896154329188" id="message-749634896154329188">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+4 #工藝，創造優勢［轟雷造成的失衡］</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">30-Aug-20 10:21 PM</span>
+
+            <div class="chatlog__message " data-message-id="749634896640868495" id="message-749634896640868495">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="hazmole#6672">@GM@Hazmole</span>:  <span class="pre pre--inline">4df+4</span> 工藝，創造優勢［轟雷造成的失衡］ = (-+b-)+4 = 3</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">30-Aug-20 10:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="749635427853533326" id="message-749635427853533326">
+                <div class="chatlog__content">
+                    <div class="markdown">魔力流竄在魔道槍械內部的迴路，將純粹的能量轉化成了大範圍的雷鳴。伴隨著青藍色的電光，愚者之雷的砲管末端放出了如巨獸般的咆嘯，衝擊著前方的空間。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">30-Aug-20 10:50 PM</span>
+
+            <div class="chatlog__message " data-message-id="749642312749023287" id="message-749642312749023287">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+1 #運動</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">30-Aug-20 10:50 PM</span>
+
+            <div class="chatlog__message " data-message-id="749642313839411250" id="message-749642313839411250">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="乙名＠對他使用炎拳吧#3639">@索拉．席凡斯．阿克諾利（PL:乙名）</span>:  <span class="pre pre--inline">4df+1</span> 運動 = (--+-)+1 = -1</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">30-Aug-20 10:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="749642423612997732" id="message-749642423612997732">
+                <div class="chatlog__content">
+                    <div class="markdown">/援引推助【態勢不穩】+2</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749644061098508348" id="message-749644061098508348">
+                <div class="chatlog__content">
+                    <div class="markdown">對於真知術的使用者來說，想要掌握周遭的狀況根本無需依賴光源。儘管黑暗籠罩，但身邊的環境卻在索拉的腦中形成一片清晰的圖景。無論是身邊的大小石塊，還是菲力克斯的動作盡在他的掌握之中。在菲力克斯扣動扳機之時，索拉早已逃離最危險的衝擊中央……</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">30-Aug-20 11:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="749645444509859891" id="message-749645444509859891">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">成功創造優勢［轟雷造成的身體失衡(1)］</div></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749645951530172417" id="message-749645951530172417">
+                <div class="chatlog__content">
+                    <div class="markdown">把握住菲力克斯因為槍傷而略微偏移的彈道，你立刻翻身越過岩塊──加上現在籠罩這片戰場的黑暗，理論上從槍管射出的子彈事不可能命中你的。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749646603526340699" id="message-749646603526340699">
+                <div class="chatlog__content">
+                    <div class="markdown">然而，從愚者之雷噴湧而出的衝擊範圍仍比想像中還要更大。儘管逃過了直接癱瘓的下場，但你仍然明顯感覺到半規管的異常，在翻越碎石的時候甚至險些因此摔倒。若不是已經遮斷了痛覺，那遍佈全身的衝擊波恐怕會直接讓你失去戰鬥能力。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">31-Aug-20 01:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="749868422556418069" id="message-749868422556418069">
+                <div class="chatlog__content">
+                    <div class="markdown">菲力克斯的槍彈威力之大，令索拉不禁懷疑自己的勝算。但、不是，那不是「現在的索拉」會思考的事。不只是痛覺、恐懼，還有懷疑、猶豫……他早也封閉了內在的雜訊，將一切擋在面前的思緒盡數排除。儘管衝擊擴散到全身、儘管菲力克斯看似失去了冷靜，他的樣子依舊毫無波瀾。躲在岩石後的他，如今所想的只是如何為自己爭取到更好的機會。
+「一腳把我踢開的人是你，現在說這些話又是什麼意思？」他冷漠地說著，但聲音卻從不是他所在的位置發出，慢步移動著，吸引著菲力克斯的注意力。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">31-Aug-20 02:55 PM</span>
+
+            <div class="chatlog__message " data-message-id="749884952966987916" id="message-749884952966987916">
+                <div class="chatlog__content">
+                    <div class="markdown">「……你真的什麼都不懂。」菲力克斯的槍口隨著你的聲音移動，另一隻手探到懷中，似乎正準備拿出些什麼。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="749885180151332925" id="message-749885180151332925">
+                <div class="chatlog__content">
+                    <div class="markdown">「看來我們之間的情誼對你來說也不過是玩笑吧，你以為我為什麼要把你踢開？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">31-Aug-20 03:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="749887834793705504" id="message-749887834793705504">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">強迫形象［此心唯繫於彼此關照之人］，因無法忽視菲力克斯背叛的原因而停手，在這瞬息萬變的戰場中，這無疑會帶來麻煩。
+若接受強迫則獲得一點命運點</div></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">31-Aug-20 04:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="749914577415831594" id="message-749914577415831594">
+                <div class="chatlog__content">
+                    <div class="markdown">儘管索拉已不為多餘的情緒所動搖，但菲力克斯的這番話仍然令他想要搞清楚事情的真相……只不過他也沒打算給菲力克斯一點好的態度。
+「有話直說，菲力克斯，你到底想說什麼？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">31-Aug-20 05:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="749931339280547863" id="message-749931339280547863">
+                <div class="chatlog__content">
+                    <div class="markdown">「原來你還會在意啊？我還以為你渴望把我們之間的聯繫一刀兩斷呢？」菲力克斯冷笑，槍口不自覺的下移。
+「如果你的願望是如此，你又何必在意我把你一腳踢開？反正這聯繫遲早要斷的，不是嗎？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">31-Aug-20 09:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="749981826759786586" id="message-749981826759786586">
+                <div class="chatlog__content">
+                    <div class="markdown">「廢話少說，你講這些只是為了拖延時間嗎？」索拉感覺菲力克斯根本意不在對話，「要不是你背叛我，你我本不需要刀劍相向，難道你後悔了嗎？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">01-Sep-20 09:56 AM</span>
+
+            <div class="chatlog__message " data-message-id="750172084109443113" id="message-750172084109443113">
+                <div class="chatlog__content">
+                    <div class="markdown">「要是我不背叛你，你可能早就死了。」瞇起眼睛，菲力克斯咬著牙。
+「……然後，當我知道你的願望時，我才知道。」重新舉起手槍，或許是身上的魔道機具發揮了什麼作用，他的槍口準確地對準了你：「你從一開始就打算背棄我。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="750172418902851676" id="message-750172418902851676">
+                <div class="chatlog__content">
+                    <div class="markdown">「在這裡退場吧，索拉──這樣的話，我們還能是朋友。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="750172501782429767" id="message-750172501782429767">
+                <div class="chatlog__content">
+                    <div class="markdown">語音方落，愚者之雷旋即發出咆嘯。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="750172577489485927" id="message-750172577489485927">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+3 #射擊，攻擊</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">01-Sep-20 09:58 AM</span>
+
+            <div class="chatlog__message " data-message-id="750172578378809445" id="message-750172578378809445">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="hazmole#6672">@GM@Hazmole</span>:  <span class="pre pre--inline">4df+3</span> 射擊，攻擊 = (-bb-)+3 = 1</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">01-Sep-20 03:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="750260913105535028" id="message-750260913105535028">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+1 #運動</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">01-Sep-20 03:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="750260913793400884" id="message-750260913793400884">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="乙名＠對他使用炎拳吧#3639">@索拉．席凡斯．阿克諾利（PL:乙名）</span>:  <span class="pre pre--inline">4df+1</span> 運動 = (++bb)+1 = 3</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">01-Sep-20 03:50 PM</span>
+
+            <div class="chatlog__message " data-message-id="750261290726850581" id="message-750261290726850581">
+                <div class="chatlog__content">
+                    <div class="markdown">//援引［轟雷造成的身體失衡］，重骰</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">01-Sep-20 03:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="750261505533935626" id="message-750261505533935626">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+1 #運動</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">01-Sep-20 03:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="750261506142240799" id="message-750261506142240799">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="乙名＠對他使用炎拳吧#3639">@索拉．席凡斯．阿克諾利（PL:乙名）</span>:  <span class="pre pre--inline">4df+1</span> 運動 = (+b+-)+1 = 2</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">01-Sep-20 03:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="750261572785668136" id="message-750261572785668136">
+                <div class="chatlog__content">
+                    <div class="markdown">//花費命運點，援引［轟雷造成的身體失衡］－２</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">01-Sep-20 04:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="750264477479469157" id="message-750264477479469157">
+                <div class="chatlog__content">
+                    <div class="markdown">/花費1FP，援引［岩石阻擋］＋２</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">01-Sep-20 04:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="750264718060683285" id="message-750264718060683285">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">防禦成功</div></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">01-Sep-20 10:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="750355175146913932" id="message-750355175146913932">
+                <div class="chatlog__content">
+                    <div class="markdown">索拉從一個掩護躲向另一個掩護，儘管菲力克斯意料之外的舉動令他的反應慢了半拍，但藉著巨岩的阻擋，轟雷的衝擊力仍舊減緩了不少。
+「背叛我、阻止我實現願望，這就是你說的朋友？」索拉嗤之以鼻。
+「我不會再被你騙了，菲力克斯。只要對你有利的話，你就會毫不猶豫地捨棄我對吧？」儘管不清楚菲力克斯為何能知道他的位置，但他依舊用著錯位的聲音說話，在言談間迅速逼近，「我可是見過的，在第一晚的時候，我就曾用魔眼見過你刺殺我的未來。」話音未落，漆黑的槍身便擊向了黃銅的手槍。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:29 AM</span>
+
+            <div class="chatlog__message " data-message-id="750542805927067728" id="message-750542805927067728">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+0 #搏鬥</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">02-Sep-20 10:29 AM</span>
+
+            <div class="chatlog__message " data-message-id="750542806703013899" id="message-750542806703013899">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="乙名＠對他使用炎拳吧#3639">@索拉．席凡斯．阿克諾利（PL:乙名）</span>:  <span class="pre pre--inline">4df+0</span> 搏鬥 = (-b-+)+0 = -1</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:33 AM</span>
+
+            <div class="chatlog__message " data-message-id="750543837419798620" id="message-750543837419798620">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #運動</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">02-Sep-20 10:33 AM</span>
+
+            <div class="chatlog__message " data-message-id="750543838367449160" id="message-750543838367449160">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="hazmole#6672">@GM@Hazmole</span>:  <span class="pre pre--inline">4df+2</span> 運動 = (+b++)+2 = 5</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:44 AM</span>
+
+            <div class="chatlog__message " data-message-id="750546615839752273" id="message-750546615839752273">
+                <div class="chatlog__content">
+                    <div class="markdown">/援引［黑暗籠罩(2)］，讓菲力克斯重骰</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:45 AM</span>
+
+            <div class="chatlog__message " data-message-id="750546872682414212" id="message-750546872682414212">
+                <div class="chatlog__content">
+                    <div class="markdown">/r 4df+2 #運動</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/209048672195969025/93b788e6f93c968f0fe25ec4d8c56aa8.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="Sidekick#6198" data-user-id="209048672195969025" >Sidekick</span>
+
+        <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">02-Sep-20 10:45 AM</span>
+
+            <div class="chatlog__message " data-message-id="750546873429000203" id="message-750546873429000203">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="hazmole#6672">@GM@Hazmole</span>:  <span class="pre pre--inline">4df+2</span> 運動 = (+bb+)+2 = 4</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:46 AM</span>
+
+            <div class="chatlog__message " data-message-id="750547197904552077" id="message-750547197904552077">
+                <div class="chatlog__content">
+                    <div class="markdown">/援引［黑暗籠罩(1)］+2，［防禦棍法．學士四式(2)］+2，-1FP援引［黑暗籠罩］+2</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:52 AM</span>
+
+            <div class="chatlog__message " data-message-id="750548766918049844" id="message-750548766918049844">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">克服成功，菲力克斯的愚者之雷被擊飛</div></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="750549125048696953" id="message-750549125048696953">
+                <div class="chatlog__content">
+                    <div class="markdown">「同樣的話我也送給你。在這裡放棄吧，菲力克斯，這樣你我就不用非得有一個人死在這了。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:59 AM</span>
+
+            <div class="chatlog__message " data-message-id="750550439849623693" id="message-750550439849623693">
+                <div class="chatlog__content">
+                    <div class="markdown">金屬撞擊聲響起，伴隨著手中傳來的衝擊感，你清楚地看到菲力克斯手中的黃銅手槍被你遠遠擊飛了出去。
+菲力克斯腳步踉蹌後退，手臂因衝擊而痠麻，抬起頭，儘管應該無法看見你，但你的視線卻彷彿仍能穿透墨鏡與黑暗的阻隔，與昔日的友人四目相接。
+「……看來這就是注定的未來了。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="750551796669349889" id="message-750551796669349889">
+                <div class="chatlog__content">
+                    <div class="markdown">他深吸了一口氣，探進懷中的左手終於將東西取出。
+那是一顆手榴彈。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="750552300623495303" id="message-750552300623495303">
+                <div class="chatlog__content">
+                    <div class="markdown">「別想輕舉妄動，索拉。」像是能看見你的行動一樣，他低吼著：「只要我的手指離開這孩子，爆炸就會讓我們兩個都死在這裡。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="750553150817042465" id="message-750553150817042465">
+                <div class="chatlog__content">
+                    <div class="markdown">「回答我的問題──為什麼你要許下那樣的願望？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 06:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="750661349503139880" id="message-750661349503139880">
+                <div class="chatlog__content">
+                    <div class="markdown">如果一個人不知疼痛為何物、不知恐懼為何物，那麼他的思考方式會變成怎樣呢？
+這就是索拉對自己施展的魔術所需要背負的代價，無法體會到自己的感受，也無法同理他人的感受。在腦中排除的東西越多，他的思考就會變得越加偏頗。
+「哼……沒想到你這麼愛多管閒事啊，菲力克斯。知道原因對你來說又有什麼意義？」索拉無懼於菲力克斯的恫嚇，一步一步走向前。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">02-Sep-20 10:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="750730792992243833" id="message-750730792992243833">
+                <div class="chatlog__content">
+                    <div class="markdown">「少囉嗦。」菲力克斯吼著，抓著手榴彈的手微微提高。
+「你到底要不要回答。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">03-Sep-20 05:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="751013694053548032" id="message-751013694053548032">
+                <div class="chatlog__content">
+                    <div class="markdown">「荒唐，你真的打算和我同歸於盡嗎？」索拉停在菲力克斯的面前，「答案很簡單，我只是知道了自己該走的方向而已。」
+「我曾盲目地以為他人身上有我想尋求的東西，但結果並不是這樣的。背叛、擔憂、失望、嫉妒、憤怒……這一切的一切只會讓我感到煩心，從未讓我覺得快樂，事情終究只是一場空。我已經厭倦了，我決定和這所有煩惱告別、從這所有的紛擾中抽離，然而生而為人的我卻無法擺脫這種天性。所以，我才需要聖杯啊。」
+他的嘴角彎曲，歪了歪腦袋，「大概……就是這樣吧？」
+原本的索拉是怎麼想的？現在的索拉已經無法確定了，就連許下願望的渴望都感受不到的他，現在只是憑著記憶讀出腦海裡的話語而已。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">03-Sep-20 06:50 PM</span>
+
+            <div class="chatlog__message " data-message-id="751031409816240158" id="message-751031409816240158">
+                <div class="chatlog__content">
+                    <div class="markdown">「……」菲力克斯沉默了片刻，咀嚼著你的話語。有那麼片刻，你似乎看到他動搖的眼神。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="751031665781899405" id="message-751031665781899405">
+                <div class="chatlog__content">
+                    <div class="markdown">「……你說的是真的嗎？索拉？」他的嗓音似乎因為方才的大吼而有些沙啞：「你從未感覺到快樂，這樣嗎？」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="751032052949843988" id="message-751032052949843988">
+                <div class="chatlog__content">
+                    <div class="markdown">「我們的友情，你家族的親情……」他吸了口氣。
+「對你而言，都只有痛苦嗎？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">04-Sep-20 10:13 PM</span>
+
+            <div class="chatlog__message " data-message-id="751444916114161795" id="message-751444916114161795">
+                <div class="chatlog__content">
+                    <div class="markdown">索拉的眼神向上飄，嘴巴微張，「當得到追尋已久的東西時，卻發現它並不如自己所想的美好——你沒有過這樣的經驗嗎？簡直糟透了，更糟的是自己還沒辦法放手。」
+
+「擁有即是負擔啊！儘管不為擁有而感到快樂，卻會因為擔憂著失去而感到焦躁。」他舉起手臂，將步槍扔到一旁，岩石間發出喀啦喀啦的撞擊聲，「當我的手上浮現令咒的時候，我就不得不面對我內心的願望了。你也是的吧！當你得到實現願望的機會後，你就再也無法放下它了！說什麼朋友？結果你也是為了聖杯將我踢開，被逼得要在這裡和我一決生死！你想要勝利？這樣你就滿足了嗎？就算你在這裡贏了，這樣你就高興了嗎？」他退後了一步，張開雙臂道：「這所有的參戰者都是一樣的，人類也好、英靈也好，他們都是被自己的欲望困住的奴隸！永遠也逃不開這個圈！」
+
+他斜眼看著菲力克斯，「你知道嗎？不管是從以前到現在，我之所以會幫你做這麼多，比起因為你是我朋友這種理由，更多的是必須維持現有關係的強迫感在驅使著我。所以我不會和你戰鬥、所以我不會讓你被抓做人質。」他像是打開了話匣子一樣繼續說著。這些話他並沒有和任何人吐露過，但或許正因為遮蔽了部分情感的關係，他才能夠在此時坦然地說出這些想法。現在不說，未來菲力克斯恐怕也不會有機會聽到。
+
+「如果我只為了我自己而戰、如果我明明有一個能讓你成為御主的機會，卻沒有交給你，那麼我們之間肯定早就決裂了吧。真是諷刺，但正因為我將令咒交給你才會導致如今的局面，這可說是比原本還要更糟的結果。真是自作自受啊，索拉&#183;阿克諾利，呵哈哈哈……」他露出奇怪的笑容，肩膀髓之抖動，攤開手質問菲力克斯，「如果我從一開始就獨立作戰是不是就不會這樣了呢？是不是如果我能像你捨棄我一樣冷酷地捨棄你，事情就會簡單多了呢？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">05-Sep-20 10:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="751817024778403890" id="message-751817024778403890">
+                <div class="chatlog__content">
+                    <div class="markdown">「……」默默的聽著你大發妄言，菲力克斯的表情在黑暗的籠罩下更顯陰暗。一直等到你告一段落，拋出最後的問題時，他才長嘆了口氣，放下握著手榴彈的左手。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="751818020191469668" id="message-751818020191469668">
+                <div class="chatlog__content">
+                    <div class="markdown">「我從來沒有打算拋棄你……不過，哼，就算我這麼說你也不會相信吧。」
+他深吸了一口氣後，像是下定了什麼決心，重新戴上了那冷酷的假面。
+「但既然你是這麼想的……那好吧，做為朋友，我就在最後幫你一把。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="751819151642984538" id="message-751819151642984538">
+                <div class="chatlog__content">
+                    <div class="markdown">「你想要逃離慾望的迴圈？你想要逃離感情的負擔？
+　你知道嗎，索拉，你不需要尋求聖杯就能輕易達到這個目標。」
+他嘴角揚起笑容，但那其中卻沒有絲毫勝利的喜悅。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="751819219389120542" id="message-751819219389120542">
+                <div class="chatlog__content">
+                    <div class="markdown">「讓死亡成為你的救贖吧。」
+語音未落，他就拋出了手榴彈。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="751819229845520454" id="message-751819229845520454">
+                <div class="chatlog__content">
+                    <div class="markdown">＝＝＝＝＝＝＝＝</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

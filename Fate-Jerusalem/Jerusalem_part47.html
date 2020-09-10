@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>耶路撒冷聖杯戰爭 - Part 47</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/576671536866525184/d5aefe15fbbffb43b5bce1a8a2b1c12f.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Haz私人團務區</div>
+        <div class="preamble__entry">耶路撒冷聖杯戰爭 - Chapter 7-3: 在這同時，索拉</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+    <div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-20 11:51 AM</span>
+
+            <div class="chatlog__message " data-message-id="742953474420899902" id="message-742953474420899902">
+                <div class="chatlog__content">
+                    <div class="markdown">消滅了穆錫、斷絕了與Raider的契約，在徹底失去了對聖杯戰爭的影響力後的這一日，索拉的日子倒也久違地回歸了平靜。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="742954270910840902" id="message-742954270910840902">
+                <div class="chatlog__content">
+                    <div class="markdown">或許是留存的組別對你的情況都略知一二，又或許是你的隱蔽魔術的確了得。從清晨甦醒以來一直到傍晚，都沒有任何人有要來找你的跡象。
+相反的，待在能夠眺望聖殿山景象的旅店窗口，從下午開始，你就能觀察到不少人在聖殿山附近進出，部屬著什麼──儘管距離有些遙遠，但你仍能辨識出那曾經屬於你的英靈、以及曾經與你並肩作戰的友人。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-20 12:11 PM</span>
+
+            <div class="chatlog__message " data-message-id="742958345970778193" id="message-742958345970778193">
+                <div class="chatlog__content">
+                    <div class="markdown">在聖殿山下集結的陣仗令人疑惑。Raider應該已經消失了才對，難道還有其他隱藏著的敵人嗎？
+不費心去多想，索拉一邊眺望著遠方，一邊用通訊耳機聯絡菲力克斯，「菲力克斯，我看到你們聚集在聖殿山，發生什麼事了嗎？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-20 01:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="742985146776420453" id="message-742985146776420453">
+                <div class="chatlog__content">
+                    <div class="markdown">通訊器的聲音傳來了些許雜訊，隔了片刻，你聽到菲力克斯的回答。
+『我們在為最終決戰做準備。』他的聲音有些冷淡：『你不知道嗎？Raider還活著喔？』</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-20 04:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="743016198308102224" id="message-743016198308102224">
+                <div class="chatlog__content">
+                    <div class="markdown">「怎麼會？穆錫昨晚確實死了。」索拉意外地說，「他利用了地下的魔力嗎？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-20 04:11 PM</span>
+
+            <div class="chatlog__message " data-message-id="743018694405259306" id="message-743018694405259306">
+                <div class="chatlog__content">
+                    <div class="markdown">『或許吧……Rider也是，Raider也是，怎麼跟你扯上關係的從者都這麼不正常啊。』菲力克斯吐了口氣，抱怨道。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="743019141824249888" id="message-743019141824249888">
+                <div class="chatlog__content">
+                    <div class="markdown">『問這做什麼呢？我還以為你已經放棄這場聖杯戰爭了。』</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-20 04:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="743022124419121193" id="message-743022124419121193">
+                <div class="chatlog__content">
+                    <div class="markdown">「說什麼話，你的勝利也是我的勝利啊，我當然會關心現在的局勢。」索拉乾笑著說。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-20 04:36 PM</span>
+
+            <div class="chatlog__message " data-message-id="743025059253190698" id="message-743025059253190698">
+                <div class="chatlog__content">
+                    <div class="markdown">『索拉啊……』菲力克斯沉默了半晌，才繼續開口：『我不確定你有沒有誤解什麼。』</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="743025264044539964" id="message-743025264044539964">
+                <div class="chatlog__content">
+                    <div class="markdown">『你應該不會以為，我會在勝利時把許願的權利分給你吧？』</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">12-Aug-20 08:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="743076774048694383" id="message-743076774048694383">
+                <div class="chatlog__content">
+                    <div class="markdown">索拉閉上雙眼，沉重地吐了口氣，「我一直都不想和你戰鬥，我也將你視為朋友，所以比起和穆錫共享聖杯，我會選擇你。」
+「我將選擇權交給了你，但你卻選擇棄我於不顧？為什麼？」他質問道。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 10:45 AM</span>
+
+            <div class="chatlog__message " data-message-id="743299097515130901" id="message-743299097515130901">
+                <div class="chatlog__content">
+                    <div class="markdown">『索拉，你知道我的願望是什麼。』菲力克斯平靜的說道，不為你的話語所動。
+『為了勝利，以及勝利之後的發展。比起你，將許願的權利分給撒母耳，或甚至Caster，能為我帶來更大的好處。』</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="743299183024537650" id="message-743299183024537650">
+                <div class="chatlog__content">
+                    <div class="markdown">『我知道他們的願望，我知道他們能給我什麼。』</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="743299328956825670" id="message-743299328956825670">
+                <div class="chatlog__content">
+                    <div class="markdown">『但是你……』他停頓了一下：『就算到了現在，我還是不知道你想要什麼。』</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 11:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="743313880557682708" id="message-743313880557682708">
+                <div class="chatlog__content">
+                    <div class="markdown">「我給了你從者。」
+「我助你和撒母耳結成同盟、我削弱了Raider、我用令咒命令Rider自盡、我將你帶到勝利面前。」索拉彷彿低吟般說著，隨著一聲自嘲般的笑，「我什麼都不能給你。」
+或許是有了上一次菲力克斯背叛向撒母耳的預演，又或者是早已猜想到自己被捨棄的結果，索拉在這一刻的心情比他所想的還要「冷靜」，菲力克斯的決心終於讓他做出了決定。
+我什麼都不能給你。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 11:53 AM</span>
+
+            <div class="chatlog__message " data-message-id="743316340487487539" id="message-743316340487487539">
+                <div class="chatlog__content">
+                    <div class="markdown">『在你給我從者之前，是你把它從我手中奪走。』菲力克斯冷冷道：『最早與撒母耳接觸的是我，搞砸的是你。Raider的御主是我們殺死的，Rider也毫髮無傷。』</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="743316479948357654" id="message-743316479948357654">
+                <div class="chatlog__content">
+                    <div class="markdown">『索拉，我沒有怪罪你的意思。』他停頓了一下：『但我並沒有欠你什麼。』</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="743317085924491335" id="message-743317085924491335">
+                <div class="chatlog__content">
+                    <div class="markdown">『或許看在我們過去的情誼，我應該邀請你一同共飲勝利的美酒……但在這最後的關頭，我並不放心把實現願望的按鈕交在一個我無法理解的人手上。』</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 12:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="743321473443299338" id="message-743321473443299338">
+                <div class="chatlog__content">
+                    <div class="markdown">「我明白一直以來我對你們而言都不算什麼。」索拉淡淡地笑著說，睜開雙眼，離開窗邊。
+「你想要的就是利益吧，所以，就算你知道了我的願望是斷絕和所有人的聯繫，你就會願意把願望從撒母耳的手上收回嗎？不會吧，因為我什麼都不能給你啊。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 02:44 PM</span>
+
+            <div class="chatlog__message " data-message-id="743359204701503499" id="message-743359204701503499">
+                <div class="chatlog__content">
+                    <div class="markdown">『……』菲力克斯沉默了片刻：『你說你的願望是斷絕與所有人的聯繫？』</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="743359335454736424" id="message-743359335454736424">
+                <div class="chatlog__content">
+                    <div class="markdown">『我無法理解……對你來說，我們的關係究竟是什麼？』</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 03:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="743368131195437107" id="message-743368131195437107">
+                <div class="chatlog__content">
+                    <div class="markdown">「既然我無法實現願望，你這問題又有什麼意義呢？」索拉輕笑道，拿出兜裡的愚者之雷確認狀態，「你欺騙我、背叛我，這就是我們現在的關係了。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 03:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="743373326625538060" id="message-743373326625538060">
+                <div class="chatlog__content">
+                    <div class="markdown">『……既然你這麼想，那就是這樣了。』菲力克斯的聲音恢復了冷靜，淡淡地說道。
+『我沒有辦法理解，也沒有辦法認同你的願望──所以，我會阻止你。』</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/02.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="乙名＠對他使用炎拳吧#3639" data-user-id="249145925921013760"  style="color: rgb(52, 152, 219)" >索拉．席凡斯．阿克諾利（PL:乙名）</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 03:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="743377009752801322" id="message-743377009752801322">
+                <div class="chatlog__content">
+                    <div class="markdown">索拉回以沉默。他需要準備的東西並不多，只將愚者之雷放進懷裡便走出房間，獨留耳機孤伶伶地在桌上。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">13-Aug-20 04:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="743384182335733834" id="message-743384182335733834">
+                <div class="chatlog__content">
+                    <div class="markdown">在空蕩蕩的房間中，只剩下了最後的通訊迴盪。
+『在聖杯面前再見吧，我曾經的朋友。』</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="743384201948168253" id="message-743384201948168253">
+                <div class="chatlog__content">
+                    <div class="markdown">＝＝＝＝＝＝＝＝</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>耶路撒冷聖杯戰爭 - Part 46</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+span[data-user-id="249145925921013760"] { color: #3498db; }
+span[data-user-id="248759644674195456"] { color: #9b59b6; }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/576671536866525184/d5aefe15fbbffb43b5bce1a8a2b1c12f.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Haz私人團務區</div>
+        <div class="preamble__entry">耶路撒冷聖杯戰爭 - Chapter 7-2: 終戰之前</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+    <div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">01-Aug-20 08:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="739096095396724736" id="message-739096095396724736">
+                <div class="chatlog__content">
+                    <div class="markdown">如同菲力克斯所說的，Assassin在不久之後也來了。儘管在看到妳時的眼神並不怎麼和善，但在理解了現階段的同盟關係之後，她還是平靜的坐了下來，透過念話傳達著撒母耳的意見。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739097553240457257" id="message-739097553240457257">
+                <div class="chatlog__content">
+                    <div class="markdown">或許因為曾經合作過，再加上共同的敵人出現在眼前，妳們的作戰會議可以說非常順利：
+正面作戰由妳為中心，菲力克斯與摩薩德的士兵在旁進行支援，而撒母耳則會帶著Assassin和Caster伺機登艦，對索拉、或是Raider本人進行斬首作戰。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">01-Aug-20 08:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="739100876089851905" id="message-739100876089851905">
+                <div class="chatlog__content">
+                    <div class="markdown">根據Caster所言，Raider的據點位於聖殿山──透過那對被神所祝福的千里眼，他同時也指出了那是聖杯的所在位置。
+在大靈脈的魔力掩蔽下，或許這也正是為什麼他可以在昨晚之前都沒有被發現的原因。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739102131386056774" id="message-739102131386056774">
+                <div class="chatlog__content">
+                    <div class="markdown">在得到這個情報後，你們也立刻採取了行動。
+撒母耳指揮摩薩德剩餘的成員對這個情報進行了確認，並調查出了通往聖殿山內部的通道。Archer派出了旗下的火槍隊監視著聖殿山附近的通道，菲力克斯也幾乎把他所有的魔道機具全部用上，在戰場的附近與摩薩德的士兵們開始部屬。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739102826491543613" id="message-739102826491543613">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">形象［魔導武裝（防空炮）的支援(1)］［摩薩德士兵的支援（妨害術式&amp;現代火槍）(1)］</div></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739103570309414946" id="message-739103570309414946">
+                <div class="chatlog__content">
+                    <div class="markdown">準備的過程相當順利──或許可以說順利過頭了。
+三組人馬，四個英靈齊聚一堂，共同準備著對付敵人。無論是Raider、索拉、甚至連Saber所屬的伊斯蘭勢力都沒有出來妨礙。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739103795140755596" id="message-739103795140755596">
+                <div class="chatlog__content">
+                    <div class="markdown">但隱隱約約，妳仍然感覺到有一絲不和諧……某人──菲力克斯、摩西、或是撒母耳，正隱瞞著什麼。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739103877076353117" id="message-739103877076353117">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="pre pre--multiline nohighlight">形象［不和諧的同盟關係］</div></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-20 11:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="739689799819984916" id="message-739689799819984916">
+                <div class="chatlog__content">
+                    <div class="markdown">很快的，時間來到了深夜。
+儘管布置時沒被干擾是件好事，但理論上這麼大的動靜，對方不可能什麼都沒察覺。考量到索拉隱蔽術式的效果，菲力克斯認為他們最有可能採取的戰術，就是如同昨天一樣，趁著己方疏忽大意時出手襲擊。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739689943714103421" id="message-739689943714103421">
+                <div class="chatlog__content">
+                    <div class="markdown">但在入夜後數個小時過去，Raider陣營卻仍然沒有絲毫動靜。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-20 11:51 AM</span>
+
+            <div class="chatlog__message " data-message-id="739692009706618953" id="message-739692009706618953">
+                <div class="chatlog__content">
+                    <div class="markdown">「……他們為什麼還沒有動靜？」米拿現的表情透露出些許焦躁，凶狠地看著通往聖殿山內部的秘密入口。
+「或許是我們的同盟，導致Raider決定採取守城戰的方式應對吧。」Archer摸著下巴，提出一種可能性：「比起貿然出面，迎戰做好萬全準備的我們，確實不如在狹窄的通道內對付我們……或許Raider並不如表面上的自大衝動。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739692757701886012" id="message-739692757701886012">
+                <div class="chatlog__content">
+                    <div class="markdown">「這樣的話，就得把對方引誘出來了呢……或者，我們主動潛進去嗎？」菲力克斯說著：「終歸來說，我們只要能讓Caster跟Assassin接近到Raider身邊就好，倒是不一定非得用上這些準備。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739692804493541376" id="message-739692804493541376">
+                <div class="chatlog__content">
+                    <div class="markdown">「Rider，你怎麼看？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-20 12:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="739697292269060107" id="message-739697292269060107">
+                <div class="chatlog__content">
+                    <div class="markdown">「你們待在這吧，我進去看看。」不假思索說道。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-20 04:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="739758916333731861" id="message-739758916333731861">
+                <div class="chatlog__content">
+                    <div class="markdown">「吾隨妳前去。」有些警戒的看著菲力克斯，Archer向妳躬身，接話道：「畢竟，攻城戰可以說是吾的拿手好戲呢。」
+「那就麻煩你們了。」對於紅衣主教的視線不以為意，菲力克斯聳聳肩，淺笑著向你們招手。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-20 05:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="739771149365542922" id="message-739771149365542922">
+                <div class="chatlog__content">
+                    <div class="markdown">伊娥可以感覺得出來，某些地方不太對勁，無論是哪一邊。
+但她並沒有謀劃的能力，即使明白危險，適合她的策略也只有一條。
+嘗試像個英雄般，勇往直前。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="739771487329714257" id="message-739771487329714257">
+                <div class="chatlog__content">
+                    <div class="markdown">她帶著Archer，逕直踏入聖殿山的小路。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">03-Aug-20 05:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="739771571052347392" id="message-739771571052347392">
+                <div class="chatlog__content">
+                    <div class="markdown">＝＝＝＝＝＝＝＝</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">05-Aug-20 10:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="740402346994958357" id="message-740402346994958357">
+                <div class="chatlog__content">
+                    <div class="markdown">在常人的想像中，神聖的事物似乎永遠是光明燦爛的。但很多時候，純粹的黑暗也能體現出聖地的莊嚴肅穆。
+踏入通往聖殿山內部的密道，走在幽暗深邃的洞窟隧道中，身為英靈、同時也是藉著聖杯之力與大地契約的妳，能深切感受到隱伏在地底下，那匯聚合一的靈脈鼓動。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">05-Aug-20 03:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="740464614516719646" id="message-740464614516719646">
+                <div class="chatlog__content">
+                    <div class="markdown">沉靜的黑暗中，只有你們兩人的移動時發出的細瑣聲響。
+出乎意料的，這一路上並沒有Archer預計會有的埋伏；Raider也像是完全沒注意到你們一樣，對於你們沒有特別隱藏起來的入侵行動，絲毫沒有回應。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="740465030293749772" id="message-740465030293749772">
+                <div class="chatlog__content">
+                    <div class="markdown">「御主……妳認為菲力克斯這個人可信嗎？」在緩緩接近聖殿山核心的路上，Archer一邊留神著周遭環境，一邊向妳問道。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">05-Aug-20 06:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="740509647525511180" id="message-740509647525511180">
+                <div class="chatlog__content">
+                    <div class="markdown">「菲力克斯的心性是明顯的，沒有刻意隱藏。求勝、遇事冷靜、明辨利害...作為策士，他有很多正向的特質。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="740510057917055026" id="message-740510057917055026">
+                <div class="chatlog__content">
+                    <div class="markdown">「所以騙人的時候，也能清楚感受到他在隱瞞。雖然不知道隱瞞了什麼，但肯定會加速我的死亡吧。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="740510260816511047" id="message-740510260816511047">
+                <div class="chatlog__content">
+                    <div class="markdown">「畢竟他是把我當作敵人的。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">06-Aug-20 09:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="740746957831667824" id="message-740746957831667824">
+                <div class="chatlog__content">
+                    <div class="markdown">「……妳這樣想，吾就放心了。」Archer輕笑：「畢竟妳對他的態度並不像是敵人。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="740748357458460743" id="message-740748357458460743">
+                <div class="chatlog__content">
+                    <div class="markdown">「御主，恕吾直言。這次與Raider之間的戰鬥，請保留最低限度的餘力。」這名在政場中打滾多年的老者接著說道。
+「Assassin與Caster……起碼Assassin，肯定會在Raider敗亡的那一瞬間對我們發起突襲吧。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="740748699893891123" id="message-740748699893891123">
+                <div class="chatlog__content">
+                    <div class="markdown">「自然，吾會盡全力保衛妳的安全……若御主情況危及，也請不吝使用令咒吧。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">06-Aug-20 12:47 PM</span>
+
+            <div class="chatlog__message " data-message-id="740793128235171884" id="message-740793128235171884">
+                <div class="chatlog__content">
+                    <div class="markdown">「不用擔心，我也想盡量待到戰爭的終結。」
+不過，其實還有一件事該知道......Raider目前的狀態究竟如何？雙方見面後，說不定局面又會有奇妙的變化。
+多虧某人，她已經對未來抱持起開放的心態，不去預設任何答案。
+只要在每個環節都做好自己，就肯定沒問題吧？</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="740793622018129922" id="message-740793622018129922">
+                <div class="chatlog__content">
+                    <div class="markdown">她筆直走向靈脈的深處──直到現在，Rider依然沒提前做任何戰鬥準備。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">07-Aug-20 03:41 PM</span>
+
+            <div class="chatlog__message " data-message-id="741199412268630039" id="message-741199412268630039">
+                <div class="chatlog__content">
+                    <div class="markdown">終於，在沉默中，妳們來到了聖殿山的深處。在天然隧道的盡頭，妳們可以看到那通往大空洞地帶的拱門。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="741199695690596353" id="message-741199695690596353">
+                <div class="chatlog__content">
+                    <div class="markdown">而在那拱門之後，正是Raider、他的戰船、以及座落在他身後的聖杯。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="741200158611603589" id="message-741200158611603589">
+                <div class="chatlog__content">
+                    <div class="markdown">「老子還以為你們會在外面虛耗一整天呢……總算是有人還有過來的膽量嗎？」Raider的粗聲粗氣迴盪在空洞中，他粗壯的身軀倚在船桅上。</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="741201356827918376" id="message-741201356827918376">
+                <div class="chatlog__content">
+                    <div class="markdown">「這句話原封不動的還給您，Raider閣下。」Archer不失禮地回道：「在見過您昨晚的表現之後，很難想像您願意屈就在這小小的斗室呢。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="741201635442950224" id="message-741201635442950224">
+                <div class="chatlog__content">
+                    <div class="markdown">「哼，隨你怎麼說。」Raider不太高興的哼了一口氣，站到船頭，從上方睥睨著你們。而Archer也已默默拿出了火槍，等待著妳的命令。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">07-Aug-20 06:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="741244772068622387" id="message-741244772068622387">
+                <div class="chatlog__content">
+                    <div class="markdown">「索拉人呢，他不在這裡嗎？」
+比起眼前所見，她更在乎不見的人：「在的話就出來吧，我有話想說。」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">07-Aug-20 08:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="741276186247823391" id="message-741276186247823391">
+                <div class="chatlog__content">
+                    <div class="markdown">「哼，那小鬼不在這裡，怕是死在哪裡的路邊了吧。」Raider似乎挺不悅的舉起了手：「事到如今，妳還想對那個被妳拋棄的可悲魔術師說些什麼？」</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/03.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="紫紫#5726" data-user-id="248759644674195456"  style="color: rgb(155, 89, 182)" >Rider（PL: 紫紫）</span>
+
+
+        <span class="chatlog__timestamp">08-Aug-20 08:59 AM</span>
+
+            <div class="chatlog__message " data-message-id="741460653126189156" id="message-741460653126189156">
+                <div class="chatlog__content">
+                    <div class="markdown">「...算了。」既然這樣，先處理完這場戰鬥再說。
+萬幸的是，先前有從菲力克斯手上拿到那個東西。
+她打開耳機，向菲力克斯傳訊：「Raider守在裡面，看起來不打算出去的樣子。更改作戰計劃吧，這裏空間滿寬闊的，應該可以直接在內部開戰。」</div>
+                </div>
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">10-Aug-20 04:21 PM</span>
+
+            <div class="chatlog__message " data-message-id="742296541271687248" id="message-742296541271687248">
+                <div class="chatlog__content">
+                    <div class="markdown">『瞭解，我們隨後就到，抵達時會再給妳信號。』菲力克斯的聲音從耳機傳來，妳聽到他對著在附近的米拿現說了些什麼，然後通訊就此中斷。</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+    <div class="chatlog__author-avatar-container">
+        <img class="chatlog__author-avatar" src="./src/01.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+        <span class="chatlog__author-name" title="hazmole#6672" data-user-id="137776984909545472" >GM@Hazmole</span>
+
+
+        <span class="chatlog__timestamp">10-Aug-20 04:29 PM</span>
+
+            <div class="chatlog__message " data-message-id="742298485683912805" id="message-742298485683912805">
+                <div class="chatlog__content">
+                    <div class="markdown">見妳沒有打算繼續說話，沒有了餘裕的Raider自然也不打算多語，雙眼中飽含著不明原因的怒火，銀手一揮，海盜戰船緩緩飄上了空。
+「為了讓一切在今晚結束。」魔力積蓄在砲管，怒火發出光芒：「──讓我們開始吧。」</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="742298501857280072" id="message-742298501857280072">
+                <div class="chatlog__content">
+                    <div class="markdown">＝＝＝＝＝＝＝＝</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

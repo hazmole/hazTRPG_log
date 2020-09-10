@@ -20,7 +20,7 @@ var name = "Jerusalem_part";
 	 
 	    var regArr = [
 	    	["https://cdn.discordapp.com/avatars/137776984909545472/1d6941d4cc01198345ac06bdd5b65e4f.png", "./src/01.png"],
-	   		["https://cdn.discordapp.com/avatars/137776984909545472/5c6bda486935b15405b9a899101cb07f.png", "./src/01.png"], // haz頭像
+	   		["https://cdn.discordapp.com/avatars/137776984909545472/ae0ff3b67ede2344f68e429013d18a67.png", "./src/01.png"], // haz頭像
 	   		["https://cdn.discordapp.com/avatars/249145925921013760/00d88f05e7f8b859a3bda4b85053c409.png", "./src/02.png"], // 乙名頭像
 	   		["https://cdn.discordapp.com/avatars/249145925921013760/a36964bfc662712d893fe10acbc645ab.png", "./src/02.png"], // 乙名頭像
 	   		["https://cdn.discordapp.com/avatars/248759644674195456/4e2f50645195ff07e5258c6c91e4bca6.png", "./src/03.png"], // 紫紫頭像
