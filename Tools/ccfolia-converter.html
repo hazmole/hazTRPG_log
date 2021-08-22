@@ -8,10 +8,21 @@
     #btn {
         margin: 1rem; width: 120px; height: 40px;
     }
+    #colorOptions {
+        margin: 0.2rem;
+        border: 1px solid #bfbfbf;
+        padding: .5rem;
+    }
+    .fontColorBlock {
+        display: inline-block;
+        width: 40px;
+        border: 1px solid black;
+    }
 </style>
 <script>
 var FILE_CONTENT = "";
 var FILE_TITLE = "";
+var COLOR_LIST = null;
 
 function handleFile(fileListObj){
     var checkResult = precheck(fileListObj);
@@ -22,10 +33,13 @@ function handleFile(fileListObj){
     var fr=new FileReader();
     fr.onload=function(){
         FILE_CONTENT = fr.result;
-        document.getElementById("btn").disabled = false;
         document.getElementById("fileName").value = FILE_TITLE;
+
+        document.getElementById("btn").disabled = false;
         document.getElementById("fileName").disabled = false;
         document.getElementById("fileTitle").disabled = false;
+
+        COLOR_LIST = getAllPlayerColor();
     }
     fr.readAsText(fileListObj[0]);
 }
@@ -33,16 +47,17 @@ function download(){
     var fileName = document.getElementById("fileName").value;
     var fileTitle = document.getElementById("fileTitle").value;
     var isNightmode = document.getElementById("nightmode").checked;
+    var isIdOnly = document.getElementById("idOnly").checked;
 
     var element = document.createElement('a');
-    element.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(formatHTML(fileTitle, FILE_CONTENT, isNightmode)));
+    element.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(formatHTML(fileTitle, FILE_CONTENT, isNightmode, isIdOnly)));
     element.setAttribute('download', fileName);
     document.body.appendChild(element);
     element.click();
 }
 
 
-function formatHTML(title, content, isNightmode){
+function formatHTML(title, content, isNightmode, isIdOnly){
     // Append Style
     var styleList = [];
     styleList.push("body {font-family:'Whitney','Helvetica Neue','Helvetica','Arial','sans-serif';}");
@@ -52,6 +67,10 @@ function formatHTML(title, content, isNightmode){
     styleList.push(".title {color:#dedede;font-size:2rem;font-weight:bold;}");
     if(isNightmode){
         styleList.push("body {background:#31363c;}");
+    }
+    if(isIdOnly){
+        var textColor = (isNightmode)? "#dcddde": "#000000";
+        styleList.push(`span:nth-child(3) {color:${textColor};}`);
     }
     content = content.replace('</head>', `<style>${styleList.join("")}</style>\n</head>`);
 
@@ -63,8 +82,18 @@ function formatHTML(title, content, isNightmode){
 
     // Replace Color
     if(isNightmode){
-        content = content.replace(/color:#888888;/g, 'color:#dcddde;');
-        content = content.replace(/color:#795548;/g, 'color:#a97967;');
+        Object.keys(COLOR_LIST).map(color=>{
+            var reg = new RegExp(`color:${color};`, 'g');
+            if(color=="#888888"){
+                content = content.replace(reg, `color:#dcddde;`);
+            }
+            else{
+                var newColor = getBrighterColor(color);
+                if(newColor!=color){
+                    content = content.replace(reg, `color:${newColor};`);
+                }
+            }
+        });
     }
 
     // Save
@@ -72,6 +101,46 @@ function formatHTML(title, content, isNightmode){
 }
 
 
+//==============
+// Color Options
+function getAllPlayerColor(){
+    var colorList = {};
+    var matchArr = FILE_CONTENT.match(/style="color:#[\w\d]+;"/g);
+    matchArr.map(style => {
+        var color = style.match(/(#[\w\d]+)/)[0];
+        colorList[color] = false;
+    });
+    return colorList;
+}
+function getBrighterColor(colorCode){
+    var matchResult = colorCode.match(/#([\w\d]{2})([\w\d]{2})([\w\d]{2})/);
+    var rgbArr = [];
+    rgbArr.push(parseInt(matchResult[1],16));
+    rgbArr.push(parseInt(matchResult[2],16));
+    rgbArr.push(parseInt(matchResult[3],16));
+    
+    var totalVal = rgbArr.reduce((a,b)=>a+b);
+
+    var rgbArrNew = null
+    if(totalVal/3<150){
+        console.log()
+        rgbArrNew = rgbArr.map(colorVal => {
+            var newVal = Math.floor(colorVal*1.3);
+            return newVal>255? 255: newVal;
+        });
+    }
+    else
+        return colorCode;
+
+    var newColorCode = "#"+rgbArrNew.map(val=>getColorCode(val)).join("");
+    return newColorCode;
+
+    //================
+    function getColorCode(val){
+        var hex = val.toString(16);
+        return hex.length==1? ("0"+hex): hex;
+    }
+}
 
 
 function precheck(fileListObj){
@@ -85,7 +154,7 @@ function precheck(fileListObj){
 </head>
 <body>
 <center>
-    <b style="font-size: 2rem;">CCFolia團錄重塑工具</b>
+    <b style="font-size: 2rem;">CCFolia團錄重塑工具</b> version 1.1
     <div class="desc" style="margin-bottom: 1.5rem;">讓你的ccfolia文字團錄弄的好看一點！</div>
     <img src="001.png"/>
 </center>
@@ -99,6 +168,7 @@ function precheck(fileListObj){
     <div><b>檔名</b>：<input type="text" id="fileName" disabled="true" style="width:400px"></div>
     <div><b>標題</b>：<input type="text" id="fileTitle" disabled="true" style="width:400px"></div>
     <div><b>夜晚模式</b>：<label><input id="nightmode" type="checkbox" checked="true">啟用</label></div>
+    <div><b>只有ID字色</b>：<label><input id="idOnly" type="checkbox">啟用</label></div>
 
     <input type="button" id="btn" value="下載檔案" disabled="true" onclick="download()" />
 
