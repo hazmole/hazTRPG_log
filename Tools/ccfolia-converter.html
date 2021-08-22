@@ -1,0 +1,112 @@
+<head>
+<title>CCFolia團錄重塑工具</title>
+<style>
+    .desc {
+        color: #808080;
+        margin: 0rem .5rem 1rem .5rem;
+    }
+    #btn {
+        margin: 1rem; width: 120px; height: 40px;
+    }
+</style>
+<script>
+var FILE_CONTENT = "";
+var FILE_TITLE = "";
+
+function handleFile(fileListObj){
+    var checkResult = precheck(fileListObj);
+    if(checkResult!=0) return ;
+
+    FILE_TITLE = fileListObj[0].name;
+
+    var fr=new FileReader();
+    fr.onload=function(){
+        FILE_CONTENT = fr.result;
+        document.getElementById("btn").disabled = false;
+        document.getElementById("fileName").value = FILE_TITLE;
+        document.getElementById("fileName").disabled = false;
+        document.getElementById("fileTitle").disabled = false;
+    }
+    fr.readAsText(fileListObj[0]);
+}
+function download(){
+    var fileName = document.getElementById("fileName").value;
+    var fileTitle = document.getElementById("fileTitle").value;
+    var isNightmode = document.getElementById("nightmode").checked;
+
+    var element = document.createElement('a');
+    element.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(formatHTML(fileTitle, FILE_CONTENT, isNightmode)));
+    element.setAttribute('download', fileName);
+    document.body.appendChild(element);
+    element.click();
+}
+
+
+function formatHTML(title, content, isNightmode){
+    // Append Style
+    var styleList = [];
+    styleList.push("body {font-family:'Whitney','Helvetica Neue','Helvetica','Arial','sans-serif';}");
+    styleList.push("p {border-bottom:#5d5d5d solid thin;}");
+    styleList.push("span:nth-child(2) {font-weight:bold;}");
+    styleList.push("span:nth-child(3) {display:block;margin-left:1em;margin-bottom:.5em;}");
+    styleList.push(".title {color:#dedede;font-size:2rem;font-weight:bold;}");
+    if(isNightmode){
+        styleList.push("body {background:#31363c;}");
+    }
+    content = content.replace('</head>', `<style>${styleList.join("")}</style>\n</head>`);
+
+    // Handle Title
+    if(title){
+        content = content.replace('<body>', `<body>\n<div class="title">${title}</div><hr>`);
+        content = content.replace(/<title>.*<\/title>/, `<title>${title}</title>`);        
+    }
+
+    // Replace Color
+    if(isNightmode){
+        content = content.replace(/color:#888888;/g, 'color:#dcddde;');
+        content = content.replace(/color:#795548;/g, 'color:#a97967;');
+    }
+
+    // Save
+    return content;
+}
+
+
+
+
+function precheck(fileListObj){
+    if(fileListObj.length!=1) return 1;
+    if(fileListObj[0].name.match(/\.html$/)==null) return 2;
+
+    return 0;
+}
+
+</script>
+</head>
+<body>
+<center>
+    <b style="font-size: 2rem;">CCFolia團錄重塑工具</b>
+    <div class="desc" style="margin-bottom: 1.5rem;">讓你的ccfolia文字團錄弄的好看一點！</div>
+    <img src="001.png"/>
+</center>
+<hr/>
+
+    <b>團錄檔案</b>：<input type="file" id="fileInput" onchange="handleFile(this.files)" />
+    <div class="desc">選擇你的ccfolia紀錄輸出檔(.html)。</div>
+
+<hr/>
+<b>新團錄設定</b>
+    <div><b>檔名</b>：<input type="text" id="fileName" disabled="true" style="width:400px"></div>
+    <div><b>標題</b>：<input type="text" id="fileTitle" disabled="true" style="width:400px"></div>
+    <div><b>夜晚模式</b>：<label><input id="nightmode" type="checkbox" checked="true">啟用</label></div>
+
+    <input type="button" id="btn" value="下載檔案" disabled="true" onclick="download()" />
+
+<hr/>
+<div style="color:#ba006a">
+有任何疑問或改進建議，煩請聯絡我們．<br/>
+<ul>
+    <li>Github專案: <a href="https://github.com/hazmole/hazTRPG_log">https://github.com/hazmole/hazTRPG_log</a></li>
+</ul>
+</div>
+</body>
