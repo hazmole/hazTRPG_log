@@ -1,19 +1,22 @@
 class TrpgParser{
 	constructor(){
 		this.regList = {
+			"getFileName": new RegExp(/(.*)\.\w+$/),
 			"htmlBody": new RegExp(/<body>(.*)<\/body>/, 's'),
 			"ccfFotmat": new RegExp(/style="color:#[\w\d]+;"/),
 			"ddfFotmat": new RegExp(/color='#[\w\d]+'/),
 		};
-
 		this.rawData = null;
 		this.mode = '';
 		
+		this.filename = '';
 		this.userMap = {};
 		this.script = null;
+
+		this.isLoaded = false;
 	}
 
-	parseData(data){
+	ParseData(filename, data){
 		this.rawData = data;
 		this.mode = this.checkMode();
 
@@ -23,8 +26,24 @@ class TrpgParser{
 			case "CCF":
 				this.parseFormat_CCF();
 		}
+
+		this.filename = filename.match(this.regList["getFileName"])[1];
+		this.isLoaded = true;
 	}
 
+	GetTitle(){ return this.filename; }
+	GetActorList(){
+		var retList = {};
+		for(var actor of Object.values(this.userMap)){
+			retList[actor.id] = actor;
+		}
+		return retList;
+	}
+	GetScript(){
+		return this.script;
+	}
+
+/*
 	Export(){
 		var title = document.getElementById("_input_title").value;
 
@@ -53,7 +72,7 @@ class TrpgParser{
 		this.userMap[actor.name].color = color;
 		this.renderColor();
 	}
-
+*/
 	//=================
 	checkMode(){
 		var self = this;
@@ -84,11 +103,7 @@ class TrpgParser{
 	registerUser(userName, color){
 		var userMapCount = Object.keys(this.userMap).length;
 		if(!this.userMap[userName]){
-			this.userMap[userName] = {
-				id: userMapCount,
-				name: userName,
-				color: color,
-			};
+			this.userMap[userName] = new Actor(userMapCount, userName, color, "");
 			return userMapCount;
 		}
 		return this.userMap[userName].id;
@@ -118,15 +133,13 @@ class TrpgParser{
 
 			var id = self.registerUser(user, color);
 
-			var obj = {
-				type: "talk",
-				actorId: id,
-				content: content,
-			};
-			return obj;
+			var line = new ScirptLine("talk");
+			line.setTalkType(id, content);
+			return line;
 		}
 	}
 
+	/*
 	//=========
 	buildUserList(rootId){
 		$(`#${rootId}`).empty();
@@ -180,12 +193,32 @@ class TrpgParser{
 			$(`.actor_${actor.id} .user`).css('color', `#${actor.color}`);
 		}
 	}
-
+	*/
 
 }
 
 
-function toggleImgUrl(elem){
+class Actor {
+	constructor(id, name, colorCode, imgUrl){
+		this.id = id;
+		this.name = name;
+		this.color = colorCode;
+		this.imgUrl = imgUrl;
+	}
+}
+class ScirptLine {
+	constructor(type){
+		this.type = type;
+		this.actorId = null;
+		this.content = null;
+	}
+	setTalkType(actorId, content){
+		this.actorId = actorId;
+		this.content = content;
+	}
+}
+
+/*function toggleImgUrl(elem){
 	$(elem).parent().siblings().toggle(500);
 }
 function setCharImg(elem){
@@ -198,19 +231,4 @@ function setCharImg(elem){
 	var actorId = elemId.match(/_user_(\d+)/)[1];
 
 }
-function setCharColor(elem){
-
-}
-
-
-
-function download(data){
-    var fileName = 'test.json';
-    
-    var element = document.createElement('a');
-    element.setAttribute('href','data:text/plain;charset=utf-8,' + 
-        encodeURIComponent(data));
-    element.setAttribute('download', fileName);
-    document.body.appendChild(element);
-    element.click();
-}
+*/

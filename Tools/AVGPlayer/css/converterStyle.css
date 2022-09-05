@@ -1,83 +1,187 @@
 #mainPanel {
 	position: absolute;
 
-	width: 1080px;
-	height: 768px;
+	width: 1024px;
+	height: 733px;
 	margin-left: calc(-1080px/2);
 	left: calc(100vw/2);
 	border: solid #29292a 5px;
+	border-top-width: 35px;
+	background-color: #cdd2db;
+	overflow: hidden;
 }
 
 /* Toolbar  */
 #_toolbar {
 	width: 100%;
-	height: 30px;
-	background: #29292a;
-}
-
-
-/* User Entry  */
-.UserEntry{
-	border: 1px solid black;
-}
-.UserEntryInner{
+	height: 75px;
+	background: #454752;
 	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid #454752;
+}
+#_toolbar_leftGroup, #_toolbar_rightGroup {
+	display: flex;
+	align-items: flex-end;
+}
+#_toolbar ._btn_group {
+	display: flex;
+	margin-right: 5px;
+}
+#_toolbar ._btn {
+	width: 75px;
+	height: 70px;
+	background-color: #646778;
+	margin: 0 1px;
+	padding: 5px 0 0 0;
+
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-	flex-wrap: wrap;
-	padding: 5px;
-	text-align: left;
 }
-._user_img {
-	width: 40px;
-	height: 40px;
-	background-size: cover;
-	background-image: url("../image/icons/pencil.png");
-	border: 1px solid gray;
-	cursor: pointer;
+#_toolbar ._btn:hover { background-color: #818499; }
+#_toolbar ._btn:active,#_toolbar ._btn.active { background-color: #353e68; }
+#_toolbar ._btn ._icon {
+	height: 50px;
+	width: 50px;
+	background-size: contain;
 }
-._user_color input {
-	width: 40px;
-	height: 40px;
-	padding: 0px;
-	cursor: pointer;
+#_toolbar ._btn ._label {
+	font-size: .4rem;
+	color: #d1d1d1;;
 }
-._user_name {
-	width: 200px;
-	padding: 2px 5px;
+#_toolbar #btn_import ._icon { background-image: url("../image/icons/import-icon.png"); }
+#_toolbar #btn_export ._icon { background-image: url("../image/icons/load.png"); }
+#_toolbar #btn_to_general ._icon { background-image: url("../image/icons/info.png"); }
+#_toolbar #btn_to_actor ._icon { background-image: url("../image/icons/mona-lisa.png"); }
+#_toolbar #btn_to_script ._icon { background-image: url("../image/icons/open-book.png"); }
+#_toolbar #_sign {
+	color: #d1d1d1;
+	font-style: italic;
+	padding: .5rem;
 }
-._user_img_url {
-	width: 348px;
+
+/* Message Bar */
+#_msgbox {
 	display: none;
+	position: absolute;
+	width: 600px;
+	top: 87px;
+	left: calc(50%);
+	z-index: 100;
+	margin-left: calc(-600px/2);
+	border-radius: 5px;
+
+	background: #f6ffdf;
+	color: black;
+
+	padding: 5px;
+	text-align: center;
 }
-._user_img_url .label {
-	background: #aaa;
-	padding: 4px;
-	width: 40px;
-}
-._user_img_url .field {
-	background: #ddd;
-	padding: 4px;
-	width: 300px;
-	text-align: left;
-}
-._user_img_url .field input {
+#_msgbox.success { background: #7ced99; }
+#_msgbox.error { background: #ed7f7f; }
+
+/* Workspace  */
+#_workspace {
 	width: 100%;
-}
-
-
-/* Script Line  */
-._scriptLine {
 	display: flex;
 }
-._scriptLine:hover {
-	border: 2px solid #a71c34;
+#_workspace #_leftCol, #_workspace #_rightCol {
+	height: 670px;
+	overflow-y: auto;
 }
-._scriptLine .user{
-	width: 90px;
-	padding: 5px;
-	background: #333;
+#_workspace #_leftCol {
+	width: 237px;
+	background: #454752;
+	display: flex;
+	flex-direction: column;
 }
-._scriptLine .content{
-	width: 500px;
-	padding: 5px;
+#_workspace #_rightCol {
+	width: calc(100% - 237px);
 }
+
+/* Left Colume  */
+#_leftCol .title {
+	background: #0a103a;
+	padding: 8px 0;
+	width: 100%;
+
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: white;
+}
+
+
+/* Actor Entry  */
+._actorEntry {
+	background: #f0f4ff;
+	width: calc(100% - 22px);
+	padding: 10px 10px;
+	margin: 1px 0;
+}
+._actorEntry:hover { background-color: #acb5cf; }
+._actorEntry:active, ._actorEntry.active { background-color: #5b6789; color: white; }
+
+._actor_frame { display: flex; }
+._actor_headImg_frame {
+	width: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+._actor_headImg {
+	width: 150px;
+	height: 150px;
+	background-color: white;
+	background-size: cover;
+	border: solid black 2px;
+}
+._actor_headImg div {
+	text-align: center;
+	color: #646464;
+	padding-top: 65px;
+}
+
+._actor_basicInfo_frame {
+	width: 600px;
+}
+._entry_title {
+	width: 120px;
+	text-align: right;
+	font-weight: bold;
+}
+
+
+/* File  */
+#_uploadFile { display: none; }
+
+/* Save Button */
+._btn_save {
+	width: 100px;
+	padding: 15px;
+  background: #34446e;
+  color: white;
+  cursor: pointer;
+}
+._btn_save:hover { background: #5b6b95; }
+._btn_save:active { background: #232e4a; }
+
+/* Others */
+.infoBlock {
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px;
+
+	background-color: #fff;
+	width: calc(100% - 42px);
+	text-align: left;
+}
+#_rightCol h2 {
+	margin: 10px;
+}
+.row { margin: 10px; }
+.flex { display: flex; align-items: center; }
+.clickable { cursor: pointer; }
+.right { text-align: right; }
+input[type=text] { height: 25px; }
