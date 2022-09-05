@@ -1,0 +1,29 @@
+<html>
+<title>團錄播放器</title>
+<link rel="stylesheet" type="text/css" href="css/playerStyle.css">
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="js/ScenePlayer.js"></script>
+<script>
+function init(){
+	var mainCtrl = new SceneCtrl("mainViewPort");
+	mainCtrl.Init();
+}
+</script>
+<body onload="init()">
+	<div style="text-align:center;">
+		<font style="font-size:2rem; font-weight:bold;">團錄播放器</font>
+		<div style="margin-bottom: 1rem;">
+			<b>播放器</b> | <a href="converter.html">轉換器</a>	
+		</div>
+	</div>
+	
+	<div id="mainViewPort"></div>
+	<div style="height:800px;"></div>
+
+	<div style="text-align:center;">
+		<div>
+			by Hazmole
+		</div>
+	</div>
+</body>
+</html>

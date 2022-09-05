@@ -1,0 +1,115 @@
+<html>
+<title>團錄轉換器</title>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/converterStyle.css">
+<script src="js/TrpgParser.js"></script>
+<script src="js/TrpgCfgEditor.js"></script>
+
+<style>
+.row {
+	display: flex;
+	justify-content: center;
+	text-align:center;
+}
+
+.infoBlock {
+	border: 1px solid black;
+	padding: .5rem;
+}
+
+#Workspace {
+	width: 1080px;
+	padding: 5px;
+
+	display: flex;
+	flex-direction: row;
+}
+#Workspace #leftCol{
+	width: 360px;
+	margin: 5px;
+	
+	display: flex;
+	flex-direction: column ;
+}
+#Global {
+	background: #ddd;
+	padding: 10px 5px;
+	margin: 5px;
+}
+#UserList {
+	margin: 5px;
+}
+
+#Content {
+	width: 600px;
+	text-align: left;
+	padding: 10px 5px;
+}
+
+</style>
+<script>
+	window.onload = function(){
+		var parser = new TrpgParser();
+		var editor = new CfgEditor("mainPanel");
+
+		editor.init();
+
+		/*$("#inputFile").on('change', (event) => {
+			const files = event.target.files;
+
+			var fr = new FileReader();
+			fr.onload = function(){
+	            try{
+	            	parser.parseData(fr.result);
+	            	parser.buildUserList("UserList");
+	            	parser.buildScript("Content");
+	            } catch(e){
+	            	console.error(e);
+	            }
+       		};
+       		fr.readAsText(files[0]);
+		});*/
+	}
+</script>
+<body>
+	<div style="text-align:center;">
+		<font style="font-size:2rem; font-weight:bold;">團錄轉換器</font>
+		<div style="margin-bottom: 1rem;">
+			<a href="player.html">播放器</a> | <b>轉換器</b>
+		</div>
+	</div>
+	<!--
+	<div class="row" style="margin:1rem 0;">
+		<div class="infoBlock" style="width:600px;">
+			這個工具能夠將 どどんとふ 和 CCFolia 輸出的團錄轉換成「播放器」可用的格式。<br>
+			若有使用上的疑問，或有任何建議，歡迎在Discord上聯絡 <b>hazmole#6672</b>。
+		</div>
+	</div>-->
+	<!--<hr>
+	<div class="row">匯入原始團錄：<input id="inputFile" type="file" accept=".html"></div>
+	<hr>
+	<button onclick="parser.Export();">輸出</button>
+	<hr>-->
+
+	<div id="mainPanel"></div>
+	<div style="height:800px;"></div>
+
+	<div style="text-align:center;">
+		<div>
+			by Hazmole
+		</div>
+	</div>
+	<!--<div class="row">
+		<div id="Workspace">
+			<div id="leftCol">
+				<div id="Global">
+					<div><b>團錄標題</b>：<input id="_input_title" type="text"></div>
+				</div>
+				<div id="UserList"></div>
+			</div>
+			<div id="Content"></div>
+		</div>
+	</div>-->
+
+</body>
+</html>

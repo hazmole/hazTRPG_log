@@ -1,0 +1,73 @@
+{
+	"config": {
+		"title": "森林的詠嘆調-Part1",
+		"defaultBg": "./image/background/sample03.png",
+		"actors": [
+			{ "id": 1, "name": "GM@Haz", "imgUrl": "" },
+			{ "id": 2, "name": "理也", "color": "#2ac3ff", "imgUrl": "./image/character/01.png" },
+			{ "id": 3, "name": "瑠美", "color": "#ca32e4", "imgUrl": "./image/character/02.png" },
+			{ "id": 4, "name": "琉璃蒼", "color": "#ff2780", "imgUrl": "./image/character/03.png" },
+			{ "id": 5, "name": "雀爺爺", "imgUrl": "./image/character/sampleMale.png" }
+		]
+	},
+	"script": [
+		{ 
+			"type": "talk",
+			"actorId": 1,
+			"content": "微風吹拂，略有些潮濕的空氣帶著森林特有的氣味鑽進了你們的鼻腔。\n漫步於清晨的森林，從樹葉間流淌而下的陽光照耀著你們腳前的道路，也驅散了森林深處的黑暗。"
+		},
+		{ 
+			"type": "talk",
+			"actorId": 2,
+			"content": "「這裡就是老伯提到的森林嗎，這個方向應該沒錯吧瑠美？」"
+		},
+		{ 
+			"type": "talk",
+			"actorId": 3,
+			"content": "「嗯~應該是這邊了。」\n瑠美眺望這些高得把陽光遮蓋的樹木。"
+		},
+		{ 
+			"type": "talk",
+			"actorId": 2,
+			"content": "「看現在的時間，我們應該可以趕在太陽下山之前到達大屋吧，蒼你怎麼想？」\n理也看向身後跟著的琉璃蒼問道"
+		},
+		{ 
+			"type": "talk",
+			"actorId": 4,
+			"content": "「稍微趕一點應該是能行的吧」"
+		},
+		{ "type": "halt" },
+		{ 
+			"type": "talk",
+			"actorId": 1,
+			"content": "為了找尋傳說中寶可夢的蹤影，你們三人一邊旅行，一邊打聽著關於不可思議寶可夢的傳聞。\n幸運的是，在來到真新鎮的不久之後，你們便有了收穫。"
+		},
+		{ "type": "changeBg", "bgUrl": "./image/background/sample02.png" },
+		{ 
+			"type": "talk",
+			"actorId": 1,
+			"content": "從一名被大家稱為「雀爺爺」的老人口中，你們得知了在常盤森林深處的廢棄宅邸附近，據說曾經有不可思議的寶可夢被目擊過。"
+		},
+		{ 
+			"type": "talk",
+			"actorId": 1,
+			"content": "儘管常盤森林的深處有著不少危險的寶可夢居住，但如果因為這點小阻礙就卻步，那也稱不上是寶可夢訓練家了吧！"
+		},
+		{ 
+			"type": "talk",
+			"actorId": 1,
+			"content": "在進一步詢問廢棄宅邸的位置後，得知你們要前往宅邸探險，雀爺爺也向你們提出了委託。"
+		},
+		{ 
+			"type": "talk",
+			"actorId": 5,
+			"content": "「可以的話……請幫我把這封信，還有這束花，放在宅邸內的墓上。」"
+		},
+		{ 
+			"type": "talk",
+			"actorId": 1,
+			"content": "據他所說，在那裏沉睡的是他年輕時的朋友。\n原本他應該要親自過去獻花的，但自從上了年紀之後，他的身體就禁不起穿過森林這項苦差事了。"
+		}
+
+	]
+}
