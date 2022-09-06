@@ -51,7 +51,7 @@
 	color: #d1d1d1;;
 }
 #_toolbar #btn_import ._icon { background-image: url("../image/icons/import-icon.png"); }
-#_toolbar #btn_export ._icon { background-image: url("../image/icons/load.png"); }
+#_toolbar #btn_export ._icon { background-image: url("../image/icons/save.png"); }
 #_toolbar #btn_to_general ._icon { background-image: url("../image/icons/info.png"); }
 #_toolbar #btn_to_actor ._icon { background-image: url("../image/icons/mona-lisa.png"); }
 #_toolbar #btn_to_script ._icon { background-image: url("../image/icons/open-book.png"); }
@@ -88,16 +88,17 @@
 }
 #_workspace #_leftCol, #_workspace #_rightCol {
 	height: 670px;
-	overflow-y: auto;
 }
 #_workspace #_leftCol {
 	width: 237px;
 	background: #454752;
+	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
 }
 #_workspace #_rightCol {
 	width: calc(100% - 237px);
+	overflow-y: hidden;
 }
 
 /* Left Colume  */
@@ -150,6 +151,27 @@
 	width: 120px;
 	text-align: right;
 	font-weight: bold;
+}
+
+
+/* Script */
+._scriptMethodEntry {
+	background: #f0f4ff;
+	width: calc(100% - 32px);
+	padding: 10px 10px;
+	border: 3px solid #1f2650;
+	margin: 1px 2px;
+}
+._scriptMethodEntry:hover  { background-color: #acb5cf; }
+._scriptMethodEntry:active { background-color: #5b6789; color: white; }
+
+#_script_ctrlPanel{
+	height: 130px;
+}
+#_script_listPanel{
+	height: 520px;
+	overflow-y: auto;
+	background: #252730;
 }
 
 
