@@ -24,6 +24,8 @@ class TrpgParser{
 
 		this.rawData = data;
 		this.mode = mode;
+		this.userMap = {};
+		this.script = [];
 		this.filename = filename.match(this.regList["getFileName"])[1];
 
 		switch(mode){
@@ -97,12 +99,10 @@ class TrpgParser{
 
 		this.filename = jsonObj.config.title;
 
-		this.userMap = {};
 		for(var actor of jsonObj.config.actors){
 			this.userMap[actor.id] = new Actor(actor.id, actor.name, actor.color, actor.imgUrl);
 		}
 
-		this.script = [];
 		for(var scriptObj of jsonObj.script){
 			this.script.push(new ScirptLine(scriptObj.type, scriptObj));
 		}
