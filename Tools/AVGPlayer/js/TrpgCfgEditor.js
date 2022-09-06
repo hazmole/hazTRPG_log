@@ -31,6 +31,7 @@ var MSG = {
 	"EOF": "文件結尾",
 	"Error_WrongFileFormat": "錯誤！無法辨識的檔案格式！",
 	"Error_NoFileLoaded": "錯誤！尚未上傳原始團錄！",
+	"Error_NoSelectedEntry": "請先選擇一個段落！",
 	"Success_ParseComplete": "讀取成功！",
 	"Success_SaveCfg": "設定已儲存！",
 	"Tip_selectActor": "請點選左側的登場角色進行個別設定。",
@@ -256,6 +257,11 @@ class CfgEditor {
 	}
 
 	onClick_addChBgCmd(){
+		if(!this.selectedPtr){
+			this.popupMsgBox("error", MSG["Error_NoSelectedEntry"]);
+			return ;
+		}
+
 		var scriptObj = {
 			type: "changeBg",
 			bgUrl: prompt("請輸入背景圖片URL:"),
@@ -263,12 +269,22 @@ class CfgEditor {
 		this.addScriptEntry(this.selectedPtr, scriptObj);
 	}
 	onClick_addHaltCmd(){
+		if(!this.selectedPtr){
+			this.popupMsgBox("error", MSG["Error_NoSelectedEntry"]);
+			return ;
+		}
+
 		var scriptObj = {
 			type: "halt"
 		};
 		this.addScriptEntry(this.selectedPtr, scriptObj);
 	}
 	onClick_delScriptCmd(){
+		if(!this.selectedPtr){
+			this.popupMsgBox("error", MSG["Error_NoSelectedEntry"]);
+			return ;
+		}
+		
 		if(!this.selectedPtr) return;
 		if($(this.selectedPtr).hasClass("SOF")) return ;
 
