@@ -41,9 +41,7 @@ builder.subpage_actorEditPage = function(actorObj){
 	return `
 		<div class="_actor_frame">
 			<div class="_actor_headImg_frame">
-				<div class="_actor_headImg" ${ imgUrl? `style="background-image:url(${imgUrl});"`: "" }>
-					${ imgUrl? "": `<div>${MSG["undefined_headImg"]}</div>` }
-				</div>
+				<div class="_actor_headImg"></div>
 			</div>
 			<div class="_actor_basicInfo_frame">
 				<div class="row flex"><div class="_entry_title">${MSG["actor_id"]}：</div><div>${actorObj.id}</div></div>

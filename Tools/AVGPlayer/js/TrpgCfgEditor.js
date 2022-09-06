@@ -154,6 +154,7 @@ class CfgEditor {
 		var actorObj = this.selectedPtr;
 		//---
 		$("#_actor_workspace").html(builder.subpage_actorEditPage(actorObj));
+		this.renderActorHeadImg();
 		//---
 		$("#_btn_saveActorCfg").on('click', this.onClick_SaveActorCfg.bind(this, actorObj.id));
 		$("#_input_actorHeadImgUrl").on('change', this.onChange_setActorHeadImg.bind(this));
@@ -256,8 +257,8 @@ class CfgEditor {
 	downloadFile(){
 		var fileName = `${this.generalCfg.title}.arp`;
 		var data = {
+			version: VERSION,
 			config: {
-				version: VERSION,
 				title: this.generalCfg.title,
 				actors: Object.values(this.actorCfg),
 			},

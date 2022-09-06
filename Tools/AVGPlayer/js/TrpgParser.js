@@ -17,17 +17,20 @@ class TrpgParser{
 	}
 
 	ParseData(filename, data){
-		this.rawData = data;
-		this.mode = this.checkMode();
-
-		switch(this.mode){
-			case "unknown":
-				throw 'Unknown file format';
-			case "CCF":
-				this.parseFormat_CCF();
+		var mode = this.checkMode(data);
+		if(mode === "unknown"){
+			throw 'Unknown file format';
 		}
 
+		this.rawData = data;
+		this.mode = mode;
 		this.filename = filename.match(this.regList["getFileName"])[1];
+
+		switch(mode){
+			case "ARP": this.parseFormat_ARP(); break;
+			case "CCF": this.parseFormat_CCF(); break;
+		}
+		
 		this.isLoaded = true;
 	}
 
@@ -43,62 +46,42 @@ class TrpgParser{
 		return this.script;
 	}
 
-/*
-	Export(){
-		var title = document.getElementById("_input_title").value;
-
-		var jsonFile = {};
-		jsonFile.config = {
-			title: title,
-			defaultBg: "",
-			actors: [],
-		};
-		jsonFile.script = [];
-
-		// append Actors
-		for(var actor of Object.values(this.userMap)){
-			jsonFile.config.actors.push(actor);
-		}
-		// append Script
-		for(var line of this.script){
-			jsonFile.script.push(line);
-		}
-
-		download(JSON.stringify(jsonFile))
-	}
 	//=================
-	setUserMapColor(actorId, color){
-		var actor = Object.values(this.userMap).find( user => user.id==actorId );
-		this.userMap[actor.name].color = color;
-		this.renderColor();
-	}
-*/
-	//=================
-	checkMode(){
+	checkMode(data){
 		var self = this;
-		var result = this.rawData.match(this.regList["htmlBody"]);
 
-		if(result==null){
-			return 'Text';
-		} else if(isCCF(this.rawData)){
-			return 'CCF';
-		} else if(isDDF(this.rawData)){
-			return 'DDF';
-		} else {
-			return 'unknown';
-		}
-		return this.mode;
+		if(isJSON(data)){
+			if(isARP(data)) return "ARP";
+		} else if(isHTML(data)) {
+			if(isCCF(data)) return "CCF";
+			//if(isDDF(data)) return "DDF";
+		} 
+		return "unknown";
 
 		//==================
+		function isJSON(data){
+			try{ JSON.parse(data) }
+			catch(e){ return false; }
+			return true;
+		}
+		function isARP(data){
+			var jsonObj = JSON.parse(data);
+			return jsonObj.version.includes("hazmole");
+		}
+		function isHTML(data){
+			var matchResult = data.match(self.regList["htmlBody"]);
+	    return (matchResult!=null);
+		}
 		function isCCF(data){
-		    var matchResult = data.match(self.regList["ccfFotmat"]);
-		    return (matchResult!=null);
+	    var matchResult = data.match(self.regList["ccfFotmat"]);
+	    return (matchResult!=null);
 		}
 		function isDDF(data){
-		    var matchResult = data.match(self.regList["ddfFotmat"]);
-		    return (matchResult!=null);
+	    var matchResult = data.match(self.regList["ddfFotmat"]);
+	    return (matchResult!=null);
 		}	
 	}
+
 	//==================
 	registerUser(userName, color){
 		var userMapCount = Object.keys(this.userMap).length;
@@ -109,6 +92,22 @@ class TrpgParser{
 		return this.userMap[userName].id;
 	}
 	//==================
+	parseFormat_ARP(){
+		var jsonObj = JSON.parse(this.rawData);
+
+		this.filename = jsonObj.config.title;
+
+		this.userMap = {};
+		for(var actor of jsonObj.config.actors){
+			this.userMap[actor.id] = new Actor(actor.id, actor.name, actor.color, actor.imgUrl);
+		}
+
+		this.script = [];
+		for(var scriptObj of jsonObj.script){
+			this.script.push(new ScirptLine(scriptObj.type, scriptObj));
+		}
+	}
+
 	parseFormat_CCF(){
 		var self = this;
 		var body = this.rawData.match(this.regList["htmlBody"])[1];
@@ -133,68 +132,13 @@ class TrpgParser{
 
 			var id = self.registerUser(user, color);
 
-			var line = new ScirptLine("talk");
-			line.setTalkType(id, content);
+			var line = new ScirptLine("talk", {
+				actorId: id,
+				content: content
+			});
 			return line;
 		}
 	}
-
-	/*
-	//=========
-	buildUserList(rootId){
-		$(`#${rootId}`).empty();
-		
-		var userArr = Object.values(this.userMap);
-		for(var user of userArr){
-			appendUserElem(user)
-		}
-
-		//====================
-		function appendUserElem(userObj){
-			var template = 
-`<div class="UserEntry" id="_user_${userObj.id}">
-	<div class="UserEntryInner">
-		<div class="_user_img" title="人物頭像" onclick="toggleImgUrl(this)"></div>
-		<div class="_user_color">
-			<input type="color" value="#${userObj.color}">
-		</div>
-		<div class="_user_name">${userObj.name}</div>
-	</div>
-	<div class="_user_img_url">
-		<div style="display: flex;">
-			<div class="label">URL</div>
-			<div class="field"><input type="text" onchange="setCharImg(this)"></div>
-		</div>
-	</div>
-</div>`;
-			$(`#${rootId}`).append(template);
-		}
-	}
-	buildScript(rootId){
-		$(`#${rootId}`).empty();
-
-		for(var line of this.script){
-			var template = 
-`<div class="_scriptLine actor_${line.actorId}">
-	<div class="user">${this.getActorName(line.actorId)}</div>
-	<div class="content">${line.content}</div>
-</div>`;
-			$(`#${rootId}`).append(template);
-		}
-		this.renderColor();
-	}
-
-	getActorName(id){
-		var actor = Object.values(this.userMap).find( user => user.id==id );
-		return (actor==null)? 'unknown': actor.name;
-	}
-	renderColor(){
-		for(var actor of Object.values(this.userMap)){
-			$(`.actor_${actor.id} .user`).css('color', `#${actor.color}`);
-		}
-	}
-	*/
-
 }
 
 
@@ -207,28 +151,24 @@ class Actor {
 	}
 }
 class ScirptLine {
-	constructor(type){
+	constructor(type, info){
 		this.type = type;
-		this.actorId = null;
-		this.content = null;
+		if(info){
+			this.setFields(info);
+		}
 	}
-	setTalkType(actorId, content){
-		this.actorId = actorId;
-		this.content = content;
+	setFields(info){
+		switch(this.type){
+			case "talk":
+				this.actorId = info.actorId;
+				this.content = info.content;
+				break;
+			case "changeBg":
+				this.bgUrl = info.bgUrl;
+				break;
+			case "halt":
+				break;
+		}
 	}
-}
-
-/*function toggleImgUrl(elem){
-	$(elem).parent().siblings().toggle(500);
-}
-function setCharImg(elem){
-	var url = $(elem).val();
-
-	var imgElem = $(elem).parent().parent().parent().siblings().find("._user_img");
-	imgElem.css("background-image", `url(${url})`);
-
-	var elemId = $(elem).parent().parent().parent().parent().attr('id');
-	var actorId = elemId.match(/_user_(\d+)/)[1];
 
 }
-*/
