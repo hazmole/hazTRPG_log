@@ -35,6 +35,9 @@ builder.actorEntry = function(actorObj){
 	var actorName = (actorObj.name)? actorObj.name: "&nbsp;";
 	return `<div class="_actorEntry clickable" data-id="${actorObj.id}">${actorName}</div>`;
 }
+builder.actorUndefinedImg = function(){
+	return `<div>${MSG["undefined_headImg"]}</div>`;
+}
 
 builder.subpage_actorEditPage = function(actorObj){
 	var imgUrl = actorObj.imgUrl;
@@ -59,7 +62,7 @@ builder.subpage_actorEditPage = function(actorObj){
 builder.pageL_scriptMethodList = function(){
 	return `
 		<div class="title">${MSG["Title_ActorList"]}</div>
-		<div id="_btn_addTalkCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddTalk"]}</div>
+		<div id="_btn_addTalkCmd" class="_scriptMethodEntry clickable disable">${MSG["btn_methodAddTalk"]}</div>
 		<div id="_btn_addChBgCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddChangeBg"]}</div>
 		<div id="_btn_addHaltCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddHalt"]}</div>
 		<div id="_btn_delCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodDel"]}</div>`.fmt();
@@ -73,6 +76,50 @@ builder.pageR_scriptCfg_Workspace = function(){
 		</div>
 		<div id="_script_listPanel">
 		</div>`.fmt();
+}
+builder.subpage_scriptList = function(actorCfg, scriptList){
+	return `
+		${builder.scriptEntrySOF()}
+		${Object.values(scriptList).map( script => builder.scriptEntry(actorCfg, script) ).join('')}
+		${builder.scriptEntryEOF()}`.fmt();
+}
+builder.scriptEntry = function(actorCfg, scriptObj){
+	var elem = '';
+	var type = scriptObj.type;
+	switch(type){
+		case "talk":
+			var actorObj = actorCfg[scriptObj.actorId];
+			elem = builder._scriptEntryInner_talk(actorObj, scriptObj);
+			break;
+		case "changeBg":
+			elem = builder._scriptEntryInner_changeBg(scriptObj);
+			break;
+		case "halt":
+			elem = builder._scriptEntryInner_halt();
+			break;
+	}
+	return `<div class="_scriptEntry clickable" data-type="${type}">${elem}</div>`;
+}
+
+builder.scriptEntrySOF = function(){
+	return `<div class="_scriptEntry clickable SOF">${MSG["SOF"]}</div>`;
+}
+builder.scriptEntryEOF = function(){
+	return `<div class="_scriptEntry EOF">${MSG["EOF"]}</div>`;
+}
+
+builder._scriptEntryInner_talk = function(actorObj, scriptObj){
+	return `
+		<div class="_scriptEntry_talkActor" style="color:#${actorObj.color};" data-actor-id=${actorObj.id}>${actorObj.name}</div>
+		<div class="_scriptEntry_talkContent">${scriptObj.content}</div>`.fmt();
+}
+builder._scriptEntryInner_changeBg = function(scriptObj){
+	return `
+		<div class="_scriptEntry_specialCmd">${MSG["cmd_changeBg"]}</div>
+		<div class="_scriptEntry_image" style="background-image: url(${scriptObj.bgUrl});" data-url="${scriptObj.bgUrl}"></div>`.fmt();
+}
+builder._scriptEntryInner_halt = function(){
+	return `<div class="_scriptEntry_specialCmd">${MSG["cmd_halt"]}</div>`;
 }
 
 /*----------------

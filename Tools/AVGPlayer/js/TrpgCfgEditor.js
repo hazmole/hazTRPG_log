@@ -25,6 +25,10 @@ var MSG = {
 	"actor_color": "代表色",
 	"actor_headImg_url": "角色頭像URL",
 	"undefined_headImg": "未設定頭像",
+	"cmd_changeBg": "指令：設定背景",
+	"cmd_halt": "指令：停頓",
+	"SOF": "文件開頭",
+	"EOF": "文件結尾",
 	"Error_WrongFileFormat": "錯誤！無法辨識的檔案格式！",
 	"Error_NoFileLoaded": "錯誤！尚未上傳原始團錄！",
 	"Success_ParseComplete": "讀取成功！",
@@ -141,25 +145,40 @@ class CfgEditor {
 		$("#btn_to_script").addClass("active");
 		$("#_leftCol").append( builder.pageL_scriptMethodList());
 		$("#_rightCol").append(builder.pageR_scriptCfg_Workspace());
+		this.render_scriptList();
 		//---
-		$("#_btn_saveScriptCfg").on('click', this.onClick_developing.bind(this));
+		$("#_btn_saveScriptCfg").on('click', this.onClick_SaveScriptCfg.bind(this));
 		$("#_btn_addTalkCmd").on('click', this.onClick_developing.bind(this));
-		$("#_btn_addChBgCmd").on('click', this.onClick_developing.bind(this));
-		$("#_btn_addHaltCmd").on('click', this.onClick_developing.bind(this));
-		$("#_btn_delCmd").on('click', this.onClick_developing.bind(this));
+		$("#_btn_addChBgCmd").on('click', this.onClick_addChBgCmd.bind(this));
+		$("#_btn_addHaltCmd").on('click', this.onClick_addHaltCmd.bind(this));
+		$("#_btn_delCmd").on('click', this.onClick_delScriptCmd.bind(this));
 	}
 	//============
 	// Sub-Page Handler
-	goToSubpage_actorEdit(){
+	render_actorEdit(){
 		var actorObj = this.selectedPtr;
 		//---
 		$("#_actor_workspace").html(builder.subpage_actorEditPage(actorObj));
-		this.renderActorHeadImg();
+		this.render_actorHeadImg();
 		//---
 		$("#_btn_saveActorCfg").on('click', this.onClick_SaveActorCfg.bind(this, actorObj.id));
 		$("#_input_actorHeadImgUrl").on('change', this.onChange_setActorHeadImg.bind(this));
 	}
-
+	render_actorHeadImg(){
+		var url = $("#_input_actorHeadImgUrl").val();
+		if(url){
+			$("._actor_headImg").empty();
+			$("._actor_headImg").css("background-image", `url(${url})`);
+		} else {
+			$("._actor_headImg").html(builder.actorUndefinedImg());
+			$("._actor_headImg").css("background-image", '');
+		}
+	}
+	render_scriptList(){
+		$("#_script_listPanel").html(builder.subpage_scriptList(this.actorCfg, this.scriptCfg));
+		//---
+		$("._scriptEntry").on('click', this.onClick_selectScriptEntry.bind(this));
+	}
 
 	//=============
 	popupMsgBox(type, msg){
@@ -203,9 +222,21 @@ class CfgEditor {
 		$(`._actorEntry[data-id=${id}]`).text(inputVal.name);
 		this.popupMsgBox("success", MSG["Success_SaveCfg"]);
 	}
+	onClick_SaveScriptCfg(){
+		var self = this;
+		var scriptArr = $("._scriptEntry:not(.SOF):not(.EOF)")
+			.map(function(){
+				return self.getScriptObjFromEntryElem(this);
+			})
+			.toArray();
+		//---
+		this.scriptCfg = scriptArr;
+		//---
+		this.popupMsgBox("success", MSG["Success_SaveCfg"]);
+	}
 
 	onClick_selectActorEntry(event){
-		var elem = event.target;
+		var elem = this.getEntryElemByEvent(event, "_actorEntry");
 
 		$('._actorEntry').removeClass("active");
 		$(elem).addClass("active");
@@ -213,28 +244,72 @@ class CfgEditor {
 		var actorId = elem.getAttribute("data-id");
 		this.selectedPtr = this.actorCfg[actorId];
 		
-		this.goToSubpage_actorEdit();
+		this.render_actorEdit();
+	}
+	onClick_selectScriptEntry(event){
+		var elem = this.getEntryElemByEvent(event, "_scriptEntry");
+
+		$('._scriptEntry').removeClass("active");
+		$(elem).addClass("active");
+		
+		this.selectedPtr = elem;
 	}
 
+	onClick_addChBgCmd(){
+		var scriptObj = {
+			type: "changeBg",
+			bgUrl: prompt("請輸入背景圖片URL:"),
+		};
+		this.addScriptEntry(this.selectedPtr, scriptObj);
+	}
+	onClick_addHaltCmd(){
+		var scriptObj = {
+			type: "halt"
+		};
+		this.addScriptEntry(this.selectedPtr, scriptObj);
+	}
+	onClick_delScriptCmd(){
+		if(!this.selectedPtr) return;
+		if($(this.selectedPtr).hasClass("SOF")) return ;
+
+		$(this.selectedPtr).remove();
+		this.selectedPtr = null;
+	}
 	onClick_developing(){
 		this.popupMsgBox("error", "尚未開發完成");
 	}
 
 	onChange_setActorHeadImg(){
-		this.renderActorHeadImg();
+		this.render_actorHeadImg();
 	}
 
 
 	//=================
-	// Render Element
-	renderActorHeadImg(){
-		var url = $("#_input_actorHeadImgUrl").val();
-		if(url){
-			$("._actor_headImg").empty();
-			$("._actor_headImg").css("background-image", `url(${url})`);
-		} else {
-			$("._actor_headImg").html(`<div>${MSG["undefined_headImg"]}</div>`);
-			$("._actor_headImg").css("background-image", '');
+	// Supportive Function
+	addScriptEntry(root, scriptObj){
+		if(!root) return;
+		$(root).after(builder.scriptEntry(this.actorCfg, scriptObj));
+		$(root).next().on('click', this.onClick_selectScriptEntry.bind(this));
+	}
+	getEntryElemByEvent(event, targetClass){
+		var elem = event.target;
+		while(!$(elem).hasClass(targetClass)){
+			elem = elem.parentElement;
+		}
+		return elem;
+	}
+	getScriptObjFromEntryElem(scriptEntry){
+		var type = $(scriptEntry).attr("data-type");
+		switch(type){
+			case "changeBg":
+				var bgUrl = $(scriptEntry).children("._scriptEntry_image").attr("data-url");
+				return { type, bgUrl };
+			case "talk":
+				var actorId = $(scriptEntry).children("._scriptEntry_talkActor").attr("data-actor-id");
+				var content = $(scriptEntry).children("._scriptEntry_talkContent").html();
+				return { type, actorId, content };
+			default:
+				return { type };
 		}
 	}
 

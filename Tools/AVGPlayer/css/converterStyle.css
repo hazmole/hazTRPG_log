@@ -162,8 +162,9 @@
 	border: 3px solid #1f2650;
 	margin: 1px 2px;
 }
-._scriptMethodEntry:hover  { background-color: #acb5cf; }
-._scriptMethodEntry:active { background-color: #5b6789; color: white; }
+._scriptMethodEntry:hover:not(.disable)  { background-color: #acb5cf; }
+._scriptMethodEntry:active:not(.disable) { background-color: #5b6789; color: white; }
+._scriptMethodEntry.disable { color:#bfbfbf; cursor: auto !important; }
 
 #_script_ctrlPanel{
 	height: 130px;
@@ -172,6 +173,43 @@
 	height: 520px;
 	overflow-y: auto;
 	background: #252730;
+}
+
+._scriptEntry { margin: 5px 5px; }
+._scriptEntry.clickable:hover { border: 2px solid #999; }
+._scriptEntry.clickable:active, ._scriptEntry.clickable.active { border: 4px solid #ff2525; }
+
+._scriptEntry.SOF, ._scriptEntry.EOF {
+	text-align: center;
+	font-size: 0.8rem;
+	text-decoration: underline;
+	border-radius: 5px;
+	margin: 5px 200px;
+	padding: 3px;
+}
+._scriptEntry.SOF { background: #fff; color: black; }
+._scriptEntry.EOF { background: #ab0000; color: white; }
+
+._scriptEntry_talkActor{
+	padding: 5px 10px;
+	background: #363638;
+}
+._scriptEntry_talkContent{
+	padding: 5px 10px 5px 15px;
+	background: #ddd;
+	font-size: 0.9rem;
+}
+._scriptEntry_specialCmd{
+	padding: 5px 10px;
+	font-size: 0.8rem;
+	background: #005fa3;
+	color: white;
+}
+._scriptEntry_image {
+	height: 120px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #ddd;
 }
 
 
