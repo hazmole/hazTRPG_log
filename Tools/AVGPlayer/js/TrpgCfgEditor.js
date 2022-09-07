@@ -7,11 +7,13 @@ var MSG = {
 	"btn_scriptCfg": "腳本設定",
 	"btn_save": "儲存",
 	"btn_apply": "確定",
+	"btn_methodMoveUp": "上移",
+	"btn_methodMoveDown": "下移",
 	"btn_methodEdit": "編輯段落",
+	"btn_methodDel": "刪除段落",
 	"btn_methodAddTalk": "插入：對話",
 	"btn_methodAddChangeBg": "插入：更改背景",
 	"btn_methodAddHalt": "插入：停頓",
-	"btn_methodDel": "刪除段落",
 	"Title_ActorList": "登場角色列表",
 	"Title_EditBgImg": "設定背景圖片",
 	"Title_EditTalk": "設定對話",
@@ -161,11 +163,14 @@ class CfgEditor {
 		this.render_scriptList();
 		//---
 		$("#_btn_saveScriptCfg").on('click', this.onClick_SaveScriptCfg.bind(this));
+		$("#_btn_moveUpCmd").on('click', this.onClick_moveUpCmd.bind(this));
+		$("#_btn_moveDownCmd").on('click', this.onClick_moveDownCmd.bind(this));
 		$("#_btn_editCmd").on('click', this.onClick_editCmd.bind(this));
+		$("#_btn_delCmd").on('click', this.onClick_delScriptCmd.bind(this));
 		//$("#_btn_addTalkCmd").on('click', this.onClick_developing.bind(this));
 		$("#_btn_addChBgCmd").on('click', this.onClick_addChBgCmd.bind(this));
 		$("#_btn_addHaltCmd").on('click', this.onClick_addHaltCmd.bind(this));
-		$("#_btn_delCmd").on('click', this.onClick_delScriptCmd.bind(this));
+		
 	}
 	clearPage(){
 		this.selectedPtr = null;
@@ -264,6 +269,26 @@ class CfgEditor {
 		this.selectedPtr = elem;
 	}
 
+	onClick_moveUpCmd(){
+		if(!this.selectedPtr){
+			this.popupMsgBox("error", MSG["Error_NoSelectedEntry"]);
+			return ;
+		}
+		if($(this.selectedPtr).hasClass("SOF")) return ;
+		if($(this.selectedPtr).prev().hasClass("SOF")) return ;
+		//---
+		$(this.selectedPtr).prev().before(this.selectedPtr);
+	}
+	onClick_moveDownCmd(){
+		if(!this.selectedPtr){
+			this.popupMsgBox("error", MSG["Error_NoSelectedEntry"]);
+			return ;
+		}
+		if($(this.selectedPtr).hasClass("SOF")) return ;
+		if($(this.selectedPtr).next().hasClass("EOF")) return ;
+		//---
+		$(this.selectedPtr).next().after(this.selectedPtr);
+	}
 	onClick_editCmd(){
 		var self = this;
 		if(!this.selectedPtr){

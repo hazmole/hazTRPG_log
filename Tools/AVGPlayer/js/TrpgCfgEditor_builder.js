@@ -62,6 +62,8 @@ builder.subpage_actorEditPage = function(actorObj){
 builder.pageL_scriptMethodList = function(){
 	return `
 		<div class="title">${MSG["Title_ActorList"]}</div>
+		<div id="_btn_moveUpCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodMoveUp"]}</div>
+		<div id="_btn_moveDownCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodMoveDown"]}</div>
 		<div id="_btn_editCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodEdit"]}</div>
 		<div id="_btn_delCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodDel"]}</div>
 		<div id="_btn_addTalkCmd" class="_scriptMethodEntry clickable disable">${MSG["btn_methodAddTalk"]}</div>
