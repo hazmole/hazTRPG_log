@@ -62,11 +62,11 @@ builder.subpage_actorEditPage = function(actorObj){
 builder.pageL_scriptMethodList = function(){
 	return `
 		<div class="title">${MSG["Title_ActorList"]}</div>
-		<div id="_btn_editCmd" class="_scriptMethodEntry clickable disable">${MSG["btn_methodEdit"]}</div>
+		<div id="_btn_editCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodEdit"]}</div>
+		<div id="_btn_delCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodDel"]}</div>
 		<div id="_btn_addTalkCmd" class="_scriptMethodEntry clickable disable">${MSG["btn_methodAddTalk"]}</div>
 		<div id="_btn_addChBgCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddChangeBg"]}</div>
-		<div id="_btn_addHaltCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddHalt"]}</div>
-		<div id="_btn_delCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodDel"]}</div>`.fmt();
+		<div id="_btn_addHaltCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddHalt"]}</div>`.fmt();
 }
 builder.pageR_scriptCfg_Workspace = function(){
 	return `
@@ -130,6 +130,12 @@ builder.ctrlWin_editBgImg = function(imgUrl){
 	return `
 		<div class="row"><b>${MSG["imgUrl"]}：</b><div><input type=text id="_input_imgUrl" class="fullWidth" value="${imgUrl}"></div></div>
 		<div class="row"><div id="_output_imgPreview" style="background-image:url(${imgUrl});"></div></div>`.fmt();
+}
+builder.ctrlWin_editTalk = function(actorCfg, actorId, content){
+	var actorObj = actorCfg[actorId];
+	return `
+		<div class="row"><b>${MSG["talk_actor"]}：</b>${actorObj.name}</div>
+		<div class="row"><textarea id="_input_content">${content}</textarea></div>`.fmt();
 }
 
 

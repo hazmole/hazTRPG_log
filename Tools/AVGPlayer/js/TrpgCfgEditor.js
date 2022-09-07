@@ -8,12 +8,13 @@ var MSG = {
 	"btn_save": "儲存",
 	"btn_apply": "確定",
 	"btn_methodEdit": "編輯段落",
-	"btn_methodAddTalk": "追加：對話",
-	"btn_methodAddChangeBg": "追加：更改背景",
-	"btn_methodAddHalt": "追加：停頓",
+	"btn_methodAddTalk": "插入：對話",
+	"btn_methodAddChangeBg": "插入：更改背景",
+	"btn_methodAddHalt": "插入：停頓",
 	"btn_methodDel": "刪除段落",
 	"Title_ActorList": "登場角色列表",
 	"Title_EditBgImg": "設定背景圖片",
+	"Title_EditTalk": "設定對話",
 	"introDoc": `這個工具能夠將 どどんとふ 和 CCFolia 輸出的團錄轉換成播放器可用的格式。<ul>
 		<li>先使用左上角的「匯入團錄」將團錄文件匯入工具中。</li>
 		<li>利用「團錄設定」可以設定輸出檔的標題。</li>
@@ -23,6 +24,7 @@ var MSG = {
 		若有其他使用上的疑問或建議，請不吝在Discord上聯絡 <b>hazmole#6672</b>。`,
 	"replatTitle": "團錄標題",
 	"exportFormat": "輸出格式",
+	"talk_actor": "發話角色",
 	"actor_id": "ID",
 	"actor_name": "名稱",
 	"actor_color": "代表色",
@@ -159,6 +161,7 @@ class CfgEditor {
 		this.render_scriptList();
 		//---
 		$("#_btn_saveScriptCfg").on('click', this.onClick_SaveScriptCfg.bind(this));
+		$("#_btn_editCmd").on('click', this.onClick_editCmd.bind(this));
 		//$("#_btn_addTalkCmd").on('click', this.onClick_developing.bind(this));
 		$("#_btn_addChBgCmd").on('click', this.onClick_addChBgCmd.bind(this));
 		$("#_btn_addHaltCmd").on('click', this.onClick_addHaltCmd.bind(this));
@@ -261,6 +264,50 @@ class CfgEditor {
 		this.selectedPtr = elem;
 	}
 
+	onClick_editCmd(){
+		var self = this;
+		if(!this.selectedPtr){
+			this.popupMsgBox("error", MSG["Error_NoSelectedEntry"]);
+			return ;
+		}
+		if($(this.selectedPtr).hasClass("SOF")) return ;
+		//---
+		var cmdType = $(this.selectedPtr).attr("data-type");
+		switch(cmdType){
+			case "changeBg": editChangeBgCmd(); break;
+			case "talk": editTalkCmd(); break;
+			case "halt": break;
+			default:
+				this.popupMsgBox("error", "尚未實作");
+				break;
+		}
+
+		//===============
+		function editChangeBgCmd(){
+			var imgElem = $(self.selectedPtr).children("._scriptEntry_image");
+			var arg_url = imgElem.attr("data-url");
+			self.popWindow_editBackground(arg_url, function(){
+				var newUrl = $("#_input_imgUrl").val();
+				imgElem.attr("data-url", newUrl);
+				imgElem.css("background-image", `url(${newUrl})`);
+				self.hideCtrlWindow();
+			}.bind(self));
+		}
+		function editTalkCmd(){
+			var actorElem = $(self.selectedPtr).children("._scriptEntry_talkActor");
+			var contentElem = $(self.selectedPtr).children("._scriptEntry_talkContent");
+			var arg = {
+				actorId: actorElem.attr("data-actor-id"),
+				content: contentElem.html(),
+			};
+			self.popWindow_editTalk(arg.actorId, arg.content, function(){
+				var newContent = $("#_input_content").val();
+				contentElem.html(newContent);
+				self.hideCtrlWindow();
+			}.bind(self));
+		}
+	}
+
 	onClick_addChBgCmd(){
 		if(!this.selectedPtr){
 			this.popupMsgBox("error", MSG["Error_NoSelectedEntry"]);
@@ -353,6 +400,16 @@ class CfgEditor {
 		$("#_input_imgUrl").on('change', function(){
 			$("#_output_imgPreview").css("background-image", `url(${$("#_input_imgUrl").val()})`);
 		}.bind(this));
+	}
+	popWindow_editTalk(actorId, content, applyCallback){
+		var title = MSG["Title_EditTalk"];
+		var content = builder.ctrlWin_editTalk(this.actorCfg, actorId, content);
+		//---
+		this.popupCtrlWindow(title, content, applyCallback);
+		//---
+		//$("#_input_imgUrl").on('change', function(){
+		//	$("#_output_imgPreview").css("background-image", `url(${$("#_input_imgUrl").val()})`);
+		//}.bind(this));
 	}
 
 	popupCtrlWindow(title, content, callback){

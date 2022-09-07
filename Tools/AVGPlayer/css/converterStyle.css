@@ -125,6 +125,12 @@
 	background-repeat: no-repeat;
 	height: calc(100% - 55px);
 }
+._ctrlwindow #_input_content {
+	width: 100%;
+	height: calc(100% - 55px);
+	font-size: 1rem;
+	resize: none;
+}
 
 /* Workspace  */
 #_workspace {
