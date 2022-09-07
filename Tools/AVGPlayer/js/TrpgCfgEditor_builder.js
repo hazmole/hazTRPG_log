@@ -62,6 +62,7 @@ builder.subpage_actorEditPage = function(actorObj){
 builder.pageL_scriptMethodList = function(){
 	return `
 		<div class="title">${MSG["Title_ActorList"]}</div>
+		<div id="_btn_editCmd" class="_scriptMethodEntry clickable disable">${MSG["btn_methodEdit"]}</div>
 		<div id="_btn_addTalkCmd" class="_scriptMethodEntry clickable disable">${MSG["btn_methodAddTalk"]}</div>
 		<div id="_btn_addChBgCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddChangeBg"]}</div>
 		<div id="_btn_addHaltCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddHalt"]}</div>
@@ -123,13 +124,31 @@ builder._scriptEntryInner_halt = function(){
 }
 
 /*----------------
+  Control Window Content
+ ----------------*/
+builder.ctrlWin_editBgImg = function(imgUrl){
+	return `
+		<div class="row"><b>${MSG["imgUrl"]}：</b><div><input type=text id="_input_imgUrl" class="fullWidth" value="${imgUrl}"></div></div>
+		<div class="row"><div id="_output_imgPreview" style="background-image:url(${imgUrl});"></div></div>`.fmt();
+}
+
+
+/*----------------
   Basic Element 
  ----------------*/
 builder.controlWindow = function(){
 	return `
 		<div class="_ctrlwindow">
-			<div class="_ctrlbar"><span class="cross-stand-alone">&nbsp;</span></div>
-			<div class="_ctrlbody">OAO</div>
+			<div class="_ctrlbar">
+				<div class="_ctrlbar_title"></div>
+				<div>
+					<span class="cross-stand-alone">&nbsp;</span>
+				</div>
+			</div>
+			<div class="_ctrlbody"></div>
+			<div class="_ctrlfooter">
+				<div class="row right"><button id="_btn_ctrlWinApply" class="_btn_save">${MSG["btn_apply"]}</button></div>
+			</div>
 		</div>`;
 }
 builder.messageBox = function(){

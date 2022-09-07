@@ -6,12 +6,14 @@ var MSG = {
 	"btn_actorCfg": "角色設定",
 	"btn_scriptCfg": "腳本設定",
 	"btn_save": "儲存",
-	"btn_methodEdit": "編輯",
+	"btn_apply": "確定",
+	"btn_methodEdit": "編輯段落",
 	"btn_methodAddTalk": "追加：對話",
 	"btn_methodAddChangeBg": "追加：更改背景",
 	"btn_methodAddHalt": "追加：停頓",
 	"btn_methodDel": "刪除段落",
 	"Title_ActorList": "登場角色列表",
+	"Title_EditBgImg": "設定背景圖片",
 	"introDoc": `這個工具能夠將 どどんとふ 和 CCFolia 輸出的團錄轉換成播放器可用的格式。<ul>
 		<li>先使用左上角的「匯入團錄」將團錄文件匯入工具中。</li>
 		<li>利用「團錄設定」可以設定輸出檔的標題。</li>
@@ -26,6 +28,7 @@ var MSG = {
 	"actor_color": "代表色",
 	"actor_headImg_url": "角色頭像URL",
 	"undefined_headImg": "未設定頭像",
+	"imgUrl": "圖片網址",
 	"cmd_changeBg": "指令：設定背景",
 	"cmd_halt": "指令：停頓",
 	"SOF": "文件開頭",
@@ -84,6 +87,7 @@ class CfgEditor {
 			console.error(e);
 		}
 		this.popupMsgBox("success", MSG["Success_ParseComplete"]);
+		this.saveToWebStorage();
 		this.goToPage("general");
 	}
 	doLoadedCheck(){
@@ -155,10 +159,16 @@ class CfgEditor {
 		this.render_scriptList();
 		//---
 		$("#_btn_saveScriptCfg").on('click', this.onClick_SaveScriptCfg.bind(this));
-		$("#_btn_addTalkCmd").on('click', this.onClick_developing.bind(this));
+		//$("#_btn_addTalkCmd").on('click', this.onClick_developing.bind(this));
 		$("#_btn_addChBgCmd").on('click', this.onClick_addChBgCmd.bind(this));
 		$("#_btn_addHaltCmd").on('click', this.onClick_addHaltCmd.bind(this));
 		$("#_btn_delCmd").on('click', this.onClick_delScriptCmd.bind(this));
+	}
+	clearPage(){
+		this.selectedPtr = null;
+		$("._btn").removeClass("active");
+		$("#_leftCol").empty();
+		$("#_rightCol").empty();
 	}
 	//============
 	// Sub-Page Handler
@@ -187,21 +197,8 @@ class CfgEditor {
 		$("._scriptEntry").on('click', this.onClick_selectScriptEntry.bind(this));
 	}
 
-	//=============
-	popupMsgBox(type, msg){
-		$("#_msgbox").attr('class', type)
-		$("#_msgbox").text(msg).fadeIn(200);
-		setTimeout(function(){
-			$("#_msgbox").fadeOut(200);
-		}, 1200);
-	}
-	//============
-	clearPage(){
-		this.selectedPtr = null;
-		$("._btn").removeClass("active");
-		$("#_leftCol").empty();
-		$("#_rightCol").empty();
-	}
+	
+
 
 
 	//=================
@@ -247,21 +244,20 @@ class CfgEditor {
 
 	onClick_selectActorEntry(event){
 		var elem = this.getEntryElemByEvent(event, "_actorEntry");
-
+		//---
 		$('._actorEntry').removeClass("active");
 		$(elem).addClass("active");
-
+		//---
 		var actorId = elem.getAttribute("data-id");
 		this.selectedPtr = this.actorCfg[actorId];
-		
 		this.render_actorEdit();
 	}
 	onClick_selectScriptEntry(event){
 		var elem = this.getEntryElemByEvent(event, "_scriptEntry");
-
+		//---
 		$('._scriptEntry').removeClass("active");
 		$(elem).addClass("active");
-		
+		//---
 		this.selectedPtr = elem;
 	}
 
@@ -270,12 +266,15 @@ class CfgEditor {
 			this.popupMsgBox("error", MSG["Error_NoSelectedEntry"]);
 			return ;
 		}
-
-		var scriptObj = {
-			type: "changeBg",
-			bgUrl: prompt("請輸入背景圖片URL:"),
-		};
-		this.addScriptEntry(this.selectedPtr, scriptObj);
+		//---
+		this.popWindow_editBackground("", function(){
+			var scriptObj = {
+				type: "changeBg",
+				bgUrl: $("#_input_imgUrl").val(),
+			};
+			this.insertScriptEntry(this.selectedPtr, scriptObj);
+			this.hideCtrlWindow();
+		}.bind(this));
 	}
 	onClick_addHaltCmd(){
 		if(!this.selectedPtr){
@@ -286,7 +285,7 @@ class CfgEditor {
 		var scriptObj = {
 			type: "halt"
 		};
-		this.addScriptEntry(this.selectedPtr, scriptObj);
+		this.insertScriptEntry(this.selectedPtr, scriptObj);
 	}
 	onClick_delScriptCmd(){
 		if(!this.selectedPtr){
@@ -300,27 +299,23 @@ class CfgEditor {
 		$(this.selectedPtr).remove();
 		this.selectedPtr = null;
 	}
-	onClick_developing(){
-		this.popupMsgBox("error", "尚未開發完成");
-	}
 
 	onChange_setActorHeadImg(){
 		this.render_actorHeadImg();
 	}
 
 
-	onClick_showCtrlWindow(){
-		// Render
-		$("._ctrlwindow").fadeIn(200);
+	onClick_showCtrlWindow(type, callback){
+		this.popupCtrlWindow(type, callback);
 	}
 	onClick_hideCtrlWindow(){
-		$("._ctrlwindow").fadeOut(200);
+		this.hideCtrlWindow();
 	}
 
 
 	//=================
 	// Supportive Function
-	addScriptEntry(root, scriptObj){
+	insertScriptEntry(root, scriptObj){
 		if(!root) return;
 		$(root).after(builder.scriptEntry(this.actorCfg, scriptObj));
 		$(root).next().on('click', this.onClick_selectScriptEntry.bind(this));
@@ -348,6 +343,29 @@ class CfgEditor {
 	}
 
 	//=================
+	// Control Window
+	popWindow_editBackground(imgUrl, applyCallback){
+		var title = MSG["Title_EditBgImg"];
+		var content = builder.ctrlWin_editBgImg(imgUrl);
+		//---
+		this.popupCtrlWindow(title, content, applyCallback);
+		//---
+		$("#_input_imgUrl").on('change', function(){
+			$("#_output_imgPreview").css("background-image", `url(${$("#_input_imgUrl").val()})`);
+		}.bind(this));
+	}
+
+	popupCtrlWindow(title, content, callback){
+		$("._ctrlbar_title").text(title);
+		$("._ctrlbody").html(content);
+		$("#_btn_ctrlWinApply").on('click', callback);
+		$("._ctrlwindow").fadeIn(200);
+	}
+	hideCtrlWindow(){
+		$("#_btn_ctrlWinApply").off();
+		$("._ctrlwindow").fadeOut(200);
+	}
+	//=================
 	// Create Elements
 	createMsgBox(){
 		$(this.viewPort).append(builder.messageBox());
@@ -364,8 +382,16 @@ class CfgEditor {
 		$("#btn_to_actor").on('click',  this.clickGoToActor.bind(this));
 		$("#btn_to_script").on('click', this.clickGoToScript.bind(this));
 	}
-
-	//================
+	//=================
+	// Message Box
+	popupMsgBox(type, msg){
+		$("#_msgbox").attr('class', type)
+		$("#_msgbox").text(msg).fadeIn(200);
+		setTimeout(function(){
+			$("#_msgbox").fadeOut(200);
+		}, 1200);
+	}
+	//=================
 	// Local Storage
 	saveToWebStorage(){
 		var obj = {
@@ -395,6 +421,12 @@ class CfgEditor {
 				console.error(e);
 			}
 		}
+	}
+	getWebStorageUsage(){
+		var _key = 'rpCfgSave';
+		var _bytes = ((localStorage[_key].length + _key.length) * 2);
+
+		return (_bytes / 1024).toFixed(2) + " KB";
 	}
 
 	//================
