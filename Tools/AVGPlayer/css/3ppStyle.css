@@ -1,0 +1,27 @@
+/* 3pp style */
+/* <span class="cross-stand-alone"></span> */
+.cross-stand-alone {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  right: 8px;
+  top: 1px;
+  cursor: pointer;
+}
+.cross-stand-alone:before, .cross-stand-alone:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: white;
+  border-radius: 4px;
+}
+.cross-stand-alone:before { transform: rotate(45deg); }
+.cross-stand-alone:after { transform: rotate(-45deg); }
+.cross-stand-alone span { display: block; }

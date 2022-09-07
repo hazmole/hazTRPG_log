@@ -79,7 +79,36 @@
 	text-align: center;
 }
 #_msgbox.success { background: #7ced99; }
+#_msgbox.warn { background: #ffbe46; }
 #_msgbox.error { background: #ed7f7f; }
+
+/* Control Window */
+._ctrlwindow {
+	display: none;
+	position: absolute;
+	top: 150px;
+	left: calc(50%);
+	z-index: 50;
+	width: 600px;
+	height: 400px;
+	margin-left: calc(-600px/2);
+	border: 2px solid #29292a;
+	
+	background: #454752;
+	color: white;
+}
+._ctrlwindow ._ctrlbar {
+	width: 100%;
+	height: 25px;
+	background: #29292a;
+	text-align: right;
+}
+._ctrlwindow ._ctrlwindow_cancel {
+	width: 25px; height: 25px;
+}
+._ctrlwindow ._ctrlbody {
+	padding: 10px;
+}
 
 /* Workspace  */
 #_workspace {

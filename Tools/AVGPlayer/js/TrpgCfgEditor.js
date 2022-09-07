@@ -6,6 +6,7 @@ var MSG = {
 	"btn_actorCfg": "角色設定",
 	"btn_scriptCfg": "腳本設定",
 	"btn_save": "儲存",
+	"btn_methodEdit": "編輯",
 	"btn_methodAddTalk": "追加：對話",
 	"btn_methodAddChangeBg": "追加：更改背景",
 	"btn_methodAddHalt": "追加：停頓",
@@ -32,7 +33,9 @@ var MSG = {
 	"Error_WrongFileFormat": "錯誤！無法辨識的檔案格式！",
 	"Error_NoFileLoaded": "錯誤！尚未上傳原始團錄！",
 	"Error_NoSelectedEntry": "請先選擇一個段落！",
+	"Warn_WebStorageExceedLimit": "警告！網頁儲存空間超過上限，自動儲存失敗。",
 	"Success_ParseComplete": "讀取成功！",
+	"Success_AutoLoaded": "自動讀取成功！",
 	"Success_SaveCfg": "設定已儲存！",
 	"Tip_selectActor": "請點選左側的登場角色進行個別設定。",
 	"Tip_editScript": "請使用左側功能編輯你的團錄。",
@@ -55,6 +58,9 @@ class CfgEditor {
 		this.createFrame();
 		this.createUploadElem();
 		this.createMsgBox();
+		this.createCtrlWindow();
+
+		this.loadFromWebStorage();
 		
 		this.goToPage("index");
 	}
@@ -206,6 +212,7 @@ class CfgEditor {
 		};
 		//---
 		this.generalCfg.title = inputVal.title;
+		this.saveToWebStorage();
 		//---
 		this.popupMsgBox("success", MSG["Success_SaveCfg"]);
 	}
@@ -219,6 +226,7 @@ class CfgEditor {
 		this.actorCfg[id].name = inputVal.name;
 		this.actorCfg[id].color = inputVal.color.substring(1);
 		this.actorCfg[id].imgUrl = inputVal.headImgUrl;
+		this.saveToWebStorage();
 		//---
 		$(`._actorEntry[data-id=${id}]`).text(inputVal.name);
 		this.popupMsgBox("success", MSG["Success_SaveCfg"]);
@@ -232,6 +240,7 @@ class CfgEditor {
 			.toArray();
 		//---
 		this.scriptCfg = scriptArr;
+		this.saveToWebStorage();
 		//---
 		this.popupMsgBox("success", MSG["Success_SaveCfg"]);
 	}
@@ -300,6 +309,15 @@ class CfgEditor {
 	}
 
 
+	onClick_showCtrlWindow(){
+		// Render
+		$("._ctrlwindow").fadeIn(200);
+	}
+	onClick_hideCtrlWindow(){
+		$("._ctrlwindow").fadeOut(200);
+	}
+
+
 	//=================
 	// Supportive Function
 	addScriptEntry(root, scriptObj){
@@ -332,7 +350,11 @@ class CfgEditor {
 	//=================
 	// Create Elements
 	createMsgBox(){
-		$(this.viewPort).append(`<div id="_msgbox"></div>`);
+		$(this.viewPort).append(builder.messageBox());
+	}
+	createCtrlWindow(){
+		$(this.viewPort).append(builder.controlWindow());
+		$(".cross-stand-alone").on('click', this.onClick_hideCtrlWindow.bind(this));
 	}
 	createFrame(){
 		$(this.viewPort).append(builder.mainFrame());
@@ -341,6 +363,38 @@ class CfgEditor {
 		$("#btn_to_general").on('click',this.clickGoToGeneral.bind(this));
 		$("#btn_to_actor").on('click',  this.clickGoToActor.bind(this));
 		$("#btn_to_script").on('click', this.clickGoToScript.bind(this));
+	}
+
+	//================
+	// Local Storage
+	saveToWebStorage(){
+		var obj = {
+			general: this.generalCfg,
+			actors: this.actorCfg,
+			script: this.scriptCfg,
+		};
+		try{
+			localStorage.setItem('rpCfgSave', JSON.stringify(obj));
+		} catch(e){
+			this.popupMsgBox("warn", MSG["Warn_WebStorageExceedLimit"]);
+			console.error(e);
+		}
+	}
+	loadFromWebStorage(){
+		var cfg = localStorage.getItem('rpCfgSave');
+		if(cfg){
+			try{
+				var jsonObj = JSON.parse(cfg);
+				this.parser.isLoaded = true;
+				this.generalCfg = jsonObj.general;
+				this.actorCfg = jsonObj.actors;
+				this.scriptCfg = jsonObj.script;
+				this.popupMsgBox("success", MSG["Success_AutoLoaded"]);
+			}catch(e){
+				localStorage.clear();
+				console.error(e);
+			}
+		}
 	}
 
 	//================

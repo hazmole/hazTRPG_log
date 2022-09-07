@@ -125,6 +125,13 @@ builder._scriptEntryInner_halt = function(){
 /*----------------
   Basic Element 
  ----------------*/
+builder.controlWindow = function(){
+	return `
+		<div class="_ctrlwindow">
+			<div class="_ctrlbar"><span class="cross-stand-alone">&nbsp;</span></div>
+			<div class="_ctrlbody">OAO</div>
+		</div>`;
+}
 builder.messageBox = function(){
 	return `<div id="_msgbox"></div>`;
 }
