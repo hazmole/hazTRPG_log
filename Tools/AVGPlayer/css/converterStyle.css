@@ -230,6 +230,19 @@
 ._scriptEntry.SOF { background: #fff; color: black; }
 ._scriptEntry.EOF { background: #ab0000; color: white; }
 
+._scriptEntry.otherCh {
+	width: calc(100% - 359px);
+	margin-left: 350px;
+	text-align: right;
+	border: 1px solid #6a6a6a;
+}
+._scriptEntry.otherCh ._scriptEntry_talkActor {
+}
+._scriptEntry.otherCh ._scriptEntry_talkContent {
+	background: black;
+	color: white;
+}
+
 ._scriptEntry_talkActor{
 	padding: 5px 10px;
 	background: #363638;

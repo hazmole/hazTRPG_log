@@ -94,8 +94,10 @@ builder.subpage_scriptList = function(actorCfg, scriptList){
 builder.scriptEntry = function(actorCfg, scriptObj){
 	var elem = '';
 	var type = scriptObj.type;
+	var isOtherCh = false;
 	switch(type){
 		case "talk":
+			isOtherCh = scriptObj.channel!="main";
 			var actorObj = actorCfg[scriptObj.actorId];
 			elem = builder._scriptEntryInner_talk(actorObj, scriptObj);
 			break;
@@ -106,7 +108,7 @@ builder.scriptEntry = function(actorCfg, scriptObj){
 			elem = builder._scriptEntryInner_halt();
 			break;
 	}
-	return `<div class="_scriptEntry clickable" data-type="${type}">${elem}</div>`;
+	return `<div class="_scriptEntry clickable ${isOtherCh? "otherCh": ""}" data-type="${type}">${elem}</div>`;
 }
 
 builder.scriptEntrySOF = function(){

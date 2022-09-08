@@ -3,8 +3,8 @@ class TrpgParser{
 		this.regList = {
 			"getFileName": new RegExp(/(.*)\.\w+$/),
 			"htmlBody": new RegExp(/<body>(.*)<\/body>/, 's'),
-			"ccfFotmat": new RegExp(/style="color:#[\w\d]+;"/),
-			"ddfFotmat": new RegExp(/color='#[\w\d]+'/),
+			"ccfFotmat": new RegExp(/<p style="color:#([\w\d]{6});">.*?<span> \[(.*?)\].*?<span>(.*?)<\/span>.*?<span>(.*?)<\/span>/, 'smg'),
+			"ddfFotmat": new RegExp(/(^\[(.*?)\])?<font color='#([\w\d]{6})'><b>(.*?)<\/b>：(.*?)<\/font>/, 'smg'),
 		};
 		this.rawData = null;
 		this.mode = '';
@@ -112,7 +112,8 @@ class TrpgParser{
 	parseFormat_DDF(){
 		var self = this;
 		var body = this.rawData.match(this.regList["htmlBody"])[1];
-		var sectionphArr = body.split("<\/font>")
+
+		var sectionphArr = body.match(this.regList['ddfFotmat'])
 			.map( sect => sect.trim() )
 			.map( sect => parseSection(sect) )
 			.filter( sect => sect!=null );
@@ -122,27 +123,31 @@ class TrpgParser{
 		function parseSection(data){
 			if(!data) return null;
 
-			try{
-				var color = data.match(/color='#(.*)'/)[1];
-				var user = data.match(/<b>(.*?)<\/b>/)[1];
-				var id = self.registerUser(user, color);
+			var matchMap = [...data.matchAll(self.regList['ddfFotmat'])][0];
+			var channel = matchMap[2];
+			var color = matchMap[3];
+			var user = matchMap[4];
+			var content = matchMap[5];
 
-				var content = data.match(/<\/b>：(.*)/s)[1];
-				var line = new ScirptLine("talk", {
-					actorId: id,
-					content: content
-				});
-				return line;
-			} catch(e) {
-				//console.error(e);
-				return null;
-			}
+			var id = self.registerUser(user, color);
+			var line = new ScirptLine("talk", {
+				channel: isMainChannel(channel)? "main": "other",
+				actorId: id,
+				content: content.trim()
+			});
+			return line;
+		}
+		function isMainChannel(ch){
+			if(!ch) return true;
+			if(ch=="主要" || ch=="メイン") return true;
+			return false;
 		}
 	}
 	parseFormat_CCF(){
 		var self = this;
 		var body = this.rawData.match(this.regList["htmlBody"])[1];
-		var sectionphArr = body.split("<\/p>")
+
+		var sectionphArr = body.match(this.regList['ccfFotmat'])
 			.map( sect => sect.trim() )
 			.map( sect => parseSection(sect) )
 			.filter( sect => sect!=null );
@@ -151,22 +156,25 @@ class TrpgParser{
 		//==============
 		function parseSection(data){
 			if(!data) return null;
-			var arr = data.match(/<span>(.*?)<\/span>/gs)
-				.filter( d => d!=null )
-				.map( d => d.match(/<span>(.*)<\/span>/s)[1] )
-				.map( d => d.trim() );
 
-			var color = data.match(/color:#(.*);/)[1];
-			var user = arr[1];
+			var matchMap = [...data.matchAll(self.regList['ccfFotmat'])][0];
+			var channel = matchMap[2];
+			var color = matchMap[1];
+			var user = matchMap[3];
+			var content = matchMap[4];
+
 			var id = self.registerUser(user, color);
-
-			var content = arr[2];
-
 			var line = new ScirptLine("talk", {
+				channel: isMainChannel(channel)? "main": "other",
 				actorId: id,
-				content: content
+				content: content.trim()
 			});
 			return line;
+		}
+		function isMainChannel(ch){
+			if(!ch) return true;
+			if(ch=="主頻道" || ch=="メイン" || ch=="Main") return true;
+			return false;
 		}
 	}
 }
@@ -190,6 +198,7 @@ class ScirptLine {
 	setFields(info){
 		switch(this.type){
 			case "talk":
+				this.channel = info.channel;
 				this.actorId = info.actorId;
 				this.content = info.content;
 				break;
