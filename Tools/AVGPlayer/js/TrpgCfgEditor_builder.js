@@ -66,7 +66,7 @@ builder.subpage_actorEditPage = function(actorObj){
  ----------------*/
 builder.pageL_scriptMethodList = function(){
 	return `
-		<div class="title">${MSG["Title_ActorList"]}</div>
+		<div class="title">${MSG["Title_ScriptMethodList"]}</div>
 		<div id="_btn_moveUpCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodMoveUp"]}</div>
 		<div id="_btn_moveDownCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodMoveDown"]}</div>
 		<div id="_btn_editCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodEdit"]}</div>

@@ -80,12 +80,12 @@ class CfgExporter {
 					<style>
 						._hidden { display:none; }
 						#_main { display:flex; flex-direction:column; align-items:center; }
-						._talk { margin:10px 5px; display:flex; border:1px solid black; background:black; width:100%; max-width:1080px; border-radius:5px; }
+						._talk { margin:10px 5px; display:flex; border:1px solid black; background:#1e1e1e; width:100%; max-width:1080px; border-radius:5px; }
 						._leftCol { width:122px; }
 						._rightCol { width:calc(100% - 126px); }
 						._actorName{ text-align:left; padding:5px; height:16px; font-size:18px; }
 						._actorImg { margin:6px; width:110px; height:110px; background-repeat:no-repeat; background-size:cover; background-color:#2a2a2a; }
-						._actorWords { margin:5px; background:#f8fdff; font-size:1.1rem; padding:10px; height:calc(100% - 57px); border-radius:5px; }
+						._actorWords { margin:5px; background:#e3e3e3; font-size:1.1rem; padding:10px; height:calc(100% - 57px); border-radius:5px; }
 						body{ background:#4f545e; }
 						h1{ color:white; text-align:center; }
 						${actorStyle}

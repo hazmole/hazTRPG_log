@@ -14,6 +14,7 @@ var MSG = {
 	"btn_methodAddChangeBg": "插入：更改背景",
 	"btn_methodAddHalt": "插入：停頓",
 	"Title_ActorList": "登場角色列表",
+	"Title_ScriptMethodList": "編輯腳本功能",
 	"Title_EditBgImg": "設定背景圖片",
 	"Title_EditTalk": "設定對話",
 	"introDoc": `這個工具能夠將 どどんとふ 和 CCFolia 輸出的團錄轉換成播放器可用的格式。<ul>
