@@ -31,8 +31,9 @@ class TrpgParser{
 		switch(mode){
 			case "ARP": this.parseFormat_ARP(); break;
 			case "CCF": this.parseFormat_CCF(); break;
+			case "DDF": this.parseFormat_DDF(); break;
 		}
-		
+
 		this.isLoaded = true;
 	}
 
@@ -54,9 +55,9 @@ class TrpgParser{
 
 		if(isJSON(data)){
 			if(isARP(data)) return "ARP";
-		} else if(isHTML(data)) {
+		} else if(isHTML(data)){
 			if(isCCF(data)) return "CCF";
-			//if(isDDF(data)) return "DDF";
+			if(isDDF(data)) return "DDF";
 		} 
 		return "unknown";
 
@@ -108,6 +109,36 @@ class TrpgParser{
 		}
 	}
 
+	parseFormat_DDF(){
+		var self = this;
+		var body = this.rawData.match(this.regList["htmlBody"])[1];
+		var sectionphArr = body.split("<\/font>")
+			.map( sect => sect.trim() )
+			.map( sect => parseSection(sect) )
+			.filter( sect => sect!=null );
+		this.script = sectionphArr;
+		
+		//==============
+		function parseSection(data){
+			if(!data) return null;
+
+			try{
+				var color = data.match(/color='#(.*)'/)[1];
+				var user = data.match(/<b>(.*?)<\/b>/)[1];
+				var id = self.registerUser(user, color);
+
+				var content = data.match(/<\/b>：(.*)/s)[1];
+				var line = new ScirptLine("talk", {
+					actorId: id,
+					content: content
+				});
+				return line;
+			} catch(e) {
+				//console.error(e);
+				return null;
+			}
+		}
+	}
 	parseFormat_CCF(){
 		var self = this;
 		var body = this.rawData.match(this.regList["htmlBody"])[1];
@@ -115,7 +146,6 @@ class TrpgParser{
 			.map( sect => sect.trim() )
 			.map( sect => parseSection(sect) )
 			.filter( sect => sect!=null );
-		
 		this.script = sectionphArr;
 
 		//==============
@@ -128,9 +158,9 @@ class TrpgParser{
 
 			var color = data.match(/color:#(.*);/)[1];
 			var user = arr[1];
-			var content = arr[2];
-
 			var id = self.registerUser(user, color);
+
+			var content = arr[2];
 
 			var line = new ScirptLine("talk", {
 				actorId: id,

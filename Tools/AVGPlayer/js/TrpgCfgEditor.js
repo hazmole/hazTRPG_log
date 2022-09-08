@@ -90,6 +90,7 @@ class CfgEditor {
 	 	} catch(e){
 			this.popupMsgBox("error", MSG["Error_WrongFileFormat"]);
 			console.error(e);
+			return ;
 		}
 		this.popupMsgBox("success", MSG["Success_ParseComplete"]);
 		this.saveToWebStorage();
