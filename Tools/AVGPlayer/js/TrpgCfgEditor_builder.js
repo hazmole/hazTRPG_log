@@ -33,7 +33,7 @@ builder.pageR_actorCfg_Workspace = function(title){
 }
 builder.actorEntry = function(actorObj){
 	var actorName = (actorObj.name)? actorObj.name: "&nbsp;";
-	return `<div class="_actorEntry clickable" data-id="${actorObj.id}">${actorName}</div>`;
+	return `<div class="_actorEntry Entry clickable" data-id="${actorObj.id}">${actorName}</div>`;
 }
 builder.actorUndefinedImg = function(){
 	return `<div>${MSG["undefined_headImg"]}</div>`;
@@ -67,13 +67,13 @@ builder.subpage_actorEditPage = function(actorObj){
 builder.pageL_scriptMethodList = function(){
 	return `
 		<div class="title">${MSG["Title_ActorList"]}</div>
-		<div id="_btn_moveUpCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodMoveUp"]}</div>
-		<div id="_btn_moveDownCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodMoveDown"]}</div>
-		<div id="_btn_editCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodEdit"]}</div>
-		<div id="_btn_delCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodDel"]}</div>
-		<div id="_btn_addTalkCmd" class="_scriptMethodEntry clickable disable">${MSG["btn_methodAddTalk"]}</div>
-		<div id="_btn_addChBgCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddChangeBg"]}</div>
-		<div id="_btn_addHaltCmd" class="_scriptMethodEntry clickable">${MSG["btn_methodAddHalt"]}</div>`.fmt();
+		<div id="_btn_moveUpCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodMoveUp"]}</div>
+		<div id="_btn_moveDownCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodMoveDown"]}</div>
+		<div id="_btn_editCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodEdit"]}</div>
+		<div id="_btn_delCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodDel"]}</div>
+		<div id="_btn_addTalkCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodAddTalk"]}</div>
+		<div id="_btn_addChBgCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodAddChangeBg"]}</div>
+		<div id="_btn_addHaltCmd" class="_scriptMethodEntry Entry clickable">${MSG["btn_methodAddHalt"]}</div>`.fmt();
 }
 builder.pageR_scriptCfg_Workspace = function(){
 	return `
@@ -141,8 +141,12 @@ builder.ctrlWin_editBgImg = function(imgUrl){
 builder.ctrlWin_editTalk = function(actorCfg, actorId, content){
 	var actorObj = actorCfg[actorId];
 	return `
-		<div class="row"><b>${MSG["talk_actor"]}：</b>${actorObj.name}</div>
+		<div class="row"><b>${MSG["talk_actor"]}：</b>
+			<select id="_input_actor">${Object.values(actorCfg).map( actor => builder._ctrlWin_actorEntry(actor, actor.id==actorId) )}</select></div>
 		<div class="row"><textarea id="_input_content">${content}</textarea></div>`.fmt();
+}
+builder._ctrlWin_actorEntry = function(actorObj, isSelected){
+	return `<option value="${actorObj.id}" ${isSelected? "selected": ""}>${actorObj.name}</option>`;
 }
 
 
