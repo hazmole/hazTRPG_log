@@ -182,6 +182,9 @@ builder.mainFrame = function(){
 					<div id="btn_export" class="_btn clickable">
 						<div class="_icon"></div><div class="_label">${MSG["btn_export"]}</div>
 					</div>
+					<div id="btn_export2" class="_btn clickable">
+						<div class="_icon"></div><div class="_label">團錄輸出測試</div>
+					</div>
 				</div>
 				<div class="_btn_group">
 					<div id="btn_to_general" class="_btn clickable">

@@ -1,4 +1,3 @@
-var VERSION = "hazmole_v1.0";
 var MSG = {
 	"btn_import": "匯入團錄",
 	"btn_export": "輸出",
@@ -21,7 +20,7 @@ var MSG = {
 		<li>先使用左上角的「匯入團錄」將團錄文件匯入工具中。</li>
 		<li>利用「團錄設定」可以設定輸出檔的標題。</li>
 		<li>利用「角色設定」可以設定團錄中登場人物的代表色跟頭像。</li>
-		<li>利用「腳本設定」可以設定團錄中變更背景的時機。</li>
+		<li>利用「腳本設定」可以編輯團錄內容並加入播放特效。</li>
 		<li>在設定完成後，點擊「輸出」來將團錄輸出成播放器可用的格式。</li></ul>
 		若有其他使用上的疑問或建議，請不吝在Discord上聯絡 <b>hazmole#6672</b>。`,
 	"replatTitle": "團錄標題",
@@ -54,6 +53,7 @@ class CfgEditor {
 	constructor(id){
 		this.viewPort = document.getElementById(id);
 		this.parser = new TrpgParser();
+		this.exporter = new CfgExporter();
 
 		this.generalCfg = {};
 		this.actorCfg = {};
@@ -112,6 +112,10 @@ class CfgEditor {
 	clickExport(){
 		if(!this.doLoadedCheck()) return ;
 		this.downloadFile();
+	}
+	clickExportTest(){
+		if(!this.doLoadedCheck()) return ;
+		this.previewReplay();
 	}
 	clickGoToGeneral(){
 		if(!this.doLoadedCheck()) return ;
@@ -498,6 +502,8 @@ class CfgEditor {
 		$(this.viewPort).append(builder.mainFrame());
 		$("#btn_import").on('click',    this.clickImport.bind(this));
 		$("#btn_export").on('click',    this.clickExport.bind(this));
+		$("#btn_export2").on('click',   this.clickExportTest.bind(this));
+
 		$("#btn_to_general").on('click',this.clickGoToGeneral.bind(this));
 		$("#btn_to_actor").on('click',  this.clickGoToActor.bind(this));
 		$("#btn_to_script").on('click', this.clickGoToScript.bind(this));
@@ -552,21 +558,18 @@ class CfgEditor {
 	//================
 	// File I/O
 	downloadFile(){
-		var fileName = `${this.generalCfg.title}.arp`;
-		var data = {
-			version: VERSION,
-			config: {
-				title: this.generalCfg.title,
-				actors: Object.values(this.actorCfg),
-			},
-			script: this.scriptCfg,
-		};
+		var exportData = this.exporter.Export("ARP", this);
 
 		var elem = document.createElement('a');
-		elem.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data, null, '\t')));
-		elem.setAttribute('download', fileName);
+		elem.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(exportData.fileData));
+		elem.setAttribute('download', exportData.fileName);
 		document.body.appendChild(elem);
 		elem.click();
+	}
+	previewReplay(){
+		var exportData = this.exporter.Export("HTML", this);
+		var w = window.open('');
+		w.document.write(exportData.fileData);
 	}
 	createUploadElem(){
 		var elem = document.createElement('input');
