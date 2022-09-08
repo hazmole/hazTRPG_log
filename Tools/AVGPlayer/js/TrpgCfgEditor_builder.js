@@ -49,7 +49,12 @@ builder.subpage_actorEditPage = function(actorObj){
 			<div class="_actor_basicInfo_frame">
 				<div class="row flex"><div class="_entry_title">${MSG["actor_id"]}：</div><div>${actorObj.id}</div></div>
 				<div class="row flex"><div class="_entry_title">${MSG["actor_name"]}：</div><div><input type="text" id="_input_actorName" value="${actorObj.name}"></div></div>
-				<div class="row flex"><div class="_entry_title">${MSG["actor_color"]}：</div><div><input type="color" id="_input_actorColor" value="#${actorObj.color}"></div></div>
+				<div class="row flex"><div class="_entry_title">${MSG["actor_color"]}：</div>
+					<div style="display:flex; align-items:center ;">
+						<div style="margin-right:5px;">#<input type="text" id="_input_actorColor_text" value="${actorObj.color.toUpperCase()}" style="width:60px;"></div>
+						<div><input type="color" id="_input_actorColor" value="#${actorObj.color}"></div>
+					</div>
+				</div>
 				<div class="row flex"><div class="_entry_title">${MSG["actor_headImg_url"]}：</div><div><input type="text" id="_input_actorHeadImgUrl" value="${imgUrl}"></div></div>
 			</div>
 		</div>

@@ -188,6 +188,8 @@ class CfgEditor {
 		//---
 		$("#_btn_saveActorCfg").on('click', this.onClick_SaveActorCfg.bind(this, actorObj.id));
 		$("#_input_actorHeadImgUrl").on('change', this.onChange_setActorHeadImg.bind(this));
+		$("#_input_actorColor_text").on('change', this.onChange_setActorColor.bind(this, "text"));
+		$("#_input_actorColor").on('change', this.onChange_setActorColor.bind(this, "picker"));
 	}
 	render_actorHeadImg(){
 		var url = $("#_input_actorHeadImgUrl").val();
@@ -375,7 +377,16 @@ class CfgEditor {
 	onChange_setActorHeadImg(){
 		this.render_actorHeadImg();
 	}
-
+	onChange_setActorColor(fromWho){
+		switch(fromWho){
+			case "picker":
+				$("#_input_actorColor_text").val($("#_input_actorColor").val().substring(1).toUpperCase());
+				break;
+			case "text":
+				$("#_input_actorColor").val("#"+$("#_input_actorColor_text").val());
+				break;
+		}
+	}
 
 	onClick_showCtrlWindow(type, callback){
 		this.popupCtrlWindow(type, callback);
