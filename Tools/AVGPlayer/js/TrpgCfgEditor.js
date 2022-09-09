@@ -185,6 +185,7 @@ class CfgEditor {
 		$("._btn").removeClass("active");
 		$("#_leftCol").empty();
 		$("#_rightCol").empty();
+		this.hideCtrlWindow();
 	}
 	//============
 	// Sub-Page Handler
@@ -488,7 +489,7 @@ class CfgEditor {
 		var content = arg.content;
 		var isOtherCh = arg.isOtherCh;
 		var title = MSG["Title_EditTalk"];
-		var content = builder.ctrlWin_editTalk(this.actorCfg, actorId, content, isOtherCh);
+		var content = builder.ctrlWin_editTalk(this.actorCfg, actorId, content, isOtherCh, this.generalCfg.isOnlyMainCh);
 		//---
 		this.popupCtrlWindow(title, content, applyCallback);
 	}

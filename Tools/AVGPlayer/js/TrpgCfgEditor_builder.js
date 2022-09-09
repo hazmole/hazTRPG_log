@@ -97,17 +97,17 @@ builder.subpage_scriptList = function(actorCfg, scriptList, isOnlyShowMain){
 	return `
 		${builder.scriptEntrySOF()}
 		${Object.values(scriptList)
-			.filter( script => !isOnlyShowMain || script.channel!="other" )
-			.map( script => builder.scriptEntry(actorCfg, script) ).join('')}
+			.map( script => { script.isHidden = (isOnlyShowMain && script.channel=="other"); return script; } )
+			.map( script => builder.scriptEntry(actorCfg, script)).join('')}
 		${builder.scriptEntryEOF()}`.fmt();
 }
 builder.scriptEntry = function(actorCfg, scriptObj){
 	var elem = '';
 	var type = scriptObj.type;
-	var isOtherCh = false;
+	var isHidden = scriptObj.isHidden;
+	var isOtherCh = (scriptObj.type=="talk" && scriptObj.channel=="other");
 	switch(type){
 		case "talk":
-			isOtherCh = scriptObj.channel!="main";
 			var actorObj = actorCfg[scriptObj.actorId];
 			elem = builder._scriptEntryInner_talk(actorObj, scriptObj);
 			break;
@@ -118,7 +118,7 @@ builder.scriptEntry = function(actorCfg, scriptObj){
 			elem = builder._scriptEntryInner_halt();
 			break;
 	}
-	return `<div class="_scriptEntry clickable ${isOtherCh? "otherCh": ""}" data-type="${type}">${elem}</div>`;
+	return `<div class="_scriptEntry clickable ${isOtherCh? "otherCh": ""} ${isHidden? "hidden": ""}" data-type="${type}">${elem}</div>`;
 }
 
 builder.scriptEntrySOF = function(){
@@ -150,7 +150,7 @@ builder.ctrlWin_editBgImg = function(imgUrl){
 		<div class="row"><b>${MSG["imgUrl"]}：</b><div><input type=text id="_input_imgUrl" class="fullWidth" value="${imgUrl}"></div></div>
 		<div class="row"><div id="_output_imgPreview" style="background-image:url(${imgUrl});"></div></div>`.fmt();
 }
-builder.ctrlWin_editTalk = function(actorCfg, actorId, content, isOtherCh){
+builder.ctrlWin_editTalk = function(actorCfg, actorId, content, isOtherCh, isOnlyShowMain){
 	var actorObj = actorCfg[actorId];
 	return `
 		<div class="row"><b>${MSG["talk_actor"]}：</b>
@@ -158,7 +158,7 @@ builder.ctrlWin_editTalk = function(actorCfg, actorId, content, isOtherCh){
 		</div>
 		<div class="row"><b>${MSG["talk_channel"]}：</b>
 			<input type="radio" id="chMain"  name="channel" value="main" ${isOtherCh? "": "checked"}>${MSG["ch_main"]}
-			<input type="radio" id="chOther" name="channel" value="other" ${isOtherCh? "checked": ""}>${MSG["ch_other"]}
+			<input type="radio" id="chOther" name="channel" value="other" ${isOtherCh? "checked": ""} ${isOnlyShowMain? "disabled": ""}>${MSG["ch_other"]}
 		</div>
 		<div class="row"><textarea id="_input_content">${content}</textarea></div>`.fmt();
 }

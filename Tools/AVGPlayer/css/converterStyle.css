@@ -52,7 +52,7 @@
 }
 #_toolbar #btn_import ._icon { background-image: url("../image/icons/import-icon.png"); }
 #_toolbar #btn_export ._icon { background-image: url("../image/icons/save.png"); }
-#_toolbar #btn_to_general ._icon { background-image: url("../image/icons/info.png"); }
+#_toolbar #btn_to_general ._icon { background-image: url("../image/icons/cog.png"); }
 #_toolbar #btn_to_actor ._icon { background-image: url("../image/icons/mona-lisa.png"); }
 #_toolbar #btn_to_script ._icon { background-image: url("../image/icons/open-book.png"); }
 #_toolbar #_sign {
@@ -296,6 +296,7 @@
 #_rightCol h2 {
 	margin: 10px;
 }
+.hidden { display: none; }
 .row { margin: 10px; }
 .flex { display: flex; align-items: center; }
 .clickable { cursor: pointer; }
