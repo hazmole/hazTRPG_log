@@ -6,6 +6,7 @@ var MSG = {
 	"btn_scriptCfg": "腳本設定",
 	"btn_save": "儲存",
 	"btn_apply": "確定",
+	"btn_preview": "預覽",
 	"btn_methodMoveUp": "上移",
 	"btn_methodMoveDown": "下移",
 	"btn_methodEdit": "編輯段落",
@@ -26,7 +27,11 @@ var MSG = {
 		若有其他使用上的疑問或建議，請不吝在Discord上聯絡 <b>hazmole#6672</b>。`,
 	"replatTitle": "團錄標題",
 	"exportFormat": "輸出格式",
+	"isOnlyShowMainCh": "只顯示主要頻道？",
 	"talk_actor": "發話角色",
+	"talk_channel": "頻道",
+	"ch_main": "主要",
+	"ch_other": "場外",
 	"actor_id": "ID",
 	"actor_name": "名稱",
 	"actor_color": "代表色",
@@ -77,6 +82,7 @@ class CfgEditor {
 	initConfig(){
 		this.generalCfg = {
 			title: this.parser.GetTitle(),
+			isOnlyMainCh: this.parser.GetGeneralCfg().isOnlyMainCh,
 		};
 		this.actorCfg = this.parser.GetActorList();
 		this.scriptCfg = this.parser.GetScript();
@@ -114,7 +120,7 @@ class CfgEditor {
 		if(!this.doLoadedCheck()) return ;
 		this.downloadFile();
 	}
-	clickExportTest(){
+	clickPreview(){
 		if(!this.doLoadedCheck()) return ;
 		this.previewReplay();
 	}
@@ -146,16 +152,12 @@ class CfgEditor {
 		$("#_rightCol").append(builder.pageR_intro());
 	}
 	goToPage_general(){
-		var title = this.generalCfg.title;
-		//---
 		$("#btn_to_general").addClass("active");
-		$("#_rightCol").append(builder.pageR_generalCfg(title));
+		$("#_rightCol").append(builder.pageR_generalCfg(this.generalCfg));
 		//---
 		$("#_btn_saveGeneralCfg").on('click', this.onClick_SaveGeneralCfg.bind(this));
 	}
 	goToPage_actor(){
-		var self = this;
-		//---
 		$("#btn_to_actor").addClass("active");
 		$("#_leftCol").append( builder.pageL_actorEntryList(Object.values(this.actorCfg)));
 		$("#_rightCol").append(builder.pageR_actorCfg_Workspace());
@@ -163,12 +165,12 @@ class CfgEditor {
 		$("._actorEntry").on("click", this.onClick_selectActorEntry.bind(this));
 	}
 	goToPage_script(){
-		//---
 		$("#btn_to_script").addClass("active");
 		$("#_leftCol").append( builder.pageL_scriptMethodList());
 		$("#_rightCol").append(builder.pageR_scriptCfg_Workspace());
 		this.render_scriptList();
 		//---
+		$("#_btn_previewScript").on('click', this.clickPreview.bind(this));
 		$("#_btn_saveScriptCfg").on('click', this.onClick_SaveScriptCfg.bind(this));
 		$("#_btn_moveUpCmd").on('click', this.onClick_moveUpCmd.bind(this));
 		$("#_btn_moveDownCmd").on('click', this.onClick_moveDownCmd.bind(this));
@@ -177,7 +179,6 @@ class CfgEditor {
 		$("#_btn_addTalkCmd").on('click', this.onClick_addScriptCmd.bind(this, "talk"));
 		$("#_btn_addChBgCmd").on('click', this.onClick_addScriptCmd.bind(this, "changeBg"));
 		$("#_btn_addHaltCmd").on('click', this.onClick_addScriptCmd.bind(this, "halt"));
-		
 	}
 	clearPage(){
 		this.selectedPtr = null;
@@ -209,7 +210,8 @@ class CfgEditor {
 		}
 	}
 	render_scriptList(){
-		$("#_script_listPanel").html(builder.subpage_scriptList(this.actorCfg, this.scriptCfg));
+		var isOnlyShowMainCh = this.generalCfg.isOnlyMainCh;
+		$("#_script_listPanel").html(builder.subpage_scriptList(this.actorCfg, this.scriptCfg, isOnlyShowMainCh));
 		//---
 		$("._scriptEntry").on('click', this.onClick_selectScriptEntry.bind(this));
 	}
@@ -222,10 +224,12 @@ class CfgEditor {
 	// Interact Method
 	onClick_SaveGeneralCfg(){
 		var inputVal = {
-			title: $("#_input_title").val()
+			title: $("#_input_title").val(),
+			isOnlyMainCh: $("#_input_isOnlyMainCh").prop('checked'),
 		};
 		//---
 		this.generalCfg.title = inputVal.title;
+		this.generalCfg.isOnlyMainCh = inputVal.isOnlyMainCh;
 		this.saveToWebStorage();
 		//---
 		this.popupMsgBox("success", MSG["Success_SaveCfg"]);
@@ -323,13 +327,16 @@ class CfgEditor {
 			var arg = {
 				actorId: actorElem.attr("data-actor-id"),
 				content: contentElem.html().replace(/<br>/g, '\n'),
+				isOtherCh: $(self.selectedPtr).hasClass("otherCh"),
 			};
-			self.popWindow_editTalk(arg.actorId, arg.content, function(){
+			self.popWindow_editTalk(arg, function(){
 				var newActorId = $("#_input_actor").val();
 				var newActorObj = self.actorCfg[newActorId];
+				var isOtherCh = $("input[name=channel]:checked").val() == 'other';
 				actorElem.attr('data-actor-id', newActorId);
 				actorElem.css('color', "#"+newActorObj.color);
 				actorElem.text(newActorObj.name);
+				(isOtherCh)? $(self.selectedPtr).addClass("otherCh"): $(self.selectedPtr).removeClass("otherCh");
 
 				var newContent = $("#_input_content").val().replace(/\n/g, '<br>');
 				contentElem.html(newContent);
@@ -366,11 +373,17 @@ class CfgEditor {
 
 		//===============
 		function addTalkCmd(){
-			self.popWindow_editTalk(0, "", function(){
+			var arg = {
+				actorId: 0,
+				content: "",
+				isOtherCh: false,
+			};
+			self.popWindow_editTalk(arg, function(){
 				var scriptObj = {
 					type: "talk",
 					actorId: $("#_input_actor").val(),
 					content: $("#_input_content").val(),
+					channel: $("input[name=channel]:checked").val(),
 				};
 				self.insertScriptEntry(self.selectedPtr, scriptObj);
 				self.hideCtrlWindow();
@@ -451,7 +464,8 @@ class CfgEditor {
 			case "talk":
 				var actorId = $(scriptEntry).children("._scriptEntry_talkActor").attr("data-actor-id");
 				var content = $(scriptEntry).children("._scriptEntry_talkContent").html();
-				return { type, actorId, content };
+				var channel = $(scriptEntry).hasClass("otherCh")? "other": "main";
+				return { type, actorId, content, channel };
 			default:
 				return { type };
 		}
@@ -469,15 +483,14 @@ class CfgEditor {
 			$("#_output_imgPreview").css("background-image", `url(${$("#_input_imgUrl").val()})`);
 		}.bind(this));
 	}
-	popWindow_editTalk(actorId, content, applyCallback){
+	popWindow_editTalk(arg, applyCallback){
+		var actorId = arg.actorId;
+		var content = arg.content;
+		var isOtherCh = arg.isOtherCh;
 		var title = MSG["Title_EditTalk"];
-		var content = builder.ctrlWin_editTalk(this.actorCfg, actorId, content);
+		var content = builder.ctrlWin_editTalk(this.actorCfg, actorId, content, isOtherCh);
 		//---
 		this.popupCtrlWindow(title, content, applyCallback);
-		//---
-		//$("#_input_imgUrl").on('change', function(){
-		//	$("#_output_imgPreview").css("background-image", `url(${$("#_input_imgUrl").val()})`);
-		//}.bind(this));
 	}
 
 	popupCtrlWindow(title, content, callback){
@@ -503,7 +516,6 @@ class CfgEditor {
 		$(this.viewPort).append(builder.mainFrame());
 		$("#btn_import").on('click',    this.clickImport.bind(this));
 		$("#btn_export").on('click',    this.clickExport.bind(this));
-		$("#btn_export2").on('click',   this.clickExportTest.bind(this));
 
 		$("#btn_to_general").on('click',this.clickGoToGeneral.bind(this));
 		$("#btn_to_actor").on('click',  this.clickGoToActor.bind(this));

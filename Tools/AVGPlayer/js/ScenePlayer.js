@@ -48,10 +48,16 @@ class SceneCtrl {
 
 	//===============
 	runNextCommand(){
+		var self = this;
 		var cmdObj = this.currentSceneObj.script[this.cmdIndex];
 		if(cmdObj==undefined){
 			this.handleEOF();
 			return;
+		}
+
+		while(isSkipCmd(cmdObj)){
+			this.cmdIndex++;
+			cmdObj = this.currentSceneObj.script[this.cmdIndex];
 		}
 
 		switch(cmdObj.type){
@@ -66,6 +72,13 @@ class SceneCtrl {
 				break;
 		}
 		this.cmdIndex++;
+
+		//========
+		function isSkipCmd(cmdObj){
+			var isSkipOtherCh = self.currentSceneObj.config.isOnlyMainCh;
+			if( cmdObj.type=="talk" && cmdObj.channel=="other" ) return true;
+			return false;
+		}
 	}
 
 	

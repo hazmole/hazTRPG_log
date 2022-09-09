@@ -10,11 +10,16 @@ builder.pageR_intro = function(){
 /*----------------
   Page: General Config
  ----------------*/
-builder.pageR_generalCfg = function(title){
+builder.pageR_generalCfg = function(generalCfg){
+	var title = generalCfg.title;
+	var isOnlyMainCh = generalCfg.isOnlyMainCh;
 	return `
 		<h2>${MSG["btn_generalCfg"]}</h2>
 		<div class="row"><b>${MSG["replatTitle"]}</b>：<input type="text" id="_input_title" value="${title}"></div>
 		<div class="row"><b>${MSG["exportFormat"]}</b>：${MSG["fileType_ARP"]}</div>
+		<div class="row">
+			<lable class="vcneter" for="_input_isOnlyMainCh"><input type="checkbox" id="_input_isOnlyMainCh" ${isOnlyMainCh? "checked='checked'":""}><b>${MSG["isOnlyShowMainCh"]}</b></label>
+		</div>
 		<div class="row right"><button id="_btn_saveGeneralCfg" class="_btn_save">${MSG["btn_save"]}</button></div>`.fmt();
 }
 
@@ -80,15 +85,20 @@ builder.pageR_scriptCfg_Workspace = function(){
 		<div id="_script_ctrlPanel">
 			<h2>${MSG["btn_scriptCfg"]}</h2>
 			<div class="row">${MSG["Tip_editScript"]}</div>
-			<div class="row right"><button id="_btn_saveScriptCfg" class="_btn_save">${MSG["btn_save"]}</button></div>
+			<div class="row right">
+				<button id="_btn_previewScript" class="_btn_preview">${MSG["btn_preview"]}</button>
+				<button id="_btn_saveScriptCfg" class="_btn_save">${MSG["btn_save"]}</button>
+			</div>
 		</div>
 		<div id="_script_listPanel">
 		</div>`.fmt();
 }
-builder.subpage_scriptList = function(actorCfg, scriptList){
+builder.subpage_scriptList = function(actorCfg, scriptList, isOnlyShowMain){
 	return `
 		${builder.scriptEntrySOF()}
-		${Object.values(scriptList).map( script => builder.scriptEntry(actorCfg, script) ).join('')}
+		${Object.values(scriptList)
+			.filter( script => !isOnlyShowMain || script.channel!="other" )
+			.map( script => builder.scriptEntry(actorCfg, script) ).join('')}
 		${builder.scriptEntryEOF()}`.fmt();
 }
 builder.scriptEntry = function(actorCfg, scriptObj){
@@ -140,11 +150,16 @@ builder.ctrlWin_editBgImg = function(imgUrl){
 		<div class="row"><b>${MSG["imgUrl"]}：</b><div><input type=text id="_input_imgUrl" class="fullWidth" value="${imgUrl}"></div></div>
 		<div class="row"><div id="_output_imgPreview" style="background-image:url(${imgUrl});"></div></div>`.fmt();
 }
-builder.ctrlWin_editTalk = function(actorCfg, actorId, content){
+builder.ctrlWin_editTalk = function(actorCfg, actorId, content, isOtherCh){
 	var actorObj = actorCfg[actorId];
 	return `
 		<div class="row"><b>${MSG["talk_actor"]}：</b>
-			<select id="_input_actor">${Object.values(actorCfg).map( actor => builder._ctrlWin_actorEntry(actor, actor.id==actorId) )}</select></div>
+			<select id="_input_actor">${Object.values(actorCfg).map( actor => builder._ctrlWin_actorEntry(actor, actor.id==actorId) )}</select>
+		</div>
+		<div class="row"><b>${MSG["talk_channel"]}：</b>
+			<input type="radio" id="chMain"  name="channel" value="main" ${isOtherCh? "": "checked"}>${MSG["ch_main"]}
+			<input type="radio" id="chOther" name="channel" value="other" ${isOtherCh? "checked": ""}>${MSG["ch_other"]}
+		</div>
 		<div class="row"><textarea id="_input_content">${content}</textarea></div>`.fmt();
 }
 builder._ctrlWin_actorEntry = function(actorObj, isSelected){
@@ -183,9 +198,6 @@ builder.mainFrame = function(){
 					</div>
 					<div id="btn_export" class="_btn clickable">
 						<div class="_icon"></div><div class="_label">${MSG["btn_export"]}</div>
-					</div>
-					<div id="btn_export2" class="_btn clickable">
-						<div class="_icon"></div><div class="_label">團錄輸出測試</div>
 					</div>
 				</div>
 				<div class="_btn_group">

@@ -127,7 +127,7 @@
 }
 ._ctrlwindow #_input_content {
 	width: 100%;
-	height: calc(100% - 55px);
+	height: calc(100% - 85px);
 	font-size: 1rem;
 	resize: none;
 }
@@ -236,8 +236,7 @@
 	text-align: right;
 	border: 1px solid #6a6a6a;
 }
-._scriptEntry.otherCh ._scriptEntry_talkActor {
-}
+._scriptEntry.otherCh:active, ._scriptEntry.otherCh.active { margin-left: 346px; }
 ._scriptEntry.otherCh ._scriptEntry_talkContent {
 	background: black;
 	color: white;
@@ -270,15 +269,19 @@
 #_uploadFile { display: none; }
 
 /* Save Button */
-._btn_save {
+._btn_save, ._btn_preview {
 	width: 100px;
 	padding: 15px;
-  background: #34446e;
-  color: white;
-  cursor: pointer;
+	background: #34446e;
+	color: white;
+	cursor: pointer;
 }
 ._btn_save:hover { background: #5b6b95; }
 ._btn_save:active { background: #232e4a; }
+
+._btn_preview { background: #646778; }
+._btn_preview:hover { background: #818499; }
+._btn_preview:active { background: #353e68; }
 
 /* Others */
 .infoBlock {
@@ -297,6 +300,8 @@
 .flex { display: flex; align-items: center; }
 .clickable { cursor: pointer; }
 .right { text-align: right; }
+.vcneter { display: flex; align-items: center; }
 .fullWidth { width: 100%; }
 input[type=text] { height: 25px; }
+input[type=checkbox] { height: 18px; width: 18px; }
 select { height: 25px; }

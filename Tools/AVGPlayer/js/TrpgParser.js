@@ -10,6 +10,7 @@ class TrpgParser{
 		this.mode = '';
 		
 		this.filename = '';
+		this.generalCfg = {};
 		this.userMap = {};
 		this.script = null;
 
@@ -24,6 +25,10 @@ class TrpgParser{
 
 		this.rawData = data;
 		this.mode = mode;
+
+		this.generalCfg = {
+			isOnlyMainCh: false,
+		};
 		this.userMap = {};
 		this.script = [];
 		this.filename = filename.match(this.regList["getFileName"])[1];
@@ -38,6 +43,9 @@ class TrpgParser{
 	}
 
 	GetTitle(){ return this.filename; }
+	GetGeneralCfg(){
+		return this.generalCfg;
+	}
 	GetActorList(){
 		var retList = {};
 		for(var actor of Object.values(this.userMap)){
@@ -99,6 +107,7 @@ class TrpgParser{
 		var jsonObj = JSON.parse(this.rawData);
 
 		this.filename = jsonObj.config.title;
+		this.generalCfg.isOnlyMainCh = !!(jsonObj.config?.isOnlyMainCh);
 
 		for(var actor of jsonObj.config.actors){
 			this.userMap[actor.id] = new Actor(actor.id, actor.name, actor.color, actor.imgUrl);
