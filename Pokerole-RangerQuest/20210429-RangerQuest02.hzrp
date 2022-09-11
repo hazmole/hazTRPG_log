@@ -1,0 +1,905 @@
+{
+	"version": "hazmole_v0.9",
+	"config": {
+		"title": "《巡護員的考驗》 第二集",
+		"isOnlyMainCh": false,
+		"actors": [
+			{
+				"id": 0,
+				"name": "GM@Haz",
+				"color": "ffffff",
+				"imgUrl": ""
+			},
+			{
+				"id": 1,
+				"name": "蜂女王",
+				"color": "58bf0a",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-416.png"
+			},
+			{
+				"id": 2,
+				"name": "小尼",
+				"color": "e29740",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKR-RQ-01.png"
+			},
+			{
+				"id": 3,
+				"name": "小紫",
+				"color": "d900ff",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-029.png"
+			},
+			{
+				"id": 4,
+				"name": "肥仔",
+				"color": "e29740",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-263.png"
+			},
+			{
+				"id": 5,
+				"name": "system",
+				"color": "dcddde",
+				"imgUrl": ""
+			},
+			{
+				"id": 6,
+				"name": "蘭花",
+				"color": "d900ff",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/NPC-female-01.png"
+			},
+			{
+				"id": 7,
+				"name": "三蜜蜂",
+				"color": "58bf0a",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-415.png"
+			}
+		]
+	},
+	"script": [
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "蜂群嗡鳴，四面環繞。在被三蜜蜂找過來的你們面前，是統治著這一個地帶，但已經身負重傷的蜂女王。儘管想要出手幫助，但對方卻仍然警戒著作為人類的你們，甚至在你們踏入空地的時候出手攻擊。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "究竟，接下來的事態又會怎麼發展呢？",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「嘶……」發出壓迫感十足的聲音，那兩對紅色的複眼滿含著對人類的不信任感。也不等你們有進一步的反應，她立刻就對接近她的小尼等人發起了攻擊。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（總之來骰先攻吧，1d6+靈巧+警覺）",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "1d6+4+3 #先攻 (1D6+4+3) ＞ 2[2]+4+3 ＞ 9",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "1d6+4 (1D6+4) ＞ 5[5]+4 ＞ 9",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "1d6+2+2 #先攻 (1D6+2+2) ＞ 4[4]+2+2 ＞ 8",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「蛇！」儘管理解實力有所差距，但當你陷入危險的瞬間，一直警戒著的肥仔立刻竄到了你面前，等待著你的指令。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（順序：肥仔→蜂女王→小紫）",
+			"channel": "other"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「啊等等等我們真的是來幫忙的…可惡！肥仔，使用圓瞳！」小尼見女王蜂發起攻擊，趕緊和蛇紋面熊交換位置，希望還有機會讓對方熄怒。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "2b6&gt;=4 2可愛+0誘惑 (2B6&gt;=4) ＞ 5,3 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "※蜂女王的力量下降 1 點",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "蛇紋熊瞪大圓眼凝視著蜂女王，露出可愛的目光努力降低對方的攻擊欲…可是不知道對野生暴怒寶可夢能起多少作用。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "不知道是不是心理作用，你注意到蜂女王的行動似乎確實因為肥仔的行動而頓了一拍，但這並不影響她採取接下來的行動。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "(4+3)dd&gt;=4 #攻擊指令（扣除2顆成功骰）",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "(4+3)d6&gt;=4 #攻擊指令（扣除2顆成功骰） (7D6&gt;=4) ＞ 24[1,5,5,5,5,2,1] ＞ 24 ＞ 成功",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "(4+3-2)b6&gt;=4 #攻擊指令傷害 (5B6&gt;=4) ＞ 6,4,1,1,2 ＞ 成功数2",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「肥仔，快閃開！」看起來剎不住了，小尼緊張地下指令讓肥仔避開蜂群-",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「蛇、蛇紋……！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "儘管試圖左右閃避，但面對從四面八方圍上來的蜂群，肥仔也無法全身而退，螫刺穿過了厚厚的毛，留下了傷口。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（更正：蜂女王只造成 1 點傷害）",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "[ 肥仔 ] 生命值 : 4 → 3",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「嗚哇…我們要先撒退！」小尼拿著精靈球向蘭花喊道。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「小紫！保護小尼跟肥仔！」蘭花大叫著，見你們陷入危險，她也立刻拋出了精靈球，讓小紫出現在你們面前：「使用二連踢！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「尼多！」一從精靈球出來，尼多蘭便大聲喊叫著，朝著蜂女王的方向飛踢而去。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "(2+1)b6&gt;=4 #靈巧+鬥毆(二連踢) (3B6&gt;=4) ＞ 6,2,4 ＞ 成功数2",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "(2+1)b6&gt;=4 #靈巧+鬥毆(二連踢) (3B6&gt;=4) ＞ 2,4,2 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "(2+2)b6&gt;=4 #二連踢傷害 (4B6&gt;=4) ＞ 1,6,4,5 ＞ 成功数3",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "※更正，傷害骰池會被扣除5顆骰子，0成功骰，僅有保底 1 傷害，適用屬性修正後為 0 點傷害。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「啥？」小尼立即望回尼多蘭。「噢不…」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "尼多蘭氣勢十足的穿過了湧上的蜂群，踢中了蜂女王那蜂巢般厚實的腹部，發出了咚的一聲。但你可以看出這一擊完全沒有發揮任何效果，反倒只是更刺激了蜂女王的怒火。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「很好！小紫！就這樣繼續攻擊！」或許是因為第一次實戰，或可能是因為太過慌張，蘭花卻沒有注意到這一點，仍舊指揮著尼多蘭進行攻擊。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「不是啊蘭花，我們應該是來幫忙的啊！」小尼慌張地拍打蘭花肩膀提醒伙伴。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「可、可是……！」蘭花看起來也慌了：「那我們要怎麼辦！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「尼多？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「先跑啊！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「我們會幫忙的，只是不是現在…相信我們！」小尼向著帶路的三蜜蜂大喊，然後嘗試把精靈球對準左閃右避的肥仔把牠收回球中逃跑！",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "4d6 靈巧+運動（逃跑） (4D6) ＞ 20[5,6,3,6] ＞ 20",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "7",
+			"content": "「蜜！蜜！」從密密麻麻的蜂群中，你能看見帶著你們過來的三蜜蜂正在蜂女王身邊瘋狂打轉，嘗試引起蜂女王的注意。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "順利的收回肥仔，你與同樣收回了小紫的蘭花一起往外奔跑。幸運的是，對方似乎並沒有要窮追的打算，在把你們趕離開空地之後，三蜜蜂們就沒有再做出攻擊的意思。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "透過樹梢，你們能看見原本飛起來的蜂女王又降落到了地上，辛苦的振翅，喘著氣。而集中的蜂群們也四散開來，茫然地飛行著。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "那麼……接下來該怎麼辦呢？",
+			"channel": "main"
+		},
+		{
+			"type": "halt"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「得救了嗎…？」聽不到振翅聲後，小尼躲在一棵樹後面回頭偷看，沒看見三蜜蜂後整個人攤坐下來。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「對了，肥仔。」看起來安全後，小尼先把蛇紋熊放出來，用牠先前的撿回來的藥劑為牠治療。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「蛇紋……」原本就沒有什麼大礙，在傷藥神奇的療效下，牠立刻抖了抖身體，精神十足地叫了一聲。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "（1單位回1hp，剩3單位）",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "[ 肥仔 ] 生命值 : 3 → 4",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「那隻寶可夢真是嚇死人…」小尼望向蘭花。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「…」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「可是牠受傷了……人家覺得應該有機會打贏吧！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "蘭花抱著重新從精靈球出來的小紫，餵了牠一口寶可夢小點心。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「但我們是來幫忙的啊…」小尼苦笑說。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「誰叫牠不讓我們幫忙……」蘭花嘟起嘴抱怨道：「不然小尼有什麼更好的辦法嗎？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「…」小尼撫摸著肥仔刺刺的毛髮。「當時的話沒耶。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「但是現在嘛…我想可以嘗試收集一些樹果給牠？」小尼提議。樹果可以解決很多問題，樹果是終極答案。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「你們就知道吃……」雖然嘴上這樣說，但蘭花還是露出了微笑：「好吧，那就用你的方法試試看吧。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「熊！」肥仔快樂地搖著尾巴。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「那就這樣辦吧！我先對一對地圖確認位置。」小尼拿出地圖，確認二人沒有在追逐中迷路。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "（需要擲嗎？）",
+			"channel": "other"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "對照地圖跟眼前所見的地形特徵，你很快就定位出自己現在的位置：大幅偏離主幹道，你們現在已經相當深入山林之中，要回到你們熟悉的區域會稍微花上一些時間。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "但這或許也不一定是壞事。畢竟在這杳無人煙的山林中，或許更有機會發現到西有的樹果也說不定？",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「我們在這裡！哇我們跑了好遠欸。」小尼戳著地圖某處，和蘭花分享剛才冒險的結果。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「知道位置那就放心了～先等一下！」小尼熱切地翻開包包，從裡面摸出兩個罐頭出來。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「別忘記午餐～吃飽了才有力氣行山！妳的有帶在身上嗎？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「人，人家的放在帳篷那邊……」臉頰有些脹紅，蘭花鼓起臉頰：「我回去再吃！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「我有多，妳要那款？」小尼左右手各拿一罐讓蘭花選擇。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「唔，唔唔……笨蛋！」搶過你右手的那個罐頭，蘭花吐了吐舌頭：「我回去再還你！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「好啊～」小尼分了幾口給肥仔嚐味道，剩下的自己吃光。「就算未煮熟還是很好吃呢…」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「少根筋的傢伙……」一邊喃喃自語，蘭花坐了下來，開著罐頭開始跟小紫一起分食著。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "肚餓又剛運動完，小尼很快把罐頭吃光。把空罐頭放回包包後，小尼站起來拍拍褲上的泥土。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「尼多～」舉起前腳拍拍主人的大腿，尼多蘭什麼都不說。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「妳們慢慢吃啊～我想一想接下來去那裡喔！」小尼又拿出地圖摩拳擦掌。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「…好，就往這邊走吧！」小尼望了一陣。地圖不會標示每棵果樹的位置，自己只能憑不太高明的知識去判斷有機會中獎的位置…",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「這些畫地圖的人都不會把深山裡的果樹位置記錄下來…果樹就像寶藏一樣呢。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「蛇紋……？」肥仔歪著頭，看你沒有要馬上出發的樣子，就小步跑到了蘭花根小紫身邊打轉。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「你們吃太快了啦！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「因為肚餓嘛～」小尼怕蘭花迷路，留下來等蘭花吃完午餐才出發。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「對了，妳先前想說什麼？」無聊時小尼想起還在營地時的事，忽然問道。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「嗯……？」嘴裡咀嚼著罐頭肉丸，蘭花先是愣了一下，接著在理解你的問句後忍不住臉頰一紅：「沒，沒什麼啦……」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「嗯，那個……回去再跟你說！」匆匆地吞下了嘴裡的食物，蘭花揮舞著手。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「好喔。」小尼沒有追問下去。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「現在仔細想想，我們剛才真是酷欸。只是如果被隊長知道可能會被當掉，哈哈！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「呼……」蘭花鬆了一口氣。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「隊長才不會當我們咧！之後我們就收服那隻蜂女王回去給他看看！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "換了個話題後，蘭花很明顯回復了平時的從容，笑鬧著。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「我不會背叛三蜜蜂的，牠相信我們不會趁火打劫才帶我們去的啊！」小尼還記掛著那隻三蜜蜂，這是很有趣的相遇。希望自己不會背棄承諾。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「好吧……但帶她出來給隊長看看應該沒關係吧……」畢竟考驗的規則沒說一定要說服。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「如果牠肯跟來一定超酷的！但也要牠飛得動…那麼我們出發吧？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「嗯！」抹抹嘴角殘留的罐頭肉屑，蘭花精神抖擻的回應道。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "從樹梢透下來的陽光緩緩偏移角度，轉眼間就已經來到了約莫下午一點左右的時間。收拾好用餐遺留下來的垃圾後，你們便跟著地圖的指示開始沿路行走，找尋著樹果的蹤跡。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（請進行「洞察＋自然」和「聰明＋警覺」的多重行動判定）",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "4b6&gt;=4 聰明+警覺 (4B6&gt;=4) ＞ 3,5,6,2 ＞ 成功数2",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "※成功協助小尼，小尼追加一顆骰子",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "4b6&gt;=4 洞察+自然 (4B6&gt;=4) ＞ 5,6,1,2 ＞ 成功数2",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "4b6&gt;=4 #聰明+警覺 (4B6&gt;=4) ＞ 2,4,3,1 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "1b6&gt;=4 #送的（？ (1B6&gt;=4) ＞ 6 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "※多重行動成功",
+			"channel": "main"
+		},
+		{
+			"type": "halt"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "聽著樹上的鳥叫蟲鳴、山間的溪流淙淙，你們漫步在山林間，不時穿插著一兩句交談，一邊找尋著樹叢間的樹果。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "作為養育著眾多寶可夢的家園，山林間的樹果叢並不算罕見。但也因餵分食者眾多，樹果的數量也不怎麼令人滿意。即使好不容易找到樹果叢，上面也幾乎都是吃剩或還沒發育完全的。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "幸好，這些對於經歷過兩個禮拜訓練的你們而言並不是什麼大問題。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "翻找著陰暗角落的灌木、觀察著位於高處的樹梢。在一番折騰之下，你們終於收集到了約３～４顆的橙橙果。在你們清點戰利品時，肥仔更是不知道從哪裡叼來了一顆木子果，得意地搖著尾巴",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「呼嘩！你竟然肯留給我們！謝啦肥仔！」小尼驚喜地稱讚蛇紋熊。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「蛇紋！」肥仔很了不起似的挺起了胸膛，用頭蹭了蹭你的腳。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「一、二、三、四顆橙橙果，再加上這木子果，這足夠讓蜂女王回復體力嗎？」小尼詢問蘭花意見，判斷寶可夢體力她應該比自己清楚。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "然而，在跟著你從樹上爬下來之後，蘭花似乎是注意到了什麼，拉了拉你的衣領，沒有馬上回答你的問題。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「小尼……我剛剛在樹上的時候，好像看到了對面那邊掛了一個黑色的網子。」蘭花的表情有些擔心：「那會不會是隊長之前提過的盜獵者啊……？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「黑色的網子…在這種地方？」小尼心知有古怪，有點擔心地左右張望。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「這…」隊長一直提醒盜獵者有多可怕，小尼縮起肩膀。「如果是的話，我們最好通知隊長…」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「嗯……」蘭花思考了一下：「你覺得，會不會就是他們打傷了蜂女王啊？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「我記得牠身上有被燒的傷痕。我們走到現在好像沒有見過火屬性寶可夢吧？」小尼越想越怕。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "咬了一下嘴唇，蘭花直直地看著你的眼睛。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「小尼，可以陪我過去看看嗎？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「為什麼？妳不怕嗎？」小尼已經想掉頭走了，想不明白蘭花為什麼反而想靠過去。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「你看嘛……如果能打倒盜獵者的話，蜂女王應該會更感謝我們吧。」她的聲音有些猶豫，你能明白她並不是完全這麼想──這只是個藉口。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "※可以進行「聰明+共感」判定來理解蘭花的想法",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「…真的嗎？」小尼一臉不相信。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "3b6&gt;=4 3聰明 (3B6&gt;=4) ＞ 1,5,5 ＞ 成功数2",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "從蘭花的眼神，她的肢體動作，她的話語中，你明白了她這麼做的原因──由於缺乏自信，她想要藉由冒險來證明自己，想要在你面前做出表現。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "除此之外，你也感覺到她想要「跟你一起冒險」。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「我總覺得妳只是想試一下…」小尼道出自己看法。「…對戰的事情妳比我厲害，妳知道就算我們靠近都不會有事的，對吧？」小尼猶豫地說出來，自己也不知道為什麼不一口拒絕。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "也許藉著拉著你一起行動，你在這之後會更願意跟她一起旅行……你可以感覺到她的不安：會不會在這次營隊結束之後，你們從此分道揚鑣──畢竟，你們的目的並不相同，不是嗎？",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「嗯，當然……只是看看而已。」蘭花擠出一個笑容，抱起了小紫：「那就……憶起過去？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「但是要很小心喔！」小尼放下肥仔，輕輕地點頭，攝手攝腳地跟上蘭花。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「那當然。」蘭花吁了口氣，露出勇敢的微笑。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "小心翼翼地往蘭花目擊補網的方向接近著，不知道是不是心理作用，你們感覺到山林間的聲音彷彿一下子安靜了下來，移動穿過樹叢時發出的沙沙聲也變得格外惱人。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "※請進行「靈巧＋隱匿」判定",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "4b6&gt;=4 #3靈巧+1隱匿 (4B6&gt;=4) ＞ 2,3,2,6 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "3b6&gt;=4 #靈巧隱匿 (3B6&gt;=4) ＞ 3,6,6 ＞ 成功数2",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "提心吊膽地，沒有製造出過多的騷動，你們順利來到了蘭花所指的區域。撥開草叢，你們能看到一個漆黑堅韌的補網被隨便地掛了起來。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "在更遠一些的空地，你們也看到了一個迷彩色的單人帳篷，一個正在用電熱爐加熱罐頭的男子，以及一頭正在閉眼休息，身上帶著螫刺傷口的大狼犬。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "小尼第一眼看到對方拿著食物，接下來才注意到那隻黑色的寶可夢。可怕的感覺又湧出來。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "隊長有時會談起他面對盜獵者時的對戰，現在竟然輪到自己面對了…",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「他看起來沒有隊長形容的那麼可怕？」小尼勉強擠出笑容偷偷說笑，實際上心裡慌到不得了。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "轉頭看向蘭花，你看到了她默默地拿出了裝著小紫的精靈球，似乎準備趁著對方不注意的時候率先出手。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「好吧…只要能贏就不用想那麼多了…」小尼深呼吸一口氣，安靜地把蛇紋熊收回球中，準備配合蘭花突擊。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「嗯……一定會贏的。」蘭花擠出笑容，你能看出她也有些不安，但在她的眼眸裡某種更強烈的感情戰勝了恐懼：「因為小尼你會幫我嘛。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「其實我只是想安心地拿到旅行章，然後陪肥仔進山裡找好吃的而已…不過…嗯，我們會一起過關的。」小尼說出心裡話。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「妳要過的關比我想闖的困難。但是山裡遇上陌生人有麻煩也要盡力幫忙，何況我們是一隊呢！」小尼握緊精靈球。「拜託了…肥仔！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "6",
+			"content": "「謝謝……那麼，要上囉！」蘭花吸了一口氣，然後踏出了腳步。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「嗯！」小尼亦離開藏身點，跟上蘭花腳步！",
+			"channel": "main"
+		}
+	]
+}

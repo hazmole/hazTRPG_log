@@ -1,0 +1,833 @@
+{
+	"version": "hazmole_v0.9",
+	"config": {
+		"title": "《巡護員的考驗》 第一集",
+		"isOnlyMainCh": false,
+		"actors": [
+			{
+				"id": 0,
+				"name": "GM@Haz",
+				"color": "ffffff",
+				"imgUrl": ""
+			},
+			{
+				"id": 1,
+				"name": "小尼",
+				"color": "e29740",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKR-RQ-01.png"
+			},
+			{
+				"id": 2,
+				"name": "亞麻曼",
+				"color": "ffffff",
+				"imgUrl": ""
+			},
+			{
+				"id": 3,
+				"name": "蘭花",
+				"color": "d900ff",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/NPC-female-01.png"
+			},
+			{
+				"id": 4,
+				"name": "小紫",
+				"color": "d900ff",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-029.png"
+			},
+			{
+				"id": 5,
+				"name": "肥仔",
+				"color": "e29740",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-263.png"
+			},
+			{
+				"id": 6,
+				"name": "",
+				"color": "dcddde",
+				"imgUrl": ""
+			},
+			{
+				"id": 7,
+				"name": "三蜜蜂",
+				"color": "58bf0a",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-415.png"
+			},
+			{
+				"id": 8,
+				"name": "蜂女王",
+				"color": "58bf0a",
+				"imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-416.png"
+			}
+		]
+	},
+	"script": [
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "清晨的陽光從樹梢溫柔灑下，讓地上搖擺的青草點綴了一層金色的斑紋；在微涼的山風之中，偶爾能聽到幾聲波波與烈雀等鳥類寶可夢的鳴叫聲。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "在綠意盎然的森林步道前，一名穿著登山裝，大約二三十來歲的青年正站在十來名剛成年不久（十來歲）的孩子們面前，說明著今天上山的注意事項。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "「總之呢……大家千萬不要忘記我們這幾天的訓練內容……」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "這是為期兩個禮拜的巡護員訓練營，專門為了想成為寶可夢巡護員的年輕訓練家所舉辦的活動，當然，這個營隊也收了不少單純只是想要學習如何在野外生存的訓練家當學生。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "在你們面前侃侃而談的，正是負責你們這個小隊的教練：亞麻曼。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "（甚麼時候開始啊…）來到一座新的山，小尼好奇地偷望別人，其他學生帶著的寶可夢似乎都比肥仔稀有一點。<br>「知道，亞麻曼隊長。」小尼跟著一起回答。<br>",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「那麼提問，如果遇到了受傷的野生寶可夢，應該要怎麼做呢？」<br>在注意事項說明告一段落後，像是要考考你們這幾天受訓的成果，他這麼問到，接著看向了在前排的少年。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「小尼，你說說看。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「先確保造成牠受傷的危險來源不在附近或者不會影響到自己的行動，然後再決定要不要靠近幫忙或者放生。」小尼想了想後回答。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「說的很好。當然除了注意周遭之外，也要記住有些寶可夢會在負傷時表現出比平常更強的敵意。」亞麻曼點了點頭讚許著，接著補充。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "在山男教練繼續解說的同時，你感覺到衣角被拉扯了幾下──不，那當然不會是你抱在懷中的肥仔，而是這兩個禮拜中總是跟你一起行動的少女：蘭花。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「欸，小尼，你覺得那個大叔什麼時候才會讓我們上山啊……」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「？」覺得自己動作很小應該不會被發現的小尼稍微轉頭眼角望向蘭花。<br>「我猜最少還要唸個三分鐘…」小尼小聲無奈地說。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "你懷中的肥仔慵懶的打了個鼾，就著你的手臂磨蹭了兩下。你看到蘭花腳邊的尼多蘭小步走了過去，用前腳戳了戳肥仔的尾巴。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「尼多尼多～」她身上的突起物搔著你的大腿，如果你沒記錯的話那些應該是毒刺……不過應該沒什麼關係吧？大概？",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "小尼的腳不自在縮了一下，其實有點想尼多蘭走開一點。自從蘭花炫耀過牠的特性後小尼變得有點怕和牠接觸，但牠又沒有真的刺傷過誰。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「牠還在睡啦。」小尼稍微放側懷中肥仔，讓下面的尼多蘭看看牠的憨樣。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「大叔再繼續講下去，我也想跟著睡了……」蘭花偷偷移動了一下位置，跟著尼多蘭一起挨到你身邊，戳了戳肥仔的肚子<br>「對了，這次考驗你有打算抓什麼樣的寶可夢嗎？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "你當然知道蘭花在說什麼。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "根據亞麻曼在十分鐘前的詳細說明，你們得知了這次巡護員訓練營最後考驗的內容：兩人搭檔，在野外平安度過一夜，並馴服至少一隻野生的寶可夢──馴服的方式不拘，但至少要讓牠願意協助你做事，或甚至離開出生地四處探險。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "雖然還沒有決定分組（通常亞麻曼會讓你們自由分組），但看蘭花的樣子，她看起來已經篤定會是跟你同一組了。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「蟲屬性寶可夢是最簡單的。牠們甚麼樹果都吃，跟肥仔一樣…」小尼坦白自己的想法，保底選項。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「又好照顧，只是有點醜就是了…」而且不強。不過這不是小尼目前會考慮的屬性。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「可是人家想抓比較可愛的寶可夢當夥伴……」蘭花嘟起嘴巴。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "你注意到身旁傳來同齡男生的眼光，你知道這幾天一直有人在嘲笑你跟女生膩在一起的這件事；不過就算撇除性別不管，蘭花也確實是個表現不錯的訓練家……雖然有時候有點任性，但大抵上來說還是挺好說話的。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「看到時遇到甚麼寶可夢吧～先找好休息地點，再在附近逛逛看？」小尼打定主意不想亂走浪費體力。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「找到果樹叢自然不愁找到寶可夢啦~」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「對吧？」小尼望向抱著的肥仔，很有信心地說。「大家都喜歡樹果，一定會靠過來的～」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「熊……！」肥仔翻了個身，聽到樹果，微微睜開了眼睛，毛茸茸的尾巴拍到了尼多蘭的臉上。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「尼多！」被嚇了一跳，尼多蘭立刻躲到了蘭花背後，然後探出頭。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「希望可以遇到跟小紫一樣可愛的寶可夢呢……」順手摸了摸尼多蘭小紫的頭，蘭花托著腮幫子。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "差不多正好三分鐘過去，站在前面的亞麻曼終於差不多告一段落。<br>「好了，那就事不宜遲，大家找好自己的搭檔後就帶著露營裝備進山吧。記住，如果有什麼狀況的話不要勉強，我們教練們都在外面隨時準備支援。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "2",
+			"content": "「我宣布第三十三屆巡護員訓練營的最終考驗正式開始！祝大家一切順利！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "拍了拍手，亞麻曼打開你們擋在面前的步道柵欄，並讓出通往山區森林的走道。好幾個已經按耐不住性子的年輕訓練家立刻帶著搭檔往裏頭跑去，嚷嚷著「我第一個！」之類的句子。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「好耶～喂喂，該醒來啦肥仔。你不想找好吃的話我把你放回精靈球了喔？」小尼搖著蛇紋熊叫喚說。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「蛇紋～」悠哉悠哉地翻身踩到了地上，睡得飽飽的肥仔抖抖了身體，立刻叫了一聲。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「死肥仔，有夠重～」把肥仔放下來後小尼望向蘭花。「…我們一組嗎？」<br>",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「那當然。」蘭花一臉理所當然的樣子，雙手插腰：「我們走吧！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「好。出發～」小尼拿出裝了地圖和指南針的精靈球放在隨時可以拿到的口袋，休哉悠哉地出發。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "在亞麻曼教練的揮手目送下，你們沿著整理過的山徑前進，走進了茂密的山林之中。由於畢竟是考驗，在經過一小段同行的路途後，其他同期生也兩兩成對，各自四散找尋自己中意的露營地點跟寶可夢棲息地去了。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "走在你的右前方，蘭花一邊東張西望著，欣賞著山間清晨的美景，一邊跟你聊著天。儘管走在前頭，但她似乎沒有要帶路的意思，時不時會停下腳步詢問你接下來該往哪裡前進。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「小尼，接下來要往哪裡走！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「分叉路轉左。」小尼看了一眼地圖，肯定地回答。「往那邊走有溪流，在附近扎營會很舒服的。妳想到想抓的寶可夢了嗎？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「小紫比較不擅長對付地面系的寶可夢，所以我想抓隻毛茸茸的飛行系寶可夢。」蘭花給出了一個兼具實用跟美觀的回答：「好！左轉──！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「蛇紋！」睡飽了精神抖擻的肥仔一邊叫著，一邊跟著往前跑的蘭花一起往前跑去──一下子都快不知道誰是誰的訓練家了。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「尼多……」抬頭看了你一眼，小紫抓了抓臉，也跟著邁開腳步努力跟上那群精力過剩的傢伙們。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「森林裡不是鳥就是蟲。一直聽到叫聲，但牠們在那裡啊…」<br>小尼抬頭望向枝葉間透出的陽光，附近幾百棵樹總有一棵上面會有鳥巢，但小尼在地面看不到。<br>",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（要按照地圖找到適合的紮營地，請進行洞察＋自然的檢定）<br>（要在同時找尋鳥系寶可夢的身影的話，也同樣進行洞察＋自然的檢定）",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（同時進行的話請依照多重行動的規則）",
+			"channel": "other"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "（來試試看w先到營地）",
+			"channel": "other"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "(2+0)b6&gt;=4 #洞察+2<br> (2B6&gt;=4) ＞ 2,4 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "(2+0)b6&gt;=4 #洞察+2  看鳥 (2B6&gt;=4) ＞ 2,4 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（骰錯啦，給我各補兩顆上去）",
+			"channel": "other"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "（我以為技能直接改就行w）",
+			"channel": "other"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "(2+2)b6&gt;=4 #洞察+{技能} 自然 (4B6&gt;=4) ＞ 5,3,6,5 ＞ 成功数3",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "(2+2)b6&gt;=4 #洞察+{技能} 自然，多重行動看鳥 (4B6&gt;=4) ＞ 6,3,3,3 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "雖然一心掛念著要幫蘭花找到適合她的鳥類寶可夢，但看她興高采烈衝在前面的身影，或許就如你說的，還是先找到營地比較要緊吧。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "完美發揮出了這兩個禮拜所學的知識，你按照簡易地圖的指示，順利帶著大家來到了一個依傍著淙淙溪流的空地。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「好耶！水源確保！」一邊歡呼著，蘭花雀躍地跑到了溪水旁，盛起水。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「蛇紋～」<br>先一步跑到空地的肥仔搖著尾巴，嘴裡叼著一罐不知道哪裡撿來的傷藥罐，<br>跑過來放到了你的腳邊，一臉「我很棒吧」的表情。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "你注意到牠嘴邊還留著桃桃果的果肉，看起來牠剛剛路上已經享用了一些果實。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（獲得一單位的傷藥）",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「你在那裡找來這個的啊？」小尼笑著接過有點泥土的傷藥罐拿在手中把玩。「我以後有錢也想買一大把傷藥埋在路邊，像埋樹果種子一樣…撿到寶物總是讓人很高興，不是嗎？」走了一大段路，先坐下來休息的小尼跟蘭花閒聊。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "小尼伸手搔肥仔的頸項。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「我知道，就像無人自助商店那樣嘛。」蘭花回應道，似乎是因為剛剛洗了把臉的關係，蘭花的臉頰濕漉漉的，衣服也有局部被水潑溼。不過她本人看起來似乎不怎麼在意。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「呼嚕嚕……」肥仔打著呼嚕，很舒服的趴了下來。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「要先把帳篷搭起來嗎？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「嗯，弄完吃點東西，然後就開始找寶可夢吧！」小尼伸展手腳後站起來，拿出精靈球裡的工具準備扎營。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「喔！」舉起手，蘭花看起來很有幹勁的樣子。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「看看，這是新買的呢～」小尼打開新買的帳蓬，插穩地釘後套上支架將其展開，不用幾分鍾就設好自己的藍色帳蓬。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「好漂亮啊～」搞定後小尼第一時間脫掉鞋子鑽進去，和布帳幕相比尼龍帳蓬舒服很多。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「好好喔……我的是姐姐以前用過的……」一邊搭建著紫紅色的耿鬼造型帳篷，蘭花嘟起嘴，羨慕的說道。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「你姐姐也有旅行過喔?」小尼把頭探出來問道。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「蛇紋！」跟著你鑽進了藍色帳篷，肥仔挺開心地四處閒晃著，不時好奇地抓抓帳篷的支柱。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「嗯，可是姊姊在拿到一個徽章之後就沒繼續旅行了。」輕鬆的搭起有些年紀的帳篷，把耿鬼舌頭造型的紅色充氣毯拉出來，蘭花蹲下來搔了搔小紫的下巴。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「欸，小尼，你會想要當戰鬥那邊的訓練家嗎？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「想冒險一定要變強吧…只是挑戰道館感覺很難喔。等我和肥仔去到必須變很強才能通過的地方再算吧，哈哈。」小尼望著頭頂的樹葉說。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「你姐姐拿過一枚道館徽章，她已經比很多人都厲害呢。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「嗯……」蘭花坐了下來，抱著膝蓋。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「小尼，我跟你說喔……」<br>「在完成這個考驗之後……我也想要去挑戰道館。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「我想要變成比我姐姐更厲害的訓練家……想要拿到八個徽章，挑戰聯盟賽看看。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「哇喔…」小尼望向蘭花。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "雖然說出的話語很有志氣，但你可以聽得出來蘭花的聲音有些不確定。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "4",
+			"content": "「尼多……」走到蘭花腳前，小紫把前腳搭到了蘭花的小腿上，像是要打氣似的。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「妳現在可以給我一個簽名嗎？」小尼問道。「我覺得妳可以呢。你和小紫比這班很多人都強，包括我。」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「哈哈……」蘭花擠出一個笑容，有些不好意思地低下頭。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「那個，小尼……這次營隊結束之後──」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "當蘭花正準備接著說些什麼的時候，她的聲音忽然停了下來，看向了你身後的方向。在此同時，你也聽到了身後傳來的嗡嗡的昆蟲振翅聲。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「肥仔！」小尼注意到不自然的聲音，趕緊坐起來把肥仔拎到營帳開口位置。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "（是什麼寶可夢？）小尼躲在帳篷中偷偷打開透氣用的小縫向外觀察。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「蛇？」肥仔一臉憨樣的被拎到了地上，沒什麼危機感的鑽了出去。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "振翅的聲音來到了帳棚的正上方，然後停了下來，似乎是停在了你的帳篷上面。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「小尼……你出來看一下？」蘭花的聲音似乎也有些困惑，但起碼從她的反應判斷，這隻寶可夢應該不是什麼危險的物種。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「啊糟！」小尼聽得出那隻寶可夢來到自己頭頂了，就算只是一張布，小尼還是覺得躲在裡面有安全感，一時不敢亂動。至於衝出去的肥仔…",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "還在擔心的小尼聽到蘭花叫自己出去，這才小心翼翼地走出帳篷。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "7",
+			"content": "「蜜～」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "小心翼翼的鑽出帳篷後回頭，映入你眼簾的是一隻由三個六邊形蜂巢接在一起黃色蟲系寶可夢。你記得這應該是一種叫做「三蜜蜂」的寶可夢。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「呼…我還以為是長著針的那個什麼呢…」小尼盯著三蜜蜂，看看牠在幹什麼。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "在跟你們對上視線後，三蜜蜂又鳴叫了一聲，振動翅膀飛了起來，在空中劃起奇怪的圖案。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「這孩子……是不是想告訴我們什麼……？」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "你記得三蜜蜂是一種有著高度社會化的寶可夢，舞蹈一直都是牠們與同族溝通的手段之一……但是，會跟其他物種溝通的情況，你倒是第一次聽說。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（若想要嘗試理解三蜜蜂表達的意思，可以進行聰明＋共感判定）",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "3B6&gt;=4 聰明+共感 (3B6&gt;=4) ＞ 1,4,2 ＞ 成功数1",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "儘管物種不同，你並不能像三蜜蜂一樣直接領悟牠舞蹈的含意，但從牠飛行的軌跡，牠的鳴叫，牠的表情，結合你在這幾天從亞麻曼教練所學到的知識，你大概可以理解到一件事：",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "牠是來求救的。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「我覺得…牠想來找救兵。」小尼望向蘭花說。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「真的嗎？」蘭花睜大了眼：「那我們得幫助牠才行！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「走吧！肥仔！」小尼趕緊穿上鞋子和喚回自己的寶可夢。「雖說沒事別靠近野生寶可夢，但是…野外應該互相幫忙啊！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「蛇紋！」肥仔精神抖擻地搖著尾巴，回應了你的呼喚。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "7",
+			"content": "「蜜！」見你似乎理解了自己的意思，三蜜蜂那三張可愛的小臉露出了喜悅的表情，立刻掉頭向著森林的深處飛了過去。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「哈…呼…快到了吧…？」小尼鑽過樹林跟著三蜜蜂，荗密的森林深處沒有明顯的路，小尼也是第一次這樣深入叢林之中。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「小心點……這邊的路不太好走……」為了避免掉隊，蘭花把小紫收進了精靈球中，維持著在你後方幾步的距離一邊前進著。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "幸好，儘管地勢崎嶇不容易前進，但領頭的三蜜蜂也沒有一味往前衝，而是時不時停下來確定你們還在視線範圍內。然而隨著不斷深入森林，你也可以開始感覺到牠的擔憂與慌張正在增長。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "7",
+			"content": "「蜜！蜜！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「我們還在啦。」小尼喃喃自語。「肥仔，你還好嗎？」小尼蹲下來觀看蛇紋熊的狀態。小尼沒有把牠收回球中，而是拜託牠走在隊伍前方。論生存和探索牠的經驗都遠在自己之上，萬一出事情牠也能支持到自己反應過來再下指令。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "5",
+			"content": "「蛇－－紋－－！」雖然看起來圓滾滾的，但肥仔的速度並沒有因此減慢。善用著種族的特性，牠一馬當先的奔馳著。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "很快的，在翻閱另一個陡峭的坡道後，氣喘吁吁的你們來到了林間深處一片被高聳樹木圍繞的空地。嗡嗡鳴聲響徹在這個空間中，你們看見了六七隻驚惶的三蜜蜂，以及一隻落在地面，幾乎跟你們一樣高的大型寶可夢。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "牠的身體呈黃黑紋路，鮮紅色的雙眼有些黯淡，膨脹如裙擺的下半身形似一個巨大的蜂巢，但很明顯留下了不自然的燒焦痕跡。\n<br>──那是一隻蜂女王，一隻受傷的蜂女王。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "7",
+			"content": "「蜜！」帶著你們的三蜜蜂立刻飛向了蜂女王的方向，在牠身邊憂心地四周打轉。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「！」小尼望見蜂女王時身體一震停下腳步。這就是實際面對真正進化型野生寶可夢時的感覺嗎？和在電視上看強大的寶可夢對拚是截然不同的觀感。就算對方看起來已經受傷了，還是有一種畏怖感影響著小尼。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「牠被燒到…這森林有火屬性的寶可夢嗎？」小尼不敢走太前，戰戰兢兢地靠近到蜂女王大概十幾二十米的位置，其間一直注意著對方反應。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "3",
+			"content": "「小尼，小心點。」緊張地抓著精靈球，蘭花停在空地的邊緣警戒著。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "8",
+			"content": "「……蜂。｣在你從空地邊緣踏入的瞬間，那只負傷的蜂女王立刻抬起頭，惡狠狠地瞪著你。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "拉近距離後，你才意識到這隻蜂女王的大小似乎比圖鑑上記錄的還要再更大一些……也許牠不只是這些三蜜蜂的女王，更是這一帶區域的統治者。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「被看到時已經逃不了啦…」小尼緊張地說。是三蜜蜂找自己來的，牠們總不會不吃花蜜改吃人吧？",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "1",
+			"content": "「你好啊…是牠，牠！」小尼指著帶自己來的三蜜蜂，又指了指自己和蘭花。「找我們，我們！」再指向蜂女王。「來找你！」",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "8",
+			"content": "見你沒有打算停下來的意思，蜂女王艱困的振動翅膀飛了起來。你可以從牠的視線中看到滿滿的不信任感，而且──牠似乎沒有要聽你辯解的意思。",
+			"channel": "main"
+		},
+		{
+			"type": "talk",
+			"actorId": "0",
+			"content": "（骰先攻……雖然我想這麼說，不過今天就先到這邊吧）",
+			"channel": "other"
+		}
+	]
+}
