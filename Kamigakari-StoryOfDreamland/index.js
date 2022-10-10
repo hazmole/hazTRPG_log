@@ -1,7 +1,7 @@
 var TITLE = "【神我狩】夢之國物語 - 團錄";
 var INDEX = [
 	{
-		title: "場景１～２",
+		title: "場景１、２",
 		url: "20220929-Kamigakari-StoryOfDreamland.html",
 	},
 	{

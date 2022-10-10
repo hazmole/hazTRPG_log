@@ -6,10 +6,11 @@
 		var TITLE, INDEX;
 
 		function init(){
+			document.title = TITLE;
+
 			var arr = INDEX.map( link => {
 				return `<div class="LinkObj" onClick="link('${link.url}')">${link.title}</div>`;
 			});
-
 			var navPanel = document.getElementById("MainNav");
 			navPanel.innerHTML = arr.join('');
 
@@ -24,11 +25,13 @@
 	<style>
 		body {
 			background: #454752;
+			margin: 0;
 		}
 		#MainNav {
 			display: flex;
 			justify-content: center;
-			margin: 5px 0;
+			background: #25222e;
+			padding: 0.5rem;
 		}
 		#MainNav .LinkObj {
 			cursor: pointer;
@@ -36,11 +39,11 @@
 			margin: 0 5px;
 
 			border: 3px groove #bfbfbf;
-			background: black;
+			background: #101014;
 			color: white;
 		}
 		#MainNav .LinkObj:hover { background: #474656; }
-		#MainNav .LinkObj:active { background: #313038; }
+		#MainNav .LinkObj:active { background: black; }
 		#MainContext {
 			width: calc(100vw - 20px);
 			height: calc(100vh - 100px);
