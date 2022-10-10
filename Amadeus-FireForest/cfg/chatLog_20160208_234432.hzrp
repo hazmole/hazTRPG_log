@@ -1,7 +1,7 @@
 {
 	"version": "hazmole_v0.92",
 	"config": {
-		"title": "【神我狩】炎之森 - Part1",
+		"title": "【神話創世】炎之森 - Part1",
 		"isOnlyMainCh": false,
 		"actors": [
 			{
@@ -57,2037 +57,2378 @@
 	"script": [
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "＝＝＝＝＝＝導入階段＝＝＝＝＝＝",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "某日，或許是從親神那裡接到預言、又抑或是憑藉著一閃而過的未來景象。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "身為神子的你們，不約而同的集中到了橫濱市的邊境。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "橫濱市境界處，你們站立在面向東京灣的懸崖。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "而在你們面前，那凡人所不能見，<br>倒立著浮在空中、彷彿要將整個天空遮蓋的巨大城市，就是神境市。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "//新增神境市的資訊",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "other",
 			"actorId": "1",
 			"content": "可以開始自由交談",
-			"channel": "other"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "位於其他三人後方，距離他們有著幾步的距離。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "一邊抬頭看著神境市，內心一邊無奈的嘆氣。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "（為什麼三個全是雄性的動物，怎麼沒半個女孩子，小男孩也好啊……）",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「哎呀哎呀」看著眼前的都市,無奈的搔著頭",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「雖然已經準備好食物了，垃圾什麼的也處理掉了，但回家大概又是看到垃圾了吧，也不知道主人會不會好好吃飯和睡覺...」我完全忽視掉城市和身旁的人一個人低頭不斷的喃喃自語著",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "拿著素描本描繪著城市的輪廓，但也就只有輪廓而已",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「竟然被分到這種麻煩的地方」看著集合處的其他三人",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「女子高中生和男子高中生阿,是我跑到什麼輕小說的世界中了嗎?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "（我受不了了啦小保，這三個全部都是怪人啦！）<br>雙腿已經無力的想要蹲下，但在三人面前還是保持一副秀麗端莊的樣貌。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「那麼我應該對旁邊還有個怪異歐吉桑感到高興嗎?」在心中無奈地嘆了一口氣",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "接著慵懶地舉起手",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「各位!雖然我一點都不想幹這種班級委員長才會幹的麻煩事,不過大少爺跟大小姐呦,最好還是介紹一下自己能做到什麼吧?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "（被蒙面中二搭話了……）",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "用被頭髮遮住的眼瞥了下對方，但手上的炭筆沒有停下「真是深不可測的預言啊」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「嘛...」看了一下旁邊的怪異大叔",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "\"不行,這傢伙沒救了,肯定整天都關在家裡拜什麼飛天義大利麵神才搞成這樣的吧\" 心中默默地想著",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「在要求人報上姓名前，主持人先自我介紹才是基本禮儀吧?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「啊，抱歉呢，剛在想主人能不能好好的正常生活著而忘了自我介紹，我叫光源 伸太郎請多指教了」我用著主人教導的方式和在場的各為自我介紹著",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「我是百合川，雖然時間短暫，但這次將會與各位共事，還請多多指教。」彎下腰向其他三人微微鞠躬。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
-			"content": "「菲洛	布拉德,專長是砍怪獸,擅長是斬怪獸,職業是殺怪獸」說話的同時 敲了一下腰間刀的刀鞘",
-			"channel": "main"
+			"content": "「菲洛 布拉德,專長是砍怪獸,擅長是斬怪獸,職業是殺怪獸」說話的同時 敲了一下腰間刀的刀鞘",
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「烏頭牧 結弦、訓楊 宇宙、薩姆耶爾，挑一個自己喜歡的稱呼便是」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「真是風趣呢，呵呵。」（這中二真是受夠了。）",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「MADAO可以嗎?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「你習慣就好，名字只是方便社交的產物」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「玩笑話就到這邊...看來差不多了吧」再度望向神境市",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "這時，無預警地，某個男神的聲音在腦中響起。而對菲洛來說，這聲音卻是再熟悉不過了──那是宙斯的聲音。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "(青筋冒起",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "「因為神境市內絕界的擴張，橫濱市的公園已經被捲入其中了。」身為因著預言而即將挑戰同一個絕界的命運共同體，此時的你們，也正聆聽著相同的神之聲。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "6",
 			"content": "「遵循著預言，救出被留在其中的神子吧。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "聲音所指，那被絕界擄獲的神子，你們已經從各自的親神那邊得知了：已有八十歲高齡的前英雄，即使引退已久，仍存在著許多仰慕他的神子。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "6",
 			"content": "「在那之前，各自做好準備吧。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "『腦袋中怎麼跑出了別人的聲音呢，平場不都只有赫茲緹亞的聲音嗎?』",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "\"不幸的2連擊,今天到底是什麼日子阿,洛基的生日?\"",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "『大概是別的神吧』我抓了抓頭不去想那麼多了",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "\"真想回家啊,不過在回家之前先把混帳揍一頓,但是那傢伙應該也是躲在不知道哪邊發念話吧\"",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "斜眼看天上，終於停下手上的筆",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "//於是，這時請各自進行節約檢定：使用【日常】進行，並得到與其達成值相同的神貨。在那之後，可以宣告要購買的道具",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "RC<br>\nAmadeus : (RC&gt;=4) → [6] → 6_スペシャル！[6]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "RA<br>\nAmadeus : (RA&gt;=4) → [1,4,4] → 1_ファンブル！[1黒] / 4_成功[4緑] / 4_成功[4緑]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "RC&gt;=4 <br>\nAmadeus : (RC&gt;=4) → [2] → 2_失敗[2]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "RC+1<br>\nAmadeus : (RC+1&gt;=4) → [4]+1 → 5_成功[4]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "/剛好6塊錢 買鎧甲",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "獲得神貨：菲6薩2鶴5伸4",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "伸太郎請選擇一個色調骰",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/花3塊買個護身符",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "//綠",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "//4塊全買食物",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「那個...你們應該沒聽到什麼好色又沒節操,整天用下半身思考的混蛋神明的聲音吧?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「如果是宙斯大人的聲音，聽得一清二楚喔。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「他誰啊?那個神呢?我只認識赫茲緹亞呢」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「我的真神只有一個」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "（這群神經病，好想回家……）",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「唉..」今天的第二度嘆氣",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「總而言之，大家站在這裡也不會發生什麼，走吧？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
-			"content": "//線索、供品 食物2	7塊",
-			"channel": "main"
+			"content": "//線索、供品 食物2 7塊",
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "接下來，請各自進行活力的決定：由於大家的等級都是LV1，所以各自擲1D6，填入活力的欄位中",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "1d6 活力<br>\nAmadeus : (1D6) → 1",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "1D6<br>\nAmadeus : (1D6) → 5",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "1D6<br>\nAmadeus : (1D6) → 1",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "1D6 快笑那兩個都是1的<br>\nAmadeus : (1D6) → 3",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「那就走吧，結束後還得趕快回家找主人呢」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「走去哪?」盯著所有人，手上的素描本像是在畫什麼",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「那個神好像說公園之類的地方吧，不過我得先去買食物就是了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「該帶多的炭筆才對」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「不過算了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "6",
 			"content": "「那麼接下來，我送你們過去吧。」充滿力量的聲音再次於腦中響起，隨著體內泛出雷光，你們緩緩浮起，以上空的神境市作為目的地啟程。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "6",
 			"content": "飛離了原先站立的懸崖，在神力的作用下，你們飛過了湛藍大海、穿過了白雲──",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "(一臉不甘願",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "6",
 			"content": "「這個絕界的始作俑者，八成是克羅諾斯那邊的渾蛋吧……」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "聽著神的獨白的期間，你們距離那逆浮於空中的巨大都市，也越來越近。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「我完全不知道自己能飛呢」我在飄的時候不斷的翻滾著",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "不久，在你們抵達的那一瞬間，重力倒轉──你們安穩的降落了在神境市的街道上。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "用著優雅的姿態從空中降落，對於這項動作非常熟練的樣子。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「...人類的身體雖然方便，但好容易暈啊」降落後我感到一股暈眩感而坐在了地上",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "從神境市抬頭仰望的景象，不再是熟悉的天空，而是平日所居的現實街道。那樣的異常，更提醒著你們身處異境的事實。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「不管幾次都還是讓人十分不爽呢。」<br>落地的瞬間，菲洛馬上觀察四周，以免出現被親神送進滿滿敵人的敵陣中這種鳥事",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "乍見之下，神境市的內部就像是空無一人的日本大都市。然而你們相當清楚，混合了複數絕界的神境市絕對不如外表那麼單純。一旦走入錯誤的道路或是建築物，很有可能立刻迷失在其中。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "而你們現在的目的，就是從中找出那將「藤卷弘」困住的絕界。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「迷林嗎?如果能加上一點立方就更完美了」拿出一根菸叼著",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「這麼多的絕界該怎麼找起呢，有人有什麼好想法嗎？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「不知道呢，隨便晃晃?但大概會回不去吧」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「有點靈感」擺出像在抓照相畫面的手勢，之後將素描本翻開新的一頁開始打起草稿",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "那麼，由於神境市內如此危險……要找到目標絕界這個動作，將被歸類為「危險之旅」。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "雖然很想嘆氣，但也只能嘆在心裡。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「那就依照宙斯大人所說的，到有公園的地方去找找看嗎？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「好阿，公園在哪呢，我沒來過這」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "所有玩家請進行移動判定：使用【技術】，難度為４。成功則抵達目的地，失敗則擲試煉表（SLT）",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「橫濱的公園阿, 2位日本人有頭緒嗎?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「無妨」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "RA&gt;=4 <br>\nAmadeus : (RA&gt;=4) → [5,3,5] → 5_成功[5白] / 3_失敗[3青] / 5_成功[5白]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
-			"content": "//骰面選5	氣氛選白",
-			"channel": "main"
+			"content": "//骰面選5 氣氛選白",
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "RB<br>\nAmadeus : (RB&gt;=4) → [1,1] → 1_ファンブル！[1黒] / 1_ファンブル！[1黒]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "SLT<br>\nAmadeus :神境市試煉表(3[3]) → 抬頭看見從大樓的窗戶中湧出了絕望之闇，街道轉眼間便被黑暗覆蓋，你拚了命的逃離了現場。在黑領域中放置1個「印」。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "RB<br>\nAmadeus : (RB&gt;=4) → [5,6] → 5_成功[5白] / 6_スペシャル！[6任意]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/骰面5，氛圍選赤",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "RC<br>\nAmadeus : (RC&gt;=4) → [3] → 3_失敗[3]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "SLT<br>\nAmadeus :神境市試煉表(2[2]) → 整個街區無預警的崩塌，向著頭上的海洋墜落。在逃跑的過程中受到2點傷害，並再執行一次試煉表。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "SLT 去你的宙斯<br>\nAmadeus :神境市試煉表(1[1]) → 不小心與同伴走失，你獨自遊蕩在無人的街道中好幾年。等到再次見到同伴時，你已經增加了1D6(=&gt;6)歲。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "1D6<br>\nAmadeus : (1D6) → 5",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "於是，在尋找公園的位置時，伸太郎與菲洛兩人，在不知不覺中和其他人走散了，各自烙單……",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "……",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "……好不容易，你們終於找到了目標絕界，並在其入口處得以會合。只不過，走丟的那兩人似乎略顯狼狽，其中一位甚至外表有了些變化",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「為什麼我只是走過一個轉角就活像是過了五年的感覺」用手中的小刀刮著突然冒出的鬍子",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「這什麼鬼地方，早知道不要出來和主人在家就好了",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「……這邊真危險呢。」臉上充斥著苦笑看著那快變流浪漢的傢伙。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "，但赫茲緹亞的話也不能不聽呢」我從死裡逃生後躺在地上不斷喘著氣",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「真是有趣的地方」嘴上的菸上下搖晃",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「總有一天要把那個叫做克羅諾斯的混帳...」將懷中不知不覺出現的畫著人臉的排球 用力地踢出去",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「不過你們也真狼狽，需要休息一下?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「同意，我吃個東西休息一下」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "我從背包拿出了一個麵包開始吃",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「隨便,反正我已經浪費不少時光了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "other",
 			"actorId": "1",
 			"content": "恩……其實應該要在休憩行動中才能進食啦。",
-			"channel": "other"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "other",
 			"actorId": "4",
 			"content": "//那就當扮演吧",
-			"channel": "other"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "絕界的入口，是那已被無數藤蔓遮蓋的廢棄公園。在其周圍，一股無形的魔力環繞著，似乎正顯示了此地的在空間上的異常……恐怕，其中的空間遠比眼前所見的要來的寬廣吧。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「這邊嗎……？」微微抬起頭，望著那充滿詭異氣氛的公園。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「哼哼哼，趕快進去吧，苦難可是不等人的」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「真是不想進去呢」雖然嘴上說著但還是不的不進去",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「好想回家啊...」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「說的也是，趕快進去吧。」想起了預言的內容，內心急了起來，快步走進入口。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "在踏入公園的入口，進入了絕界的那一剎那，你們能清楚地感覺到自己被從這個時空中切離，進入了異界。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "恢復視覺後，在你們眼前的，是一片廣大而深邃的森林……高聳入雲的樹木林立著、大片的草原與苔癬覆蓋了地面。然而，與彷彿原始叢林的第一印象不同，各處被保養良好的公園設施：涼亭、長椅、步道，甚至是雕像，仍然完好的散落在各處‥‥",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「非常的……綠呢。」雖然喜歡綠色，但一次看到這麼多還是有點讓人感到噁心。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "這裡，就是退休神子藤卷弘被困住的意境，也將是你們冒險展開之地。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "//導入階段END",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
-			"type": "halt"
+			"type": "halt",
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "＝＝＝＝＝＝冒險階段＝＝＝＝＝＝",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "＝＝＝＝＝＝第一巡迴：百合川 緣鶴＝＝＝＝＝＝",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "SST 丟一下比較帶感阿<br>\nAmadeus :炎之森場景表(2[2]) → 捧著壺的女神像安靜佇立的水池。水面微晃、魚群掠過，池上的拱橋勾勒出優美的弧線。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "(順延)",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
-			"type": "halt"
+			"type": "halt",
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "＝＝＝＝＝＝第一巡迴：薩姆耶爾＝＝＝＝＝＝",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "SST<br>\nAmadeus :炎之森場景表(6[6]) → 大片草地生長在起伏的丘陵間，頂上青空無比遼闊。在這裡盡情奔跑的話，想必會有相當不錯的心情吧。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "//百合川 緣鶴",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "//使用線索",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "RB+++&gt;=4 探百合穿<br>\nAmadeus : (RB+++&gt;=4) → [3,1]+++ → 3_失敗[3青] / 1_ファンブル！[1黒]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
-			"content": "//判定選3	氣氛選1",
-			"channel": "main"
+			"content": "//判定選3  氣氛選1",
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "//調查成功，黑領域現在3",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "7",
 			"content": "百合川的【真實】：",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "7",
 			"content": "你再次看到了的未來景象。你蜷曲在瀕死的藤卷身上，盡其所能地對他施予急救。但注視著遠處的他，卻仍這麼逝去了。<br>\n　　在決戰階段的最後，若此【真實】沒有被公開，則預言將成為現實。但若此【真實】已被公開，則其中一名玩家可以進行【愛】的判定，若判定成功，則復活藤卷。<br>\n觸發條件：當藤卷持有對任意玩家角色的1點以上【思念】時公開。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "無盡的草原映在眼前",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「這綠地絕對不是一座公園該有的景色才對」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「不過也好，有個能輕鬆的地方也不錯」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "整個人坐在草地上，開始看著風景繪圖",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「我們不是來找人的嗎？」感覺他比其他兩人可靠才跟過來的，結果又坐下來畫畫了。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「別這樣，他們兩人也才剛休息不久，妳也坐下休息吧」指了指草地",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「找人好麻煩啊，也沒味道可聞，很難找阿」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「草地嗎……感覺有點髒呢。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「喔?草地可是這個星球上最自然的產物」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「可惜」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "在講話的同時手從來沒停過",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「這樣可能還比較舒服一點。」鄧起腳尖輕輕一躍。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "other",
 			"actorId": "2",
 			"content": "我想用天空之翼(?",
-			"channel": "other"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "other",
 			"actorId": "2",
 			"content": "雖然沒效果但我就是想用反正開了(ry",
-			"channel": "other"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "other",
 			"actorId": "1",
 			"content": "也可以啦w",
-			"channel": "other"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "到空中後緣鶴卻沒有因為重力而落下，反而是繼續浮在空中。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "保持這樣的姿態躺在空中，靜靜看著下方的薩姆耶爾。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「喔?這睥睨眾生的眼神，簡直就像天使一樣」被頭髮遮住的眼睛往上抬",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「如此的高傲」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「對了，妳可有看過抽象畫?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「是指……畢卡索的畫之類的嗎？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「那已經算是淺顯易懂的」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「所以妳確實看過?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「看過是看過，可是沒有太深刻的印象呢。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「像是畫的名稱之類的。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「是嗎?真遺憾」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「真是不好意思，比起繪畫，音樂比較吸引我。」說著的同時用著手指輕輕敲了下脖子上的耳機。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「我還以為能找到同好」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「妳知道抽象畫這東西，無法完全看透的人，會因為個人的理解不同而有各種解釋嗎?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「我也很想欣賞畫呢，但完全不懂，所以還是算了吧。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「感覺可以理解呢。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「同樣都是綠色，卻有高山或樹林的解釋……吧？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「這也是一般人所能了解的極限」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「正如我現在描繪出的妳，又是什麼樣貌?」畫出一圖給百合川看",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "//其實跟真實有關",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「這是我嗎？」稍微起身，仔細的看向薩姆耶爾手中的畫。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「妳認為是，那就是了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「這正是妳的想法，對吧」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「如果我說是的話，你應該也知道這件事情絕對不能發生。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「我等真神在這方面是最拿手的」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/幫我下移",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「所以休息應該也夠了，走嗎？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「不能，跟不會是兩碼子事情」將畫收起畫下一張圖",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "站起身",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「回到抽象畫的部分」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「以我個人的看法，抽象畫超脫了一般的線條以及圖案的限制，沒了限制，才反而能用最簡單的線條陳述真實」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「看了你的畫，隱隱約約可以理解這種感覺呢。」輕輕的落下，降落於草地上。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「正因如此，抽象畫也成了窺視那偉大睿智的冰山一角的方式」將新畫好的畫再度攤開給百合川看",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "//公開真實",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "//接續著未來的景象，你找到了藤卷所在的位置。然而，太遲了。在滿地的鮮血中，只剩下了遺留在那的手杖。<br>\n　　此【真實】若在第一巡迴內公開，則迴避該未來，並且進入主控場景「救出」。若在第一巡迴結束時沒能公開，則進入主控場景「遲來的救援」。<br>\n觸發條件<br>\n當你看到1個以上其他玩家角色的【真實】時公開。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「這應該就是妳想找的，對吧?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「……。」呆愣地看著薩姆耶爾，沒辦法說出半句話。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "只是默默的看著百合川，面帶微笑",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「真厲害呢……」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「不過今天我的靈感也只能幫助我到這」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「時間也差不多到了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「該去尋找那兩頭迷途的野犬」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「我去通知他們吧，等我一下。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「有勞妳」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "說完後再次飛離地面，朝著其餘兩人的方向飛去。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "從懷中拿出一根菸，輕輕的咬了咬",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "手上的畫筆變成銀色的鑰匙",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "往空氣一劃，一道無形的門從空間打開",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "薩姆耶爾一腳踏進，整個人消失在虛空中",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "END",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
-			"type": "halt"
+			"type": "halt",
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "＝＝＝＝＝＝主控場景：救出＝＝＝＝＝＝",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "在你們知曉了藤卷被困的所在地後，你們立刻便踏上了旅程。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "而在穿越了一座座的森林、踏遍了一個接著一個的走道後，終於，你們來到了一座涼亭前。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「太慢囉。」這麼說著的，是位坐在涼亭內的長椅上，穿著貼身灰色西裝的白髮老人：「初次見面，勞煩諸位了……敝姓藤卷。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「救難費加上車馬費還有午餐錢,順便一提今天是國定假日,所以都給我加倍」毫不猶豫地伸出右手",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「初次見面，不過你如此經驗豐富，怎麼一個人陷在這?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「所以我們現在回去後就算完成了嗎?我們可以走了嗎?我想快回去」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「如果你要一個人昏到在芬多精前面的話,給我去植物園就可以了,就算跑來這種鳥地方也不會讓你失去的髮線再回來」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「咳咳……」用右手肘頂了頂菲洛。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「應該沒有發生什麼事吧？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「現在的神子還真是傷腦筋呢……」老人苦笑了一下：「托福，姑且是還沒有大礙。不過，雖然說是這麼說，卻是怎麼樣也走不出去呢。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「然後我想我們現在大概也被困在裡面了? 過去的神子先生」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "雖然嘴上說著沒事，但你們還是能注意到他的衣服身上留有多處傷痕，恐怕是已經過了一番激戰吧。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "（宙斯家的神子都這麼不懂禮節嗎……）",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「這樣的話，那可就傷腦筋了呢。」藤卷老人搖了搖頭，眼神掃過了你們的臉上：「說來，你們都是什麼人呢？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「是來幫您離開這邊的。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "/公開：藤卷弘的預言",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "他曾經是擊倒眾多怪物的英雄、是培訓鍛鍊眾多神字的導師，如今因為年事已高而引退，但卻在平靜享受餘生之時，被捲入《絕界》的發生之中。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "/接下來的調查以及交流，可以以藤卷作為目標。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「被全自動胯下自走砲所牽扯進來的可憐神子乘四,如果不想再讓我們的悲慘程度加深的話,就別再硬撐了」將手中的乾糧丟給藤捲",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "雖然放了五年 但應該不會壞...",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「胯下自走砲……呵呵，是指宙斯吧，現在的孩子啊……」藤卷苦笑著接過了乾糧：「那麼，既然是要來接我走的，那麼就有勞你們囉？還請多多指教。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「這邊才是，請多多指教。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "一邊說著，藤卷站了起身，拄著拐杖走出了涼亭。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「那請多指教了，老先生」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "（這就是歷經百戰的神子嗎……）跟在藤卷身旁時不斷的看向他，從眼神中透露出尊敬。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「哼哼，這麼輕描淡寫嗎」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「請在不噎死的情況下,說一下到底發生什麼事吧」用眼神示意伸太郎過去攙扶",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「接下來希望能輕鬆些」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「如果只是普通的絕界是關不住你這個老人的吧?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "看到洛飛得指示我前去攙扶老先生",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "看著拐杖,突然靈光一閃",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「我說大小姐阿,你剛剛飛行的法術能放在這個老人身上嗎?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "「是呢，那麼我就稍微說明一下吧。」藤卷微瞇著眼睛，說道：「這座絕界，恐怕是由魔獸奇美拉所製造的……你們應該有聽說過吧，那在王之庭園被培育，甚至可以被視作為兵器的一種魔獸。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「衣服破損的地方是和牠戰鬥所造成的嗎？」比起菲洛的提問，藤卷更為優先。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「完全沒聽過呢，主人沒和我說，赫茲緹亞只有說一些魔獸相關的東西而已呢」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「那麼要破解這個絕界的方法之一,就是殺掉製造結界的奇美拉了吧? 不過 我想你應該也已經實行過了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "「是啊，說實話，那可是一番苦戰呢，我甚至差點把老命給丟了呢。」藤卷輕描淡寫的笑道：「不過呢，我可沒打算在這裡死去。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "「或許你猜得沒錯吧，我也試過從絕界中逃離，但無論如何都還是會回到這裡呢。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「有聽說，雖然不隸屬我那邊」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「你現在還活著,所以不是你輸,不過...」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "「呵呵……說是奇美拉的詛咒也不為過吧？」藤卷淡淡地嘆了一口氣，算是結束了這個話題",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「結界也還是維持著,就代表看來您運氣好到抽到再來一隻?」聳聳肩",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「放心吧，我們那麼多人可以打敗的，大概吧...而且我不怎麼會戰鬥呢」我想到預言的事情稍微感到安心",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "而就在這時，你們忽然聞到了一股焦味。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「詛咒嗎? 光是身為宙斯的神子就是一種詛咒了,至少事情的大概已經知道了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「有股像主人煮飯一樣的味道，是附近有火災嗎?」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "在你們的周遭，不知何故，森林開始燃燒了起來，兇猛的熱氣撲向你們。抬頭一看，原本翠綠的世界，如今卻已被染成了一片鮮紅──",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「呵呵……果然沒那麼容易讓我出去呢。」藤卷喃喃道。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「怯!在絕界之中也會有在公園烤肉的蠢蛋嗎?」握住刀柄 像是要把背後三人後在背後一樣",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「毀滅的世界是如此的炙熱，生命凋零的瞬間總是讓人心頭一顫」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "傳聞中，魔獸奇美拉所到之處，都將陷入一片火海──而眼前的景象，也恰恰如此。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「大叔和少年,藤卷就拜託你們了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "/接下來，冒險階段的所有場景都將處於燃燒中的狀態。此外，若有角色進行行為判定失敗，則進行判定的玩家角色將會受到１點熱氣傷害。此效果持續到決戰階段開始為止。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「別把自己擅長的事情推給菜鳥」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「想要代替我衝前頭的話,請便」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「我可不想變烤狗肉啊，老先生要小心了」我將老先生給背起來準備逃跑",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「總而言之，我們省去找牠的麻煩了。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「都先鎮定一點，好嗎？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「不過要是被你代替而導致你死掉的話,會害我睡眠不足的,所以最重要的任務就交給你」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「勞煩你了……你叫什麼名字？」藤卷沒什麼抗拒的讓伸太郎背了起來，同時問道",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "「究竟這次，會不會找到呢?」看著眼前的景色",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「這傢伙...沒救了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "「啊~我叫做光源伸太郎，總之我想趕快回去就是了」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "（討厭……這群人都各講各的，我想回去了。）",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "「那麼在被火焰完全包圍之前,想辦法殺出一條生路吧」舉起彎刀,眼神堅定著看著前方",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「伸太郎嘛……呵呵……」瞇起眼睛，藤卷喃喃道",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "在這赤紅色的炙熱異界中，面對著被烈火佔據的森林，為了拯救藤卷老人，你們快步地離開了涼亭，朝著出口奔去。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "//於是，在END前，作為方才與藤卷交談的影響。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "//各位可以進行一次以藤卷為目標的交流判定。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "RS-1 來吧，我的愛是S級的<br>\nAmadeus : (RS-1&gt;=4) → [1,4,4,3]-1 → 0_ファンブル！[1黒] / 3_失敗[4緑] / 3_失敗[4緑] / 2_失敗[3青]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/選骰面4的，然後青色當氛圍骰",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "RA-2 -2阿....<br>\nAmadeus : (RA-2&gt;=4) → [5,6,2]-2 → 3_失敗[5白] / 4_スペシャル！[6任意] / 0_失敗[2赤]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "/6當行動骰 白",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "RB-1&gt;=4 <br>\nAmadeus : (RB-1&gt;=4) → [6,4]-1 → 5_スペシャル！[6任意] / 3_失敗[4緑]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "//6當行動 3當氣氛",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "RB<br>\nAmadeus : (RB&gt;=4) → [2,6] → 2_失敗[2赤] / 6_スペシャル！[6任意]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "/那麼，菲洛、薩姆、伸太郎請各自選擇要：[藤卷對自己的思念+1]或[自己對藤卷的思念+1]。前者將他記入協力者與關係欄；後者記錄在關係欄中即可。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "5",
 			"content": "//藤捲對自己+1",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "3",
 			"content": "/藤卷對自己的思念+1",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "/關係是「同情」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "4",
 			"content": "//藤原對自己",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "//主控場景：救出──END",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
-			"type": "halt"
+			"type": "halt",
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "＝＝＝＝＝＝第一巡迴：百合川 緣鶴＝＝＝＝＝＝",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "百合川 緣鶴：SST 丟一下比較帶感阿<br>\nAmadeus :炎之森場景表(2[2]) → 捧著壺的女神像安靜佇立的水池。水面微晃、魚群掠過，池上的拱橋勾勒出優美的弧線。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "進行交談，對象是藤卷，另外使用親神的權能，-2HP",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "RS 藤卷來吧，這次沒有負了！<br>\nAmadeus : (RS&gt;=4) → [5,5,2,6] → 5_成功[5白] / 5_成功[5白] / 2_失敗[2赤] / 6_スペシャル！[6任意]",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/選骰面5當行動骰，骰面6的當綠色做氛圍骰。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/選我對藤卷的思念+1，關係是憧憬",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "在伸太郎放下藤卷後，緣鶴與他來到一旁的水池。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "周圍的森林充斥著火焰，在有水的地方比較能靜下心，緣鶴是這樣想的。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "攙扶藤卷至水池的外圍坐下後，自己則站在他的面前。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "首先映入眼簾的不是這老人滄桑的面孔，而是那個看起來已經將近發霉的乾糧。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「有件事可能要先說一下，藤卷先生……」緣鶴的表情讓人覺得這件事有點難以啟齒。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "「……怎麼了嗎，小女孩？」藤卷看著遠處燃燒著的天空，應道",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「那個可能已經發霉了，上面有著黑色的斑點，吃下去可能對身體不太好。」用著左手食指比著菲洛所給的乾糧。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「……呵呵。」藤卷老人楞了一下，才苦笑著將之收入懷中：「沒關係，畢竟是剛收下的物資，就這麼丟掉也不好啊。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「咳……為什麼藤卷先生會被捲進這個絕界呢？」輕輕嗓後繼續說道。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「嗯……說白了一點，就是運氣不好呢。」藤卷瞇起眼睛，接近嘆息般地說道：「不過，如果以神子的身分來說的話，那麼毫無疑問……是因為命運吧。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「是這樣嗎……」自己也身為神子，難免露出些失落的表情。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「這次是受到親神的委託所以來幫助藤卷先生的，除此之外……也有一點個人的意願。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「您應該也經歷了許多事，我接下來所說的事或許也只是笑笑就過而已。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「不過萬一不是，還請你不要驚訝。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/公開真實",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/你再次看到了的未來景象。你蜷曲在瀕死的藤卷身上，盡其所能地對他施予急救。但注視著遠處的他，卻仍這麼逝去了。　　<br>\n在決戰階段的最後，若此【真實】沒有被公開，則預言將成為現實。<br>\n但若此【真實】已被公開，則其中一名玩家可以進行【愛】的判定，若判定成功，則復活藤卷。<br>\n觸發條件當藤卷持有對任意玩家角色的1點以上【思念】時公開。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「在預言中，我看見了死去的您。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「……是嗎。」在聽到你的話後，藤卷垂下了眼，低聲道：「……妳也看到了嗎……？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「經歷許多事情的您應該也知道。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「預言是可以改變的。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「我會盡量幫忙的，也請您不要屈服於命運之下。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「妳說的沒錯呢。」藤卷深呼吸了一口氣，才又露出微笑：「雖然預言不容易改變……但我也沒就這麼打算屈服啊。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「讓我們一起加油吧，打倒奇美拉、離開這個絕境，回到安穩平和的日常生活。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "猶豫了一會後，向藤卷伸出右手。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「呵呵，那可不容易呢。」藤卷伸出手，瞇著眼笑了幾聲：「不過，我也不想就這麼死去呢。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「不容易的事情才會有種冒險的感覺啊。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「不覺得這種冒險就像年輕人一樣嗎？」面帶微笑的看著藤卷。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「呵呵，別看我這樣，心還是很年輕的喔。」藤卷調皮地笑了笑，敲了敲拐杖：「那麼為了迴避死亡的命運，我們趕緊出發吧？」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「說的也是，那年輕的藤卷先生需要我幫忙扶著嗎？」同樣也露出了調皮的笑容。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "8",
 			"content": "「哈哈哈，就讓我逞一下年輕吧。」藤卷爽朗的笑道，踏出腳步，算是做了答復",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "「那就走吧。」",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "雖說讓是本人的意願想要自行行走，不過還是有點擔心，用著同樣的步調走在藤卷身旁。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "兩人離開了水池，朝著其餘三人所在的地方走去。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "緣鶴的步調雖慢，但看上去輕快了不少，或許是將心中的疙瘩說出來的關係。",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "2",
 			"content": "/end",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "ＳＡＶＥ",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "命運之輪因果數：黑3赤2藍1綠3白2",
-			"channel": "main"
+			"isHidden": false
 		},
 		{
 			"type": "talk",
+			"channel": "main",
 			"actorId": "1",
 			"content": "玩家血量：菲15薩12鶴8伸9",
-			"channel": "main"
+			"isHidden": false
 		}
 	]
 }
