@@ -1,0 +1,1243 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta property="og:title" content="20220929-【神我狩】夢之國物語">
+<meta property="og:description" content="">
+<title>20220929-【神我狩】夢之國物語</title>
+<style>
+h1{ color:white; margin: 5px 0; }
+body{ background:#454752; }
+._subtitle { color:#ddd; margin:5px 0 20px 0; }
+._sectTitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
+._hidden { display:none; }
+.center { display:flex; flex-direction:column; align-items:center; }
+#_main { display:flex; flex-direction:column; align-items:end; }
+._script {width: 100%;}
+
+
+._halt { padding:30px 0; }
+._talk { margin:5px 0; display:flex; border:1px solid black; background:#1e1e1e; color:#eee; width:100%; max-width:1080px; border-radius:5px; }
+._leftCol { width:122px; }
+._rightCol { width:calc(100% - 126px); }
+._actorName{ padding:5px 10px; height:20px; font-size:18px; }
+._actorImg { margin:6px; width:110px; height:110px; background-repeat:no-repeat; background-size:cover; background-color:#2a2a2a; }
+._actorWords { margin:5px; background:#2a2a2a; font-size:1.1rem; padding:10px; height:calc(100% - 60px); border-radius:5px; }
+._sectTitle { border-radius:5px; margin-bottom:5px; }
+
+._talk.otherCh { width:calc(50%); text-align:right; margin-left:auto; }
+._talk.otherCh ._leftCol { display:none; }
+._talk.otherCh ._rightCol { width:100%; }
+._talk.otherCh ._actorWords { background:black;color:white; }
+
+._actor_0 ._actorName { color: #e0e0e0; }
+._actor_0 ._actorName::after { content:"GM@Haz"; }
+._actor_0 ._actorImg { background-image:url(); } 
+._actor_1 ._actorName { color: #b395cb; }
+._actor_1 ._actorName::after { content:"菲爾米娜"; }
+._actor_1 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-03.png); } 
+._actor_2 ._actorName { color: #e0e0e0; }
+._actor_2 ._actorName::after { content:"淺野 愛依"; }
+._actor_2 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-02.png); } 
+._actor_3 ._actorName { color: #e0e0e0; }
+._actor_3 ._actorName::after { content:"竹內 不亂軒"; }
+._actor_3 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-01.png); } 
+._actor_4 ._actorName { color: #888888; }
+._actor_4 ._actorName::after { content:"system"; }
+._actor_4 ._actorImg { background-image:url(); } 
+._actor_5 ._actorName { color: #e0e0e0; }
+._actor_5 ._actorName::after { content:"淺野 香伶"; }
+._actor_5 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-03.png); } 
+._actor_6 ._actorName { color: #ffeb3b; }
+._actor_6 ._actorName::after { content:"菲爾托利"; }
+._actor_6 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-04.png); } 
+._actor_7 ._actorName { color: #e0e0e0; }
+._actor_7 ._actorName::after { content:"嚕嚕吉"; }
+._actor_7 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-04.jfif); } 
+._actor_8 ._actorName { color: #c99987; }
+._actor_8 ._actorName::after { content:"寂祀  大斎"; }
+._actor_8 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-01.png); } 
+._actor_9 ._actorName { color: #fb4b4b; }
+._actor_9 ._actorName::after { content:"梅諾"; }
+._actor_9 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-02.png); } 
+._actor_10 ._actorName { color: #888888; }
+._actor_10 ._actorName::after { content:"小動物玩偶"; }
+._actor_10 ._actorImg { background-image:url(); } 
+._actor_11 ._actorName { color: #888888; }
+._actor_11 ._actorName::after { content:"玩具直升機"; }
+._actor_11 ._actorImg { background-image:url(); } 
+._actor_12 ._actorName { color: #888888; }
+._actor_12 ._actorName::after { content:"小動物游擊隊"; }
+._actor_12 ._actorImg { background-image:url(); } 
+._actor_13 ._actorName { color: #e0e0e0; }
+._actor_13 ._actorName::after { content:"櫃台人員"; }
+._actor_13 ._actorImg { background-image:url(); } 
+._actor_14 ._actorName { color: #e0e0e0; }
+._actor_14 ._actorName::after { content:"白鳥 一華"; }
+._actor_14 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-05.png); } 
+._actor_15 ._actorName { color: #e0e0e0; }
+._actor_15 ._actorName::after { content:"男孩的聲音"; }
+._actor_15 ._actorImg { background-image:url(); } 
+</style>
+</head>
+<body class="center">
+<div class="_hidden">
+<version>hazmole_v1.0</version>
+</div>
+
+<h1>20220929-【神我狩】夢之國物語</h1>
+<div class="_subtitle"></div>
+
+<div id="_main"><div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【場景１：探訪友人】<br>主役：菲爾米娜</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">鑽過百葉窗的隙縫，陽光溫柔地點綴著窗邊的青色床鋪，<br>緩和了病房日光燈給人的蒼白印象。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">儘管仍能聞到些許消毒水的刺鼻氣味。<br>但在推開窗戶，讓微風輕輕溜入之後，<br>這間病房也終於脫離了原本那讓人窒息的氛圍。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這裡是位於「小燕病院」三樓的雙人病房，<br>而躺在靠窗病床上的，是一名披著粉紅色外套，小學生外貌的女孩。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">女孩的病床邊坐著一個看似14、15歲的少女，她正望著床上的人，臉上毫無情緒。<br>雖然少女緊盯著床上的女孩，但手中不停地削著蘋果，很快的一盤兔子蘋果便完成了。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「愛依，吃。」菲爾米娜插起一個削好的蘋果拿到愛依嘴邊。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「耶～謝謝米娜姊姊！」<br>女孩開心地張開嘴，一口咬下後，一邊咀嚼一邊道謝著。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">女孩的神色健康，充滿活力，沒有絲毫病態的她看起來完全與這裡無緣。<br>然而，那被石膏包起來的右腳，卻也被迫讓她這樣清純年華的孩子呆坐在床上。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯。」菲爾米娜點點頭，再次拿起盤中的一塊蘋果給病床上的女孩後，她的視線移到了愛依的右腿。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「......痛嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「一點也不痛喔！真是的，姐姐跟媽媽你們都太大驚小怪了啦。」<br>愛依嘟起嘴，輕鬆的回應道。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「哪，米娜姐姐，我什麼時候才能出院啊……」<br>在車禍發生之後已經過了好幾天，愛依像是忍不住住院的無聊一樣，少見的撒著嬌。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果是人類的恢復力......」少女側著頭，認真的計算著人類骨折後的恢復時間。<br>「三個月。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咦～可、可是，七海醬上次摔下樓梯的時候腳明明也打了石膏，卻還是有來學校啊？我們還都有在她腳上簽名的說。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">菲爾米娜輕輕的將頭側到另一旁，似乎不太理解愛依的意思。<br>「明明還沒有痊癒卻離開整備空間......這樣不可以，愛依不能學她。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「而且，愛依的是車子。」言下之意便是相較於七海，愛依的狀況更為嚴重。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">雖然少女的臉上依然毫無表情，但對談的語速稍稍變快了一些。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「愛依需要完整的休息。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「呣呣……」<br>愛依看起來還是有點不能接受，鼓著臉頰發出可愛的噪音。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這時，從病院的門外傳來咚咚兩聲。<br>很快的，隨著房門被推開，一個聽著會讓人忍不住皺眉的男聲傳了進來。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「打擾了，我來今天的例行檢查囉。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">凌亂而長度惱人的茶色瀏海，黑眼圈，福馬林的臭味。<br>除了穿著醫生白袍之外，這個男子給人的感覺幾乎沒什麼醫生該有的專業感。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">但很不幸的，這位男子是個貨真價實的醫生，<br>更讓人難以置信的，這位男子甚至是這座「小燕病院」的院長。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「愛依醬今天有乖乖的嗎？頭會不會暈？」<br>走到了病床附近，名牌上顯著「竹內」兩個字的男子舉起手，用著有些病態的笑容對著愛依打了個招呼。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「愛依，很──健──康──！」<br>故意拖長了音，愛依像是要表達自己什麼問題都沒有一樣舉起了雙手。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在不亂軒舉起手時，菲爾米娜迅速地站起身抓住他的手臂，臉上出現了戰鬥時才會有的狠勁。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">直到看清來人後，菲爾米娜才緩緩的鬆手。<br>「原來是醫生，以為是襲擊者。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「哎呀呀呀……米娜小姐今天也是很有精神呢。」<br>搔了搔頭，竹內醫生一邊嘆著氣，一邊露出看起來別有所指的苦笑。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">這樣的情境在這幾天時不時會發生，但老實說，也確實不能怪妳太過敏感。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">每次這位「竹內醫生」在例行檢查時，看著愛依的眼神總是讓妳覺得有些危險。<br>──不是蘿莉控的那種，而是彷彿在看著實驗台上的解剖動物一樣的眼神。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">菲爾米娜依然緊盯著不亂軒，不知為何菲爾米娜一直不覺得對方是個好人，甚至在幾日前她真的打算拿出武器攻擊過去，但在這些天的認真觀察下，她才勉強地接受了不亂軒還不是敵人的事實。<br></div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「檢查很快就好？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「哈哈哈，很快就好，很快就好。」<br>竹內露出笑容，明明應該是表示友善，那張臉卻總是讓人懷疑他下一秒會拿出手術刀出來。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「醫生！請問愛依什麼時候才能夠出院！」<br>一邊接受醫生的檢查，愛依一邊提問，看起來她在病房真的是悶壞了。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這個嘛……大概再觀察個兩三天，沒問題的話就可以出院了。」<br>「雖然我希望妳能多待幾天就是了……哈哈，不過總不能老把妳關在這裡嘛？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「好吧……只有兩三天的話……」<br>看起來有些沮喪，但愛依還是乖巧的點了點頭。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">聽到不亂軒這麼說，菲爾米娜再次抓緊了不亂軒的手臂。<br>「治療不是還沒結束嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「已經結束了喔，接下來只需要靜養就好了。」<br>竹內醫生見怪不怪的任憑妳抓著他的手，輕鬆地聳聳肩。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘛……雖然還是有腦震盪的可能性，不過這幾天觀察下來……」<br>儘管個性跟態度都相當可疑，但這種時候他確實還是有點醫生樣的。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">一邊聽著竹內醫生的說明，忽然的，妳超常的第六感發出了提醒。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">有一股視線在盯著妳……不，是盯著愛依嗎？<br>讓人不寒而慄，投射著惡意和好奇心的視線……那似乎是來自……病房外？</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在感受到那股視線後，菲爾米娜的雙眼微微睜大，下一秒便放開了不亂軒的手朝病房外衝了出去。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在妳衝出病房的瞬間，妳的耳朵聽到了門口發出「啪咚」的聲音。<br>……在地上，躺著一個小狗玩偶。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">走廊上，儀器的嗶嗶聲、護理師和家屬交談的聲音傳入妳的耳中。<br>一如往常的病院景象，就彷彿剛剛的那股視線只是錯覺一樣。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「？」<br>被玩偶吸引注意後，菲爾米娜先是看了看天花板，接著又看了走廊的兩側，試圖找尋玩偶是從哪個方向過來的。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">※請菲爾米娜進行【知性】判定，目標值10</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">2d6+1 #知性判定 (2D6+1) ＞ 9[4,5]+1 ＞ 10</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">靈力操作: 6 →5, 達成值變更為 11</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">天花板、牆壁、地面、人群，妳很快地掃視了整個走廊，卻沒有看到任何可疑的人物。反倒是妳忽然衝出病院的行為招來了護理師好奇的目光。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">從聲音判斷，這個玩偶也不像是被丟過來。<br>很奇怪，妳找不到任何可疑的蹤跡……就像是「玩偶憑空出現在了門邊」一樣。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「米娜小姐，怎麼了嗎？」<br>從病院內探出頭，竹內醫生喊著妳的名字，一臉困惑。<br>從他身後，依稀也能聽到愛依有些擔心的呼喊聲。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">菲爾米娜的思緒被不亂軒的聲音給打斷，在看了眼不亂軒後，米娜彎下身去將掉在地上的布偶給撿起來。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「有股視線。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">對於不亂軒的提問，菲爾米娜僅僅只是回了這句話，接著便走回愛依的床邊。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「抱歉。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯……」<br>一臉不確定妳在說什麼的表情，醫生聳了聳肩。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘛……今天的檢查也結束了。」<br>「記得讓愛依多休息，陪她玩玩遊戲也行，讓她精神好一些，對健康也好。」<br>招了招手，竹內醫生在跟妳叮囑了幾句後，便轉身道別離開。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">菲爾米娜輕輕地點了點頭，然而視線依然停留在手中的玩偶上。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">狗狗玩偶那漆黑的眼珠回望著妳，看不出任何感情。<br>那塞滿絨毛的柔軟觸感本應讓人放鬆，但此時此刻，妳卻只感到不安。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在這和平的日常之下，似乎有什麼正在蠢蠢欲動……</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「得聯絡托利......」緊盯著玩偶片刻後，菲爾米娜望著窗外緩緩地說出這句話。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">※米娜 獲得感情</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">/對：竹內 不亂軒，懷疑。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="halt"><div class="_halt"></div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">【場景２：小動物的遊行】<br>主役：菲爾托利</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">順著樓梯往下，推開總是會怪叫的老舊鐵門，在踏入那陰暗工坊的瞬間，<br>妳的聽覺受器立刻被低沉、規律、且刺耳的金屬聲給充滿。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">嘈雜歸嘈雜，但每次聽到這個習以為常的聲音，<br>都不禁讓妳感到彷彿回家一樣的熟悉感。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">走進房間的深處，在被無數金屬機械包圍的空間，<br>那位以不太健康的姿勢坐在工作檯前的女性似乎注意到了妳的接近，抬起了有些疲倦的臉龐。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「托利，妳來了……」<br>名為淺野香伶的女性向妳招了招手，嘆了口氣，看起來已經連續工作好幾天了。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「妳看起來很，疲勞。」托利看著香伶，在腦中想了一下適合的用詞。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這次的工期比較短……沒事，差不多告一段落了。」<br>舉起桌邊的能量飲料一飲而盡，香伶抹了抹嘴角，吁了一口氣。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「需要我開始打掃嗎？」想到愛依跟米娜應該都不在，剩下的打掃人員只剩下...</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「改天吧……今天有別的事要拜託妳……」<br>香伶伸展了一下背部的肌肉，發出幾聲咖搭咖搭的不妙聲音後，往桌子底下踢了一腳。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「喂笨狗，醒醒。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗷嗚嗚嗚嗚－－」<br>桌子下傳來一陣委屈的狗叫聲，很快的，一個毛茸茸的身影就這麼滾了出來。<br>那是一隻金黃色的柴犬，身形略胖，像是模仿人類一樣戴著墨鏡，看起來很是滑稽。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗚嗚……別這麼踢老朽嘛，還有，妳這裡那堆吵死人的機器可不可以改改啊。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">托利用手上的斧頭...的柄點了下那滑稽的墨鏡，讓它戴得更正一點。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我跟你說過，你可以用手機。」<br>香伶有點不耐煩的嘆了口氣。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「妳明知道老朽弄不懂那些時髦玩意兒……算了……」<br>金黃色的柴犬妖怪走到了托利面前，抬起頭。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「托利小妹，調查還順利嗎？」<br>嚕嚕吉像是在打招呼似的舉起前腳（雖然看起來比較像是在做握手的動作）。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「實地調查還未有進展，只是從複數人口中聽聞一樣的傳聞，推估真實存在的機率很高。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗷……那太好了，老朽這趟算是沒白來。」<br>嚕嚕吉點了點頭，彷彿妳的調查結果在意料之中。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">繞著自己的尾巴轉了幾圈後，牠從空無一物的地方咬出一個綠色的包袱。<br>在把它放到妳面前後，嚕嚕吉一邊搖著尾巴，一邊解釋。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這是從老朽朋友那邊聽到的情報，據說是在市區的醫院附近發現了這個。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這是...」托利蹲下身來打開包袱。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">解開沾滿柴犬口水的布巾，躺在布巾的是一齣獵奇分屍案的現場……<br>從這堆破布和絨毛的殘骸中，妳能看出這堆殘骸曾經是一隻粉紅色的兔子玩偶。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">然而奇怪的是，殘骸中隱約能看到黑色的金屬碎片……<br>經過簡單的分析比對，妳辨識出了那是玩偶尺寸的槍械……什麼東西？</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「物怪...看起來也不像...」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「機械人偶嗎……？不對，看起來也沒有關節……」<br>香伶傾斜上半身，瞇著眼睛湊了過來。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這是你咬的嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗷嗷嗷，才不是！」<br>嚕嚕吉抖動著鼻子，露出沒有絲毫威嚇力的兇臉。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「是物怪喔，或者說，曾經是，雖然現在已經沒有靈力了就是。<br>　聽老朽的朋友說，在制服它的時候用力過猛了才變成這樣。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「沒想到還有這種形式的，該更新資料庫了。」邊說著邊看著嚕嚕吉...順便更新著。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「深夜遊行的傳聞，再加上忽然冒出來的新種物怪……恐怕，是最糟的情況呢……」<br>香伶皺著眉頭，有些擔心的看著妳。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「確實，是荒御魂事件的可能性很高呢。」<br>嚕嚕吉點點頭。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那麼就是我該出場的時候了。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就是這樣汪！」<br>眼前的柴犬啪的一聲用肉球打了一下地面。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……有需要的話記得找其他人協助，荒御魂不是一個人可以應付的。」<br>跟嚕嚕吉不同，香伶認真的提醒著妳──她一直都是這樣，有點過度擔心的傾向。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「說的也是，先算上米娜後剩下的...嚕嚕吉有人選嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗷嗚？嗚……」<br>嚕嚕吉思考了一下。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就，順其自然……？」<br>他歪了歪頭。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「順其自然，雖然不能理解但是是很有趣的說法。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「傳聞流傳到現在這樣，老朽認為其他勢力的人應該也多少有行動了，<br>　如果你們目的地一樣的話，總會見到的。」<br>嚕嚕吉搖了搖尾巴，姑且是給了個解釋。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我晚餐時間前回來。」托利的雙手按著嚕嚕吉上。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗷嗷！？放、放開老朽嗚嗚嗚嗚－－」<br>嚕嚕吉，死命掙扎。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「走了嚕嚕吉，順其自然。」托利將掙扎的嚕嚕吉夾在臂彎裡。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「別太欺負人家喔，姑且是長輩。」<br>香伶嘆了口氣，揉揉太陽穴後，回到了工作桌上。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「路上小心。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">很顯然，托利對順其自然的定義肯定存在著理解錯誤。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗷嗚嗚嗚！老朽不是戰鬥人員啊不要啊痛老朽的毛可惡嗚嗚嗚嗚……」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">柴犬的慘叫聲迴盪在嘈雜的工坊。<br>目送著妳們兩個離去的身影，香伶長嘆了口氣。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「應該沒問題吧……嗯？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在眼角餘光，那擺放在布巾中央的玩偶殘骸，似乎動了一下。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">/END</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">※菲爾托利 獲得感情</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">//對嚕嚕吉 信賴</div>
+</div>
+</div></div><!--EOS--></div>
+</body>
+</html>
