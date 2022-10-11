@@ -1,0 +1,1971 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta property="og:title" content="森林的詠嘆調-Part5">
+<meta property="og:description" content="">
+<title>森林的詠嘆調-Part5</title>
+<style>
+h1{ color:white; margin: 5px 0; }
+body{ background:#454752; }
+._subtitle { color:#ddd; margin:5px 0 20px 0; }
+._sectTitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
+._hidden { display:none; }
+.center { display:flex; flex-direction:column; align-items:center; }
+#_main { display:flex; flex-direction:column; align-items:end; }
+._script {width: 100%;}
+
+
+._halt { padding:30px 0; }
+._talk { margin:5px 0; display:flex; border:1px solid black; background:#1e1e1e; color:#eee; width:100%; max-width:1080px; border-radius:5px; }
+._leftCol { width:122px; }
+._rightCol { width:calc(100% - 126px); }
+._actorName{ padding:5px 10px; height:20px; font-size:18px; }
+._actorImg { margin:6px; width:110px; height:110px; background-repeat:no-repeat; background-size:cover; background-color:#2a2a2a; }
+._actorWords { margin:5px; background:#2a2a2a; font-size:1.1rem; padding:10px; height:calc(100% - 60px); border-radius:5px; }
+._sectTitle { border-radius:5px; margin-bottom:5px; }
+
+@media only screen and (max-width: 400px) {
+._leftCol { width:100px; }
+._rightCol { width:calc(100% - 100px); }
+._actorImg { margin:35px 0 5px 10px; width: 85px; height: 85px; }
+}
+
+._talk.otherCh { width:calc(50%); text-align:right; margin-left:auto; }
+._talk.otherCh ._leftCol { display:none; }
+._talk.otherCh ._rightCol { width:100%; }
+._talk.otherCh ._actorWords { background:black;color:white; }
+
+._actor_0 ._actorName { color: #dcddde; }
+._actor_0 ._actorName::after { content:"GM@Haz"; }
+._actor_0 ._actorImg { background-image:url(); } 
+._actor_1 ._actorName { color: #dcddde; }
+._actor_1 ._actorName::after { content:"燈岸"; }
+._actor_1 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKR-AOF-NPC-01.png); } 
+._actor_2 ._actorName { color: #ca32e4; }
+._actor_2 ._actorName::after { content:"瑠美"; }
+._actor_2 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKR-AOF-02.png); } 
+._actor_3 ._actorName { color: #ff2929; }
+._actor_3 ._actorName::after { content:"琉璃蒼"; }
+._actor_3 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKR-AOF-03.png); } 
+._actor_4 ._actorName { color: #2ac3ff; }
+._actor_4 ._actorName::after { content:"理也"; }
+._actor_4 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKR-AOF-01.png); } 
+._actor_5 ._actorName { color: #dcddde; }
+._actor_5 ._actorName::after { content:"燈火幽靈"; }
+._actor_5 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-608.png); } 
+._actor_6 ._actorName { color: #ca32e4; }
+._actor_6 ._actorName::after { content:"咪帕"; }
+._actor_6 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-677.png); } 
+._actor_7 ._actorName { color: #ff2929; }
+._actor_7 ._actorName::after { content:"明嵐"; }
+._actor_7 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-155.gif); } 
+._actor_8 ._actorName { color: #dcddde; }
+._actor_8 ._actorName::after { content:"鬼斯"; }
+._actor_8 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-092.png); } 
+._actor_9 ._actorName { color: #dcddde; }
+._actor_9 ._actorName::after { content:"system"; }
+._actor_9 ._actorImg { background-image:url(); } 
+._actor_10 ._actorName { color: #2ac3ff; }
+._actor_10 ._actorName::after { content:"伊零"; }
+._actor_10 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-133.gif); } 
+._actor_11 ._actorName { color: #dcddde; }
+._actor_11 ._actorName::after { content:"水晶燈火靈"; }
+._actor_11 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-609.png); } 
+._actor_12 ._actorName { color: #62e368; }
+._actor_12 ._actorName::after { content:"時拉比"; }
+._actor_12 ._actorImg { background-image:url(); } 
+._actor_13 ._actorName { color: #dcddde; }
+._actor_13 ._actorName::after { content:"年老的女性"; }
+._actor_13 ._actorImg { background-image:url(); } 
+._actor_14 ._actorName { color: #dcddde; }
+._actor_14 ._actorName::after { content:"耿鬼"; }
+._actor_14 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-094.png); } 
+._actor_15 ._actorName { color: #dcddde; }
+._actor_15 ._actorName::after { content:"雀爺爺"; }
+._actor_15 ._actorImg { background-image:url(); } 
+._actor_16 ._actorName { color: #dcddde; }
+._actor_16 ._actorName::after { content:"火焰幻影"; }
+._actor_16 ._actorImg { background-image:url(); } 
+._actor_17 ._actorName { color: #dcddde; }
+._actor_17 ._actorName::after { content:"？？？"; }
+._actor_17 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKR-AOF-NPC-01.png); } 
+._actor_18 ._actorName { color: #dcddde; }
+._actor_18 ._actorName::after { content:"阿利多斯"; }
+._actor_18 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/PKM-168.png); } 
+</style>
+</head>
+<body class="center">
+<div class="_hidden">
+<version>hazmole_v1.0</version>
+</div>
+
+<h1>森林的詠嘆調-Part5</h1>
+<div class="_subtitle"></div>
+
+<div id="_main"><div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">隨著房門推動，老舊木頭的摩擦聲搔刮著夜晚的寂靜，房間內的景象映入你們眼中。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">時值深夜，窗簾已經被拉上，但儘管房內沒有月光的照耀，那在空氣中不斷躍動的青色鬼火，仍做為光源點綴著這個房間。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不好了……請你們……救救這個孩子！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">穿著睡衣，對於你們的忽然闖入，燈岸似乎也顧不得驚訝，焦急地向你們求助。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在她懷中，那隻在下午還充滿活力的燈火幽靈正蜷縮成一團，發出了痛苦的哀嚎。<br>而隨著每一次燈火幽靈的顫抖，房間內飛舞的青色火焰也越發耀眼。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「燈火幽靈…牠怎麼了？」瑠美看一看燈岸，又看一看咪帕。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「是生病還是怎麼了嗎…？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「額」抱著明嵐靠近房間，蒼愣了一下，現在的狀況跟自己的想像差的太多了</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「誒？燈岸小姐妳沒有遇到危險嗎？好痛...！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這個症狀是...」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">//要確認情況，請進行聰明＋傳聞或醫藥的判定</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">4b6 聰明＋傳聞 (4B6) ＞ 2,1,3,5</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">2b6  (2B6) ＞ 1,3</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">6b6 聰明+傳聞 (6B6) ＞ 3,3,3,5,3,5</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">或許是曾經聽過寶可夢中心的喬伊小姐提過，又或許是曾經經歷過類似的遭遇。
+<br>琉璃蒼知道，這並不是疾病──但在此時此刻，你並不確定這究竟是不是件好事。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在少部分的案例中，儘管寶可夢累積到了足以進化的力量，卻不會馬上進化──過多的力量囤積在體內找不到出口，便可能導致類似發燒或暈眩的症狀……而即使最後成功進化，因為痛苦而讓力量失去控制的情況也……</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在那一瞬間，你或許明白了這一晚發生悲劇的真相。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「他剛剛明明還很有活力的……到底怎麼了？有辦法讓他好過一點嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">抱著燈火幽靈，燈岸憂心忡忡地走來走去．卻不知該如何是好，只能把希望寄託在你們身上。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「...他太晚進化了，積蓄在體內的能量過多，在這種狀況下，一旦進化」蒼認真在思考等等怎麼逃命了「...他的力量會失控，帶火系的燈火幽靈應該會把這裡炸掉，我猜」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「怎麼會…」瑠美想起信的內容…這樣…一切就能講通了。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「可、那，現在該……」<br>儘管燈火幽靈不適的理由得到了解答，但這顯然沒有解決燈岸的問題。她咬著嘴唇，低頭看著懷中的燈火幽靈。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我該……怎麼辦……？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不然我們只能趕緊讓它到屋子外面...」理也一邊說一邊坐在了地上</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「有甚麼能解把牠力量平穩定釋放的方法嗎…」瑠美掩著嘴巴，十分擔心的看著燈火幽靈。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「靈……」<br>燈火幽靈難受地鳴叫著，看起來要不是燈岸抱著他，他甚至連正常飄起來都做不到。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果帶牠到屋子外，那只會把森林燒起來…這只會變成另一種悲劇…」瑠美捏緊自己的手。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不行嗎...」理也看了看燈火幽靈的樣子</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">但是，瑠美仍然不放棄，嘗試從過往爸爸教導的知識探索甚麼可能的方法。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords"></div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「對了…那個鈴鐺？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">聽到瑠美的話，理也便舉起那個手上的鈴鐺再次搖響它</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">隨著理也輕輕搖晃，鈴鐺發出了沉悶的金屬音，卻絲毫沒有先前清脆的樂聲。<br>是因為你們已經脫離時間夾縫了的關係嗎？又亦或是因為它蘊含的神奇力量已經用盡？無論如何，現在的鈴鐺似乎派不上用場。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「唔……」<br>眼睜睜的看著燈火幽靈痛苦的樣子，燈岸似乎也很難受，只能像是哄小孩般的努力安撫燈火幽靈。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這是沒辦法的意思嗎…」瑠美感到微微失落，但並不代表終結。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「...我有兩個方法，當然我不是專業的，只是瞎猜的」蒼見無敵的鈴鐺之星沒有辦法，只好無奈的說道「一是用吸取類招式抽他的能量，但這裡唯一可能會的鬼斯有夠不靠譜；二是...讓他放招式，能放多少就放多少，把多的能量吐乾淨，但為了避免波及周邊我們得負責壓制他」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「靈……靈……！」<br>然而他的狀況卻絲毫沒有減輕的樣子，燈火幽靈身上的火焰搖曳，周遭的鬼火數量越來越多，甚至已經開始讓房間發出了焦味。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這樣子的話，也是需要鬼斯幫忙吧。明嵐現在受傷太重了，只靠伊零跟咪帕的話可不夠。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「...或是我們現在丟下他落跑，我深深覺得一棟房子跟小命比起來真的沒啥」蒼看著燈火幽靈的眼神就像在看一顆不定時炸彈</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「使用招式嗎？可、可是我不是訓練家──」<br>似乎並不清楚怎麼該怎麼做，燈岸抬起頭，有些慌張；但隨著燈火幽靈再一次悲鳴，她咬著下唇，深吸了口氣，像是下定了決心。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">瑠美慢慢地走上前，嘗試伸手觸摸燈火幽靈。「我們會想到辦法的…忍耐著。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……我不想就這麼放著這孩子不管。」<br>她抬起頭，看著你們。<br>「對不起……但可以拜託你們幫幫我嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我也不會把牠丟棄，咪帕，我們來一起想辦法！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪～咪！」咪帕舉高雙手，附和到。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不用說這種話啦燈岸小姐，我們也是有不能放棄的理由的。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「...那就只能上了啊」蒼咬咬牙，把夥伴舉起來晃啊晃「明嵐！明嵐！出大事！快起來！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「波嗚嗚嗚……」儘管傷勢大致穩定了下來，但明嵐看起來還是很疲累的樣子，翻著肚子拒絕醒來。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘶……」<br>在你們身邊打轉的鬼斯似乎也明白了事情的嚴重性，儘管還是頂著那張鬼臉，但看得出牠也願意幫忙。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果要用招式的話，那得要把燈火幽靈帶到房間外吧？走廊至少比房間空曠」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「你在睡下去之後就起不來了啊」蒼掏出傷藥往明嵐身上狂噴，把裡頭的藥劑一次用完「有炸彈快炸啦！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯，那就趕快……哇！？」<br>話還沒說完，燈岸的身體就忽然飄了起來，不禁發出驚呼。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">隨著窗簾被無形的力量猛然拉開，你們聽到了鬼斯發出嘻嘻的笑聲，接著一股浮力把你們拖了起來。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「鬼斯，謝謝你！」雖然感覺奇奇怪怪的，但瑠美沒有拒絕。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘻……」鬼斯的雙眼發出了淡紫色的光芒，接著，你們感覺到自己像是被一雙無形的手給舉了起來，緩緩的迎著灑落的月光飄向了窗外。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「真的幫大忙了...我是真的走不動了。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「波嗚嗚……」軟綿綿的跟著飄了起來，蒼彷彿可以看到明嵐賭氣似的鼓起了臉頰。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「...明天給你加餐行吧，拜託你好好幹活，我們真的小命不保啦現在」窮鬼蒼肉痛的對明嵐做出承諾，小命當前，他只能對不起錢包了</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「明嵐加油~再撐一下！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">//請蒼進行聰明+共感的檢定</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">4b6&gt;3  (4B6&gt;3) ＞ 2,2,6,4 ＞ 成功数2</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「波……」原本還不情不願的明嵐在聽到蒼的承諾後，稍微睜開了瞇著的眼睛，發出了一聲像是在說「真的嗎？」的叫聲。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「真的真的」蒼的眼角漏出淚光，對不起了錢錢，我真的需要這個酷夥伴</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「波嗚！」在空中舉起手，明嵐做出了萬歲的姿勢，背上燃起火花，但接著很快就因為重心的關係頭下腳上轉了過來。
+<br>……起碼是願意醒來幹活了。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_9">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">[ 明嵐 ] 生命值 : 0 → 3</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">在念力的搬運下，你們魚貫飛出窗外，來到了寧靜的夜空之下。<br>跟隨著燈火幽靈的移動，那些躁動的青色火焰也隨之飄了出來，撞上房屋，點起了陣陣黑煙──</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「你小心啊」蒼趕緊把明嵐抱正</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">彷彿心跳一般，以燈火幽靈為中心，青色幽火鼓動著，環繞著燈火幽靈與燈岸開始旋轉。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘶……」或許是擔心波及到底下的森林或房屋，鬼斯在猶豫了一下後，沒有把你們放下來，而是任由你們繼續飄盪在空中。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">瑠美似乎猜到鬼斯的想法「鬼斯，那就拜托了你！在一切完結之前，支撐住！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘶……」眼睛持續散發著淡紫色的光芒，鬼斯晃了晃身體表示沒問題。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……」<br>對於這太不尋常的體驗，燈岸深吸了一口氣，對著燈火幽靈小小聲地說了些什麼後，抬起頭看著你們。<br>「……接下來……要命令這孩子使用招式……嗎？我該做什麼？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「要這樣打嗎，難度有點高啊」鬆開明嵐，蒼用蛙式『游』離戰圈「他有啥火系招式就放！，火花，鬼火，火焰漩渦之類的！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「看來也只能這樣了...伊零要上了！」理也說著從精靈球中放出伊零</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「燈岸姐姐，你要做的事只有一件！就是相信那孩子，然後像正式對戰一樣讓燈火幽靈使用招式向我們攻擊吧！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_10">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「伊布！」從精靈球中被釋放出來，雖然一下子因為自己身處的情境而有些困惑，但伊零很快就取得了平衡，精神抖擻的鳴叫著。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗯……我知道了。」燈岸稍微鬆開抱著燈火幽靈的雙手，點了點頭。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「那麼，咪帕，我們上！」瑠美鬆開手，讓咪帕自由行動。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪！」似乎比其他人更習慣於念力造成的浮空狀態，咪帕如履平地般的踏出腳步，舉起雙手，隨時準備好應戰。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「燈火幽靈……請相信我吧。」燈岸輕輕捧著燈火幽靈，低聲呢喃。<br>「使用火焰漩渦！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「靈……」勉強睜開了豆粒般的眼睛，燈火幽靈也顧不得瞄準，就這麼朝著隨機方向釋放出了火焰──而其結果，卻反而使燈岸與牠自己被團團青色火焰給包裹住。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">儘管隔有一段距離，但灼熱的高溫仍然傳達到了你們的肌膚上。<br>──身處火焰漩渦中心的燈岸自不用說。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「誒誒誒！？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「哪有招式燒自己的啊!?」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「燈…燈岸姐姐！」瑠美驚恐地呼喊著對方。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪帕…！有辦法把那些火焰移開嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「瑠美！快用咪帕的念力把火焰！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(3+2)B6&gt;=4 #火焰漩渦 (5B6&gt;=4) ＞ 6,4,4,1,3 ＞ 成功数3</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">//疼痛懲罰扣除一顆成功骰</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「伊零用幫助！那個...！把燈火幽靈的注意力分散！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_10">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(3+2)B6&gt;=4 #幫助 (5B6&gt;=4) ＞ 6,5,1,2,1 ＞ 成功数2</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_10">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">//目標咪帕</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「明嵐衝過去拍散火焰！電光一閃！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(4+2)B6&gt;=4 #電光一閃 (6B6&gt;=4) ＞ 4,6,2,4,3,1 ＞ 成功数3</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(4+2+2)B6&gt;=4 #念力 (8B6&gt;=4) ＞ 2,6,4,4,6,4,3,2 ＞ 成功数5</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「波嗚──！」背後放射出的火焰讓明嵐小小的身體彷彿火箭一樣衝過去，忍受著沒有那麼強大的火焰漩渦，在明嵐一陣高速亂衝亂撞之後，困住了燈岸的火焰漩渦也隨即被沖散。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">而在四濺的青色火焰要波及到在場的任何人之前，在伊零的幫助下，咪帕也搶到了絕佳的機會，增幅過的念力固定住了烈焰，讓其在原地消滅。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗚……」因為那瞬間的高溫而有些痛苦的悲鳴，手掌似乎也有些燙傷，但燈岸仍然沒有放手。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「燈火幽靈的狀態不能再用剛剛那招了！換另一種吧！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「靈……」釋放出了一部份的力量，儘管燈火幽靈仍然沒有完全恢復，但從周圍青色鬼火的狀況看來，這個方式確實有用！</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「燈岸姐姐，你確定不退開點？燈火幽靈的狀況顯然沒辦法控制招式的方向」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">瑠美咬牙切齒，看到燈岸姐姐那燙傷的手，內心如同燒在自己身上的感覺。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「沒事的……畢竟我得幫助這孩子才行。」<br>燈岸喘著氣，眼神卻沒有猶豫。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「如果燈岸小姐放手的話牠會直接掉下去的。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不過這樣的確有效！我們再試幾次！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「換個方式……燈火幽靈，抱歉，再撐一下就好……使用暗影球！」
+<br>燈岸稍微提高了音量，像是同時在為自己加油一般，大喊道。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「靈……靈！」難受的舉起兩隻燈座般的手臂，燈火幽靈回應道，將鬼魅的力量集中，然後釋放出來──</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「燈火幽靈，你的目標是我們！加油！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(3+2)B6&gt;=4 #暗影球 (5B6&gt;=4) ＞ 3,2,1,3,2 ＞ 成功数0</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">黑影凝聚而成的球體朝著四面八方射出，彷彿彈幕一般迅速掠過了你們的位置。<br>儘管絲毫沒有準頭可言，但那龐大的數量仍讓你們花了點功夫才能避開。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_5">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「靈……靈靈……」隨著一次又一次的將力量釋放，燈火幽靈身上開始散發出白色的光芒。周遭的青色鬼火開始凝聚──</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「成功了嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「做得好啊，就是這樣了！」鼓勵對方打中自己聽上去有點奇怪，但瑠美也只能讓能用這種方法嘗試讓燈火幽靈打起精神。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「哇哇哇哇哇」手忙腳亂的閃過亂飛的暗影球，蒼滿頭汗看著燈火幽靈「這麼多能量，到底是怎麼壓著不進化的啊!?」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們知道，這一刻就是成敗的關鍵。<br>──只要這最後的一擊成功釋放出來，燈火幽靈就能脫離痛苦，順利進化。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">然而，隨著那些火焰不斷凝聚，你們很快就察覺了不妙。<br>你們不知道下一招具體會是什麼，但很明顯，瀕臨極限的燈火幽靈根本無法控制這團能量釋放的方向，而做為其結果，燈岸必然會被捲入其中。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘶……嘶……」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_8">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">──而更糟的是，支撐著你們的鬼斯，看起來也快要到了極限。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">你們該怎麼辦？</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「糟糕！燈岸小姐快放開燈火幽靈！！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「不行…！」瑠美拼命地呼喊著並向他們接近，即使這件是多麼危險的事。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_10">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「伊咪！」即使當下放手也難以迴避，查覺到這件事的伊零立刻緊張地望向理也，希望得到指令。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「挫賽！」蒼揪住瑠美，以防再多一個人陷入危險「鬼斯！把我們放下去！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">都走到這步了，都突破了那道時間牆壁了，怎麼可能放棄…！</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_3">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「明嵐！瞪眼！讓他虛弱化！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_7">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(2+1)B6&gt;=4 #瞪眼 (3B6&gt;=4) ＞ 4,2,4 ＞ 成功数2</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪帕…把他們分開！拜托了！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這可能是最後的辦法了...」理也這時從背包中拿出最後一顆精靈球</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「拜託了伊零！把這個踢過去！」理也說著把球甩了出去</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪……咪！」猶豫了片刻，一向乖巧的咪帕在這最後關頭卻沒有聽從瑠美的命令，牠舉起手，眼中發出了粉紅色的光芒，代替無力的鬼斯讓你們維持浮空的狀態。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(4+2)B6&gt;=4 #念力 (6B6&gt;=4) ＞ 5,1,4,1,5,3 ＞ 成功数3</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_10">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「伊布！」很快的鳴叫回應，在精靈球被扔到自己面前時，伊零立刻轉身，用潑沙的技巧將精靈球給踢向了燈火幽靈的方向。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_10">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">(3+0)B6&gt;=4 #潑沙 (3B6&gt;=4) ＞ 5,6,1 ＞ 成功数2</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「是唉…！」要不然咪帕接替鬼斯的話，大家就掉下去了。「那麼…就是我來想辦法的時間了！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">精靈球迅速的朝著燈火幽靈的方向飛馳而去，準確的命中了燈火幽靈的身體，隨著一陣亮粉色的光芒，將燈火幽靈收了進去。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「欸？」還沒有意識到發生了什麼事，燈岸錯愕地咦了一下。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就是現在燈岸小姐！把球丟上空中然後讓燈火幽靈出招吧！！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「我、我知道了！」聞聲抓住還在抖動的精靈球，燈岸閉上眼睛，將它用力的往空中扔出去。<br>「燈火幽靈──使用最後一擊！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「就是現在！咪帕，讓我來推開燈岸姐姐！」等到燈岸投擲精靈球的前一刻，瑠美向咪帕呼叫。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">已經顧不上決定招式，精靈球直直的衝到空中，然後在那一瞬間，燈火幽靈一直以來積蓄著的力量被全數釋放，在精靈球被無情破壞的同時，奔騰的青紫色烈焰在夜空中炸開。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">儘管避免了首當其衝，暴走的火焰餘波仍然朝著燈岸的方向嘶吼。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪、咪咪咪咪──！」在咪帕的協助下，瑠美的身體彷彿被托住一樣，開始朝著燈岸的方向加速。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">3b6 靈巧+運動 (3B6) ＞ 5,5,1</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">//成功</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">雖然運動神經不怎麼好，動起來像笨笨的，但瑠美相信咪帕，「這就是我和咪帕之間的羈絆…！」正如爸爸所說人類與寶可夢之間的可能性。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">就在火焰快要落到燈岸頭上時…「燈岸姐姐！」瑠美飛撲過去，抱著了燈岸。火焰剛好從她們身邊落下。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">紫色的火焰吞噬了你們身後的空間，那灼熱的高溫刺痛著你的肌膚。<br></div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">然而，很快的，火焰散去，夜晚冰冷的空氣重新環抱著你們。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「成功了....」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">沐浴在月光下，燈岸黑色的秀髮飄逸著，從那美麗的瞳孔中映出了夜景，以及她在看見夜空時發自內心的喜悅。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪、咪……」<br>你們可以感覺到托住自己身體的力量開始慢慢減弱，你們也隨之緩緩下降。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">瑠美抱在燈岸懷中哭壞了，然而這卻是喜極而泣的眼睛。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">而那從更高空中緩緩降落的那隻寶可夢，以及那喜悅的鳴叫，也確實宣告了你們的勝利。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「大家都沒事太好了...」理也終於撐不住似的，在落地的時候昏倒了。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_11">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「靈──！」宛如吊燈般的寶可夢發出了熟悉的叫聲，在你們落地的瞬間撲了過來，不斷在你們身邊雀躍。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「太好了……真是太好了……」<br>顧不得自己比你們年長，燈岸也忍不住流下了淚水，緊緊抱著瑠美。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_1">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「……謝謝你們，要是沒有你們的幫助的話……謝謝……」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_6">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪……」勉強撐著走到了瑠美的腳邊，咪帕抱著瑠美的小腿，終於像是力氣用盡一樣倒了下來，睡著了。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_10">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咿～布～」
+<br>另一邊的伊零倒是精神的很，在昏過去的理也身邊跳來跳去，時不時用頭頂想把主人叫醒。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「咪帕辛苦了~」瑠美擦擦眼淚，然後像抱嬰兒一樣溫柔地抱起咪帕，「真是的…你最棒了-」瑠美輕輕地蹭咪帕睡著的臉頰，以他為自己的驕傲。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嗚...伊零讓我休息一下....好痛痛痛！」理也意識模糊的想用手阻止伊零，這時碰到了傷口令他痛到馬上清醒</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">不知道是不是一下子放鬆下來導致的錯覺，你們的視界邊緣開始泛起淡淡的、溫柔的白光；你們看到燈岸抱著撲過來撒嬌的水晶燈火靈，張開口似乎在對你們說著什麼，但那聲音卻像是從遠處傳來一般朦朧，你們什麼都沒聽到。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">漸漸的，白光開始增強，緩緩籠罩著你們的視野。<br>你們再一次聽到了那清脆、溫暖的鈴聲在耳邊響起，而這一次，你們清楚的看見了那個嬌小、綠色的神祕身影。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_12">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「── ♪」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊...要回去了嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">神秘的寶可夢對著你們露出微笑，開心的飄著轉了一圈。<br>忽然的，一個童稚的聲音從你們腦中響起，儘管聽不懂祂所使用的語言，但你們可以理解，祂在對你們說「謝謝」以及「辛苦了」。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">了解到好像是時候到了的樣子，也是呢…既然是穿越過來的，那就要回去了。「燈岸姐姐…再見了！」趕緊留下最後一句話。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">白光緩緩褪去，當你們重新睜開雙眼，你們已經回到了那美麗的、宅邸前方的花海。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">彷彿曾經看過這一幕似的，你們聽到了從宅邸那邊傳來咿呀的開門聲。<br>一名年老的女性站在那邊，身後跟著兩隻似曾相識的幽靈系寶可夢，有些訝異的看著你們。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊……沒想到這麼晚了也會有客人呢？」<br>老奶奶的臉上露出了慈祥的微笑，對著你們招了招手。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「要進來坐坐嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_14">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘻嘻嘻……」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_11">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「靈～靈～」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">雖然這位老女士沒有說明自己的身份，可是瑠美很清楚。瑠美的眼角泛起淚光。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「好的~多多指教！」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_4">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「啊...那，我們就打擾了燈...婆婆。」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_15">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「阿岸，有誰來了嗎？」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">依稀有個你們似乎曾經聽過的老爺爺的聲音從屋內傳來，你們看見眼前那年老、但輪廓雀仍熟悉無比的老婆婆靦腆一笑，牽著你們的手，帶著你們進屋。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「這讓我想起了好久以前的事哪……」<br>她露出了懷念的表情。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_13">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「總之，歡迎你們，請好好放鬆休息吧……」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">夕陽的餘暉斜照在寧靜的花海，隨著晚風吹起，樹葉婆娑的聲音就彷彿鈴聲一般悅耳。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_2">
+<div class="_leftCol">
+<div class="_actorImg "></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">「嘻嘻…！好想聽你們的故事~」</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">聽著屋內傳來的歡笑聲、惡作劇的尖叫與胡鬧、用餐時的杯盤交錯；<br>那小小的綠色身影坐在屋頂上，輕輕哼著歌曲。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">──那是獻給過往悲劇的詠嘆調</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">同時，也是獻給美好未來的祝福。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">夕陽落下，夜幕降臨，這穿梭時空的冒險劇終於告一段落。<br>但是屬於他們的故事，今後仍將繼續下去。</div>
+</div>
+</div></div><!--EOS-->
+<div class="_script" data-type="talk">
+<div class="_talk mainCh _actor_0">
+<div class="_leftCol">
+<div class="_actorImg _hidden"></div>
+</div>
+<div class="_rightCol">
+<div class="_actorName"></div>
+<div class="_actorWords">──END</div>
+</div>
+</div></div><!--EOS--></div>
+</body>
+</html>
