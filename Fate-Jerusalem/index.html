@@ -1,6 +1,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="./index.js"></script>
 	<script>
 		var TITLE, INDEX;
@@ -25,14 +26,23 @@
 	<style>
 		body {
 			background: #454752;
+			color: white;
 			margin: 0;
+		}
+
+		#MainFrame {
+			display: flex;
+			flex-direction: column;
+			height: calc(100vh);
 		}
 		#MainNav {
 			display: flex;
-			justify-content: flex-start;
+			justify-content: center;
 			flex-wrap: wrap;
 			background: #25222e;
-			padding: 0.5rem 0.5rem 0 0.5rem
+			padding-top: 0.5rem;
+			max-height: 105px;
+			overflow: auto;
 		}
 		#MainNav .LinkObj {
 			cursor: pointer;
@@ -42,17 +52,17 @@
 			border: 3px groove #bfbfbf;
 			background: #101014;
 			color: white;
+			font-size: 12px;
 		}
 		#MainNav .LinkObj:hover { background: #474656; }
 		#MainNav .LinkObj:active { background: black; }
 		#MainContext {
-			width: calc(100vw - 20px);
-			height: calc(100vh - 100px);
+			flex-grow: 1;
 		}
 	</style>
 </head>
-
-<div id="MainNav"></div>
-<embed id="MainContext" type="text/html" src="" >
-
+<div id="MainFrame">
+	<div id="MainNav"></div>
+	<embed id="MainContext" type="text/html" src="" >
+</div>
 </html>
