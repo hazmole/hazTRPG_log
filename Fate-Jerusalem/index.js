@@ -55,4 +55,3 @@ var INDEX = [
 	{ title: "EP-1", url: "Jerusalem_part53.html", },
 	{ title: "EP-2", url: "Jerusalem_part54.html", },
 ];
-INDEX = INDEX.splice(0,20)
