@@ -16,15 +16,18 @@ body{ background:#454752; }
 ._script {width: 100%;}
 
 
-._halt { padding:40px 0; }
-._talk { margin:0; display:flex; border-bottom:1px solid #3a3a3a; background:#1e1e1e; color:#eee; width:100%; max-width:1080px; }
-._leftCol { width: 20px; }
-._rightCol { width:100%; }
-._actorName{ padding:10px; height:16px; font-size:18px; }
-._actorImg { display:none; }
-._actorWords { margin:5px; font-size:1.1rem; padding:0 10px 10px 10px; border-radius:5px; }
+._halt { padding:30px 0; }
+._talk { margin:5px 0; display:flex; border:1px solid black; background:#1e1e1e; color:#eee; width:100%; max-width:1080px; border-radius:5px; }
+._leftCol { width:122px; }
+._rightCol { width:calc(100% - 126px); }
+._actorName{ padding:5px 10px; height:20px; font-size:18px; }
+._actorImg { margin:6px; width:110px; height:110px; background-repeat:no-repeat; background-size:cover; background-color:#2a2a2a; }
+._actorWords { margin:5px; background:#2a2a2a; font-size:1.1rem; padding:10px; height:calc(100% - 60px); border-radius:5px; }
+._sectTitle { border-radius:5px; margin-bottom:5px; }
 
-._talk.otherCh { text-align:right; background:black; }
+._talk.otherCh { width:calc(50%); text-align:right; margin-left:auto; }
+._talk.otherCh ._leftCol { display:none; }
+._talk.otherCh ._rightCol { width:100%; }
 ._talk.otherCh ._actorWords { background:black;color:white; }
 
 ._actor_0 ._actorName { color: #e0e0e0; }
@@ -32,25 +35,49 @@ body{ background:#454752; }
 ._actor_0 ._actorImg { background-image:url(); } 
 ._actor_1 ._actorName { color: #b395cb; }
 ._actor_1 ._actorName::after { content:"菲爾米娜"; }
-._actor_1 ._actorImg { background-image:url(); } 
+._actor_1 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-03.png); } 
 ._actor_2 ._actorName { color: #e0e0e0; }
 ._actor_2 ._actorName::after { content:"淺野 愛依"; }
-._actor_2 ._actorImg { background-image:url(); } 
+._actor_2 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-02.png); } 
 ._actor_3 ._actorName { color: #e0e0e0; }
 ._actor_3 ._actorName::after { content:"竹內 不亂軒"; }
-._actor_3 ._actorImg { background-image:url(); } 
+._actor_3 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-01.png); } 
 ._actor_4 ._actorName { color: #888888; }
 ._actor_4 ._actorName::after { content:"system"; }
 ._actor_4 ._actorImg { background-image:url(); } 
 ._actor_5 ._actorName { color: #e0e0e0; }
 ._actor_5 ._actorName::after { content:"淺野 香伶"; }
-._actor_5 ._actorImg { background-image:url(); } 
+._actor_5 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-03.png); } 
 ._actor_6 ._actorName { color: #ffeb3b; }
 ._actor_6 ._actorName::after { content:"菲爾托利"; }
-._actor_6 ._actorImg { background-image:url(); } 
+._actor_6 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-04.png); } 
 ._actor_7 ._actorName { color: #e0e0e0; }
 ._actor_7 ._actorName::after { content:"嚕嚕吉"; }
-._actor_7 ._actorImg { background-image:url(); } 
+._actor_7 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-04.jfif); } 
+._actor_8 ._actorName { color: #c99987; }
+._actor_8 ._actorName::after { content:"寂祀  大斎"; }
+._actor_8 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-01.png); } 
+._actor_9 ._actorName { color: #fb4b4b; }
+._actor_9 ._actorName::after { content:"梅諾"; }
+._actor_9 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-02.png); } 
+._actor_10 ._actorName { color: #888888; }
+._actor_10 ._actorName::after { content:"小動物玩偶"; }
+._actor_10 ._actorImg { background-image:url(); } 
+._actor_11 ._actorName { color: #888888; }
+._actor_11 ._actorName::after { content:"玩具直升機"; }
+._actor_11 ._actorImg { background-image:url(); } 
+._actor_12 ._actorName { color: #888888; }
+._actor_12 ._actorName::after { content:"小動物游擊隊"; }
+._actor_12 ._actorImg { background-image:url(); } 
+._actor_13 ._actorName { color: #e0e0e0; }
+._actor_13 ._actorName::after { content:"櫃台人員"; }
+._actor_13 ._actorImg { background-image:url(); } 
+._actor_14 ._actorName { color: #e0e0e0; }
+._actor_14 ._actorName::after { content:"白鳥 一華"; }
+._actor_14 ._actorImg { background-image:url(https://hazmole.github.io/hazTRPG_log/shared/images/chars/KGK-DLS-NPC-05.png); } 
+._actor_15 ._actorName { color: #e0e0e0; }
+._actor_15 ._actorName::after { content:"男孩的聲音"; }
+._actor_15 ._actorImg { background-image:url(); } 
 </style>
 </head>
 <body class="center">
@@ -104,7 +131,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -114,7 +141,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -124,7 +151,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_2">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -144,7 +171,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -154,7 +181,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -164,7 +191,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_2">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -174,7 +201,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_2">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -184,7 +211,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -194,7 +221,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_2">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -204,7 +231,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -214,7 +241,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -224,7 +251,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -234,7 +261,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -244,7 +271,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_2">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -264,7 +291,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -294,7 +321,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -304,7 +331,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_2">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -314,7 +341,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -324,7 +351,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -334,7 +361,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -364,7 +391,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -374,7 +401,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -384,7 +411,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -394,7 +421,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_2">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -404,7 +431,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -414,7 +441,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_2">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -424,7 +451,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -434,7 +461,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -444,7 +471,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -474,7 +501,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -504,7 +531,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -524,7 +551,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -534,7 +561,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -564,7 +591,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -574,7 +601,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -584,7 +611,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -594,7 +621,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -604,7 +631,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -614,7 +641,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -624,7 +651,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_3">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -634,7 +661,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -664,7 +691,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -684,7 +711,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_1">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -735,7 +762,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -745,7 +772,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -755,7 +782,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -765,7 +792,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -775,7 +802,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -785,7 +812,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -795,7 +822,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -805,7 +832,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -815,7 +842,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -825,7 +852,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -835,7 +862,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -845,7 +872,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -855,7 +882,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -865,7 +892,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -875,7 +902,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -885,7 +912,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -895,7 +922,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -925,7 +952,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -935,7 +962,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -945,7 +972,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -955,7 +982,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -965,7 +992,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -975,7 +1002,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -985,7 +1012,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -995,7 +1022,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1005,7 +1032,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1015,7 +1042,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1025,7 +1052,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1035,7 +1062,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1045,7 +1072,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1055,7 +1082,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1065,7 +1092,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1075,7 +1102,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1085,7 +1112,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1095,7 +1122,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1105,7 +1132,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1115,7 +1142,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1125,7 +1152,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1135,7 +1162,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1145,7 +1172,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_7">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1165,7 +1192,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_5">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
@@ -1205,7 +1232,7 @@ body{ background:#454752; }
 <div class="_script" data-type="talk">
 <div class="_talk mainCh _actor_6">
 <div class="_leftCol">
-<div class="_actorImg _hidden"></div>
+<div class="_actorImg "></div>
 </div>
 <div class="_rightCol">
 <div class="_actorName"></div>
