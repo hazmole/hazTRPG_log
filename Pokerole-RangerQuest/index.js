@@ -1,4 +1,4 @@
-var TITLE = "【Pokerole】巡護員的考驗 - 團錄";
+var TITLE = "【Pokerole 2.0】巡護員的考驗 - 團錄";
 var INDEX = [
 	{ title: "第一次", url: "20210422-Pokerole-RangerQuest.html", },
 	{ title: "第二次", url: "20210429-Pokerole-RangerQuest.html", },
