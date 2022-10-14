@@ -14,13 +14,13 @@
         "id": 2,
         "name": "菲洛．布拉德",
         "color": "fe3434",
-        "imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/AMDS-FF-01.png"
+        "imgUrl": "./img/AMDS-FF-01.png"
       },
       {
         "id": 3,
         "name": "光源 伸太郎",
         "color": "b062fe",
-        "imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/AMDS-FF-04.png"
+        "imgUrl": "./img/AMDS-FF-04.png"
       },
       {
         "id": 4,
@@ -38,7 +38,7 @@
         "id": 6,
         "name": "百合川 緣鶴",
         "color": "009900",
-        "imgUrl": "https://hazmole.github.io/hazTRPG_log/shared/images/chars/AMDS-FF-03.png"
+        "imgUrl": "./img/AMDS-FF-03.png"
       }
     ]
   },
