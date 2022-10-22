@@ -1,0 +1,102 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="哈絲的團務彙整站">
+	<meta property="og:type" content="website">
+	<title>哈絲的團務彙整站</title>
+	<script src="./index.js"></script>
+	<script>
+		var INDEX;
+
+		function init(){
+			// Render PageLink Object
+			var arr = INDEX.map( (link, idx) => {
+				return `
+				<div class="LinkObj clickable" onClick="link('${link.url}')">
+					<div class="system-name">【${link.system}】</div>
+					<div class="game-name">${link.title}</div>
+				</div>`;
+			});
+			var navPanel = document.getElementById("NavbarInner");
+			navPanel.innerHTML = arr.join('');
+
+			// Set Default Page
+			var pageUrl = getCurrentPageUrl();
+			link(pageUrl);
+		}
+		function link(url){
+			// Render PageLink Objects Deactive
+			var arr = document.getElementsByClassName('LinkObj');
+			for(var i=0; i<arr.length; i++){
+				if(arr[i].classList.contains('active')){
+					arr[i].classList.remove('active');
+				}
+			}
+			// Render PageLink Object Active
+			const idx = getLinkIdxByUrl(url);
+			if(idx!=-1){
+				const elem = getLinkElemByIdx(idx);
+				elem.classList.add("active");
+			}
+
+			// Render Page
+			var embdPanel = document.getElementById("MainContext");
+			if(url!='')  embdPanel.src = url + '/index.html';
+			else         embdPanel.src = 'welcome.html';
+
+			// Modify URL
+			updatePageParam(url);
+		}
+		function getLinkIdxByUrl(url){
+			var linkIdx = INDEX.findIndex( link => link.url == url );
+			return linkIdx;
+		}
+		function getLinkElemByIdx(idx){
+			return document.getElementsByClassName('LinkObj')[idx];
+		}
+		function getCurrentPageUrl(){
+			const urlParams = new URLSearchParams(window.location.search);
+			const currentPageUrl = urlParams.get('p');
+			if(getLinkIdxByUrl(currentPageUrl)<0) return '';
+			return currentPageUrl;
+		}
+		function updatePageParam(url){
+			const urlParams = new URLSearchParams(window.location.search);
+			const path = window.location.pathname;
+			urlParams.set('p', url);
+			window.history.pushState({}, '', path+`?${urlParams.toString()}`);
+		}
+
+		window.onload = init;
+	</script>
+	<style>
+		body { background:#454752; color:white; margin:0; }
+		#MainFrame { width: 100%; height: 100%; }
+		#MainNavbarOuter { flex-grow: 0; width: 200px; background: #242424; }
+		#NavbarTitle     { text-align: center; font-size: 20px; padding: 1rem 0; background-color: black; }
+		#NavbarInner     { flex-grow: 1; overflow-y: auto; margin: 10px; }
+		#MainContext     { flex-grow: 1; }
+
+		.row { display: flex; flex-direction: row; }
+		.colume { display: flex; flex-direction: column; }
+		.clickable { cursor: pointer; }
+
+		.LinkObj { padding: 5px; margin:5px 0; background: black; border:3px groove #979494; }
+		.LinkObj.active { filter: brightness(1.5); background: #101232; }
+		.LinkObj:hover { filter: brightness(1.5); background: #101232; }
+		.LinkObj:active { filter: brightness(0.8); }
+		.LinkObj .system-name { color: #aaa; }
+		.LinkObj .game-name   { padding-left: 1rem; }
+	</style>
+</head>
+<div id="MainFrame" class="row">
+	<div id="MainNavbarOuter" class="colume">
+		<div id="NavbarTitle" class="clickable" onClick="link('')">哈絲的團務彙整站</div>
+		<div id="NavbarInner"></div>
+	</div>
+	<iframe id="MainContext" type="text/html" src="" >
+		你的瀏覽器不支援 iframe
+	</iframe>
+</div>
+</html>
