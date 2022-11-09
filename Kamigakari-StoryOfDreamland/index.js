@@ -7,4 +7,5 @@ var INDEX = [
 	{ title: "場景6、7", url: "20221013-Kamigakari-StoryOfDreamland.html", },
 	{ title: "場景8、9", url: "20221020-Kamigakari-StoryOfDreamland.html", },
 	{ title: "場景10、11", url: "20221027-Kamigakari-StoryOfDreamland.html", },
+	{ title: "場景12", url: "20221103-Kamigakari-StoryOfDreamland.html", },
 ];
