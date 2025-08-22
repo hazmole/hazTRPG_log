@@ -1,4 +1,10 @@
 var TITLE = "【宿命倒影】櫻花遮蔽的天幕 - 團錄";
 var INDEX = [
-	{ title: "第一次", url: "20231217-Reflection-WhenSakuraCoverTheSky.html", },
+	{ title: "開場白", url: "20231217-00.html", },
+	{ title: "那時，我們曾是摯友", url: "20231217-01.html", },
+	{ title: "那時，你踰越界線", url: "20231217-02.html", },
+	{ title: "那時，你辜負了我", url: "20231217-03.html", },
+	{ title: "那時，我們竭力追求和解", url: "20231217-04.html", },
+	{ title: "最終，我們舉刀相向", url: "20231217-05.html", },
+	{ title: "最終決戰", url: "20231217-06.html", },
 ];
