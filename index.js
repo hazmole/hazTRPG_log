@@ -20,12 +20,12 @@ var INDEX = [
 		url: "Fate-Jerusalem"
 	},
 	{
-		system: "Pokerole-2.0",
+		system: "Pokerole 2.0",
 		title: "森林的詠嘆調",
 		url: "Pokerole-AriaOfTheForest"
 	},
 	{
-		system: "Pokerole-2.0",
+		system: "Pokerole 2.0",
 		title: "巡護員的考驗",
 		url: "Pokerole-RangerQuest"
 	},

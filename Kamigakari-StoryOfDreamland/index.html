@@ -163,8 +163,8 @@
 		.NavGroupTitle::before { content:"▶"; margin-right:8px; }
 		.NavGroupInner { display:flex; flex-direction:column; gap:2px; padding-left:10px; margin-top:2px; height:0; overflow: hidden; }
 
-		.NavGroupOuter.Unfold .NavGroupTitle::before { content:"▼"; margin-right:6px; }
-		.NavGroupOuter.Unfold .NavGroupInner { height: auto; }
+		.NavGroupOuter.Unfold > .NavGroupTitle::before { content:"▼"; margin-right:6px; }
+		.NavGroupOuter.Unfold > .NavGroupInner { height: auto; }
 
 		.NavLink { cursor:pointer; padding:5px 10px; border:1px solid #71757b; }
 		.NavLink:hover { background-color:#515055 }
