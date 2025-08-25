@@ -21,32 +21,39 @@
 
 			// Set Default Page
 			var pageUrl = getCurrentPageUrl();
-			link(pageUrl);
+			linkByUrl(pageUrl);
 		}
 		function onMessage(event) {
 			const index = event.data['replay-index'];
-			const replayInfo = INDEX[index];
-			link(replayInfo.url);
+			linkByIndex(index);
 		}
 
 
 
 		function select(elem) {
-			link(elem.value);
+			linkByUrl(elem.value);
 		}
-		function link(url){
-			// Render Page
-			var embdPanel = document.getElementById("MainContext");
-			if(url === "") embdPanel.src = 'welcome.html';
-			else           embdPanel.src = (url + '/index.html');
+		function linkByUrl(url) {
+			const idx = INDEX.findIndex(replay => replay.url === url);
+			linkByIndex((idx === -1)? "": idx);
+		}
+		function linkByIndex(idx){
+			const replayObj = INDEX[idx];
+			const iframeElem = document.getElementById("MainContext");
+			const selectElem = document.getElementById("DropdownMenu");
 
-			if (url === "") {
-				const selectElem = document.getElementById("DropdownMenu");
+			if (idx === "") {
+				// goto "Welcome.html"
+				iframeElem.src = 'welcome.html';
 				selectElem.selectedIndex = 0;
+				updatePageParam("");
+			} else {
+				// goto Replay
+				iframeElem.src = (replayObj.url + '/index.html');
+				selectElem.selectedIndex = (parseInt(idx) + 1);
+				updatePageParam(replayObj.url);
 			}
 
-			// Modify URL
-			updatePageParam(url);
 		}
 		function getLinkIdxByUrl(url){
 			var linkIdx = INDEX.findIndex( link => link.url == url );
@@ -110,6 +117,7 @@
 			border: none;
 			background: none;
 			top: calc(anchor(bottom) + 1px);
+			max-height: 460px;
 		}
 
 		option {
@@ -142,7 +150,7 @@
 </head>
 <div id="MainFrame" class="colume">
 	<div id="MainNavbar" class="row">
-		<div id="Title" class="clickable" onClick="link('')">哈絲的團務彙整站</div>
+		<div id="Title" class="clickable" onClick="linkByIndex('')">哈絲的團務彙整站</div>
 		<div id="Options">
 			<select id="DropdownMenu" onchange="select(this)">
 			</select>
