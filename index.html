@@ -11,39 +11,31 @@
 
 		function init(){
 			// Render PageLink Object
-			var arr = INDEX.map( (link, idx) => {
-				return `
-				<div class="LinkObj clickable" onClick="link('${link.url}')">
-					<div class="system-name">【${link.system}】</div>
-					<div class="game-name">${link.title}</div>
-				</div>`;
+			var options = INDEX.map( (link, idx) => {
+				return `<option value="${link.url}"><span class="label">【${link.system}】${link.title}</span></option>`;
 			});
-			var navPanel = document.getElementById("NavbarInner");
-			navPanel.innerHTML = arr.join('');
+			var firstOpt = `<option value="" selected disabled><span class="label"><center>── 選擇團錄 ──</center></span></option>`;
+			
+			var selectorElem = document.getElementById("DropdownMenu");
+			selectorElem.innerHTML = [ firstOpt , ...options ].join('');
 
 			// Set Default Page
 			var pageUrl = getCurrentPageUrl();
 			link(pageUrl);
 		}
+		function select(elem) {
+			link(elem.value);
+		}
 		function link(url){
-			// Render PageLink Objects Deactive
-			var arr = document.getElementsByClassName('LinkObj');
-			for(var i=0; i<arr.length; i++){
-				if(arr[i].classList.contains('active')){
-					arr[i].classList.remove('active');
-				}
-			}
-			// Render PageLink Object Active
-			const idx = getLinkIdxByUrl(url);
-			if(idx!=-1){
-				const elem = getLinkElemByIdx(idx);
-				elem.classList.add("active");
-			}
-
 			// Render Page
 			var embdPanel = document.getElementById("MainContext");
-			if(url!='')  embdPanel.src = url + '/index.html';
-			else         embdPanel.src = 'welcome.html';
+			if(url === "") embdPanel.src = 'welcome.html';
+			else           embdPanel.src = (url + '/index.html');
+
+			if (url === "") {
+				const selectElem = document.getElementById("DropdownMenu");
+				selectElem.selectedIndex = 0;
+			}
 
 			// Modify URL
 			updatePageParam(url);
@@ -73,10 +65,10 @@
 	<style>
 		body { background:#454752; color:white; margin:0; }
 		#MainFrame { width: 100%; height: 100%; }
-		#MainNavbarOuter { flex-grow: 0; width: 200px; background: #141414; }
-		#NavbarTitle     { text-align: center; font-size: 20px; padding: 1rem 0; }
-		#NavbarInner     { flex-grow: 1; overflow-y: auto; margin: 10px; }
-		#MainContext     { flex-grow: 1; border:0; width: calc(100vw - 200px); }
+		#MainNavbar  { flex-grow: 0; height: auto; background: #141414; }
+		#Title { text-align: center; font-size: 20px; padding: 1rem; }
+		#Options { flex-grow: 1; overflow-y: auto; margin: 10px; display: flex; align-items: center; }
+		#MainContext { flex-grow: 1; border:0; width: calc(100vw); }
 
 		.row { display: flex; flex-direction: row; }
 		.colume { display: flex; flex-direction: column; }
@@ -88,12 +80,64 @@
 		.LinkObj:active { filter: brightness(0.8); }
 		.LinkObj .system-name { color: #aaa; }
 		.LinkObj .game-name   { padding-left: 1rem; }
+
+		select,
+		::picker(select) {
+			appearance: base-select;
+		}
+		select {
+			border: 2px solid #dddddd;
+			background: #eeeeee; color: #000;
+			min-width: 250px;
+			padding: 5px 10px;
+			transition: 0.4s;
+			font-size: 1em;
+		}
+		select:hover, select:focus { background: #dddddd; }
+		select::picker-icon { color: #999999; margin-top: 5px; }
+		select:open::picker-icon { rotate: 180deg; margin-top: 1px; }
+
+		::picker(select) {
+			border: none;
+			background: none;
+			top: calc(anchor(bottom) + 1px);
+		}
+
+		option {
+			display: flex;
+			justify-content: flex-start;
+			gap: 20px;
+
+			border: 2px solid #dddddd;
+			background: #eeeeee;
+			padding: 10px;
+			transition: 0.4s;
+		}
+		option:first-of-type { border-radius: 8px 8px 0 0; }
+		option:last-of-type  { border-radius: 0 0 8px 8px; }
+		option:not(option:last-of-type) { border-bottom: none; }
+		option:nth-of-type(odd) { background: white; }
+
+		option:hover,
+		option:focus { background: #99939f; }
+		option:checked { font-weight: bold; }
+		option::checkmark { order: 1; margin-left: auto; content: "✔"; }
+
+		::picker(select) { opacity: 0; transition: all 0.4s allow-discrete; }
+		::picker(select):popover-open { opacity: 1; }
+		@starting-style {
+			::picker(select):popover-open { opacity: 0; }
+		}
+
 	</style>
 </head>
-<div id="MainFrame" class="row">
-	<div id="MainNavbarOuter" class="colume">
-		<div id="NavbarTitle" class="clickable" onClick="link('')">哈絲的團務彙整站</div>
-		<div id="NavbarInner"></div>
+<div id="MainFrame" class="colume">
+	<div id="MainNavbar" class="row">
+		<div id="Title" class="clickable" onClick="link('')">哈絲的團務彙整站</div>
+		<div id="Options">
+			<select id="DropdownMenu" onchange="select(this)">
+			</select>
+		</div>
 	</div>
 	<iframe id="MainContext" type="text/html" src="" >
 		你的瀏覽器不支援 iframe
