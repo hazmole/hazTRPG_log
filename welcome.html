@@ -1,7 +1,128 @@
 <head>
+<script src="./index.js"></script>
+<script>
+	var INDEX;
+
+	function init(){
+			// Render PageLink Object
+			var options = INDEX.map( (item, idx) => {
+				const imgUrl = (item.imgUrl)? item.imgUrl: "src/img/scroll-quill.svg";
+				const extraInfo = item.info;
+				const extraInfoArr = [];
+				if (extraInfo != undefined) {
+					Object.keys(extraInfo).forEach((key) => {
+						extraInfoArr.push(`<label>${getInfoTitle(key)}</label>：${extraInfo[key]}`);
+					});
+				}
+
+				return `<div class="ReplayBlock">
+					<div class="image"><img src="${imgUrl}" /></div>
+					<div class="info">
+						<div class="header">
+							<div class="title">${ item.title }</div>
+							<div class="btn open" title="閱讀團錄" onClick="postToParentFrame(${ idx })"></div>
+							<div class="btn popup" title="另開視窗" onClick="popup(${ idx })"></div>
+						</div>
+						<div class="extra-info">
+							${ extraInfoArr.map(text => `<div class="into-item">${text}</div>`).join("") }
+						</div>
+					</div>
+				</div>`;
+			});
+			
+			var selectorElem = document.getElementById("MainPanel");
+			selectorElem.innerHTML = options.join('');
+	}
+	function getInfoTitle(key) {
+		switch(key) {
+			case "system": return "系統";
+			case "gm": return "GM";
+			case "member": return "玩家";
+			case "startDate": return "起始時間";
+		}
+		return "???";
+	}
+
+	function postToParentFrame(index) {
+		const data = { 'replay-index': index };
+		window.parent.postMessage(data, "*");
+	}
+	function popup(index) {
+		const replayInfo = INDEX[index];
+		window.open(replayInfo.url + "/index.html", '_blank').focus();
+	}
+
+	window.onload = init;
+</script>
 <style>
-	body { color: #ddd; }
+	body {
+		color: #fff;
+		padding: 1em 2em;
+	}
+	h3 { color: #ddd; }
+	hr {
+		margin: 1rem 0;
+		border-top: 3px double #8c8b8b;
+	}
+
+	#MainPanel {
+		display: flex; flex-direction: column;
+		gap: 1rem;
+		max-height: calc(100vh - 160px);
+	}
+	.ReplayBlock {
+		display: flex; gap: 10px;
+		background-color: #00000050;
+		padding: 10px;
+		width: 100%;
+		max-width: 800px;
+	}
+	.ReplayBlock .image {
+		background-color: #00000050;
+		width: 100px; height: 100px; padding: 5px; border-radius: 5px;
+	}
+	.ReplayBlock .image img { width: 100%; height: 100%; border-radius: 5px; }
+	.ReplayBlock .info { flex-grow: 1; }
+	.ReplayBlock .info .header {
+		display: flex; flex-direction: row; gap: 8px;
+	}
+	.ReplayBlock .info .header > .btn {
+		cursor: pointer;
+		width: 24px; height: 24px;
+	}
+	.ReplayBlock .info .header > .title {
+		flex-grow: 1;
+		font-weight: bold;
+		font-size: 1.2em;
+		margin-bottom: 10px;
+		color: white;
+	}
+	.ReplayBlock .extra-info {
+		display: flex; flex-direction: column;
+		color: #d3d3d3;
+	}
+	
+	.into-item { 
+		background-color: #27292d;
+		padding: 2px 5px; }
+	.into-item:nth-of-type(odd) {
+		background-color: #494a51;
+	}
+
+	.into-item > label {
+		font-weight: bold;
+	}
+
+	.btn.open  { content: url("src/img/open-book.svg"); }
+	.btn.popup { content: url("src/img/expand-wide-svgrepo-com.svg"); }
 </style>
 </head>
 <h3>歡迎來到我的團錄彙整站</h3>
-其實就只是方便自己參照團錄而已，耶
+<p>
+	其實就只是方便自己參照團錄而已，耶
+</p>
+
+<hr/>
+
+<div id="MainPanel">
+</div>

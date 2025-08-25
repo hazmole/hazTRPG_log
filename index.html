@@ -9,12 +9,12 @@
 	<script>
 		var INDEX;
 
-		function init(){
+		function init() {
 			// Render PageLink Object
 			var options = INDEX.map( (link, idx) => {
 				return `<option value="${link.url}"><span class="label">【${link.system}】${link.title}</span></option>`;
 			});
-			var firstOpt = `<option value="" selected disabled><span class="label"><center>── 選擇團錄 ──</center></span></option>`;
+			var firstOpt = `<option value="" selected disabled><span class="label">── 選擇團錄 ──</span></option>`;
 			
 			var selectorElem = document.getElementById("DropdownMenu");
 			selectorElem.innerHTML = [ firstOpt , ...options ].join('');
@@ -23,6 +23,14 @@
 			var pageUrl = getCurrentPageUrl();
 			link(pageUrl);
 		}
+		function onMessage(event) {
+			const index = event.data['replay-index'];
+			const replayInfo = INDEX[index];
+			link(replayInfo.url);
+		}
+
+
+
 		function select(elem) {
 			link(elem.value);
 		}
@@ -61,6 +69,7 @@
 		}
 
 		window.onload = init;
+		window.addEventListener("message", onMessage, false);
 	</script>
 	<style>
 		body { background:#454752; color:white; margin:0; }
