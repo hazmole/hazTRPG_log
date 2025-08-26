@@ -71,6 +71,18 @@ var INDEX = [
 		}
 	},
 	{
+		system: "天鈾大主廚",
+		title: "大吃一驚吧！耶夢加德",
+		url: "Fate-SurpriseJormungandr",
+		imgUrl: "src/img/replay-cover/Fate-SurpriseJormungandr.JPG",
+		info: {
+			system: "命運(FATE)擴充 - 天鈾大主廚(Uranium Chef)",
+			gm: "Hazmole",
+			member: "貓a、Mr.天狼星、影殤、艾芙",
+			startDate: "2018/09/24",
+		}
+	},
+	{
 		system: "神話創世",
 		title: "天堂謳歌",
 		url: "Amadeus-HeavenSong",
