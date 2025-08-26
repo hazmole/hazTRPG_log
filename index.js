@@ -106,4 +106,16 @@ var INDEX = [
 			startDate: "2016/02/08",
 		}
 	},
+	{
+		system: "蟲鳴之時",
+		title: "吞夢的作家",
+		url: "RevoBack-SongOfMushi-DreamEatingManiac",
+		imgUrl: "src/img/replay-cover/RevoCreateBackup.jpg",
+		info: {
+			system: "蟲鳴之時(自創規則)",
+			gm: "Hazmole",
+			member: "Artis、九祭、貓a、MADAO、newisme",
+			startDate: "2012/07/13",
+		}
+	},
 ];
