@@ -1,5 +1,17 @@
 var INDEX = [
 	{
+		system: "FF14 TRPG",
+		title: "塵沙中的水晶",
+		url: "FF14-CrystalInTheSand",
+		imgUrl: "src/img/replay-cover/FF14-login.jpg",
+		info: {
+			system: "FF14 TRPG",
+			gm: "Hazmole",
+			member: "高高、丁、Artis、薩托里",
+			startDate: "2024/12/22",
+		}
+	},
+	{
 		system: "怪物心",
 		title: "海爾頓高校記事",
 		url: "Monsterhearts_HeartOfHeltonHigh",
