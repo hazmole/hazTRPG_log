@@ -107,6 +107,30 @@ var INDEX = [
 		}
 	},
 	{
+		system: "酒吧基礎團",
+		title: "大神的夢遊仙境",
+		url: "RevoBack-BarBasic-DreamlandOfTheOldGod",
+		imgUrl: "src/img/replay-cover/RevoCreateBackup.jpg",
+		info: {
+			system: "酒吧基礎團(創革酒吧2D6)",
+			gm: "Hazmole",
+			member: "裏月、陸合巡、ken6402、ak47662283",
+			startDate: "2013/05/26",
+		}
+	},
+	{
+		system: "蟲鳴之時",
+		title: "囚夢的幻影",
+		url: "RevoBack-SongOfMushi-PhantomOfTheDreamyPrison",
+		imgUrl: "src/img/replay-cover/RevoCreateBackup.jpg",
+		info: {
+			system: "蟲鳴之時(自創規則)",
+			gm: "Hazmole",
+			member: "藍刺蝟、千晴、薩托里、keysgame、Nyxaer、洛席爾",
+			startDate: "2012/10/26",
+		}
+	},
+	{
 		system: "蟲鳴之時",
 		title: "吞夢的作家",
 		url: "RevoBack-SongOfMushi-DreamEatingManiac",
