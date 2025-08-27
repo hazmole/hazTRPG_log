@@ -2,14 +2,22 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:title" content="哈絲的團務彙整站">
 	<meta property="og:type" content="website">
-	<title>哈絲的團務彙整站</title>
+	<!-- ↓↓↓ 只需要改這邊就好 ↓↓↓ -->
+	<meta property="og:title" content="...的團務彙整站">  <!-- 貼到社群網站上時的預覽標題(可不填) -->
+	<meta property="og:image" content="">                <!-- 貼到社群網站上時的預覽縮圖(可不填) -->
+	<meta property="og:description" content="">          <!-- 貼到社群網站上時的預覽說明(可不填) -->
+	<title>...的團務彙整站</title> <!-- 網頁標題 -->
+	<!-- ↑↑↑ 只需要改這邊就好 ↑↑↑ -->
 	<script src="./index.js"></script>
 	<script>
 		var INDEX;
 
 		function init() {
+			// Render Title
+			const titleElem = document.getElementById("Title");
+			titleElem.innerHTML = document.title;
+
 			// Render PageLink Object
 			var options = INDEX.map( (link, idx) => {
 				return `<option value="${link.url}"><span class="label">【${link.system}】${link.title}</span></option>`;
@@ -150,7 +158,7 @@
 </head>
 <div id="MainFrame" class="colume">
 	<div id="MainNavbar" class="row">
-		<div id="Title" class="clickable" onClick="linkByIndex('')">哈絲的團務彙整站</div>
+		<div id="Title" class="clickable" onClick="linkByIndex('')"></div>
 		<div id="Options">
 			<select id="DropdownMenu" onchange="select(this)">
 			</select>

@@ -1,5 +1,5 @@
 var TITLE = "(標題文字)";
 var INDEX = [
-	{	title: "網頁連結", url: "https://www.google.com" },
-	{	title: "Github", url: "https://github.com" },
+	{	title: "Github(外部連結)", url: "https://github.com/hazmole/hazTRPG_log" },
+	{	title: "範例頁面(內部連結)", url: "example.html" },
 ];
