@@ -1,661 +1,1001 @@
-
 <html>
-<head>
-<meta charset="utf-8">
-<meta property="og:title" content="20230126-【神我狩】平安逆刃哀歌">
-<meta property="og:description" content="">
-<title>20230126-【神我狩】平安逆刃哀歌</title>
-<style>
-h1{ color:white; margin: 5px 0; }
-body{ background:#454752; }
-._subtitle { color:#ddd; margin:5px 0 20px 0; }
-._sectTitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
-._hidden { display:none; }
-.center { display:flex; flex-direction:column; align-items:center; }
-#_main { display:flex; flex-direction:column; align-items:end; }
-._script {width: 100%;}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="【神我狩】平安逆刃哀歌">
+        <meta property="og:description" content="">
+        <title>【神我狩】平安逆刃哀歌</title>
+        <style>
+            :root{
+                --color-bg: #454752;
+                --color-title: #FFFFFF;
+                --color-subtitle: #dddddd;
+                --color-talk-bg: #1E1E1E;
+                --color-talk-panel-bg: #2A2A2A;
+                --color-talk-panel-text: #EEEEEE;
+            }
+            body { display:flex; flex-direction:column; align-items:center; background:var(--color-bg); }
+            h1{ margin: 5px 0; color:var(--color-title); }
+            ._hidden { display:none !important; }
+            ._main { display:flex; flex-direction:column; align-items:stretch; gap:10px; width:100%; max-width:1080px; }
+            ._subtitle { color:var(--color-subtitle); margin-top:0; margin-bottom: 20px; }
+            ._sctitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
 
+            ._talk { display:flex; flex-direction:row; gap:2px; background:var(--color-talk-bg); width:100%; border-radius:5px; }
+            ._talk ._lCol { width:110px; flex-shrink:0; margin:6px; margin-right:0; }
+            ._talk ._rCol { flex:1; display:flex; flex-direction: column; }
+            ._talk ._img { width:110px; height:110px; background-repeat:no-repeat; background-size:cover; background-color:#ffffff10; }
+            ._talk ._name { margin:6px; height:20px; font-size:18px; display:flex; justify-content:space-between; }
+            ._talk ._channel { margin-left:5px; color:#888888; display:none; }
+            ._talk ._content { flex:1; margin:6px; background:var(--color-talk-panel-bg); color:var(--color-talk-panel-text); font-size:1.1rem; padding:10px; border-radius:5px; }
+            ._talk._other { width:50%; margin-left:auto; }
+            ._talk._other ._lCol { display:none; }
+            ._talk._other ._name { justify-content:end; }
+            ._talk._other ._channel { display:block; }
+            ._talk._other ._content { background:black; color:white; text-align:right; }
 
-._halt { padding:30px 0; }
-._talk { margin:5px 0; display:flex; border:1px solid black; background:#1e1e1e; color:#eee; width:100%; max-width:1080px; border-radius:5px; }
-._leftCol { width:122px; }
-._rightCol { width:calc(100% - 126px); }
-._actorName{ padding:5px 10px; height:20px; font-size:18px; }
-._actorImg { margin:6px; width:110px; height:110px; background-repeat:no-repeat; background-size:cover; background-color:#2a2a2a; }
-._actorWords { margin:5px; background:#2a2a2a; font-size:1.1rem; padding:10px; height:calc(100% - 60px); border-radius:5px; }
-._sectTitle { border-radius:5px; margin-bottom:5px; }
+            ._halt { padding:30px 0; }
+            ._sctitle { border-radius:5px; }
+            ._bg-img { display:flex; justify-content: center; }
+            ._bg-img img { max-width:100%; max-height:400px; }
 
-@media only screen and (max-width: 400px) {
-._leftCol { width:100px; }
-._rightCol { width:calc(100% - 100px); }
-._actorImg { margin:35px 0 5px 10px; width: 85px; height: 85px; }
-}
+            ._actor_0 ._name { color:#cccccc; content:'GM@Haz'; }
+            ._actor_0 ._img { background-image:url(''); display:none; }
+            ._actor_1 ._name { color:#673ab7; content:'日日野 守'; }
+            ._actor_1 ._img { background-image:url('./img/PC_04.png'); display:block; }
+            ._actor_2 ._name { color:#e0e0e0; content:'鶴丸 国永'; }
+            ._actor_2 ._img { background-image:url('./img/PC_02.png'); display:block; }
+            ._actor_3 ._name { color:#673ab7; content:'太郎太刀'; }
+            ._actor_3 ._img { background-image:url('./img/PC_01.png'); display:block; }
+            ._actor_4 ._name { color:#f09fee; content:'源 清麿'; }
+            ._actor_4 ._img { background-image:url('./img/PC_03.png'); display:block; }
+            ._actor_5 ._name { color:#888888; content:'system'; }
+            ._actor_5 ._img { background-image:url(''); display:none; }
+            ._actor_6 ._name { color:#888888; content:'溯行軍．刀鬼'; }
+            ._actor_6 ._img { background-image:url(''); display:none; }
+            ._actor_7 ._name { color:#888888; content:'溯行軍．劍魔'; }
+            ._actor_7 ._img { background-image:url(''); display:none; }
+            ._actor_8 ._name { color:#888888; content:'獅子王'; }
+            ._actor_8 ._img { background-image:url('./img/NPC_002.png'); display:block; }
+            ._actor_9 ._name { color:#888888; content:'以仁王'; }
+            ._actor_9 ._img { background-image:url('./img/NPC_004.png'); display:block; }
+            ._actor_10 ._name { color:#cccccc; content:'狐之助'; }
+            ._actor_10 ._img { background-image:url('./img/NPC_001.png'); display:block; }
+            ._actor_11 ._name { color:#888888; content:'源賴政'; }
+            ._actor_11 ._img { background-image:url('./img/NPC_003.png'); display:block; }
+            ._actor_12 ._name { color:#888888; content:'溯行軍．蛇刃'; }
+            ._actor_12 ._img { background-image:url(''); display:none; }
+        </style>
+        <meta-data class="_hidden">
+            <channel>
+                _ch_6b3c511f9497: { name:"主要"; main:true; hide:false; }
+            </channel>
+        </meta-data>
+    </head>
+    <body>
+        <div class="_hidden"><version>hazmole_v2.0</version></div>
+        <h1>【神我狩】平安逆刃哀歌</h1>
+        <div class="_subtitle">2023/01/26 - 矯正</div>
 
-._talk.otherCh { width:calc(50%); text-align:right; margin-left:auto; }
-._talk.otherCh ._leftCol { display:none; }
-._talk.otherCh ._rightCol { width:100%; }
-._talk.otherCh ._actorWords { background:black;color:white; }
-
-._actor_0 ._actorName { color: #cccccc; }
-._actor_0 ._actorName::after { content:"GM@Haz"; }
-._actor_0 ._actorImg { background-image:url(); } 
-._actor_1 ._actorName { color: #673ab7; }
-._actor_1 ._actorName::after { content:"日日野 守"; }
-._actor_1 ._actorImg { background-image:url(./img/PC_04.png); } 
-._actor_2 ._actorName { color: #e0e0e0; }
-._actor_2 ._actorName::after { content:"鶴丸 国永"; }
-._actor_2 ._actorImg { background-image:url(./img/PC_02.png); } 
-._actor_3 ._actorName { color: #673ab7; }
-._actor_3 ._actorName::after { content:"太郎太刀"; }
-._actor_3 ._actorImg { background-image:url(./img/PC_01.png); } 
-._actor_4 ._actorName { color: #f09fee; }
-._actor_4 ._actorName::after { content:"源 清麿"; }
-._actor_4 ._actorImg { background-image:url(./img/PC_03.png); } 
-._actor_5 ._actorName { color: #888888; }
-._actor_5 ._actorName::after { content:"system"; }
-._actor_5 ._actorImg { background-image:url(); } 
-._actor_6 ._actorName { color: #888888; }
-._actor_6 ._actorName::after { content:"溯行軍．刀鬼"; }
-._actor_6 ._actorImg { background-image:url(); } 
-._actor_7 ._actorName { color: #888888; }
-._actor_7 ._actorName::after { content:"溯行軍．劍魔"; }
-._actor_7 ._actorImg { background-image:url(); } 
-._actor_8 ._actorName { color: #888888; }
-._actor_8 ._actorName::after { content:"獅子王"; }
-._actor_8 ._actorImg { background-image:url(./img/NPC_002.png); } 
-._actor_9 ._actorName { color: #888888; }
-._actor_9 ._actorName::after { content:"以仁王"; }
-._actor_9 ._actorImg { background-image:url(./img/NPC_004.png); } 
-._actor_10 ._actorName { color: #cccccc; }
-._actor_10 ._actorName::after { content:"狐之助"; }
-._actor_10 ._actorImg { background-image:url(./img/NPC_001.png); } 
-._actor_11 ._actorName { color: #888888; }
-._actor_11 ._actorName::after { content:"源賴政"; }
-._actor_11 ._actorImg { background-image:url(./img/NPC_003.png); } 
-._actor_12 ._actorName { color: #888888; }
-._actor_12 ._actorName::after { content:"溯行軍．蛇刃"; }
-._actor_12 ._actorImg { background-image:url(); } 
-</style>
-</head>
-<body class="center">
-<div class="_hidden">
-<version>hazmole_v1.0</version>
-</div>
-
-<h1>20230126-【神我狩】平安逆刃哀歌</h1>
-<div class="_subtitle"></div>
-
-<div id="_main"><div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">【場景１１】<br>主役：日日野守<br>同行者：全員</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">夜幕低垂，靜謐的寺院早已在月色的照耀下陷入沉睡。<br>靜謐而肅殺的空氣中，只有嘶嘶蟲鳴點綴著寧靜。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">審神者戴上鬼面，將手中符咒散落四周。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">符紙觸地，瞬間發出亮光，在平整的地面上勾勒出鮮紅的輪廓。儀式在不知不覺中已悄然展開，接下來，就得考驗施術者的本領了。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">唐突打破氣氛的，是喀一聲，凶刃出鞘的聲音。<br>隱藏在黑暗中的數只紅色凶眼緊咬著女人的身影，緩緩逼近。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※同行者可以進行登場判定，目標值２</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">2d6+2&gt;2 #幸運判定 (2D6+2&gt;2) ＞ 7[3,4]+2 ＞ 9 ＞ 成功</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">2d6+2&gt;2 #幸運判定 (2D6+2) ＞ 9[4,5]+2 ＞ 11 ＞ 成功</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">2d6+4&gt;2 #幸運判定 (2D6+4&gt;2) ＞ 8[2,6]+4 ＞ 12 ＞ 成功</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「汙穢之物，休想靠近。」太郎踏出步伐，大太刀的反射著月光及儀式的光芒，其中一群的溯行軍就此人頭落地。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「哦，別忘記還有我們啊。」<br>刃光一閃，鶴丸用刀鞘擋下砍向日日守的凶刃，接著反手將對方砍落。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「有破綻。」原本隱身於黑夜中的清麿則是自敵人身後出現，快狠準的一刀刺穿剩下的溯行軍。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">刀劍交鳴的聲音此起彼落，伴隨著重物倒地的悶聲。<br>但這一切喧囂，都被隔絕在硃紅色的結界之外。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">朱紅色的靈紋，隨著月光與禱詞在地面上蔓延開來。<br>穿過木製的寺堂、穿過沉睡的戰士。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">汗水沿著鬼面滴下，足以干涉人心記憶的大結界已然將平等寺整個圈起。<br>剩下的，就是注入靈力，催動法陣去改寫這個世界的現實了。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">然而，這麼做真的好嗎？有這麼一瞬間，這個念頭襲上了妳的心頭。<br>為了歷史的軌跡，擅自玩弄人們的記憶與感情……<br>在綻放靈光的結界陣前，妳可以感覺到來自世界的反動。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">手緩緩伸出，面具下的日日野被世界意志一震，胸口一甜，鮮血順著下唇緩緩流下，滲出面具之外。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「或許，這就是時之政府送審神者親上戰場的原因吧。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">一抹微笑浮於臉龐，鮮血緩緩滴落，靈力注入處正緩緩散發著光芒。審神者已做好啟動結界的準備。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※創建法則障礙：認知竄改（房規，流程比照消去法則障礙）<br>創造必要人數：３人<br>創造判定：知性，難度１２<br>特殊傷害：４Ｄ<br>懲罰：【精神】－１<br>效果Ｂ：－<br>效果Ａ：將２個［靈力］變更為任意骰面</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※將必要人數－２，難度＋４</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">發動【靈紋燃燒：物理超越】<br>→增加1顆骰子</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">1d6 #靈紋消耗 (1D6) ＞ 2</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">3d6+8 #知性判定 (3D6+8) ＞ 9[1,3,5]+8 ＞ 17</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※創建成功</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">朱紅色的紋理明暗，彷彿心臟脈動。<br>舞動的靈光在月色下紛飛，如同蝶舞一般，沉入熟睡將士們的夢中。<br>啃咬著，扭曲著……</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">眼見術式發動成功，日日野如脫力般跌坐在原地，面具也隨之落地。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">唇邊的鮮血早已凝結，在被儀式反動凍得蒼白的臉上，顯得格外嫣紅。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「那麼，接下來，就拜託各位刀劍男士們了。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">轉過頭，審神者說出失去意識前的最後一言。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「......！」<br>眼見儀式完成，鶴丸早一步回到日日野身旁，左手一伸正好接住倒下的日日野。<br></div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「呼~好險。」<br>鶴丸輕輕地幫對方喬好一個比較舒適的躺姿後，再次回到同伴身旁。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……」<br>注視著儀式完成後的光景，溯行軍們收刀入鞘，也不再戀棧。<br>留下了幾個斷後用的兵力後，來襲的敵人們重新沒入黑暗。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">──儘管如此，那緊繃的殺意仍然沒有消退。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">夜風湧動，烏雲捲起，蓋住了明月。<br>在那麼一瞬間，你們彷彿都聽到了一聲清脆而肅殺的金屬聲。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">彷彿要將天地都染成鮮紅，如同要刺穿心臟的冰冷，<br>強烈而鮮紅的殺意直指你們而來。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">在靜謐的黑夜中，蟄伏於時代之中的凶劍終於出鞘。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">──這是宣戰布告。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「審神者，還起得來嗎？」清麿趁著空檔來到審神者身邊，一手抱起人詢問的同時另一手依然握在刀上警戒著四周。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「多謝。」聲音虛弱，但聽得出精神還不錯。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「雖說終究不免一戰，但溯行軍也挺著急的呢。」身著和服的女性苦笑著，一邊試著掙脫目前被撈起來的狀態。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">看樣子是不太習慣被人抱著。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「可惜沒有時間多休息了呢。」清麿露出了苦惱的笑容，一邊輕輕放開手讓審神者站好：「敵人的本陣即將到來，得做好準備呢。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「前方就是污穢之地了，做好十二萬分的準備吧。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="halt"><div class="_halt"></div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※場景結束，全體可以締結感情，或變更原有的感情</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">源清麿：隊長</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="halt"><div class="_halt"></div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">【場景１２】<br>最終決戰</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">任憑那肅殺的夜風吹拂己身，迎著毫不掩飾的敵意前進。<br>在被染成鮮紅的月色重新灑下之際，映入你們眼簾的，是部屬在平等院前的漆黑軍勢。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">拋下了偽裝用的軍鎧，那妖異的武裝下是無窮的殺意。<br>利用了源家軍準備好的物資與地形，溯行軍們嚴陣以待，數百把出鞘的凶刃迎著月色，閃爍著冰冷的寒光。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_7">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……」<br>立於陣中，宛如仁王般的巨漢手中握著尺寸驚人的大劍，冷冽的眼神注視著接近而來的你們。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">戰場緊張的空氣宛如尖刺般刺激著皮膚，面對此情此景，鶴丸露出了興奮的笑容。<br>「準備好了嗎？來讓敵人們大吃一驚吧。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「嗯，無論如何，我們都得好好執行刀劍男士的義務呢。」清麿調整好自己的帽子，淡粉的瞳眸閃爍著鮮明的紫。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「在黎明前結束這場戰鬥吧。」金色的瞳孔一如既往的冷漠注視著眼前的一切。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_8">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……必須，守護好爺爺的歷史……」<br>獅子王握著刀柄，閉著眼睛，深吸一口氣。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「讓時間和歷史回歸正確的地方吧。」重新戴好面具，審神者立於眾人身後，緩緩開口。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">風湧，雲起。<br>在猙獰殺意下，某一面源家的旗幟裂開，發出了布匹被撕裂的臨死之音。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">──如同宣告了開戰的鐘聲。<br>在無聲的夜色下，決定歷史的總力戰，即將在此上演最後一幕。</div>
-</div>
-</div></div><!--EOS--></div>
-</body>
+        <div class="_main">
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">【場景１１】<br>主役：日日野守<br>同行者：全員</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">夜幕低垂，靜謐的寺院早已在月色的照耀下陷入沉睡。<br>靜謐而肅殺的空氣中，只有嘶嘶蟲鳴點綴著寧靜。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">審神者戴上鬼面，將手中符咒散落四周。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">符紙觸地，瞬間發出亮光，在平整的地面上勾勒出鮮紅的輪廓。儀式在不知不覺中已悄然展開，接下來，就得考驗施術者的本領了。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">唐突打破氣氛的，是喀一聲，凶刃出鞘的聲音。<br>隱藏在黑暗中的數只紅色凶眼緊咬著女人的身影，緩緩逼近。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">※同行者可以進行登場判定，目標值２</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">2d6+2&gt;2 #幸運判定 (2D6+2&gt;2) ＞ 7[3,4]+2 ＞ 9 ＞ 成功</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">2d6+2&gt;2 #幸運判定 (2D6+2) ＞ 9[4,5]+2 ＞ 11 ＞ 成功</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">2d6+4&gt;2 #幸運判定 (2D6+4&gt;2) ＞ 8[2,6]+4 ＞ 12 ＞ 成功</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「汙穢之物，休想靠近。」太郎踏出步伐，大太刀的反射著月光及儀式的光芒，其中一群的溯行軍就此人頭落地。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「哦，別忘記還有我們啊。」<br>刃光一閃，鶴丸用刀鞘擋下砍向日日守的凶刃，接著反手將對方砍落。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「有破綻。」原本隱身於黑夜中的清麿則是自敵人身後出現，快狠準的一刀刺穿剩下的溯行軍。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">刀劍交鳴的聲音此起彼落，伴隨著重物倒地的悶聲。<br>但這一切喧囂，都被隔絕在硃紅色的結界之外。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">朱紅色的靈紋，隨著月光與禱詞在地面上蔓延開來。<br>穿過木製的寺堂、穿過沉睡的戰士。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">汗水沿著鬼面滴下，足以干涉人心記憶的大結界已然將平等寺整個圈起。<br>剩下的，就是注入靈力，催動法陣去改寫這個世界的現實了。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">然而，這麼做真的好嗎？有這麼一瞬間，這個念頭襲上了妳的心頭。<br>為了歷史的軌跡，擅自玩弄人們的記憶與感情……<br>在綻放靈光的結界陣前，妳可以感覺到來自世界的反動。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">手緩緩伸出，面具下的日日野被世界意志一震，胸口一甜，鮮血順著下唇緩緩流下，滲出面具之外。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「或許，這就是時之政府送審神者親上戰場的原因吧。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">一抹微笑浮於臉龐，鮮血緩緩滴落，靈力注入處正緩緩散發著光芒。審神者已做好啟動結界的準備。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">※創建法則障礙：認知竄改（房規，流程比照消去法則障礙）<br>創造必要人數：３人<br>創造判定：知性，難度１２<br>特殊傷害：４Ｄ<br>懲罰：【精神】－１<br>效果Ｂ：－<br>效果Ａ：將２個［靈力］變更為任意骰面</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">※將必要人數－２，難度＋４</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">發動【靈紋燃燒：物理超越】<br>→增加1顆骰子</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">1d6 #靈紋消耗 (1D6) ＞ 2</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">3d6+8 #知性判定 (3D6+8) ＞ 9[1,3,5]+8 ＞ 17</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">※創建成功</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">朱紅色的紋理明暗，彷彿心臟脈動。<br>舞動的靈光在月色下紛飛，如同蝶舞一般，沉入熟睡將士們的夢中。<br>啃咬著，扭曲著……</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">眼見術式發動成功，日日野如脫力般跌坐在原地，面具也隨之落地。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">唇邊的鮮血早已凝結，在被儀式反動凍得蒼白的臉上，顯得格外嫣紅。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「那麼，接下來，就拜託各位刀劍男士們了。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">轉過頭，審神者說出失去意識前的最後一言。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「......！」<br>眼見儀式完成，鶴丸早一步回到日日野身旁，左手一伸正好接住倒下的日日野。<br></div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「呼~好險。」<br>鶴丸輕輕地幫對方喬好一個比較舒適的躺姿後，再次回到同伴身旁。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            溯行軍．刀鬼
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「……」<br>注視著儀式完成後的光景，溯行軍們收刀入鞘，也不再戀棧。<br>留下了幾個斷後用的兵力後，來襲的敵人們重新沒入黑暗。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">──儘管如此，那緊繃的殺意仍然沒有消退。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">夜風湧動，烏雲捲起，蓋住了明月。<br>在那麼一瞬間，你們彷彿都聽到了一聲清脆而肅殺的金屬聲。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">彷彿要將天地都染成鮮紅，如同要刺穿心臟的冰冷，<br>強烈而鮮紅的殺意直指你們而來。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">在靜謐的黑夜中，蟄伏於時代之中的凶劍終於出鞘。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">──這是宣戰布告。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「審神者，還起得來嗎？」清麿趁著空檔來到審神者身邊，一手抱起人詢問的同時另一手依然握在刀上警戒著四周。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「多謝。」聲音虛弱，但聽得出精神還不錯。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「雖說終究不免一戰，但溯行軍也挺著急的呢。」身著和服的女性苦笑著，一邊試著掙脫目前被撈起來的狀態。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">看樣子是不太習慣被人抱著。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「可惜沒有時間多休息了呢。」清麿露出了苦惱的笑容，一邊輕輕放開手讓審神者站好：「敵人的本陣即將到來，得做好準備呢。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「前方就是污穢之地了，做好十二萬分的準備吧。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="halt">
+    <div class="_halt"></div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">※場景結束，全體可以締結感情，或變更原有的感情</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">源清麿：隊長</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="halt">
+    <div class="_halt"></div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">【場景１２】<br>最終決戰</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">任憑那肅殺的夜風吹拂己身，迎著毫不掩飾的敵意前進。<br>在被染成鮮紅的月色重新灑下之際，映入你們眼簾的，是部屬在平等院前的漆黑軍勢。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">拋下了偽裝用的軍鎧，那妖異的武裝下是無窮的殺意。<br>利用了源家軍準備好的物資與地形，溯行軍們嚴陣以待，數百把出鞘的凶刃迎著月色，閃爍著冰冷的寒光。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_7 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            溯行軍．劍魔
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「……」<br>立於陣中，宛如仁王般的巨漢手中握著尺寸驚人的大劍，冷冽的眼神注視著接近而來的你們。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">戰場緊張的空氣宛如尖刺般刺激著皮膚，面對此情此景，鶴丸露出了興奮的笑容。<br>「準備好了嗎？來讓敵人們大吃一驚吧。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「嗯，無論如何，我們都得好好執行刀劍男士的義務呢。」清麿調整好自己的帽子，淡粉的瞳眸閃爍著鮮明的紫。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「在黎明前結束這場戰鬥吧。」金色的瞳孔一如既往的冷漠注視著眼前的一切。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_8 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            獅子王
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「……必須，守護好爺爺的歷史……」<br>獅子王握著刀柄，閉著眼睛，深吸一口氣。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">「讓時間和歷史回歸正確的地方吧。」重新戴好面具，審神者立於眾人身後，緩緩開口。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">風湧，雲起。<br>在猙獰殺意下，某一面源家的旗幟裂開，發出了布匹被撕裂的臨死之音。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">6b3c511f9497</channel>
+        </div>
+        <div class="_content">──如同宣告了開戰的鐘聲。<br>在無聲的夜色下，決定歷史的總力戰，即將在此上演最後一幕。</div>
+    </div>
+</div>
+</div><!--EOS-->
+        </div>
+    </body>
 </html>

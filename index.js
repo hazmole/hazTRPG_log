@@ -36,6 +36,18 @@ var INDEX = [
 	},
 	{
 		system: "神我狩",
+		title: "平安逆刃哀歌",
+		url: "Kamigakari-HeianSakabadouElegy",
+		imgUrl: "src/img/replay-cover/Kamigakari-HeianSakabadouElegy.jpg",
+		info: {
+			system: "武装伝奇RPG 神我狩",
+			gm: "Hazmole",
+			member: "高高、丁、深雪、洛嵐",
+			startDate: "2022/12/15",
+		}
+	},
+	{
+		system: "神我狩",
 		title: "夢之國物語",
 		url: "Kamigakari-StoryOfDreamland",
 		imgUrl: "src/img/replay-cover/StoryOfDreamland.png",

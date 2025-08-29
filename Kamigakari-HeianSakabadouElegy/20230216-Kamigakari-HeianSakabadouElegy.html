@@ -1,939 +1,1450 @@
-
 <html>
-<head>
-<meta charset="utf-8">
-<meta property="og:title" content="20230216-【神我狩】平安逆刃哀歌">
-<meta property="og:description" content="">
-<title>20230216-【神我狩】平安逆刃哀歌</title>
-<style>
-h1{ color:white; margin: 5px 0; }
-body{ background:#454752; }
-._subtitle { color:#ddd; margin:5px 0 20px 0; }
-._sectTitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
-._hidden { display:none; }
-.center { display:flex; flex-direction:column; align-items:center; }
-#_main { display:flex; flex-direction:column; align-items:end; }
-._script {width: 100%;}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="【神我狩】平安逆刃哀歌">
+        <meta property="og:description" content="">
+        <title>【神我狩】平安逆刃哀歌</title>
+        <style>
+            :root{
+                --color-bg: #454752;
+                --color-title: #FFFFFF;
+                --color-subtitle: #dddddd;
+                --color-talk-bg: #1E1E1E;
+                --color-talk-panel-bg: #2A2A2A;
+                --color-talk-panel-text: #EEEEEE;
+            }
+            body { display:flex; flex-direction:column; align-items:center; background:var(--color-bg); }
+            h1{ margin: 5px 0; color:var(--color-title); }
+            ._hidden { display:none !important; }
+            ._main { display:flex; flex-direction:column; align-items:stretch; gap:10px; width:100%; max-width:1080px; }
+            ._subtitle { color:var(--color-subtitle); margin-top:0; margin-bottom: 20px; }
+            ._sctitle { background:#ddd; margin-top:30px; padding:10px;font-weight:bold;font-size:1.3rem;text-align:center; }
 
+            ._talk { display:flex; flex-direction:row; gap:2px; background:var(--color-talk-bg); width:100%; border-radius:5px; }
+            ._talk ._lCol { width:110px; flex-shrink:0; margin:6px; margin-right:0; }
+            ._talk ._rCol { flex:1; display:flex; flex-direction: column; }
+            ._talk ._img { width:110px; height:110px; background-repeat:no-repeat; background-size:cover; background-color:#ffffff10; }
+            ._talk ._name { margin:6px; height:20px; font-size:18px; display:flex; justify-content:space-between; }
+            ._talk ._channel { margin-left:5px; color:#888888; display:none; }
+            ._talk ._content { flex:1; margin:6px; background:var(--color-talk-panel-bg); color:var(--color-talk-panel-text); font-size:1.1rem; padding:10px; border-radius:5px; }
+            ._talk._other { width:50%; margin-left:auto; }
+            ._talk._other ._lCol { display:none; }
+            ._talk._other ._name { justify-content:end; }
+            ._talk._other ._channel { display:block; }
+            ._talk._other ._content { background:black; color:white; text-align:right; }
 
-._halt { padding:30px 0; }
-._talk { margin:5px 0; display:flex; border:1px solid black; background:#1e1e1e; color:#eee; width:100%; max-width:1080px; border-radius:5px; }
-._leftCol { width:122px; }
-._rightCol { width:calc(100% - 126px); }
-._actorName{ padding:5px 10px; height:20px; font-size:18px; }
-._actorImg { margin:6px; width:110px; height:110px; background-repeat:no-repeat; background-size:cover; background-color:#2a2a2a; }
-._actorWords { margin:5px; background:#2a2a2a; font-size:1.1rem; padding:10px; height:calc(100% - 60px); border-radius:5px; }
-._sectTitle { border-radius:5px; margin-bottom:5px; }
+            ._halt { padding:30px 0; }
+            ._sctitle { border-radius:5px; }
+            ._bg-img { display:flex; justify-content: center; }
+            ._bg-img img { max-width:100%; max-height:400px; }
 
-@media only screen and (max-width: 400px) {
-._leftCol { width:100px; }
-._rightCol { width:calc(100% - 100px); }
-._actorImg { margin:35px 0 5px 10px; width: 85px; height: 85px; }
-}
+            ._actor_0 ._name { color:#cccccc; content:'GM@Haz'; }
+            ._actor_0 ._img { background-image:url(''); display:none; }
+            ._actor_1 ._name { color:#888888; content:'源賴政'; }
+            ._actor_1 ._img { background-image:url('./img/NPC_003.png'); display:block; }
+            ._actor_2 ._name { color:#888888; content:'少年'; }
+            ._actor_2 ._img { background-image:url('./img/NPC_002_2.png'); display:block; }
+            ._actor_3 ._name { color:#673ab7; content:'日日野 守'; }
+            ._actor_3 ._img { background-image:url('./img/PC_04.png'); display:block; }
+            ._actor_4 ._name { color:#888888; content:'獅子王'; }
+            ._actor_4 ._img { background-image:url('./img/NPC_002.png'); display:block; }
+            ._actor_5 ._name { color:#cccccc; content:'狐之助'; }
+            ._actor_5 ._img { background-image:url('./img/NPC_001.png'); display:block; }
+            ._actor_6 ._name { color:#f09fee; content:'源 清麿'; }
+            ._actor_6 ._img { background-image:url('./img/PC_03.png'); display:block; }
+            ._actor_7 ._name { color:#e0e0e0; content:'鶴丸 国永'; }
+            ._actor_7 ._img { background-image:url('./img/PC_02.png'); display:block; }
+            ._actor_8 ._name { color:#673ab7; content:'太郎太刀'; }
+            ._actor_8 ._img { background-image:url('./img/PC_01.png'); display:block; }
+            ._actor_9 ._name { color:#888888; content:'小烏丸'; }
+            ._actor_9 ._img { background-image:url(''); display:none; }
+            ._actor_10 ._name { color:#888888; content:'system'; }
+            ._actor_10 ._img { background-image:url(''); display:none; }
+            ._actor_13 ._name { color:#888888; content:'以仁王'; }
+            ._actor_13 ._img { background-image:url('./img/NPC_004.png'); display:block; }
+        </style>
+        <meta-data class="_hidden">
+            <channel>
+                _ch_420eafebb0e1: { name:"主要"; main:true; hide:false; }
+            </channel>
+        </meta-data>
+    </head>
+    <body>
+        <div class="_hidden"><version>hazmole_v2.0</version></div>
+        <h1>【神我狩】平安逆刃哀歌</h1>
+        <div class="_subtitle">2023/02/16 - 尾聲</div>
 
-._talk.otherCh { width:calc(50%); text-align:right; margin-left:auto; }
-._talk.otherCh ._leftCol { display:none; }
-._talk.otherCh ._rightCol { width:100%; }
-._talk.otherCh ._actorWords { background:black;color:white; }
-
-._actor_0 ._actorName { color: #cccccc; }
-._actor_0 ._actorName::after { content:"GM@Haz"; }
-._actor_0 ._actorImg { background-image:url(); } 
-._actor_1 ._actorName { color: #888888; }
-._actor_1 ._actorName::after { content:"源賴政"; }
-._actor_1 ._actorImg { background-image:url(./img/NPC_003.png); } 
-._actor_2 ._actorName { color: #888888; }
-._actor_2 ._actorName::after { content:"少年"; }
-._actor_2 ._actorImg { background-image:url(./img/NPC_002_2.png); } 
-._actor_3 ._actorName { color: #673ab7; }
-._actor_3 ._actorName::after { content:"日日野 守"; }
-._actor_3 ._actorImg { background-image:url(./img/PC_04.png); } 
-._actor_4 ._actorName { color: #888888; }
-._actor_4 ._actorName::after { content:"獅子王"; }
-._actor_4 ._actorImg { background-image:url(./img/NPC_002.png); } 
-._actor_5 ._actorName { color: #cccccc; }
-._actor_5 ._actorName::after { content:"狐之助"; }
-._actor_5 ._actorImg { background-image:url(./img/NPC_001.png); } 
-._actor_6 ._actorName { color: #f09fee; }
-._actor_6 ._actorName::after { content:"源 清麿"; }
-._actor_6 ._actorImg { background-image:url(./img/PC_03.png); } 
-._actor_7 ._actorName { color: #e0e0e0; }
-._actor_7 ._actorName::after { content:"鶴丸 国永"; }
-._actor_7 ._actorImg { background-image:url(./img/PC_02.png); } 
-._actor_8 ._actorName { color: #673ab7; }
-._actor_8 ._actorName::after { content:"太郎太刀"; }
-._actor_8 ._actorImg { background-image:url(./img/PC_01.png); } 
-._actor_9 ._actorName { color: #888888; }
-._actor_9 ._actorName::after { content:"小烏丸"; }
-._actor_9 ._actorImg { background-image:url(); } 
-._actor_10 ._actorName { color: #888888; }
-._actor_10 ._actorName::after { content:"system"; }
-._actor_10 ._actorImg { background-image:url(); } 
-._actor_13 ._actorName { color: #888888; }
-._actor_13 ._actorName::after { content:"以仁王"; }
-._actor_13 ._actorImg { background-image:url(./img/NPC_004.png); } 
-</style>
-</head>
-<body class="center">
-<div class="_hidden">
-<version>hazmole_v1.0</version>
-</div>
-
-<h1>20230216-【神我狩】平安逆刃哀歌</h1>
-<div class="_subtitle"></div>
-
-<div id="_main"><div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">【場景１３】</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">平等院內，青松下。<br>風起，葉落，在這安寧的庭院之中，外頭喧囂的殺喊聲似乎也減弱了許多</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">翠綠的草皮被鮮血浸染，負傷的老人腳步踉蹌，在少年的攙扶中緩緩跪坐下來。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……剛剛出陣斷後的是誰？」喘息片刻，老人出聲詢問。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……」少年遲疑了一下，低下頭，不敢直視老人的臉：「……是仲綱大人。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「他說……至少希望能讓您有機會離開這裡。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「是嗎……仲綱那孩子也……」<br>老人沒有把話說完，身形一晃，摀著側腹幾乎要摔倒。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">──身負重傷，大勢已去，就算離開這裡，又能去到哪裡？</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「賴政大人……！」<br>少年慌忙撐住了差點倒下的老人，連聲呼喚。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「不礙事……不過，怕是走不了了。」<br>賴政回以苦笑，硬是撐起身體坐直。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……」<br>少年沒有回答，表情明顯暗了下來。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">他知道，賴政說的是實話。<br>……而賴政接下來要說的話，他也知道。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「最後，再拜託你了。」<br>賴政輕嘆，從懷中拿出和扇，莊重的擺放到地上。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">接著，隨著清脆的金屬聲，腰間那把特別輕巧的太刀也終於出竅。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">刀身修長，黑漆沉穩。<br>這把由二條天皇賜贈的太刀，如今刃口向內，意圖自不言而喻，</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「賴政大人……」<br>少年的聲音像是快要哭出來一樣。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「我死之後，把我的首級沉入宇治川……不要讓平家的人糟蹋了。」<br>閉上雙眼，老人的聲音很平靜，似乎對這樣的局面早有了心理準備。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_2">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……是。」<br>軍盔底下傳來吸鼻子的聲音，少年低下頭，看不到表情。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……抱歉，連累你們了。」<br>長嘆一口氣，賴政抬起頭，望著天。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">手指撫過鋒利的刀刃，看著刃面倒映的身影，老者深吸一口氣。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_1">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「木既埋沒，何來花開。」<br>「時運不濟，唯留悲嘆。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">將心中之念寄於和歌，老者低吟著最後的辭世詞，緩緩閉上眼。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">枯葉落，紅花開。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">在少年的低泣聲中，源賴政平靜的，滿懷遺憾的，迎接了自己的命運。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="halt"><div class="_halt"></div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「塵歸塵、土歸土、時間和命運也該回到它應在的位置。」和服上依舊佈滿血汙，遍體麟傷的審神者揭下鬼面，來到老人與少年身旁。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「帶著這些，朝著更遠的道路前進吧。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">手輕輕拂過少年蓬鬆的頭髮，日日野平靜的開口。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……我知道。」<br>擦掉臉上的淚痕，獅子王吸了吸鼻子，閉上眼睛。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……但是，我接下來該朝著哪裡前進呢？」<br>少年的表情有些迷惘。在這個時代誕生的他，並不屬於任何人。<br>失去了主人的刀，又有什麼存在意義呢？</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">靜靜的看著獅子王，審神者思索了片刻，向著少年拋出了邀請。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「不嫌棄的話，就跟著我走吧。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……那麼，以後請多多指教。」<br>抬起頭，獅子王試著對妳回以開朗的微笑。<br>……但那硬擠出的笑容之下，那揮之不去的哀傷卻怎麼也無法掩飾。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「審神者大人的本丸是什麼樣子呢？不知道有沒有我認識的人呢？」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">你們在這個時代的任務結束了。<br>溯行軍被消滅，扭曲的歷史也被重新導正。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">隨著術式的靈光飄散，你們的身影從這個歷史上消失了。<br>但有些東西即使結束了，也不會消失……</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="halt"><div class="_halt"></div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">【場景１４】<br>登場人物：全員</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">回到了本丸，迎接你們的是溫暖的微風。<br>以及毛茸茸的式神。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_5">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「各位辛苦了，歡迎回來～」<br>狐之助舉起右掌，向你們招呼。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「這算是任務告一段落了……呢，大家狀況如何？」看了眼跟著一起回來的男士們與審神者。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「托您的福，並無大礙。」雖然身上傷勢不少，但審神者看起來氣色還不錯。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_7">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「啊，還行，沒什麼問題。」雖然但著倦容卻依然笑著。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_8">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「有些疲憊，但並無大礙。」太郎隨意的抹了抹自己身上的血液。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「這邊才是，受各位照顧了。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_7">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「別這麼說，多虧隊長大人的指揮，才讓我們戰鬥非常順利。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……是，我沒事！」<br>獅子王慢了半刻，才刻意有精神的回答道。<br>──說是這樣說，但他的身體確實已經破破爛爛的了。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……看來需要先手入呢，審神者方便嗎？」露出了苦笑。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「嘛......回到本丸應該就會有人協助幫忙處理了。」不知道是鬆懈下來還是累了，審神者的語氣又開始隨便了。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">順帶一提，上面這句話浮現的同時，日日野腦袋裡幫忙的最佳人選是小烏丸。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_9">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">說人人到，小烏丸從廊下走出，一臉苦笑的看向把自己弄得滿身是傷的自家審神者。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_9">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「諸位辛苦了，咱家的審神者應該沒有給各位添麻煩吧。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「他表現得很好哦。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_8">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「這次的任務情況十分特殊，若是沒有審神者的幫助，我們可能沒辦法全須全尾的回來。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_7">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「哪裡，真要說應該是我們給你們家審神者添麻煩才對。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「你們這樣誇我，我會不好意思的啦......」一臉傻笑的日日野看起來完全不像戰場上凜然的樣子。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「……那個，我的名字是獅子王，初來乍到，以後還請多多指教！」<br>明顯有些緊張，獅子王向小烏丸打了個招呼。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_9">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">一臉拿審神者沒辦法的樣子，小烏丸苦笑著開口，「為父代替本丸所有孩子感謝諸位，接下來的事就交給吾吧。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_9">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「無須拘束，日後吾等既為平等的存在，你還得早日習慣本丸的生活。」看著獅子王，小烏丸露出了平靜的笑容。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_9">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「首先，果然還是該先領你去處理一下傷勢呢。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_4">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「是！來去大修理一下……」<br>獅子王舉起手，精神的回答。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「辛苦了，整件事情的報告整理就交給我吧，各位儘早回到自己的本丸休息如何呢？」看著略顯疲態的夥伴們，源清麿說著。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_8">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「好的，感謝隊長，那麼我這邊就先告辭了。」太郎點點頭，便轉身離開了。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_7">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「嗯，那就這樣吧，有緣演練場再見囉。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">「嗯，之後見。」</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">彼此告別，在平安回到了各自的本丸後，這次的任務也終於畫下了圓滿的終點。<br>然而，即使任務結束，還是有許多的東西被留了下來。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">溯行軍異樣的行為，確認道智慧個體的存在，無疑讓時之政府的警惕程度上升。考量到未來再次與類似敵人交手的可能，你們的任務執行方針也自然需要變化。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">親自手刃了原主的獅子王，儘管表面故作開朗，但心裡的傷口一時半刻也難以癒合。在未來的相處中，能否讓他真正解開心傷，感受到歸屬感，也成為了日日野本丸的重要課題之一。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">－－守護歷史的意義為何？<br>對於你們而言，這次的任務無疑再一次的向你們發問。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">無論如何，刀劍男士們的戰鬥，還將持續下去。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="sect_title"><div class="_sectTitle">團後結算</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※法則障礙「歷史竄改」解除：<br>→全體恢復６點靈紋</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※結算奇御魂的使用：</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_8">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">變換成愚者黃金，獲得3000G。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">變換成愚者黃金，獲得3000G。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">變換成愚者黃金，獲得3000G。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_7">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">變換成愚者黃金，獲得3000G。</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※消除感情，恢復4D6點靈紋：</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">4D6 恢復靈紋 (4D6) ＞ 16[3,3,5,5] ＞ 16<br>→靈紋:9+6+16 &gt; 0，全恢復</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_7">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">4D6 恢復靈紋 (4D6) ＞ 13[1,2,4,6] ＞ 13<br>→靈紋:-8+6+13 &gt; 0，全恢復</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_8">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">4D6 恢復靈紋 (4D6) ＞ 19[2,5,6,6] ＞ 19<br>→靈紋:-12+6+19 &gt; 0，全恢復</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">4D6 恢復靈紋 (4D6) ＞ 12[2,3,3,4] ＞ 12<br>→靈紋:20+6+12 &gt; 0，全恢復</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※結算戰利品分配：</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_8">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">獲得 刀裝碎片．恨鐵／物Ｄ+2：1000G （效果值:2）</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_7">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">獲得 刀裝碎片．恨鐵／物Ｄ+2：1000G （效果值:2）<br>獲得 刀裝碎片．重槍／體力+1：500G （效果值:1）</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_6">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">獲得 刀裝碎片．蛇棘／移動+2：1000G （效果值:2）<br>獲得 刀裝碎片．飛矢／行動+1：500G （效果值:1）</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_3">
-<div class="_leftCol">
-<div class="_actorImg "></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">獲得 刀裝碎片．破魔／精神+2：1000G （效果值:2）<br>獲得 刀裝碎片．韌刃／生命+3：500G （效果值:1）</div>
-</div>
-</div></div><!--EOS-->
-<div class="_script" data-type="talk">
-<div class="_talk mainCh _actor_0">
-<div class="_leftCol">
-<div class="_actorImg _hidden"></div>
-</div>
-<div class="_rightCol">
-<div class="_actorName"></div>
-<div class="_actorWords">※結算經驗值與報酬金：<br>→全體獲得3000G（奇御魂）<br>→全體獲得200經驗值</div>
-</div>
-</div></div><!--EOS--></div>
-</body>
+        <div class="_main">
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">【場景１３】</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">平等院內，青松下。<br>風起，葉落，在這安寧的庭院之中，外頭喧囂的殺喊聲似乎也減弱了許多</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">翠綠的草皮被鮮血浸染，負傷的老人腳步踉蹌，在少年的攙扶中緩緩跪坐下來。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源賴政
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……剛剛出陣斷後的是誰？」喘息片刻，老人出聲詢問。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            少年
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……」少年遲疑了一下，低下頭，不敢直視老人的臉：「……是仲綱大人。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            少年
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「他說……至少希望能讓您有機會離開這裡。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源賴政
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「是嗎……仲綱那孩子也……」<br>老人沒有把話說完，身形一晃，摀著側腹幾乎要摔倒。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源賴政
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">──身負重傷，大勢已去，就算離開這裡，又能去到哪裡？</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            少年
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「賴政大人……！」<br>少年慌忙撐住了差點倒下的老人，連聲呼喚。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源賴政
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「不礙事……不過，怕是走不了了。」<br>賴政回以苦笑，硬是撐起身體坐直。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            少年
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……」<br>少年沒有回答，表情明顯暗了下來。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">他知道，賴政說的是實話。<br>……而賴政接下來要說的話，他也知道。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源賴政
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「最後，再拜託你了。」<br>賴政輕嘆，從懷中拿出和扇，莊重的擺放到地上。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">接著，隨著清脆的金屬聲，腰間那把特別輕巧的太刀也終於出竅。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">刀身修長，黑漆沉穩。<br>這把由二條天皇賜贈的太刀，如今刃口向內，意圖自不言而喻，</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            少年
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「賴政大人……」<br>少年的聲音像是快要哭出來一樣。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源賴政
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「我死之後，把我的首級沉入宇治川……不要讓平家的人糟蹋了。」<br>閉上雙眼，老人的聲音很平靜，似乎對這樣的局面早有了心理準備。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_2 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            少年
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……是。」<br>軍盔底下傳來吸鼻子的聲音，少年低下頭，看不到表情。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源賴政
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……抱歉，連累你們了。」<br>長嘆一口氣，賴政抬起頭，望著天。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">手指撫過鋒利的刀刃，看著刃面倒映的身影，老者深吸一口氣。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_1 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源賴政
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「木既埋沒，何來花開。」<br>「時運不濟，唯留悲嘆。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">將心中之念寄於和歌，老者低吟著最後的辭世詞，緩緩閉上眼。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">枯葉落，紅花開。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">在少年的低泣聲中，源賴政平靜的，滿懷遺憾的，迎接了自己的命運。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="halt">
+    <div class="_halt"></div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「塵歸塵、土歸土、時間和命運也該回到它應在的位置。」和服上依舊佈滿血汙，遍體麟傷的審神者揭下鬼面，來到老人與少年身旁。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「帶著這些，朝著更遠的道路前進吧。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">手輕輕拂過少年蓬鬆的頭髮，日日野平靜的開口。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            獅子王
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……我知道。」<br>擦掉臉上的淚痕，獅子王吸了吸鼻子，閉上眼睛。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            獅子王
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……但是，我接下來該朝著哪裡前進呢？」<br>少年的表情有些迷惘。在這個時代誕生的他，並不屬於任何人。<br>失去了主人的刀，又有什麼存在意義呢？</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">靜靜的看著獅子王，審神者思索了片刻，向著少年拋出了邀請。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「不嫌棄的話，就跟著我走吧。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            獅子王
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……那麼，以後請多多指教。」<br>抬起頭，獅子王試著對妳回以開朗的微笑。<br>……但那硬擠出的笑容之下，那揮之不去的哀傷卻怎麼也無法掩飾。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            獅子王
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「審神者大人的本丸是什麼樣子呢？不知道有沒有我認識的人呢？」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">你們在這個時代的任務結束了。<br>溯行軍被消滅，扭曲的歷史也被重新導正。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">隨著術式的靈光飄散，你們的身影從這個歷史上消失了。<br>但有些東西即使結束了，也不會消失……</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="halt">
+    <div class="_halt"></div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">【場景１４】<br>登場人物：全員</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">回到了本丸，迎接你們的是溫暖的微風。<br>以及毛茸茸的式神。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_5 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            狐之助
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「各位辛苦了，歡迎回來～」<br>狐之助舉起右掌，向你們招呼。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「這算是任務告一段落了……呢，大家狀況如何？」看了眼跟著一起回來的男士們與審神者。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「托您的福，並無大礙。」雖然身上傷勢不少，但審神者看起來氣色還不錯。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_7 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「啊，還行，沒什麼問題。」雖然但著倦容卻依然笑著。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_8 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「有些疲憊，但並無大礙。」太郎隨意的抹了抹自己身上的血液。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「這邊才是，受各位照顧了。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_7 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「別這麼說，多虧隊長大人的指揮，才讓我們戰鬥非常順利。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            獅子王
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……是，我沒事！」<br>獅子王慢了半刻，才刻意有精神的回答道。<br>──說是這樣說，但他的身體確實已經破破爛爛的了。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……看來需要先手入呢，審神者方便嗎？」露出了苦笑。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「嘛......回到本丸應該就會有人協助幫忙處理了。」不知道是鬆懈下來還是累了，審神者的語氣又開始隨便了。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">順帶一提，上面這句話浮現的同時，日日野腦袋裡幫忙的最佳人選是小烏丸。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_9 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            小烏丸
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">說人人到，小烏丸從廊下走出，一臉苦笑的看向把自己弄得滿身是傷的自家審神者。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_9 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            小烏丸
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「諸位辛苦了，咱家的審神者應該沒有給各位添麻煩吧。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「他表現得很好哦。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_8 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「這次的任務情況十分特殊，若是沒有審神者的幫助，我們可能沒辦法全須全尾的回來。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_7 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「哪裡，真要說應該是我們給你們家審神者添麻煩才對。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「你們這樣誇我，我會不好意思的啦......」一臉傻笑的日日野看起來完全不像戰場上凜然的樣子。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            獅子王
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「……那個，我的名字是獅子王，初來乍到，以後還請多多指教！」<br>明顯有些緊張，獅子王向小烏丸打了個招呼。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_9 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            小烏丸
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">一臉拿審神者沒辦法的樣子，小烏丸苦笑著開口，「為父代替本丸所有孩子感謝諸位，接下來的事就交給吾吧。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_9 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            小烏丸
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「無須拘束，日後吾等既為平等的存在，你還得早日習慣本丸的生活。」看著獅子王，小烏丸露出了平靜的笑容。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_9 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            小烏丸
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「首先，果然還是該先領你去處理一下傷勢呢。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_4 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            獅子王
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「是！來去大修理一下……」<br>獅子王舉起手，精神的回答。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「辛苦了，整件事情的報告整理就交給我吧，各位儘早回到自己的本丸休息如何呢？」看著略顯疲態的夥伴們，源清麿說著。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_8 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「好的，感謝隊長，那麼我這邊就先告辭了。」太郎點點頭，便轉身離開了。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_7 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「嗯，那就這樣吧，有緣演練場再見囉。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">「嗯，之後見。」</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">彼此告別，在平安回到了各自的本丸後，這次的任務也終於畫下了圓滿的終點。<br>然而，即使任務結束，還是有許多的東西被留了下來。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">溯行軍異樣的行為，確認道智慧個體的存在，無疑讓時之政府的警惕程度上升。考量到未來再次與類似敵人交手的可能，你們的任務執行方針也自然需要變化。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">親自手刃了原主的獅子王，儘管表面故作開朗，但心裡的傷口一時半刻也難以癒合。在未來的相處中，能否讓他真正解開心傷，感受到歸屬感，也成為了日日野本丸的重要課題之一。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">－－守護歷史的意義為何？<br>對於你們而言，這次的任務無疑再一次的向你們發問。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">無論如何，刀劍男士們的戰鬥，還將持續下去。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="title">
+    <div class="_sctitle">團後結算</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">※法則障礙「歷史竄改」解除：<br>→全體恢復６點靈紋</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">※結算奇御魂的使用：</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_8 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">變換成愚者黃金，獲得3000G。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">變換成愚者黃金，獲得3000G。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">變換成愚者黃金，獲得3000G。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_7 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">變換成愚者黃金，獲得3000G。</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">※消除感情，恢復4D6點靈紋：</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">4D6 恢復靈紋 (4D6) ＞ 16[3,3,5,5] ＞ 16<br>→靈紋:9+6+16 &gt; 0，全恢復</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_7 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">4D6 恢復靈紋 (4D6) ＞ 13[1,2,4,6] ＞ 13<br>→靈紋:-8+6+13 &gt; 0，全恢復</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_8 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">4D6 恢復靈紋 (4D6) ＞ 19[2,5,6,6] ＞ 19<br>→靈紋:-12+6+19 &gt; 0，全恢復</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">4D6 恢復靈紋 (4D6) ＞ 12[2,3,3,4] ＞ 12<br>→靈紋:20+6+12 &gt; 0，全恢復</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">※結算戰利品分配：</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_8 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            太郎太刀
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">獲得 刀裝碎片．恨鐵／物Ｄ+2：1000G （效果值:2）</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_7 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            鶴丸 国永
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">獲得 刀裝碎片．恨鐵／物Ｄ+2：1000G （效果值:2）<br>獲得 刀裝碎片．重槍／體力+1：500G （效果值:1）</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_6 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            源 清麿
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">獲得 刀裝碎片．蛇棘／移動+2：1000G （效果值:2）<br>獲得 刀裝碎片．飛矢／行動+1：500G （效果值:1）</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_3 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            日日野 守
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">獲得 刀裝碎片．破魔／精神+2：1000G （效果值:2）<br>獲得 刀裝碎片．韌刃／生命+3：500G （效果值:1）</div>
+    </div>
+</div>
+</div><!--EOS-->
+<div class="_script-outer " data-type="talk">
+    
+<div class="_talk _actor_0 _main ">
+    <div class="_lCol">
+        <div class="_img"></div>
+    </div>
+    <div class="_rCol">
+        <div class="_name">
+            GM@Haz
+            <div class="_channel">[主要]</div>
+            <channel class="_hidden">420eafebb0e1</channel>
+        </div>
+        <div class="_content">※結算經驗值與報酬金：<br>→全體獲得3000G（奇御魂）<br>→全體獲得200經驗值</div>
+    </div>
+</div>
+</div><!--EOS-->
+        </div>
+    </body>
 </html>
