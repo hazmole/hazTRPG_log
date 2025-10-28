@@ -1,5 +1,17 @@
 var INDEX = [
 	{
+		system: "神我狩/魔道書",
+		title: "千蝶殘響",
+		url: "Kamigakari-RequiemOfThousandButterflies",
+		imgUrl: "src/img/replay-cover/Kamigakari-RequiemOfThousandButterflies.jpg",
+		info: {
+			system: "武装伝奇RPG 神我狩 (feat. 魔道書大戰)",
+			gm: "Hazmole",
+			member: "薩托、格露、Artis、高高",
+			startDate: "2025/10/22",
+		}
+	},
+	{
 		system: "FF14 TRPG",
 		title: "塵沙中的水晶",
 		url: "FF14-CrystalInTheSand",
@@ -40,7 +52,7 @@ var INDEX = [
 		url: "Kamigakari-HeianSakabadouElegy",
 		imgUrl: "src/img/replay-cover/Kamigakari-HeianSakabadouElegy.jpg",
 		info: {
-			system: "武装伝奇RPG 神我狩",
+			system: "武装伝奇RPG 神我狩 (feat. 刀劍亂舞)",
 			gm: "Hazmole",
 			member: "高高、丁、深雪、洛嵐",
 			startDate: "2022/12/15",
