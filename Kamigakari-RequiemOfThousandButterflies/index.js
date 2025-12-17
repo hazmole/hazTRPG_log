@@ -6,4 +6,5 @@ var INDEX = [
 	{	title: "情報統整",     url: "20251105-Kamigakari-RequiemOfThousandButterflies.html" },
 	{	title: "初步調查",     url: "20251112-Kamigakari-RequiemOfThousandButterflies.html" },
 	{	title: "黃金之夢",     url: "20251126-Kamigakari-RequiemOfThousandButterflies.html" },
+	{	title: "無銘墓",       url: "20251210-Kamigakari-RequiemOfThousandButterflies.html" },
 ];
