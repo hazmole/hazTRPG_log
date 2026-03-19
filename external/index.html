@@ -1,0 +1,51 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>測試版型</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/tab-setup.css">
+  <link rel="stylesheet" href="./css/tab-viewer.css">
+  <script src="./js/block-utils.js"></script>
+  <script src="./js/router.js"></script>
+  <script src="./js/google-sheet.js"></script>
+  <script src="./mode-setup.js"></script>
+  <script src="./mode-viewer.js"></script>
+  <script>
+    const router = new CoreRouter();
+    router.run();    
+  </script>
+</head>
+<body>
+  <div id="setup-section">
+    <div class="setup-container">
+        <div>
+            <h2><i class="fas fa-link" style="color: #ccc;"></i> 連結您的試算表</h2>
+            <p>請輸入 Google Sheet 「發佈到網路」的 CSV 網址：</p>
+            <div class="input-group">
+                <input type="text" id="csv-url" placeholder="https://docs.google.com/spreadsheets/d/.../pub?output=csv">
+                <button onclick="setup()">確認連接</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="viewer-section">
+    <!-- Header -->
+    <header>
+      <div id="site-title">載入中...</div>
+      <div class="toggle-btn" onclick="toggleNavMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    <!-- Nav-menu -->
+    <div id="overlay" onclick="toggleNavMenu()"></div>
+    <nav id="nav-menu">
+      <div id="viewer-menu-title">目錄</div>
+      <div id="viewer-menu-list"></div>
+    </nav>
+    <!-- Main -->
+    <main>
+      <iframe id="viewer-content" src="about:blank" onload="cancelLoading()" onError="cancelLoading()"></iframe>
+    </main>
+  </div>
+</body>
