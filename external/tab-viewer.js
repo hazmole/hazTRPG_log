@@ -34,6 +34,7 @@ ViewerTab.renderBaseTitle = function(cfg) {
 ViewerTab.renderMenu = function(cfg) {
   // Render Menu-List
   const menuElem = document.getElementById("viewer-menu-list");
+  menuElem.innerHTML = "";
   cfg.pages.forEach((item, index) => {
     const div = document.createElement('div');
     div.className = 'menu-item';
