@@ -1,11 +1,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="RpColle - 我的專屬 TRPG 團錄彙整工具">
-  <meta property="og:description" content="這是一個方便的 TRPG 團錄彙整工具，你可以透過試算表來管理團錄資訊，並分享你的彙整連結給其他人。">
+  <meta property="og:title" content="HzColle - 我的專屬網頁彙整工具">
+  <meta property="og:description" content="這是一個方便的網頁彙整工具，你可以透過試算表來管理各個網頁資料，並將你的彙整連結分享給其他人。">
   <meta property="og:image" content="./favicon.png">
+  <meta property="og:image"  content="https://hazmole.github.io/hazTRPG_log/external/favicon.png">
+  <meta property="og:type" content="website">
 	<meta property="og:type" content="website">
-  <title>TRPG團錄彙整平台</title>
+  <title>HzColle - 網頁彙整工具</title>
   <link rel="icon" href="./favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="./css/default.css">
@@ -17,7 +19,7 @@
   <script src="./tab-setup.js"></script>
   <script src="./tab-viewer.js"></script>
   <script>
-    const SITE_TITLE = "TRPG團錄彙整平台";
+    const SITE_TITLE = "HzColle - 網頁彙整工具";
     const router = new CoreRouter();
     router.run();    
   </script>
@@ -27,9 +29,9 @@
     <div class="setup-container">
         <div>
             <h2><i class="fas fa-link" style="color: #ccc;"></i> 連結您的試算表目錄</h2>
-            <p>本站基於 <a href="https://docs.google.com/spreadsheets/d/1gL5yOX0KeM4Cf0-DKQWZFbd7ecfq65ercdj-V2NzzIQ/edit?gid=0#gid=0" target="_blank">團錄目錄</a> 試算表格式，提供彙整團錄的功能。</p>
+            <p>本站使用 google 試算表來提供彙整團錄的功能。</p>
             <p>您可以在建立自己的試算表副本後，透過將目錄頁發佈到網路，取得其 CSV 網址；將 CSV 網址填入後，點擊「連結」，本站便會將其彙整。複製本站彙整後的網址，便可輕易將團錄分享給其他人。</p>
-            <p>關於更詳細的說明，可以參考團錄目錄內的教學文件。</p>
+            <p>關於更詳細的說明，可以參考 <a href="https://docs.google.com/spreadsheets/d/1gL5yOX0KeM4Cf0-DKQWZFbd7ecfq65ercdj-V2NzzIQ/edit?gid=0#gid=0" target="_blank">團錄目錄</a> 內的教學文件。</p>
             <p><b>請輸入「發佈到網路」的 CSV 網址：</b></p>
             <div class="input-group">
                 <input type="text" id="csv-url" placeholder="https://docs.google.com/spreadsheets/d/.../pub?output=csv">

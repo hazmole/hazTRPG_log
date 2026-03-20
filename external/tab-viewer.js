@@ -58,7 +58,7 @@ ViewerTab.renderContent = function(cfg, pageID) {
   const item = cfg.pages[pageID];
 
   // Render Title
-  const titleText = cfg.title + '-' + item.name;
+  const titleText = cfg.title + ' - ' + item.name;
   document.title = titleText;
   document.getElementById("site-title").innerText = titleText;
 
