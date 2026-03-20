@@ -1,7 +1,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>測試版型</title>
+  <meta property="og:title" content="HazRp - 我的專屬團錄彙整工具">
+  <meta property="og:description" content="這是一個方便的團錄彙整工具，你可以透過試算表來管理團錄資訊，並分享你的彙整連結給其他人。">
+  <meta property="og:image" content="./favicon.png">
+	<meta property="og:type" content="website">
+  <title>TRPG團錄彙整平台</title>
+  <link rel="icon" href="./favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="./css/default.css">
   <link rel="stylesheet" href="./css/tab-setup.css">
@@ -9,22 +14,26 @@
   <script src="./js/block-utils.js"></script>
   <script src="./js/router.js"></script>
   <script src="./js/google-sheet.js"></script>
-  <script src="./mode-setup.js"></script>
-  <script src="./mode-viewer.js"></script>
+  <script src="./tab-setup.js"></script>
+  <script src="./tab-viewer.js"></script>
   <script>
+    const SITE_TITLE = "TRPG團錄彙整平台";
     const router = new CoreRouter();
     router.run();    
   </script>
 </head>
-<body>
+<body id="Root">
   <div id="setup-section">
     <div class="setup-container">
         <div>
-            <h2><i class="fas fa-link" style="color: #ccc;"></i> 連結您的試算表</h2>
-            <p>請輸入 Google Sheet 「發佈到網路」的 CSV 網址：</p>
+            <h2><i class="fas fa-link" style="color: #ccc;"></i> 連結您的試算表目錄</h2>
+            <p>本站基於 <a href="https://docs.google.com/spreadsheets/d/1gL5yOX0KeM4Cf0-DKQWZFbd7ecfq65ercdj-V2NzzIQ/edit?gid=0#gid=0" target="_blank">團錄目錄</a> 試算表格式，提供彙整團錄的功能。</p>
+            <p>您可以在建立自己的試算表副本後，透過將目錄頁發佈到網路，取得其 CSV 網址；將 CSV 網址填入後，點擊「連結」，本站便會將其彙整。複製本站彙整後的網址，便可輕易將團錄分享給其他人。</p>
+            <p>關於更詳細的說明，可以參考團錄目錄內的教學文件。</p>
+            <p><b>請輸入「發佈到網路」的 CSV 網址：</b></p>
             <div class="input-group">
                 <input type="text" id="csv-url" placeholder="https://docs.google.com/spreadsheets/d/.../pub?output=csv">
-                <button onclick="setup()">確認連接</button>
+                <button onclick="SetupTab.connect()">連結</button>
             </div>
         </div>
     </div>
@@ -32,20 +41,35 @@
   <div id="viewer-section">
     <!-- Header -->
     <header>
-      <div id="site-title">載入中...</div>
-      <div class="toggle-btn" onclick="toggleNavMenu()">
-        <i class="fa-solid fa-bars"></i>
+      <div class="header-container">
+      <div class="header-group">
+        <div class="toggle-btn" onclick="ViewerTab.toggleNavMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div id="site-title">載入中...</div>
+      </div>
+      <div class="header-group">
+        <div id="wide-mode-btn" class="toggle-btn" onclick="ViewerTab.toggleWideMode(this)">
+          <i class="fa-solid fa-expand"></i>
+        </div>
+        <div id="dark-mode-btn" class="toggle-btn" onclick="ViewerTab.toggleDarkMode(this)">
+          <i class="fa-solid fa-moon"></i>
+        </div>
+      </div>
       </div>
     </header>
     <!-- Nav-menu -->
-    <div id="overlay" onclick="toggleNavMenu()"></div>
+    <div id="overlay" onclick="ViewerTab.toggleNavMenu()"></div>
     <nav id="nav-menu">
       <div id="viewer-menu-title">目錄</div>
       <div id="viewer-menu-list"></div>
     </nav>
     <!-- Main -->
     <main>
-      <iframe id="viewer-content" src="about:blank" onload="cancelLoading()" onError="cancelLoading()"></iframe>
+      <iframe id="viewer-content" src="about:blank"
+        referrerpolicy="strict-origin-when-cross-origin"
+        onload="ViewerTab.cancelLoading()"
+        onError="cancelLoading()"></iframe>
     </main>
   </div>
 </body>
