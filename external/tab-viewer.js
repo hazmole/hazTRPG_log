@@ -39,10 +39,23 @@ ViewerTab.renderMenu = function(cfg) {
     const div = document.createElement('div');
     div.className = 'menu-item';
     div.innerText = item.name || `頁面 ${index + 1}`;
-    div.onclick = () => {
+    div.addEventListener('click', (e) => {
+      // CtrlBtn + Click 
+      if (e.ctrlKey || e.metaKey) {
+        window.open(item.url, '_blank');
+        return ;
+      }
+
       ViewerTab.gotoPage(cfg, index);
       ViewerTab.toggleNavMenu();
-    };
+    });
+    div.addEventListener('auxclick', (e) => {
+      // Mouse's MiddleBtn
+      if (e.button === 1) {
+        window.open(item.url, '_blank');
+      }
+    });
+
     menuElem.appendChild(div);
   });
 }
